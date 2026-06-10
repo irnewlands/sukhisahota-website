@@ -1,13 +1,8 @@
 /*
- * DESIGN PHILOSOPHY: Warm Civic Modernism
- * Mid-century civic sensibility meets contemporary progressive political design.
- * 
- * Color: Warm cream background (#FBF7F0), NDP orange (#E8610A) as primary accent,
- *        deep charcoal (#1E1E1E) for text, warm amber (#C4621A) for secondary accents,
- *        muted sage (#4A6741) for environmental/land acknowledgement references.
- * Typography: Fraunces (display serif, warmth + personality) + Outfit (clean geometric sans)
- * Layout: Asymmetric, editorial, generous whitespace, pull quotes in margins
- * Motion: Subtle entrance animations, fill-from-bottom CTAs, smooth scroll
+ * DESIGN PHILOSOPHY: Contemporary Progressive
+ * Bold typography, dynamic layouts, intentional asymmetry
+ * Color: Cream bg, NDP orange primary, charcoal text, sage accents
+ * Typography: Fraunces (display) + Outfit (body)
  */
 
 @import "tailwindcss";
@@ -41,12 +36,12 @@
   --color-ring: var(--ring);
 
   /* Campaign brand colours */
-  --color-ndp-orange: oklch(0.62 0.19 42);
-  --color-ndp-amber: oklch(0.55 0.17 42);
-  --color-ndp-cream: oklch(0.975 0.018 80);
-  --color-ndp-cream-alt: oklch(0.955 0.016 80);
-  --color-ndp-charcoal: oklch(0.16 0.008 285);
-  --color-ndp-sage: oklch(0.42 0.07 148);
+  --color-orange: oklch(0.62 0.19 42);
+  --color-amber: oklch(0.55 0.17 42);
+  --color-cream: oklch(0.975 0.018 80);
+  --color-cream-alt: oklch(0.955 0.016 80);
+  --color-charcoal: oklch(0.16 0.008 285);
+  --color-sage: oklch(0.42 0.07 148);
 }
 
 :root {
@@ -84,7 +79,7 @@
     font-family: 'Outfit', sans-serif;
     -webkit-font-smoothing: antialiased;
   }
-  h1, h2, h3 {
+  h1, h2, h3, h4, h5, h6 {
     font-family: 'Fraunces', serif;
   }
   button:not(:disabled),
@@ -102,8 +97,8 @@
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
 
   .flex {
@@ -122,114 +117,261 @@
     .container {
       padding-left: 3rem;
       padding-right: 3rem;
-      max-width: 1320px;
+      max-width: 1280px;
     }
   }
 
-  /* Section label style — small caps, orange accent */
-  .section-label {
+  /* Primary Button - Orange */
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.875rem 1.75rem;
     font-family: 'Outfit', sans-serif;
-    font-size: 0.7rem;
     font-weight: 600;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--color-ndp-orange);
+    font-size: 0.9rem;
+    letter-spacing: 0.02em;
+    color: white;
+    background: var(--color-orange);
+    border: 2px solid var(--color-orange);
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.25s cubic-bezier(0.23, 1, 0.32, 1);
+    box-shadow: 0 2px 8px rgba(232, 97, 10, 0.2);
+  }
+  .btn-primary:hover {
+    background: var(--color-amber);
+    border-color: var(--color-amber);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(232, 97, 10, 0.3);
+  }
+  .btn-primary:active {
+    transform: translateY(0);
   }
 
-  /* Pull quote style */
-  .pull-quote {
-    font-family: 'Fraunces', serif;
-    font-size: clamp(1.25rem, 2.5vw, 1.75rem);
-    font-style: italic;
-    font-weight: 500;
-    line-height: 1.5;
-    color: var(--color-ndp-charcoal);
-    border-left: 3px solid var(--color-ndp-orange);
-    padding-left: 1.5rem;
+  /* Secondary Button - Outline */
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.75rem;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 0.02em;
+    color: var(--color-orange);
+    background: transparent;
+    border: 2px solid var(--color-orange);
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.25s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  .btn-secondary:hover {
+    background: var(--color-orange);
+    color: white;
+    transform: translateY(-2px);
+  }
+  .btn-secondary:active {
+    transform: translateY(0);
   }
 
-  /* Orange underline accent for headings */
-  .heading-accent::after {
-    content: '';
-    display: block;
-    width: 3rem;
-    height: 3px;
-    background: var(--color-ndp-orange);
-    margin-top: 0.75rem;
+  /* White Button for Orange Sections */
+  .btn-white {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.875rem 1.75rem;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 0.02em;
+    color: var(--color-orange);
+    background: white;
+    border: 2px solid white;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.25s cubic-bezier(0.23, 1, 0.32, 1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  .btn-white:hover {
+    background: oklch(0.99 0 0);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  }
+
+  /* Outline White Button for Orange Sections */
+  .btn-outline-white {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.75rem;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 0.02em;
+    color: white;
+    background: transparent;
+    border: 2px solid white;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.25s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  .btn-outline-white:hover {
+    background: white;
+    color: var(--color-orange);
+  }
+
+  /* Social Icon */
+  .social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    color: var(--color-orange);
+    background: transparent;
+    transition: all 0.2s ease;
+  }
+  .social-icon:hover {
+    background: var(--color-orange);
+    color: white;
+    transform: translateY(-2px);
   }
 
   /* Scroll reveal animation */
   .reveal {
     opacity: 0;
-    transform: translateY(24px);
-    transition: opacity 0.35s cubic-bezier(0.23, 1, 0.32, 1),
-                transform 0.35s cubic-bezier(0.23, 1, 0.32, 1);
+    transform: translateY(30px);
+    transition: opacity 0.6s cubic-bezier(0.23, 1, 0.32, 1),
+                transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
   }
   .reveal.visible {
     opacity: 1;
     transform: translateY(0);
   }
 
-  /* CTA button fill-from-bottom */
-  .btn-campaign {
+  /* Nav Link */
+  .nav-link {
     position: relative;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.75rem 1.75rem;
-    font-family: 'Outfit', sans-serif;
-    font-weight: 600;
-    font-size: 0.9rem;
-    letter-spacing: 0.04em;
-    color: white;
-    background: var(--color-ndp-orange);
-    border: 2px solid var(--color-ndp-orange);
-    border-radius: 3px;
-    overflow: hidden;
-    transition: color 0.22s ease, transform 0.16s ease;
   }
-  .btn-campaign::before {
+  .nav-link::after {
     content: '';
     position: absolute;
-    inset: 0;
-    background: var(--color-ndp-amber);
-    transform: scaleY(0);
-    transform-origin: bottom;
-    transition: transform 0.22s cubic-bezier(0.23, 1, 0.32, 1);
-    z-index: 0;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--color-orange);
+    transition: all 0.25s ease;
+    transform: translateX(-50%);
   }
-  .btn-campaign:hover::before {
-    transform: scaleY(1);
-  }
-  .btn-campaign span {
-    position: relative;
-    z-index: 1;
-  }
-  .btn-campaign:active {
-    transform: scale(0.97);
+  .nav-link:hover::after,
+  .nav-link.text-orange::after {
+    width: 60%;
   }
 
-  /* Outline CTA variant */
-  .btn-outline-campaign {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.75rem 1.75rem;
+  /* Stat Card */
+  .stat-card {
+    position: relative;
+    overflow: hidden;
+  }
+  .stat-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--color-orange);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  .stat-card:hover::before {
+    opacity: 1;
+  }
+
+  /* Value Card */
+  .value-card {
+    position: relative;
+  }
+  .value-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--color-orange), var(--color-amber));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  .value-card:hover::after {
+    opacity: 1;
+  }
+}
+
+/* Custom utility classes */
+@layer utilities {
+  .text-orange {
+    color: var(--color-orange);
+  }
+  .text-amber {
+    color: var(--color-amber);
+  }
+  .text-charcoal {
+    color: var(--color-charcoal);
+  }
+  .text-sage {
+    color: var(--color-sage);
+  }
+  .text-cream {
+    color: var(--color-cream);
+  }
+
+  .bg-orange {
+    background-color: var(--color-orange);
+  }
+  .bg-amber {
+    background-color: var(--color-amber);
+  }
+  .bg-charcoal {
+    background-color: var(--color-charcoal);
+  }
+  .bg-sage {
+    background-color: var(--color-sage);
+  }
+  .bg-cream {
+    background-color: var(--color-cream);
+  }
+  .bg-cream-alt {
+    background-color: var(--color-cream-alt);
+  }
+
+  .border-orange {
+    border-color: var(--color-orange);
+  }
+  .border-amber {
+    border-color: var(--color-amber);
+  }
+  .border-charcoal {
+    border-color: var(--color-charcoal);
+  }
+  .border-sage {
+    border-color: var(--color-sage);
+  }
+
+  .font-serif {
+    font-family: 'Fraunces', serif;
+  }
+  .font-sans {
     font-family: 'Outfit', sans-serif;
-    font-weight: 600;
-    font-size: 0.9rem;
-    letter-spacing: 0.04em;
-    color: var(--color-ndp-orange);
-    background: transparent;
-    border: 2px solid var(--color-ndp-orange);
-    border-radius: 3px;
-    transition: background 0.22s ease, color 0.22s ease, transform 0.16s ease;
   }
-  .btn-outline-campaign:hover {
-    background: var(--color-ndp-orange);
-    color: white;
-  }
-  .btn-outline-campaign:active {
-    transform: scale(0.97);
+}
+
+/* Smooth scroll offset for fixed header */
+@media (min-width: 768px) {
+  [id] {
+    scroll-margin-top: 80px;
   }
 }
