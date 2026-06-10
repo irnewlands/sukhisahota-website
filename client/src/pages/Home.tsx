@@ -6,7 +6,7 @@
  */
 
 import { useEffect, useState } from "react";
-import { Mail, Linkedin, Instagram, Facebook, ChevronDown, ArrowRight, Users, Globe, Heart, Shield, Leaf, HandHeart, Chrome as Home, Stethoscope, GraduationCap, Scale, TreePine, DollarSign, Wrench } from "lucide-react";
+import { Mail, Linkedin, Instagram, Facebook, ChevronDown, ArrowRight, Users, Globe, Heart, Shield, Leaf, HandHeart, Chrome as HomeIcon, Stethoscope, GraduationCap, Scale, TreePine, DollarSign, Wrench } from "lucide-react";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import NewsletterSignup from "@/components/NewsletterSignup";
 
@@ -444,7 +444,7 @@ export default function Home() {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               <PlatformCard
-                icon={Home}
+                icon={HomeIcon}
                 title="Affordability & Housing"
                 points={[
                   "Remove GST permanently from essentials like groceries, diapers, and monthly bills",
