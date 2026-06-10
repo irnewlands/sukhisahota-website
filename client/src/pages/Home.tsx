@@ -6,7 +6,7 @@
  */
 
 import { useEffect, useState } from "react";
-import { Mail, Linkedin, Instagram, Facebook, ChevronDown, ArrowRight, Users, Globe, Heart, Shield, Leaf, HandHeart } from "lucide-react";
+import { Mail, Linkedin, Instagram, Facebook, ChevronDown, ArrowRight, Users, Globe, Heart, Shield, Leaf, HandHeart, Chrome as Home, Stethoscope, GraduationCap, Scale, TreePine, DollarSign, Wrench } from "lucide-react";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import NewsletterSignup from "@/components/NewsletterSignup";
 
@@ -38,7 +38,8 @@ function useReveal() {
 const NAV_LINKS = [
   { label: "Welcome", href: "#welcome" },
   { label: "About", href: "#about" },
-  { label: "Election", href: "#election" },
+  { label: "Why I Run", href: "#why" },
+  { label: "Platform", href: "#platform" },
   { label: "Vision", href: "#stand" },
   { label: "Join", href: "#involved" },
 ];
@@ -177,6 +178,28 @@ function ValueCard({ icon: Icon, title, description }: { icon: React.ElementType
   );
 }
 
+// ─── Platform Card Component ───────────────────────────────────────────────────────
+function PlatformCard({ icon: Icon, title, points }: { icon: React.ElementType; title: string; points: string[] }) {
+  return (
+    <div className="platform-card group p-6 bg-white rounded-xl border border-border/50 hover:border-orange/50 hover:shadow-lg transition-all duration-300">
+      <div className="flex items-center gap-3 mb-4">
+        <div className="w-10 h-10 rounded-lg bg-orange/10 flex items-center justify-center group-hover:bg-orange/20 transition-colors">
+          <Icon className="w-5 h-5 text-orange" />
+        </div>
+        <h3 className="font-serif text-lg font-bold text-charcoal">{title}</h3>
+      </div>
+      <ul className="space-y-2">
+        {points.map((point, i) => (
+          <li key={i} className="text-sm text-muted-foreground leading-relaxed flex items-start gap-2">
+            <span className="w-1.5 h-1.5 bg-orange rounded-full mt-2 flex-shrink-0" />
+            <span>{point}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
 // ─── Section Header Component ───────────────────────────────────────────────────────
 function SectionHeader({ number, title, light = false }: { number: string; title: string; light?: boolean }) {
   return (
@@ -200,7 +223,7 @@ function QuoteBlock({ text, light = false }: { text: string; light?: boolean }) 
   );
 }
 
-// ─── Main Component ───────────────────────────────────────────────────────────
+// ─── Main Component ───────────────────────────────────────────────────
 export default function Home() {
   useReveal();
 
@@ -229,7 +252,7 @@ export default function Home() {
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-orange/10 rounded-full mb-6">
               <span className="w-2 h-2 bg-orange rounded-full animate-pulse" />
               <span className="text-sm font-semibold tracking-wider uppercase text-orange">
-                NDP · Former Candidate
+                NDP · Former Candidate for Vancouver Granville
               </span>
             </div>
 
@@ -239,13 +262,13 @@ export default function Home() {
             </h1>
 
             <p className="text-lg md:text-xl text-charcoal/80 leading-relaxed mb-8 max-w-lg">
-              My name is Sukhi Sahota. I ran as the NDP Candidate for Vancouver Granville and now I'm focused on grassroots organizing — because it's time for us to be truly organized from the ground up.
+              My name is Sukhi Sahota. I ran as the NDP Candidate for Vancouver Granville — fighting for regular people, not billionaires, and working to build a fairer, more equitable Canada.
             </p>
 
             {/* Highlight Quote */}
             <div className="bg-charcoal text-white p-6 rounded-xl mb-8 max-w-md">
               <p className="font-sans text-lg font-semibold">
-                "It's time for us to be truly organised from a grassroots level."
+                "Society can only be judged by how it looks after our most vulnerable individuals."
               </p>
             </div>
 
@@ -333,22 +356,25 @@ export default function Home() {
         </div>
       </section>
 
-      {/* About Me Section - Split with Image */}
+      {/* About Me Section - Biography */}
       <section id="about" className="py-20 md:py-28 bg-white">
         <div className="container">
           <div className="reveal grid lg:grid-cols-2 gap-12 items-center">
             <div className="order-2 lg:order-1">
-              <SectionHeader number="02 / About Me" title="A life shaped by resilience and community" />
+              <SectionHeader number="02 / About Me" title="A life shaped by resilience" />
 
               <div className="space-y-5 text-base text-charcoal/85 leading-relaxed">
                 <p>
-                  I am originally from the UK and was raised in a single-parent family with two siblings who have learning difficulties. I was brought up as a Jehovah's Witness, but I was excommunicated as a young adult when I embraced my identity as a member of the LGBTQ+ community. I lost every friend I had up to that point in my life.
+                  Before settling in Vancouver, I lived in the UK, Japan, New Zealand, Australia, and Hong Kong. My experience growing up with family members struggling with health issues and disabilities taught me the importance of a social safety net and the need to protect universal healthcare.
                 </p>
                 <p>
-                  After working and studying Accounting and Finance for a few years, I strongly desired to explore my identity and connection to the world. To pursue this journey, I left the UK and moved to Japan, then lived in Australia, New Zealand, and Hong Kong. After eight years, I settled in Canada, where I have been living in Vancouver for the past eight years.
+                  A proud member of the 2SLGBTQIA+ community, I believe society can only be judged by how it looks after our most vulnerable individuals.
                 </p>
                 <p>
-                  I have faced joblessness, discrimination, grief, housing insecurity, and food insecurity. These experiences motivated me to work with volunteers at the Richmond Food Bank to create and launch a food pantry outside the premises, ensuring access to food at any time.
+                  I studied Accounting and Finance and work for an environmental NGO focused on the climate crisis. My commitment to the community led me to launch a food pantry during the pandemic, supporting those facing housing and food insecurity.
+                </p>
+                <p>
+                  I was brought up as a Jehovah's Witness, but I was excommunicated as a young adult when I embraced my identity as a member of the LGBTQ+ community. I lost every friend I had up to that point in my life. I have faced joblessness, discrimination, grief, housing insecurity, and food insecurity — and these experiences drive my commitment to public service.
                 </p>
               </div>
 
@@ -376,61 +402,113 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Election 2025 Section */}
-      <section id="election" className="py-20 md:py-28">
+      {/* Why I'm Running Section */}
+      <section id="why" className="py-20 md:py-28 bg-charcoal text-white">
         <div className="container">
-          <div className="reveal grid lg:grid-cols-2 gap-12 items-center">
-            <div className="relative">
-              <div
-                className="aspect-[4/3] rounded-2xl overflow-hidden shadow-xl"
-                style={{ backgroundImage: `url('${VANCOUVER}')`, backgroundSize: "cover", backgroundPosition: "center" }}
-              />
-              <div className="absolute -top-4 -left-4 w-24 h-24 border-4 border-orange/30 rounded-xl -z-10 hidden md:block" />
+          <div className="reveal max-w-4xl mx-auto">
+            <SectionHeader number="03 / Why I Run" title="A protector for the vulnerable" light />
+
+            <div className="space-y-6 text-lg text-white/85 leading-relaxed">
+              <p>
+                I want to give back hope, love, and compassion to everyday Canadians and be a voice and advocate for the voiceless and vulnerable in our society.
+              </p>
+              <p>
+                I was brought up in the UK in a single-parent family household. My mother suffers from mild learning difficulties and brought up my brother who has Cerebral Palsy and my sister who also suffers from learning difficulties due to a brain injury when young. I watched my mother navigate these difficult circumstances, and I started to take on more responsibilities and become an adult and advocate for my family at the age of 13.
+              </p>
+              <p>
+                My mother didn't struggle alone — she had a social support worker who would visit nearly every day, my Grandmother who lived with us, special schools for my siblings, and income assistance from the government. I cannot imagine how my mother would have coped without all the governmental assistance she received, but I am aware that today here in Canada, many other families face far less support.
+              </p>
+              <p>
+                I genuinely believe that society can only be judged by how far it looks after its most vulnerable and voiceless. I must carry the torch of democratic socialism — to see any government take away social support for our most vulnerable breaks my heart, and I cannot allow that to happen.
+              </p>
             </div>
 
-            <div>
-              <SectionHeader number="03 / The Election of 2025" title="What the 2025 election taught us" />
-
-              <div className="space-y-5 text-base text-charcoal/85 leading-relaxed">
-                <p>
-                  The NDP Executive's primary concern is to set the party's goals and objectives and to serve as the basis for the Election Planning Committee. As a result of that strategy and Trump's tariffs, not only did we lose parliamentary status, but we are now in a fiscal dire situation.
-                </p>
-                <p>
-                  It felt like a chokehold was placed on our campaign due to the centralization of everything. My campaign manager and I managed the visibility campaign well, given the circumstances, but we kept encountering roadblocks when we had to go to the central office to make a request or get something approved.
-                </p>
-                <p>
-                  I don't want democracy to die on the last day of every convention; I want to ensure that our members' resolutions, once passed, actually DO something and affect the decisions of the Executive & Council.
-                </p>
-              </div>
-
-              <div className="mt-10">
-                <QuoteBlock text="I had the opportunity to meet with Emilie Taman, the Review and Renewal Process facilitator and give my thoughts at the roundtable for candidates in the Lower Mainland in October 2025." />
-              </div>
+            <div className="mt-12 bg-white/10 p-8 rounded-xl">
+              <p className="font-serif text-xl md:text-2xl italic leading-relaxed">
+                "This is why I'm here — I vow to be a protector of the defenceless and vulnerable for the rest of my life, whatever service I can carry out is what will fulfil my purpose in life."
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Our Work Section - Dark Theme */}
-      <section id="work" className="py-20 md:py-28 bg-charcoal text-white">
+      {/* Platform Section - NDP Commitments */}
+      <section id="platform" className="py-20 md:py-28">
         <div className="container">
-          <div className="reveal max-w-3xl">
-            <SectionHeader number="04 / Our Work is Unfinished" title="It's time to listen" light />
+          <div className="reveal">
+            <SectionHeader number="04 / Platform" title="Fighting for you" />
 
-            <div className="space-y-5 text-lg text-white/85 leading-relaxed">
-              <p>
-                I want to bring my experience as a Candidate in one of the worst elections for the NDP in the last 30 years to the benefit of all our grassroots members. These very unique circumstances call for a 'reset', to stop and to contemplate and most importantly to listen.
-              </p>
-              <p>
-                A lot of these issues could have been addressed if some aspects of approval were decentralized, and if we vetted and approved candidates well before an anticipated election and set a cut-off date for incoming prospective candidate applications, so that several prospective candidates could go through the vetting process.
-              </p>
-              <p>
-                In order to re-empower EDAs, we need to set up regional councils that consist of members of several EDAs who can be given a level of autonomy and decision-making by Central and can act as a go-between for the EDA and Central, which in itself would be the first step towards decentralization.
-              </p>
-            </div>
+            <p className="max-w-2xl text-lg text-charcoal/85 leading-relaxed mb-12">
+              As your representative, I'll fight for regular people, not billionaires. Here are the key areas where I'll work tirelessly to build a fairer, more equitable Canada.
+            </p>
 
-            <div className="mt-12">
-              <QuoteBlock text="it's important to be approachable and listen to different views; that's how 'Iron sharpens Iron'." light />
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <PlatformCard
+                icon={Home}
+                title="Affordability & Housing"
+                points={[
+                  "Remove GST permanently from essentials like groceries, diapers, and monthly bills",
+                  "Build 20% non-market housing in every neighbourhood",
+                  "Ban predatory financial landlords from buying affordable housing",
+                  "Fight soaring rents with strong tenant protections",
+                  "$16 billion national housing strategy"
+                ]}
+              />
+              <PlatformCard
+                icon={Stethoscope}
+                title="Healthcare"
+                points={[
+                  "Universal pharmacare covering essential medicines within 4 years",
+                  "Cover diabetes medications and birth control immediately",
+                  "Pan-Canadian licensure for medical professionals",
+                  "$5,000 tax credit for nurses and PSWs",
+                  "Expand mental health coverage for psychotherapy and counselling"
+                ]}
+              />
+              <PlatformCard
+                icon={Globe}
+                title="Climate Action"
+                points={[
+                  "Cut emissions to 50% below 2005 levels by 2035",
+                  "Eliminate fossil fuel subsidies by end of 2026",
+                  "Free energy retrofits for 2.3 million low-income households",
+                  "Build an East-West clean energy grid",
+                  "100% non-emitting electricity by 2045"
+                ]}
+              />
+              <PlatformCard
+                icon={Heart}
+                title="Indigenous Rights"
+                points={[
+                  "End all long-term boil water advisories on First Nations",
+                  "Free, prior and informed consent for all decisions affecting land rights",
+                  "Expand Red Dress Alert nationwide",
+                  "Combat residential school denialism with legislation",
+                  "Support Indigenous jurisdiction over child welfare"
+                ]}
+              />
+              <PlatformCard
+                icon={Shield}
+                title="Workers & Jobs"
+                points={[
+                  "Counter-tariff revenues go directly to support workers",
+                  "Train 100,000+ skilled workers for the green economy",
+                  "Develop sector-specific industrial strategies",
+                  "Protect workers affected by trade disputes",
+                  "Strengthen Employment Insurance benefits"
+                ]}
+              />
+              <PlatformCard
+                icon={Scale}
+                title="Democratic Reform"
+                points={[
+                  "Establish independent citizens assembly for proportional representation",
+                  "Lower voting age to 16",
+                  "Indigenous languages on election ballots in Indigenous territories",
+                  "Foreign agent registry to protect democratic institutions",
+                  "Strengthen transparency in federal budget-making"
+                ]}
+              />
             </div>
           </div>
         </div>
@@ -490,11 +568,11 @@ export default function Home() {
               Get Involved
             </span>
             <h2 className="font-serif text-4xl md:text-5xl font-bold mt-3 mb-6">
-              Join the grassroots movement
+              Join the movement
             </h2>
 
             <p className="text-lg text-white/90 leading-relaxed mb-10">
-              Whether you want to volunteer, donate, or simply stay informed about our work, there are many ways to get involved in building a stronger, more democratic NDP.
+              Whether you want to volunteer, donate, or simply stay informed, there are many ways to get involved in building a stronger, more democratic Canada.
             </p>
 
             <div className="flex flex-wrap justify-center gap-4 mb-12">
@@ -542,13 +620,18 @@ export default function Home() {
                   </a>
                 </li>
                 <li>
-                  <a href="#stand" className="text-white/70 hover:text-white transition-colors">
-                    What I Stand For
+                  <a href="#why" className="text-white/70 hover:text-white transition-colors">
+                    Why I Run
                   </a>
                 </li>
                 <li>
-                  <a href="#involved" className="text-white/70 hover:text-white transition-colors">
-                    Get Involved
+                  <a href="#platform" className="text-white/70 hover:text-white transition-colors">
+                    Platform
+                  </a>
+                </li>
+                <li>
+                  <a href="#stand" className="text-white/70 hover:text-white transition-colors">
+                    What I Stand For
                   </a>
                 </li>
               </ul>
