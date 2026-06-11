@@ -11,7 +11,7 @@ import LanguageSwitcher from "@/components/LanguageSwitcher";
 import NewsletterSignup from "@/components/NewsletterSignup";
 
 // ─── Asset URLs ──────────────────────────────────────────────────────────────
-const CANDIDATE_PHOTO = "https://sukhisahota.ca/ndp-en/_assets/media/c95bbd1e799d9df9beab1ae666d484e4.jpg";
+const PORTRAIT_PHOTO = "/006A7069a.jpg";
 const CANVASSING_PHOTO = "/20250322_151454.jpg";
 const CLASSROOM_PHOTO = "/20250110_113015.jpg";
 
@@ -231,74 +231,82 @@ export default function Home() {
     <div className="min-h-screen bg-cream">
       <Nav />
 
-      {/* Hero Section - Full Bleed Diagonal Split */}
-      <section className="relative min-h-screen flex items-center pt-16 overflow-hidden">
-        {/* Background Image with Overlay */}
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url('${CANDIDATE_PHOTO}')` }}
-        >
-          <div className="absolute inset-0 bg-gradient-to-r from-cream via-cream/95 to-cream/70 md:via-cream/80 md:to-cream/30" />
-        </div>
-
-        {/* Decorative Elements */}
-        <div className="absolute top-0 right-0 w-1/3 h-full bg-orange/5 skew-x-12 transform translate-x-20 hidden lg:block" />
+      {/* Hero Section */}
+      <section className="relative min-h-screen flex items-center pt-16 overflow-hidden bg-cream">
+        {/* Decorative background shapes */}
+        <div className="absolute top-0 right-0 w-1/2 h-full bg-orange/5 hidden lg:block" style={{ clipPath: "polygon(15% 0, 100% 0, 100% 100%, 0% 100%)" }} />
         <div className="absolute bottom-20 left-10 w-24 h-24 border-4 border-orange/20 rounded-full hidden md:block" />
-        <div className="absolute top-40 right-20 w-16 h-16 bg-sage/20 rounded-full hidden md:block" />
 
-        {/* Content */}
         <div className="container relative z-10">
-          <div className="max-w-2xl py-12 md:py-20">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-orange/10 rounded-full mb-6">
-              <span className="w-2 h-2 bg-orange rounded-full animate-pulse" />
-              <span className="text-sm font-semibold tracking-wider uppercase text-orange">
-                NDP · Former Candidate for Vancouver Granville
-              </span>
-            </div>
+          <div className="grid lg:grid-cols-2 gap-12 items-center py-12 md:py-20">
+            {/* Text content */}
+            <div>
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-orange/10 rounded-full mb-6">
+                <span className="w-2 h-2 bg-orange rounded-full animate-pulse" />
+                <span className="text-sm font-semibold tracking-wider uppercase text-orange">
+                  NDP · Former Candidate for Vancouver Granville
+                </span>
+              </div>
 
-            <h1 className="font-serif text-5xl md:text-7xl font-bold text-charcoal leading-none mb-6">
-              Fighting for
-              <span className="block text-orange">every Canadian</span>
-            </h1>
+              <h1 className="font-serif text-5xl md:text-7xl font-bold text-charcoal leading-none mb-6">
+                Fighting for
+                <span className="block text-orange">every Canadian</span>
+              </h1>
 
-            <p className="text-lg md:text-xl text-charcoal/80 leading-relaxed mb-8 max-w-lg">
-              My name is Sukhi Sahota. I ran as the NDP Candidate for Vancouver Granville — fighting for regular people, not billionaires, and working to build a fairer, more equitable Canada.
-            </p>
-
-            {/* Highlight Quote */}
-            <div className="bg-charcoal text-white p-6 rounded-xl mb-8 max-w-md">
-              <p className="font-sans text-lg font-semibold">
-                "Society can only be judged by how it looks after our most vulnerable individuals."
+              <p className="text-lg md:text-xl text-charcoal/80 leading-relaxed mb-8 max-w-lg">
+                My name is Sukhi Sahota. I ran as the NDP Candidate for Vancouver Granville — fighting for regular people, not billionaires, and working to build a fairer, more equitable Canada.
               </p>
+
+              {/* Highlight Quote */}
+              <div className="bg-charcoal text-white p-6 rounded-xl mb-8 max-w-md">
+                <p className="font-sans text-lg font-semibold">
+                  "Society can only be judged by how it looks after our most vulnerable individuals."
+                </p>
+              </div>
+
+              {/* CTAs */}
+              <div className="flex flex-wrap gap-4 mb-8">
+                <a href="#about" className="btn-primary group">
+                  Learn About Me
+                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                </a>
+                <a href="mailto:info@sukhisahota.ca" className="btn-secondary">
+                  Ask a Question
+                </a>
+              </div>
+
+              {/* Social Links */}
+              <div className="flex items-center gap-4">
+                <span className="text-sm text-muted-foreground">Follow:</span>
+                <div className="flex gap-3">
+                  <a href="http://www.linkedin.com/in/sukhisahota" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="LinkedIn">
+                    <Linkedin className="w-5 h-5" />
+                  </a>
+                  <a href="https://www.instagram.com/sukhi4thepeople/" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="Instagram">
+                    <Instagram className="w-5 h-5" />
+                  </a>
+                  <a href="https://www.facebook.com/Sukhi4thepeople" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="Facebook">
+                    <Facebook className="w-5 h-5" />
+                  </a>
+                  <a href="mailto:info@sukhisahota.ca" className="social-icon" aria-label="Email">
+                    <Mail className="w-5 h-5" />
+                  </a>
+                </div>
+              </div>
             </div>
 
-            {/* CTAs */}
-            <div className="flex flex-wrap gap-4 mb-8">
-              <a href="#about" className="btn-primary group">
-                Learn About Me
-                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-              </a>
-              <a href="mailto:info@sukhisahota.ca" className="btn-secondary">
-                Ask a Question
-              </a>
-            </div>
-
-            {/* Social Links */}
-            <div className="flex items-center gap-4">
-              <span className="text-sm text-muted-foreground">Follow:</span>
-              <div className="flex gap-3">
-                <a href="http://www.linkedin.com/in/sukhisahota" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="LinkedIn">
-                  <Linkedin className="w-5 h-5" />
-                </a>
-                <a href="https://www.instagram.com/sukhi4thepeople/" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="Instagram">
-                  <Instagram className="w-5 h-5" />
-                </a>
-                <a href="https://www.facebook.com/Sukhi4thepeople" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="Facebook">
-                  <Facebook className="w-5 h-5" />
-                </a>
-                <a href="mailto:info@sukhisahota.ca" className="social-icon" aria-label="Email">
-                  <Mail className="w-5 h-5" />
-                </a>
+            {/* Portrait photo */}
+            <div className="relative flex justify-center lg:justify-end">
+              <div className="relative">
+                <div className="w-80 h-80 md:w-96 md:h-96 lg:w-[440px] lg:h-[540px] rounded-2xl overflow-hidden shadow-2xl">
+                  <img
+                    src={PORTRAIT_PHOTO}
+                    alt="Sukhi Sahota"
+                    className="w-full h-full object-cover object-top"
+                  />
+                </div>
+                {/* Decorative frame */}
+                <div className="absolute -bottom-4 -left-4 w-full h-full rounded-2xl border-4 border-orange/30 -z-10" />
               </div>
             </div>
           </div>

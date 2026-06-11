@@ -158,7 +158,7 @@ export default function Autobiography() {
             boxShadow: "0 8px 32px rgba(0,0,0,0.15)",
           }}>
             <img
-              src="/20250322_151454.jpg"
+              src="/006A7069a.jpg"
               alt="Sukhi Sahota"
               style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "top" }}
             />
