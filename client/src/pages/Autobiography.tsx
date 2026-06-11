@@ -16,11 +16,17 @@ interface Section {
   title: string;
   content: string[];
   pullQuote?: string;
+  image?: string;
+  imageAlt?: string;
+  imageCaption?: string;
 }
 
 const sections: Section[] = [
   {
     title: "Getting Started",
+    image: "/IMG-20170310-WA0002.jpg",
+    imageAlt: "Sukhi as a young person growing up in the UK",
+    imageCaption: "Growing up in the UK — early memories that shaped who I am",
     content: [
       "Originally from the UK but of South Asian origin, I grew up in a single-parent family with two siblings who have learning difficulties.",
       "It was a hard life for my mother, who herself experienced a disability that never got fully diagnosed and addressed. She had no choice but to have an arranged marriage and then to have kids. It was my Grandmother's way of setting up a structure of support for the long-term future.",
@@ -40,6 +46,9 @@ const sections: Section[] = [
   },
   {
     title: "My Journey",
+    image: "/SAM_2551.JPG",
+    imageAlt: "Sukhi at a mountain summit at sunset",
+    imageCaption: "Summit at sunset — adventures across the world",
     content: [
       "After having obtained a Diploma in Accounting & Finance and working for a few years, as well as seeing my siblings go into full-time government care, I wanted to learn more about myself and my connection to this world and society as a whole after being insulated in a secluded community for most of my childhood years.",
       "So I left the UK at 23, took advantage of the UK government's Youth Mobility (Working Holiday) program and moved to Japan on the other side of the world. I landed in Tokyo with a suitcase and a phrasebook in hand, only having learnt a few words at this stage but managed to find work as an English language Instructor within 1 month of arriving.",
@@ -138,6 +147,23 @@ export default function Autobiography() {
           textAlign: "center",
         }}
       >
+        <div style={{ marginBottom: "2rem" }}>
+          <div style={{
+            width: "140px",
+            height: "140px",
+            borderRadius: "50%",
+            overflow: "hidden",
+            margin: "0 auto",
+            border: "4px solid var(--color-ndp-orange)",
+            boxShadow: "0 8px 32px rgba(0,0,0,0.15)",
+          }}>
+            <img
+              src="/20250322_151454.jpg"
+              alt="Sukhi Sahota"
+              style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "top" }}
+            />
+          </div>
+        </div>
         <span
           style={{
             fontFamily: "'Outfit', sans-serif",
@@ -199,6 +225,23 @@ export default function Autobiography() {
             >
               {section.title}
             </h2>
+
+            {section.image && (
+              <div style={{ marginBottom: "2rem" }}>
+                <div style={{ borderRadius: "1rem", overflow: "hidden", maxHeight: "420px" }}>
+                  <img
+                    src={section.image}
+                    alt={section.imageAlt}
+                    style={{ width: "100%", height: "420px", objectFit: "cover", objectPosition: "top", display: "block" }}
+                  />
+                </div>
+                {section.imageCaption && (
+                  <p style={{ fontFamily: "'Outfit', sans-serif", fontSize: "0.85rem", color: "var(--muted-foreground)", textAlign: "center", marginTop: "0.5rem" }}>
+                    {section.imageCaption}
+                  </p>
+                )}
+              </div>
+            )}
 
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "2rem", alignItems: "start" }}>
               <div>

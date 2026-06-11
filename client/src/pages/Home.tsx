@@ -12,8 +12,8 @@ import NewsletterSignup from "@/components/NewsletterSignup";
 
 // ─── Asset URLs ──────────────────────────────────────────────────────────────
 const CANDIDATE_PHOTO = "https://sukhisahota.ca/ndp-en/_assets/media/c95bbd1e799d9df9beab1ae666d484e4.jpg";
-const VANCOUVER = "https://d2xsxph8kpxj0f.cloudfront.net/310519663697652215/KTWnaZgXJ8mCfxSys5NDzn/vancouver-skyline-fw6WUe9bMtpg4A5dFpTnaw.webp";
-const COMMUNITY = "https://d2xsxph8kpxj0f.cloudfront.net/310519663697652215/KTWnaZgXJ8mCfxSys5NDzn/community-abstract-ZYWFQ6wx3cbmzxRJCSQJFH.webp";
+const CANVASSING_PHOTO = "/20250322_151454.jpg";
+const CLASSROOM_PHOTO = "/20250110_113015.jpg";
 
 // ─── Scroll reveal hook ───────────────────────────────────────────────────────
 function useReveal() {
@@ -341,8 +341,18 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Stats */}
+            {/* Photo + Stats */}
             <div className="space-y-4 lg:sticky lg:top-24">
+              <div className="relative rounded-2xl overflow-hidden shadow-xl aspect-[3/4]">
+                <img
+                  src={CANVASSING_PHOTO}
+                  alt="Sukhi Sahota canvassing door-to-door in Vancouver Granville"
+                  className="w-full h-full object-cover object-top"
+                />
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-charcoal/80 to-transparent p-4">
+                  <p className="text-white text-sm font-medium">Canvassing door-to-door in Vancouver Granville</p>
+                </div>
+              </div>
               <StatCard
                 value="7.5%"
                 label="NDP vote share in Vancouver Granville — 3rd highest for any non-incumbent Metro Vancouver riding"
@@ -392,10 +402,13 @@ export default function Home() {
             </div>
 
             <div className="order-1 lg:order-2 relative">
-              <div
-                className="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl"
-                style={{ backgroundImage: `url('${COMMUNITY}')`, backgroundSize: "cover", backgroundPosition: "center" }}
-              />
+              <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl">
+                <img
+                  src={CLASSROOM_PHOTO}
+                  alt="Sukhi Sahota with students in Hong Kong"
+                  className="w-full h-full object-cover"
+                />
+              </div>
               <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-orange/20 rounded-xl -z-10 hidden md:block" />
             </div>
           </div>
