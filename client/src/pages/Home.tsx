@@ -13,7 +13,7 @@ import NewsletterSignup from "@/components/NewsletterSignup";
 // ─── Asset URLs ──────────────────────────────────────────────────────────────
 const PORTRAIT_PHOTO = "/006A7069a.jpg";
 const CANVASSING_PHOTO = "/20250322_151454.jpg";
-const CLASSROOM_PHOTO = "/20250110_113015.jpg";
+const CLASSROOM_PHOTO = "/20250110_113015v2.jpg";
 
 // ─── Scroll reveal hook ───────────────────────────────────────────────────────
 function useReveal() {
@@ -413,7 +413,7 @@ export default function Home() {
               <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl">
                 <img
                   src={CLASSROOM_PHOTO}
-                  alt="Sukhi Sahota with students in Hong Kong"
+                  alt="Sukhi Sahota as a young person growing up in the UK"
                   className="w-full h-full object-cover"
                 />
               </div>
