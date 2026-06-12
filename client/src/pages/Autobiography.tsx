@@ -74,7 +74,7 @@ const sections: Section[] = [
       "I chose Vancouver over Toronto because I love hiking and landscape photography, so the West Coast is perfect for pursuing my passions and interests in beauty and nature while living in a sizeable, LGBTQ-friendly city with all its services.",
       "I have also noticed a notable shift since the pandemic within our community as a whole; many people have also experienced joblessness, discrimination, grief, housing insecurity as well and food insecurity like me, which in turn led me to work with other volunteers at a Food Bank to create and launch a food pantry outside the premises.",
       "I felt so elated when we launched the food pantry and saw the handwritten notes we received from those so stigmatized in society that would never be seen at a food bank. This further impressed on me the need to take on more work in serving the community at large.",
-      "I have been working for an Environmental NGO for nearly the last 3 years, and it gives me a sense of fulfilment that we can all make a difference individually as well as collectively at the same time.",
+      "I have just finished working for an Environmental NGO for the last 3 years, I gained a sense of fulfilment that we can all make a difference individually as well as collectively at the same time.",
     ],
     pullQuote: "We can all make a difference both individually and collectively.",
   },
