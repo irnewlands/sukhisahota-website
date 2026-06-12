@@ -115,7 +115,7 @@ export default function NewsletterSignup() {
               padding: "0.75rem 1.5rem",
               borderRadius: "4px",
               border: "none",
-              background: status === "success" ? "rgba(34, 197, 94, 0.9)" : "white",
+              background: status === "success" ? "rgba(34, 197, 94, 0.9)" : "black",
               color: status === "success" ? "white" : "var(--color-ndp-orange)",
               cursor: status === "loading" || status === "success" ? "not-allowed" : "pointer",
               transition: "all 0.18s",
