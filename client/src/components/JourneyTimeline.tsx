@@ -38,7 +38,7 @@ const journeyStops: TimelineStop[] = [
   {
     country: "Japan",
     period: "2010 – 2011",
-    years: "1 year and 2 momths",
+    years: "1 year and 2 months",
     icon: "🇯🇵",
     milestones: [
       "Moved to Tokyo independently",
@@ -83,7 +83,7 @@ const journeyStops: TimelineStop[] = [
   {
     country: "Hong Kong",
     period: "2016 – 2017",
-    years: "1 year and 4 momths",
+    years: "1 year and 4 months",
     icon: "🇭🇰",
     milestones: [
       "Witnessed Umbrella Movement aftermath",
