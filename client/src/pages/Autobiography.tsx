@@ -110,15 +110,17 @@ export default function Autobiography() {
         >
           <a
             href="/"
-            style={{
-              fontFamily: "'Fraunces', serif",
-              fontWeight: 700,
-              fontSize: "1.25rem",
-              color: "var(--foreground)",
-              textDecoration: "none",
-            }}
+            style={{ display: "flex", alignItems: "center", gap: "0.75rem", textDecoration: "none" }}
           >
-            Sukhi Sahota
+            <img src="/Forthepeople_-original.png" alt="For the People" style={{ height: "36px", width: "auto" }} />
+            <div style={{ display: "flex", flexDirection: "column" }}>
+              <span style={{ fontFamily: "'Fraunces', serif", fontWeight: 700, fontSize: "1.1rem", color: "var(--foreground)", lineHeight: 1.2 }}>
+                Sukhi Sahota
+              </span>
+              <span style={{ fontFamily: "'Outfit', sans-serif", fontSize: "0.7rem", fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--color-ndp-orange)" }}>
+                Former Federal Candidate
+              </span>
+            </div>
           </a>
           <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
             <LanguageSwitcher />

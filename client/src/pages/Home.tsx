@@ -77,13 +77,20 @@ function Nav() {
     >
       <div className="container flex items-center justify-between h-16">
         {/* Logo */}
-        <a href="#welcome" className="group flex flex-col no-underline">
-          <span className="font-serif font-bold text-lg text-charcoal group-hover:text-orange transition-colors">
-            Sukhi Sahota
-          </span>
-          <span className="text-xs font-semibold tracking-widest text-orange uppercase">
-            Former Federal Candidate
-          </span>
+        <a href="#welcome" className="group flex items-center gap-3 no-underline">
+          <img
+            src="/Forthepeople_-original.png"
+            alt="For the People"
+            className="h-9 w-auto flex-shrink-0"
+          />
+          <div className="flex flex-col">
+            <span className="font-serif font-bold text-lg text-charcoal group-hover:text-orange transition-colors leading-tight">
+              Sukhi Sahota
+            </span>
+            <span className="text-xs font-semibold tracking-widest text-orange uppercase">
+              Former Federal Candidate
+            </span>
+          </div>
         </a>
 
         {/* Desktop nav */}
