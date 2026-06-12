@@ -200,7 +200,7 @@ export default function Autobiography() {
             margin: "0 auto",
           }}
         >
-          A personal journey shaped by resilience, identity, and community — from the UK to the world and back again.
+          A personal journey shaped by resilience, identity, and community — from the UK to the world and finally Canada.
         </p>
       </section>
 
