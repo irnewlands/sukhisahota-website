@@ -242,7 +242,6 @@ export default function Home() {
       <section className="relative min-h-screen flex items-center pt-16 overflow-hidden bg-cream">
         {/* Decorative background shapes */}
         <div className="absolute top-0 right-0 w-1/2 h-full bg-orange/5 hidden lg:block" style={{ clipPath: "polygon(15% 0, 100% 0, 100% 100%, 0% 100%)" }} />
-        <div className="absolute bottom-20 left-10 w-24 h-24 border-4 border-orange/20 rounded-full hidden md:block" />
 
         <div className="container relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center py-12 md:py-20">
