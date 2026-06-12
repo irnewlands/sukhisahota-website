@@ -450,7 +450,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="mt-12 bg-white/10 p-8 rounded-xl">
+            <div className="mt-12 bg-orange-600 p-8 rounded-xl">
               <p className="font-serif text-xl md:text-2xl italic leading-relaxed">
                 "This is why I'm here — I vow to be a protector of the defenceless and vulnerable for the rest of my life, whatever service I can carry out is what will fulfil my purpose in life."
               </p>
