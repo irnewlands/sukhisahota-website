@@ -622,7 +622,7 @@ export default function Home() {
               </a>
               <a
                 href="mailto:info@sukhisahota.ca"
-                className="btn-outline-white"
+                className="btn-primary"
               >
                 Get in Touch
               </a>
