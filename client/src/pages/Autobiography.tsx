@@ -374,4 +374,3 @@ export default function Autobiography() {
     </div>
   );
 }
-Commit directly to the main branch
