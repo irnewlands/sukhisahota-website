@@ -210,8 +210,8 @@
     font-size: 0.9rem;
     letter-spacing: 0.02em;
     color: white;
-    background: transparent;
-    border: 2px solid white;
+    background: black;
+    border: 2px solid #f15a22;
     border-radius: 8px;
     text-decoration: none;
     transition: all 0.25s cubic-bezier(0.23, 1, 0.32, 1);
