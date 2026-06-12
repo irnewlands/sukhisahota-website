@@ -486,7 +486,7 @@ export default function Home() {
                 title="Healthcare"
                 points={[
                   "Universal pharmacare covering essential medicines within 4 years",
-                  "Cover diabetes medications and birth control immediately",
+                  "Cover diabetes medications and birth control for all Canadians irregardless of Geographic location",
                   "Pan-Canadian licensure for medical professionals",
                   "$5,000 tax credit for nurses and PSWs",
                   "Expand mental health coverage for psychotherapy and counselling"
