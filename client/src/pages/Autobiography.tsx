@@ -230,11 +230,11 @@ export default function Autobiography() {
 
             {section.image && (
               <div style={{ marginBottom: "2rem" }}>
-                <div style={{ borderRadius: "1rem", overflow: "hidden", maxHeight: "420px" }}>
+                <div style={{ borderRadius: "1rem", overflow: "visible", maxHeight: "none" }}>
                   <img
                     src={section.image}
                     alt={section.imageAlt}
-                    style={{ width: "100%", height: "420px", objectFit: "cover", objectPosition: "top", display: "block" }}
+                    style={{ width: "100%", height: "auto", objectFit: "contain", objectPosition: "center", display: "block" }}
                   />
                 </div>
                 {section.imageCaption && (
