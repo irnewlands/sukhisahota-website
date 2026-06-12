@@ -22,7 +22,7 @@ interface TimelineStop {
 const journeyStops: TimelineStop[] = [
   {
     country: "United Kingdom",
-    period: "1990s – 2013",
+    period: "1987 – 2010",
     years: "23 years",
     icon: "🇬🇧",
     milestones: [
@@ -37,8 +37,8 @@ const journeyStops: TimelineStop[] = [
   },
   {
     country: "Japan",
-    period: "2013 – 2014",
-    years: "1 year",
+    period: "2010 – 2011",
+    years: "1 year and 2 momths",
     icon: "🇯🇵",
     milestones: [
       "Moved to Tokyo independently",
@@ -52,8 +52,8 @@ const journeyStops: TimelineStop[] = [
   },
   {
     country: "Australia",
-    period: "2014 – 2016",
-    years: "2 years",
+    period: "2011 – 2014",
+    years: "2 years and 6 months",
     icon: "🇦🇺",
     milestones: [
       "Struggled with job discrimination",
@@ -67,8 +67,8 @@ const journeyStops: TimelineStop[] = [
   },
   {
     country: "New Zealand",
-    period: "2016 – 2017",
-    years: "1 year",
+    period: "2014 – 2016",
+    years: "2 years",
     icon: "🇳🇿",
     milestones: [
       "Thriving in accounting work",
@@ -82,8 +82,8 @@ const journeyStops: TimelineStop[] = [
   },
   {
     country: "Hong Kong",
-    period: "2017 – 2018",
-    years: "1 year",
+    period: "2016 – 2017",
+    years: "1 year and 4 momths",
     icon: "🇭🇰",
     milestones: [
       "Witnessed Umbrella Movement aftermath",
