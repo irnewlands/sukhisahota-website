@@ -46,9 +46,9 @@ const sections: Section[] = [
   },
   {
     title: "My Journey",
-    image: "/SAM_2551.JPG",
-    imageAlt: "Sukhi at a mountain summit at sunset",
-    imageCaption: "Summit at sunset — adventures across the world",
+    image: "/SAM_2552v2.JPG",
+    imageAlt: "Sukhi at a mountain summit at sunrise",
+    imageCaption: "Summit at sunrise at Mauna Kea in 2011 — adventures across the world",
     content: [
       "After having obtained a Diploma in Accounting & Finance and working for a few years, as well as seeing my siblings go into full-time government care, I wanted to learn more about myself and my connection to this world and society as a whole after being insulated in a secluded community for most of my childhood years.",
       "So I left the UK at 23, took advantage of the UK government's Youth Mobility (Working Holiday) program and moved to Japan on the other side of the world. I landed in Tokyo with a suitcase and a phrasebook in hand, only having learnt a few words at this stage but managed to find work as an English language Instructor within 1 month of arriving.",
