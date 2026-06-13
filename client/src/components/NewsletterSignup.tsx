@@ -23,12 +23,14 @@ export default function NewsletterSignup() {
     </h4>
 
     <p className="text-white/90">
-      Thank you for joining the mailing list. You'll receive future updates,
-      announcements, and opportunities to get involved.
+      Thank you for joining our community. Together we can build a fairer, more inclusive Canada.
     </p>
   </div>
 ) : (
+<>
 <form
+ </>
+)}
   onSubmit={async (e) => {
     e.preventDefault();
 
@@ -42,8 +44,8 @@ export default function NewsletterSignup() {
         mode: "no-cors",
       }
     );
-
-    setSubmitted(true);
+e.currentTarget.reset();
+setSubmitted(true);
   }}
   className="space-y-4 max-w-2xl mx-auto"
 >
@@ -81,7 +83,7 @@ export default function NewsletterSignup() {
             type="submit"
             className="rounded-md bg-black px-6 py-3 font-bold text-white hover:bg-charcoal transition"
           >
-            Subscribe
+            Stay Connected
           </button>
         </div>
 
@@ -89,7 +91,7 @@ export default function NewsletterSignup() {
         <input type="hidden" name="anticsrf" value="true" />
 
         <p className="text-sm text-white/80">
-          We respect your privacy. Unsubscribe at any time.
+          We respect your privacy. Unsubscribe at any time by e-mailing: info@sukhisahota.ca
         </p>
       </form>
     </div>
