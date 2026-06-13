@@ -14,11 +14,20 @@ export default function NewsletterSignup() {
       <p className="text-white/90 mb-6 max-w-2xl mx-auto">
         Get future campaign updates, event announcements, and grassroots organizing opportunities delivered to your inbox.
       </p>
-{submitted && (
-  <div className="mb-4 rounded-md bg-green-600 text-white p-3">
-    Thank you! You have successfully joined the mailing list.
+{submitted ? (
+  <div className="rounded-xl border border-white/30 bg-white/10 p-6 text-center">
+    <div className="text-3xl mb-2">✓</div>
+
+    <h4 className="font-serif text-2xl text-white font-bold mb-2">
+      You're In!
+    </h4>
+
+    <p className="text-white/90">
+      Thank you for joining the mailing list. You'll receive future updates,
+      announcements, and opportunities to get involved.
+    </p>
   </div>
-)}
+) : (
 <form
   onSubmit={async (e) => {
     e.preventDefault();
