@@ -27,10 +27,7 @@ export default function NewsletterSignup() {
     </p>
   </div>
 ) : (
-<>
 <form
- </>
-)}
   onSubmit={async (e) => {
     e.preventDefault();
 
@@ -44,6 +41,7 @@ export default function NewsletterSignup() {
         mode: "no-cors",
       }
     );
+   
 e.currentTarget.reset();
 setSubmitted(true);
   }}
