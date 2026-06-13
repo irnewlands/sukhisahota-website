@@ -47,7 +47,7 @@ export default function NewsletterSignup() {
               );
 
               e.currentTarget.reset();
-              setSubmitted(true);
+              alert("Thank you! You have successfully joined the mailing list.");
             } finally {
               setSubmitting(false);
             }
