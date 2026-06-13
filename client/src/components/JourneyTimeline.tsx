@@ -110,7 +110,7 @@ const journeyStops: TimelineStop[] = [
     ],
     description:
       "Found home on the West Coast. Pursued passions in nature, served the community, and now running for BC Regional Rep Executive to organize from the grassroots.",
-    color: "var(--color-ndp-orange)",
+    color: "#22c55e",
   },
 ];
 
