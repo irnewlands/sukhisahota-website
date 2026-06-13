@@ -1,6 +1,7 @@
 import { Mail } from "lucide-react";
-
+import { useState } from "react";
 export default function NewsletterSignup() {
+ const [submitted, setSubmitted] = useState(false);
   return (
     <div className="rounded-xl border border-white/30 bg-white/10 p-6 md:p-8 text-center">
       <div className="flex items-center justify-center gap-3 mb-4">
@@ -13,12 +14,30 @@ export default function NewsletterSignup() {
       <p className="text-white/90 mb-6 max-w-2xl mx-auto">
         Get future campaign updates, event announcements, and grassroots organizing opportunities delivered to your inbox.
       </p>
+{submitted && (
+  <div className="mb-4 rounded-md bg-green-600 text-white p-3">
+    Thank you! You have successfully joined the mailing list.
+  </div>
+)}
+<form
+  onSubmit={async (e) => {
+    e.preventDefault();
 
-      <form
-        action="https://assets.mailerlite.com/jsonp/2430134/forms/190139921541891187/subscribe"
-        method="post"
-        className="space-y-4 max-w-2xl mx-auto"
-      >
+    const formData = new FormData(e.currentTarget);
+
+    await fetch(
+      "https://assets.mailerlite.com/jsonp/2430134/forms/190139921541891187/subscribe",
+      {
+        method: "POST",
+        body: formData,
+        mode: "no-cors",
+      }
+    );
+
+    setSubmitted(true);
+  }}
+  className="space-y-4 max-w-2xl mx-auto"
+>
         <div className="grid md:grid-cols-2 gap-4">
           <input
             type="text"
