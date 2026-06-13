@@ -402,13 +402,13 @@ export default function Home() {
                 </p>
               </div>
 
-              <a
-                href="/autobiography"
-                className="inline-flex items-center gap-2 mt-8 font-semibold text-orange hover:text-amber transition-colors group"
-              >
-                Read Full Autobiography
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </a>
+            <a
+  href="/autobiography"
+  className="inline-flex items-center gap-3 rounded-2xl bg-[#f25c05] px-8 py-5 text-white font-bold text-xl shadow-lg hover:scale-105 transition"
+>
+  Learn More About My Journey
+  <span>→</span>
+</a>
 
               <div className="mt-10">
                 <QuoteBlock text="We can all make a difference both individually and collectively." />
