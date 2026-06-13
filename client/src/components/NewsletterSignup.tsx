@@ -92,6 +92,7 @@ setSubmitted(true);
           We respect your privacy. Unsubscribe at any time by e-mailing: info@sukhisahota.ca
         </p>
       </form>
-    </div>
+)}
+ </div>
   );
 }
