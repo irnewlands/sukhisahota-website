@@ -317,13 +317,13 @@ export default function Autobiography() {
 
       {/* CTA Footer */}
       <section
-        style={{
-          backgroundColor: "var(--color-ndp-charcoal)",
-          color: "white",
-          padding: "3rem 2rem",
-          textAlign: "center",
-        }}
-      >
+  style={{
+    backgroundColor: "#111827",
+    color: "white",
+    padding: "3rem 2rem",
+    textAlign: "center",
+  }}
+>
         <h3
           style={{
             fontFamily: "'Fraunces', serif",
@@ -334,15 +334,15 @@ export default function Autobiography() {
         >
           Ready to support grassroots change?
         </h3>
-        <p
-          style={{
-            fontFamily: "'Outfit', sans-serif",
-            fontSize: "1rem",
-            lineHeight: 1.8,
-            marginBottom: "2rem",
-            color: "oklch(0.78 0.01 285)",
-          }}
-        >
+       <p
+  style={{
+    fontFamily: "'Outfit', sans-serif",
+    fontSize: "1rem",
+    lineHeight: 1.8,
+    marginBottom: "2rem",
+    color: "#d1d5db",
+  }}
+>
           Join Sukhi in building a more organized, inclusive NDP from the ground up.
         </p>
         <a
