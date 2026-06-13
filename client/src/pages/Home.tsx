@@ -12,7 +12,7 @@ import NewsletterSignup from "@/components/NewsletterSignup";
 
 // ─── Asset URLs ──────────────────────────────────────────────────────────────
 const PORTRAIT_PHOTO = "/006A7069a.jpg";
-const CANVASSING_PHOTO = "/20250322_151454.jpg";
+const CANVASSING_PHOTO = "/151341v3.jpg";
 const CLASSROOM_PHOTO = "/20250110_113015v2.jpg";
 
 // ─── Scroll reveal hook ───────────────────────────────────────────────────────
