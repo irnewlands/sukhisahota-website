@@ -17,7 +17,6 @@ export default function NewsletterSignup() {
       <form
         action="https://assets.mailerlite.com/jsonp/2430134/forms/190139921541891187/subscribe"
         method="post"
-        target="_blank"
         className="space-y-4 max-w-2xl mx-auto"
       >
         <div className="grid md:grid-cols-2 gap-4">
@@ -27,7 +26,7 @@ export default function NewsletterSignup() {
             placeholder="First name"
             required
             autoComplete="given-name"
-            className="w-full rounded-md px-4 py-3 text-charcoal"
+            className="w-full rounded-md px-4 py-3 bg-white text-black border-2 border-white"
           />
 
           <input
@@ -36,7 +35,7 @@ export default function NewsletterSignup() {
             placeholder="Last name"
             required
             autoComplete="family-name"
-            className="w-full rounded-md px-4 py-3 text-charcoal"
+            className="w-full rounded-md px-4 py-3 bg-white text-black border-2 border-white"
           />
         </div>
 
@@ -47,7 +46,7 @@ export default function NewsletterSignup() {
             placeholder="your@email.com"
             required
             autoComplete="email"
-            className="flex-1 rounded-md px-4 py-3 text-charcoal"
+            className="w-full rounded-md px-4 py-3 bg-white text-black border-2 border-white"
           />
 
           <button
