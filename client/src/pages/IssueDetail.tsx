@@ -1,3 +1,5 @@
+import SiteHeader from "@/components/SiteHeader";
+import SiteFooter from "@/components/SiteFooter";
 import { issueDetails } from "@/data/issues";
 import { useLocation } from "wouter";
 
@@ -17,7 +19,10 @@ export default function IssueDetail() {
     );
   }
 
-  return (
+return (
+  <>
+    <SiteHeader />
+    
     <main className="min-h-screen bg-[#f8f1e7] text-[#111827]">
       <section className="mx-auto max-w-4xl px-6 py-20">
         <a href="/issues" className="mb-8 inline-block font-bold text-[#e85d04]">
@@ -83,7 +88,10 @@ export default function IssueDetail() {
             </div>
           </section>
         )}
-      </section>
+       </section>
     </main>
+
+    <SiteFooter />
+  </>
   );
 }
