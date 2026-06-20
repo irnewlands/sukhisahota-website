@@ -92,58 +92,6 @@ export default function Autobiography() {
     <SiteHeader />
       
     <div style={{ minHeight: "100vh", backgroundColor: "var(--background)", color: "var(--foreground)" }}>
-      {/* Header / Navigation */}
-      <header
-        style={{
-          position: "sticky",
-          top: 0,
-          zIndex: 50,
-          backgroundColor: "var(--background)",
-          borderBottom: "1px solid var(--border)",
-          backdropFilter: "blur(8px)",
-        }}
-      >
-        <nav
-          style={{
-            maxWidth: "1280px",
-            margin: "0 auto",
-            padding: "1rem 2rem",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-between",
-          }}
-        >
-          <a
-            href="/"
-            style={{ display: "flex", alignItems: "center", gap: "0.75rem", textDecoration: "none" }}
-          >
-            <img src="/Forthepeople_-original.png" alt="For the People" style={{ height: "36px", width: "auto" }} />
-            <div style={{ display: "flex", flexDirection: "column" }}>
-              <span style={{ fontFamily: "'Fraunces', serif", fontWeight: 700, fontSize: "1.1rem", color: "var(--foreground)", lineHeight: 1.2 }}>
-                Sukhi Sahota
-              </span>
-              <span style={{ fontFamily: "'Outfit', sans-serif", fontSize: "0.7rem", fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--color-ndp-orange)" }}>
-                Former Federal Candidate
-              </span>
-            </div>
-          </a>
-          <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
-            <LanguageSwitcher />
-            <a
-              href="/"
-              style={{
-                fontFamily: "'Outfit', sans-serif",
-                fontSize: "0.95rem",
-                color: "var(--color-ndp-orange)",
-                textDecoration: "none",
-                fontWeight: 500,
-              }}
-            >
-              ← Back to Home
-            </a>
-          </div>
-        </nav>
-      </header>
 
       {/* Hero Section */}
       <section
