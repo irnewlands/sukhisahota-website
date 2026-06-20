@@ -1,4 +1,4 @@
-// Core website migration completed - June 2026
+// Core website migration completed - 20 June 2026
 // Issues architecture completed milestone.
 export const issueDetails = {
   climate: {
