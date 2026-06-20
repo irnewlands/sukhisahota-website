@@ -2,6 +2,7 @@
 export const issueDetails = {
   climate: {
     title: "Climate & Environment",
+    related: ["housing", "healthcare", "reconciliation"],
     summary:
       "Real climate action means ending fossil fuel subsidies, investing in renewable energy, and protecting communities from climate breakdown.",
     sections: [
@@ -18,6 +19,7 @@ export const issueDetails = {
 
   housing: {
     title: "Housing & Affordability",
+    related: ["healthcare", "social-safety-net", "economy"],
     summary:
       "Everyone deserves stable housing, affordable groceries, and an economy that works for working people.",
     sections: [
@@ -34,6 +36,7 @@ export const issueDetails = {
 
    economy: {
     title: "Economic Security",
+    related: ["social-safety-net", "housing"], 
     summary:
       "We need an economy where workers are respected, wealth is taxed fairly, and public investment builds long-term community prosperity.",
     sections: [
@@ -50,6 +53,7 @@ export const issueDetails = {
 
   democracy: {
     title: "Democracy & Electoral Reform",
+    related: ["sovereignty", "ai"],
     summary:
       "Grassroots democracy must be more than a slogan. People should have real power in political parties, communities, and public institutions.",
     sections: [
@@ -66,6 +70,7 @@ export const issueDetails = {
 
   ai: {
     title: "Technology & Artificial Intelligence",
+    related: ["democracy", "economy"],
     summary:
       "AI and emerging technologies must be governed in the public interest, with transparency, worker protections, and democratic accountability.",
     sections: [
@@ -82,6 +87,7 @@ export const issueDetails = {
 
   "lgbtq-rights": {
     title: "LGBTQ+ Rights",
+    related: ["healthcare", "social-safety-net"],
     summary:
       "Queer and trans people deserve safety, dignity, healthcare, legal protection, and full participation in public life.",
     sections: [
@@ -98,6 +104,7 @@ export const issueDetails = {
 
   reconciliation: {
     title: "Indigenous Reconciliation",
+    related: ["climate", "social-safety-net"],
     summary:
       "Reconciliation requires action, respect for Indigenous rights, clean water, land protection, and meaningful consent.",
     sections: [
@@ -114,6 +121,7 @@ export const issueDetails = {
 
   sovereignty: {
     title: "Canadian Sovereignty",
+    related: ["democracy", "economy"],
     summary:
       "Canada must protect its public institutions, economic independence, democratic values, and ability to act in the public interest.",
     sections: [
@@ -130,6 +138,7 @@ export const issueDetails = {
 
   "social-safety-net": {
     title: "Social Safety Net",
+    related: ["healthcare", "housing", "economy"],
     summary:
       "A strong society is measured by how well it supports people during illness, disability, unemployment, caregiving, grief, and crisis.",
     sections: [
@@ -145,6 +154,7 @@ export const issueDetails = {
   }, 
   healthcare: {
     title: "Healthcare",
+    related: ["social-safety-net", "housing"],
     summary:
       "Public healthcare must be protected and expanded, including pharmacare, dental care, mental health care, and reproductive healthcare.",
     sections: [
