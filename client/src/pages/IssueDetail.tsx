@@ -31,9 +31,15 @@ return (
     
     <main className="min-h-screen bg-[#f8f1e7] text-[#111827]">
       <section className="mx-auto max-w-4xl px-6 py-20">
-        <a href="/issues" className="mb-8 inline-block font-bold text-[#e85d04]">
-          ← Back to Issues
-        </a>
+       <div className="mb-8 flex flex-wrap items-center justify-between gap-4">
+  <a href="/issues" className="font-bold text-[#e85d04]">
+    ← Back to Issues
+  </a>
+
+  <a href="/" className="font-bold text-[#e85d04]">
+    Home →
+  </a>
+</div>
 
         <p className="mb-4 text-sm font-bold uppercase tracking-[0.25em] text-[#e85d04]">
           Issues & Priorities
