@@ -5,7 +5,12 @@ export default function IssueDetail() {
   const [location] = useLocation();
   const slug = location.split("/").pop() || "";
   const issue = issueDetails[slug as keyof typeof issueDetails];
-
+  const relatedIssues =
+  issue?.related?.map(
+    (relatedSlug) =>
+      issueDetails[relatedSlug as keyof typeof issueDetails]
+  ) || [];
+  
   if (!issue) {
     return (
       <main className="min-h-screen bg-[#f8f1e7] px-6 py-20">
@@ -48,7 +53,37 @@ export default function IssueDetail() {
             </article>
           ))}
         </div>
-      </section>
-    </main>
-  );
-}
+       {issue.related && issue.related.length > 0 && (
+          <section className="mt-16">
+            <h2 className="mb-8 font-serif text-4xl font-bold">
+              Related Issues
+            </h2>
+
+            <div className="grid gap-6 md:grid-cols-2">
+              {issue.related.map((relatedSlug) => {
+                const related =
+                  issueDetails[relatedSlug as keyof typeof issueDetails];
+
+                return (
+                  <a
+                    key={relatedSlug}
+                    href={`/issues/${relatedSlug}`}
+                    className="block rounded-3xl bg-white p-6 shadow-lg transition hover:-translate-y-1 hover:shadow-xl"
+                  >
+                    <h3 className="mb-3 font-serif text-2xl font-bold">
+                      {related.title}
+                    </h3>
+
+                    <p className="leading-7 text-[#4b5563]">
+                      {related.summary}
+                    </p>
+
+                    <p className="mt-4 font-bold text-[#e85d04]">
+                      Learn more →
+                    </p>
+                  </a>
+                );
+              })}
+            </div>
+          </section>
+        )}    
