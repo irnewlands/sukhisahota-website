@@ -1,3 +1,4 @@
+// Issues architecture completed milestone.
 export const issueDetails = {
   climate: {
     title: "Climate & Environment",
