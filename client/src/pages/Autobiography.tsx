@@ -1,3 +1,5 @@
+import SiteHeader from "@/components/SiteHeader";
+import SiteFooter from "@/components/SiteFooter";
 import { useEffect } from "react";
 import JourneyTimeline from "@/components/JourneyTimeline";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
@@ -86,6 +88,8 @@ export default function Autobiography() {
   }, []);
 
   return (
+    <>
+    <SiteHeader />
     <div style={{ minHeight: "100vh", backgroundColor: "var(--background)", color: "var(--foreground)" }}>
       {/* Header / Navigation */}
       <header
@@ -372,5 +376,6 @@ export default function Autobiography() {
         </a>
       </section>
     </div>
-  );
+  </main>
+);
 }
