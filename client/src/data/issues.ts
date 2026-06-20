@@ -5,6 +5,12 @@ export const issueDetails = {
     related: ["housing", "healthcare", "reconciliation"],
     summary:
       "Real climate action means ending fossil fuel subsidies, investing in renewable energy, and protecting communities from climate breakdown.",
+    priorities: [
+  "End fossil fuel subsidies",
+  "Invest in renewable energy",
+  "Protect land, water, and air",
+  "Support communities facing climate impacts",
+],
     sections: [
       {
         heading: "Why this matters",
@@ -22,6 +28,12 @@ export const issueDetails = {
     related: ["healthcare", "social-safety-net", "economy"],
     summary:
       "Everyone deserves stable housing, affordable groceries, and an economy that works for working people.",
+    priorities: [
+  "Build more non-market and co-op housing",
+  "Strengthen renter protections",
+  "Reduce barriers to housing construction",
+  "Tackle speculation and housing financialization",
+],
     sections: [
       {
         heading: "Why this matters",
@@ -39,6 +51,12 @@ export const issueDetails = {
     related: ["social-safety-net", "housing"], 
     summary:
       "We need an economy where workers are respected, wealth is taxed fairly, and public investment builds long-term community prosperity.",
+     priorities: [
+  "Support good-paying union jobs",
+  "Invest in productivity and innovation",
+  "Strengthen worker protections",
+  "Build an economy that works for everyone",
+],
     sections: [
       {
         heading: "Why this matters",
@@ -56,6 +74,12 @@ export const issueDetails = {
     related: ["sovereignty", "ai"],
     summary:
       "Grassroots democracy must be more than a slogan. People should have real power in political parties, communities, and public institutions.",
+    priorities: [
+  "Electoral reform and proportional representation",
+  "Increase transparency and accountability",
+  "Protect democratic institutions",
+  "Encourage greater civic participation",
+],
     sections: [
       {
         heading: "Why this matters",
@@ -73,6 +97,12 @@ export const issueDetails = {
     related: ["democracy", "economy"],
     summary:
       "AI and emerging technologies must be governed in the public interest, with transparency, worker protections, and democratic accountability.",
+    priorities: [
+  "Establish clear AI regulations",
+  "Protect privacy and personal data",
+  "Promote responsible innovation",
+  "Prepare workers for technological change",
+],
     sections: [
       {
         heading: "Why this matters",
@@ -90,6 +120,12 @@ export const issueDetails = {
     related: ["healthcare", "social-safety-net"],
     summary:
       "Queer and trans people deserve safety, dignity, healthcare, legal protection, and full participation in public life.",
+    priorities: [
+  "Defend LGBTQ+ equality and inclusion",
+  "Combat discrimination and hate",
+  "Support LGBTQ+ youth",
+  "Protect access to healthcare and services",
+],
     sections: [
       {
         heading: "Why this matters",
@@ -107,6 +143,12 @@ export const issueDetails = {
     related: ["climate", "social-safety-net"],
     summary:
       "Reconciliation requires action, respect for Indigenous rights, clean water, land protection, and meaningful consent.",
+    priorities: [
+  "Implement Truth and Reconciliation Calls to Action",
+  "Respect Indigenous self-determination",
+  "Ensure clean water and essential infrastructure",
+  "Strengthen nation-to-nation relationships",
+],
     sections: [
       {
         heading: "Why this matters",
@@ -124,6 +166,12 @@ export const issueDetails = {
     related: ["democracy", "economy"],
     summary:
       "Canada must protect its public institutions, economic independence, democratic values, and ability to act in the public interest.",
+    priorities: [
+  "Strengthen democratic institutions",
+  "Protect critical infrastructure",
+  "Support domestic economic resilience",
+  "Promote an independent foreign policy",
+],
     sections: [
       {
         heading: "Why this matters",
@@ -141,6 +189,12 @@ export const issueDetails = {
     related: ["healthcare", "housing", "economy"],
     summary:
       "A strong society is measured by how well it supports people during illness, disability, unemployment, caregiving, grief, and crisis.",
+    priorities: [
+  "Strengthen income supports",
+  "Reduce poverty and food insecurity",
+  "Expand disability supports",
+  "Ensure dignity for vulnerable Canadians",
+],
     sections: [
       {
         heading: "Why this matters",
@@ -157,6 +211,12 @@ export const issueDetails = {
     related: ["social-safety-net", "housing"],
     summary:
       "Public healthcare must be protected and expanded, including pharmacare, dental care, mental health care, and reproductive healthcare.",
+    priorities: [
+  "Expand universal pharmacare",
+  "Improve access to mental health services",
+  "Address healthcare staffing shortages",
+  "Reduce wait times for patients",
+],
     sections: [
       {
         heading: "Why this matters",
