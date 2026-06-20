@@ -4,12 +4,15 @@ export default function About() {
   return (
      <>
     <SiteHeader />
+       
     <main className="min-h-screen bg-[#f8f1e7] text-[#111827]">
-      ...existing page content...
+      {...existing page content...}
     </main>
+       
     <SiteFooter />
   </>
 );
+}  
     <main className="min-h-screen bg-[#f8f1e7] text-[#111827]">
       <section className="mx-auto max-w-5xl px-6 py-20">
         <p className="mb-4 text-sm font-bold uppercase tracking-[0.25em] text-[#e85d04]">
