@@ -36,37 +36,22 @@ function useReveal() {
 
 // ─── Nav ──────────────────────────────────────────────────────────────────────
 const NAV_LINKS = [
-  { label: "Welcome", href: "#welcome" },
-  { label: "About", href: "#about" },
-  { label: "Why I Run", href: "#why" },
-  { label: "Platform", href: "#platform" },
-  { label: "Vision", href: "#stand" },
-  { label: "Join", href: "#involved" },
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
+  { label: "Election 2025", href: "/election-2025" },
+  { label: "Renewal", href: "/renewal-report" },
+  { label: "Issues", href: "/issues" },
+  { label: "Get Involved", href: "/get-involved" },
 ];
 
 function Nav() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [active, setActive] = useState("");
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 48);
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
-  useEffect(() => {
-    const sections = NAV_LINKS.map((l) => document.querySelector(l.href));
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((e) => {
-          if (e.isIntersecting) setActive(e.target.id);
-        });
-      },
-      { rootMargin: "-40% 0px -50% 0px" }
-    );
-    sections.forEach((s) => s && observer.observe(s));
-    return () => observer.disconnect();
   }, []);
 
   return (
@@ -77,7 +62,7 @@ function Nav() {
     >
       <div className="container flex items-center justify-between h-16">
         {/* Logo */}
-        <a href="#welcome" className="group flex items-center gap-3 no-underline">
+        <a href="/" className="group flex items-center gap-3 no-underline">
           <img
             src="/Forthepeople_-original.png"
             alt="For the People"
@@ -99,11 +84,7 @@ function Nav() {
             <a
               key={l.href}
               href={l.href}
-              className={`nav-link px-3 py-2 text-sm font-medium rounded transition-colors ${
-                active === l.href.slice(1)
-                  ? "text-orange"
-                  : "text-charcoal hover:text-orange"
-              }`}
+              className="nav-link px-3 py-2 text-sm font-medium rounded transition-colors text-charcoal hover:text-orange"
             >
               {l.label}
             </a>
@@ -111,8 +92,8 @@ function Nav() {
           <div className="ml-2">
             <LanguageSwitcher />
           </div>
-          <a href="mailto:info@sukhisahota.ca" className="btn-primary ml-3 text-sm py-2 px-4">
-            Contact
+          <a href="/get-involved" className="btn-primary ml-3 text-sm py-2 px-4">
+            Join
           </a>
         </nav>
 
@@ -136,7 +117,7 @@ function Nav() {
       {open && (
         <div className="bg-cream/98 border-t border-border md:hidden">
           <div className="container py-4">
-            {NAV_LINKS.map((l) => (
+            
               <a
                 key={l.href}
                 href={l.href}
