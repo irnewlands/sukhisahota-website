@@ -141,6 +141,10 @@ function Nav() {
     </div>
   </div>
 )}
+</header>
+  );
+}
+           
 // ─── Stat Card Component ───────────────────────────────────────────────────────
 function StatCard({ value, label }: { value: string; label: string }) {
   return (
