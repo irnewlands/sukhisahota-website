@@ -1,53 +1,21 @@
 const issues = [
   {
     title: "Climate & Environment",
+    slug: "climate",
     description:
       "Real climate action means ending fossil fuel subsidies, investing in renewable energy, and protecting communities from climate breakdown.",
   },
   {
     title: "Housing & Affordability",
+    slug: "housing",
     description:
-      "Everyone deserves stable housing, affordable groceries, and an economy that works for working people, not just investors and speculators.",
+      "Everyone deserves stable housing, affordable groceries, and an economy that works for working people.",
   },
   {
     title: "Healthcare",
+    slug: "healthcare",
     description:
       "Public healthcare must be protected and expanded, including pharmacare, dental care, mental health care, and reproductive healthcare.",
-  },
-  {
-    title: "Social Safety Net",
-    description:
-      "A strong society is measured by how well it supports people during illness, disability, unemployment, caregiving, grief, and crisis.",
-  },
-  {
-    title: "Economic Security",
-    description:
-      "We need an economy where workers are respected, wealth is taxed fairly, and public investment builds long-term community prosperity.",
-  },
-  {
-    title: "Democracy & Electoral Reform",
-    description:
-      "Grassroots democracy must be more than a slogan. People should have real power in political parties, communities, and public institutions.",
-  },
-  {
-    title: "Technology & Artificial Intelligence",
-    description:
-      "AI and emerging technologies must be governed in the public interest, with transparency, worker protections, and democratic accountability.",
-  },
-  {
-    title: "LGBTQ+ Rights",
-    description:
-      "Queer and trans people deserve safety, dignity, healthcare, legal protection, and full participation in public life.",
-  },
-  {
-    title: "Indigenous Reconciliation",
-    description:
-      "Reconciliation requires action, respect for Indigenous rights, clean water, land protection, and meaningful consent.",
-  },
-  {
-    title: "Canadian Sovereignty",
-    description:
-      "Canada must protect its public institutions, economic independence, democratic values, and ability to act in the public interest.",
   },
 ];
 
@@ -71,9 +39,10 @@ export default function Issues() {
 
         <div className="grid gap-6 md:grid-cols-2">
           {issues.map((issue) => (
-            <article
+            <a
               key={issue.title}
-              className="rounded-3xl bg-white p-8 shadow-lg transition hover:-translate-y-1 hover:shadow-xl"
+              href={`/issues/${issue.slug}`}
+              className="block rounded-3xl bg-white p-8 shadow-lg transition hover:-translate-y-1 hover:shadow-xl no-underline text-inherit"
             >
               <h2 className="mb-4 font-serif text-3xl font-bold">
                 {issue.title}
@@ -82,7 +51,11 @@ export default function Issues() {
               <p className="text-lg leading-8 text-[#4b5563]">
                 {issue.description}
               </p>
-            </article>
+
+              <p className="mt-6 font-bold text-[#e85d04]">
+                Learn more →
+              </p>
+            </a>
           ))}
         </div>
       </section>
