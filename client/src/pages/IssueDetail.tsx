@@ -5,12 +5,7 @@ export default function IssueDetail() {
   const [location] = useLocation();
   const slug = location.split("/").pop() || "";
   const issue = issueDetails[slug as keyof typeof issueDetails];
-  const relatedIssues =
-  issue?.related?.map(
-    (relatedSlug) =>
-      issueDetails[relatedSlug as keyof typeof issueDetails]
-  ) || [];
-  
+
   if (!issue) {
     return (
       <main className="min-h-screen bg-[#f8f1e7] px-6 py-20">
@@ -53,7 +48,8 @@ export default function IssueDetail() {
             </article>
           ))}
         </div>
-       {issue.related && issue.related.length > 0 && (
+
+        {issue.related && issue.related.length > 0 && (
           <section className="mt-16">
             <h2 className="mb-8 font-serif text-4xl font-bold">
               Related Issues
@@ -86,4 +82,8 @@ export default function IssueDetail() {
               })}
             </div>
           </section>
-        )}    
+        )}
+      </section>
+    </main>
+  );
+}
