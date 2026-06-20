@@ -90,6 +90,7 @@ export default function Autobiography() {
   return (
     <>
     <SiteHeader />
+      
     <div style={{ minHeight: "100vh", backgroundColor: "var(--background)", color: "var(--foreground)" }}>
       {/* Header / Navigation */}
       <header
@@ -376,6 +377,8 @@ export default function Autobiography() {
         </a>
       </section>
     </div>
-  </main>
-);
+
+      <SiteFooter />
+    </>
+  );
 }
