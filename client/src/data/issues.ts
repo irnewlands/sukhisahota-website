@@ -3,7 +3,7 @@ export const issueDetails = {
   climate: {
     title: "Climate & Environment",
     related: ["housing", "healthcare", "reconciliation"],
-    summary: "...",
+    summary:
       "Real climate action means ending fossil fuel subsidies, investing in renewable energy, and protecting communities from climate breakdown.",
     sections: [
       {
