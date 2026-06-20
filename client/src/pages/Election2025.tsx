@@ -1,5 +1,10 @@
+import SiteHeader from "@/components/SiteHeader";
+import SiteFooter from "@/components/SiteFooter";
 export default function Election2025() {
   return (
+    <>
+     <SiteHeader />
+
     <main className="min-h-screen bg-[#f8f1e7] text-[#111827]">
       <section className="mx-auto max-w-5xl px-6 py-20">
         <p className="mb-4 text-sm font-bold uppercase tracking-[0.25em] text-[#e85d04]">
@@ -124,5 +129,8 @@ export default function Election2025() {
         </div>
       </section>
     </main>
-  );
+
+<SiteFooter />
+</>
+);
 }
