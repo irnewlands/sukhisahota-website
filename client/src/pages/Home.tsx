@@ -113,36 +113,34 @@ function Nav() {
         </button>
       </div>
 
-      {/* Mobile drawer */}
-      {open && (
-        <div className="bg-cream/98 border-t border-border md:hidden">
-          <div className="container py-4">
-            
-              <a
-                key={l.href}
-                href={l.href}
-                onClick={() => setOpen(false)}
-                className="block py-3 text-base font-medium text-charcoal border-b border-border"
-              >
-                {l.label}
-              </a>
-            ))}
-            <div className="py-3 border-b border-border">
-              <LanguageSwitcher />
-            </div>
-            <a
-              href="mailto:info@sukhisahota.ca"
-              className="block mt-4 py-3 text-center font-semibold text-white bg-orange rounded"
-            >
-              Contact
-            </a>
-          </div>
-        </div>
-      )}
-    </header>
-  );
-}
+     {/* Mobile drawer */}
+{open && (
+  <div className="bg-cream/98 border-t border-border md:hidden">
+    <div className="container py-4">
+      {NAV_LINKS.map((l) => (
+        <a
+          key={l.href}
+          href={l.href}
+          onClick={() => setOpen(false)}
+          className="block py-3 text-base font-medium text-charcoal border-b border-border"
+        >
+          {l.label}
+        </a>
+      ))}
 
+      <div className="py-3 border-b border-border">
+        <LanguageSwitcher />
+      </div>
+
+      <a
+        href="/get-involved"
+        className="block mt-4 py-3 text-center font-semibold text-white bg-orange rounded"
+      >
+        Join
+      </a>
+    </div>
+  </div>
+)}
 // ─── Stat Card Component ───────────────────────────────────────────────────────
 function StatCard({ value, label }: { value: string; label: string }) {
   return (
