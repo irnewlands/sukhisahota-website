@@ -40,6 +40,24 @@ return (
         <p className="mb-12 text-xl leading-8 text-[#374151]">
           {issue.summary}
         </p>
+        {issue.priorities && issue.priorities.length > 0 && (
+  <section className="mb-12 rounded-3xl bg-[#111827] p-8 text-white shadow-xl">
+    <h2 className="mb-6 font-serif text-3xl font-bold">
+      Key Priorities
+    </h2>
+
+    <div className="grid gap-4 md:grid-cols-2">
+      {issue.priorities.map((priority) => (
+        <div
+          key={priority}
+          className="rounded-2xl bg-white/10 p-4 text-lg leading-7"
+        >
+          ✓ {priority}
+        </div>
+      ))}
+    </div>
+  </section>
+)}
 
         <div className="space-y-8">
           {issue.sections.map((section) => (
