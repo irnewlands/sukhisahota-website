@@ -12,6 +12,7 @@ import Election2025 from "./pages/Election2025";
 import RenewalReport from "./pages/RenewalReport";
 import Issues from "./pages/Issues";
 import GetInvolved from "./pages/GetInvolved";
+import IssueDetail from "./pages/IssueDetail";
 
 function Router() {
   return (
@@ -24,6 +25,7 @@ function Router() {
       <Route path={"/renewal-report"} component={RenewalReport} />
       <Route path={"/issues"} component={Issues} />
       <Route path={"/get-involved"} component={GetInvolved} />
+      <Route path={"/issues/:slug"} component={IssueDetail} />
       <Route path={"/404"} component={NotFound} />
       <Route component={NotFound} />
     </Switch>
