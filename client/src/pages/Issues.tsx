@@ -17,6 +17,48 @@ const issues = [
     description:
       "Public healthcare must be protected and expanded, including pharmacare, dental care, mental health care, and reproductive healthcare.",
   },
+  {
+    title: "Economic Security",
+    slug: "economy",
+    description:
+      "Workers, families, small businesses, and communities should be at the centre of economic decision-making.",
+  },
+  {
+    title: "Democracy & Electoral Reform",
+    slug: "democracy",
+    description:
+      "Grassroots democracy must be more than a slogan. People should have real power in political parties and public institutions.",
+  },
+  {
+    title: "Technology & Artificial Intelligence",
+    slug: "ai",
+    description:
+      "AI and emerging technologies must be governed in the public interest, with transparency and worker protections.",
+  },
+  {
+    title: "LGBTQ+ Rights",
+    slug: "lgbtq-rights",
+    description:
+      "Queer and trans people deserve safety, dignity, healthcare, legal protection, and full participation in public life.",
+  },
+  {
+    title: "Indigenous Reconciliation",
+    slug: "reconciliation",
+    description:
+      "Reconciliation requires action, respect for Indigenous rights, clean water, land protection, and meaningful consent.",
+  },
+  {
+    title: "Canadian Sovereignty",
+    slug: "sovereignty",
+    description:
+      "Canada must protect its public institutions, economic independence, democratic values, and ability to act in the public interest.",
+  },
+  {
+    title: "Social Safety Net",
+    slug: "social-safety-net",
+    description:
+      "A strong society is measured by how well it supports people during illness, disability, unemployment, caregiving, grief, and crisis.",
+  },
 ];
 
 export default function Issues() {
@@ -42,7 +84,7 @@ export default function Issues() {
             <a
               key={issue.title}
               href={`/issues/${issue.slug}`}
-              className="block rounded-3xl bg-white p-8 shadow-lg transition hover:-translate-y-1 hover:shadow-xl no-underline text-inherit"
+              className="block rounded-3xl bg-white p-8 text-inherit no-underline shadow-lg transition hover:-translate-y-1 hover:shadow-xl"
             >
               <h2 className="mb-4 font-serif text-3xl font-bold">
                 {issue.title}
@@ -52,9 +94,7 @@ export default function Issues() {
                 {issue.description}
               </p>
 
-              <p className="mt-6 font-bold text-[#e85d04]">
-                Learn more →
-              </p>
+              <p className="mt-6 font-bold text-[#e85d04]">Learn more →</p>
             </a>
           ))}
         </div>
