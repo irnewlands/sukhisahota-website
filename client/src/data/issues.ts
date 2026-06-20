@@ -31,6 +31,117 @@ export const issueDetails = {
     ],
   },
 
+   economy: {
+    title: "Economic Security",
+    summary:
+      "We need an economy where workers are respected, wealth is taxed fairly, and public investment builds long-term community prosperity.",
+    sections: [
+      {
+        heading: "Why this matters",
+        body: "Too many people are working hard but still struggling with rent, groceries, bills, and financial insecurity.",
+      },
+      {
+        heading: "What I believe",
+        body: "An economy should serve people, not the other way around. Workers, families, small businesses, and communities should be at the centre of economic decision-making.",
+      },
+    ],
+  },
+
+  democracy: {
+    title: "Democracy & Electoral Reform",
+    summary:
+      "Grassroots democracy must be more than a slogan. People should have real power in political parties, communities, and public institutions.",
+    sections: [
+      {
+        heading: "Why this matters",
+        body: "Democracy is strongest when ordinary people are heard, respected, and able to meaningfully shape decisions.",
+      },
+      {
+        heading: "What I believe",
+        body: "We need stronger internal democracy, electoral reform, proportional representation, and decision-making structures that listen to grassroots members.",
+      },
+    ],
+  },
+
+  ai: {
+    title: "Technology & Artificial Intelligence",
+    summary:
+      "AI and emerging technologies must be governed in the public interest, with transparency, worker protections, and democratic accountability.",
+    sections: [
+      {
+        heading: "Why this matters",
+        body: "Artificial intelligence will reshape work, communication, public services, and democracy itself.",
+      },
+      {
+        heading: "What I believe",
+        body: "Technology should support people, not replace accountability. AI must be regulated transparently and used in ways that protect workers, privacy, and public trust.",
+      },
+    ],
+  },
+
+  "lgbtq-rights": {
+    title: "LGBTQ+ Rights",
+    summary:
+      "Queer and trans people deserve safety, dignity, healthcare, legal protection, and full participation in public life.",
+    sections: [
+      {
+        heading: "Why this matters",
+        body: "LGBTQ+ rights are human rights. No one should face discrimination, exclusion, or fear because of who they are.",
+      },
+      {
+        heading: "What I believe",
+        body: "We must defend LGBTQ+ communities, protect access to affirming healthcare, and stand against hate, prejudice, and political scapegoating.",
+      },
+    ],
+  },
+
+  reconciliation: {
+    title: "Indigenous Reconciliation",
+    summary:
+      "Reconciliation requires action, respect for Indigenous rights, clean water, land protection, and meaningful consent.",
+    sections: [
+      {
+        heading: "Why this matters",
+        body: "Reconciliation cannot be symbolic. It requires governments and institutions to respect Indigenous rights, jurisdiction, and lived realities.",
+      },
+      {
+        heading: "What I believe",
+        body: "We must support clean drinking water, land protection, self-determination, and meaningful implementation of Indigenous rights.",
+      },
+    ],
+  },
+
+  sovereignty: {
+    title: "Canadian Sovereignty",
+    summary:
+      "Canada must protect its public institutions, economic independence, democratic values, and ability to act in the public interest.",
+    sections: [
+      {
+        heading: "Why this matters",
+        body: "In a changing world, Canada must be able to make decisions that protect people, communities, public services, and democratic institutions.",
+      },
+      {
+        heading: "What I believe",
+        body: "Canadian sovereignty means defending democracy, protecting public institutions, and ensuring our economy serves people who live and work here.",
+      },
+    ],
+  },
+
+  "social-safety-net": {
+    title: "Social Safety Net",
+    summary:
+      "A strong society is measured by how well it supports people during illness, disability, unemployment, caregiving, grief, and crisis.",
+    sections: [
+      {
+        heading: "Why this matters",
+        body: "At different points in life, anyone can become vulnerable. A strong social safety net ensures people are not abandoned during hardship.",
+      },
+      {
+        heading: "What I believe",
+        body: "Government should protect people when they need support most, including through healthcare, income support, disability services, housing, and care systems.",
+      },
+    ],
+  }, 
   healthcare: {
     title: "Healthcare",
     summary:
