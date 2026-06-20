@@ -12,9 +12,15 @@ export default function IssueDetail() {
     return (
       <main className="min-h-screen bg-[#f8f1e7] px-6 py-20">
         <h1 className="font-serif text-5xl font-bold">Issue not found</h1>
-        <a href="/issues" className="mt-8 inline-block text-[#e85d04] font-bold">
-          ← Back to Issues
-        </a>
+        <div className="mb-8 flex flex-wrap items-center justify-between gap-4">
+  <a href="/issues" className="font-bold text-[#e85d04]">
+    ← Back to Issues
+  </a>
+
+  <a href="/" className="font-bold text-[#e85d04]">
+    Home →
+  </a>
+</div>
       </main>
     );
   }
