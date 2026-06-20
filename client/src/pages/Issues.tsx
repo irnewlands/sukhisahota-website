@@ -1,3 +1,5 @@
+import SiteHeader from "@/components/SiteHeader";
+import SiteFooter from "@/components/SiteFooter";
 const issues = [
   {
     title: "Climate & Environment",
@@ -62,7 +64,9 @@ const issues = [
 ];
 
 export default function Issues() {
-  return (
+return (
+  <>
+    <SiteHeader />
     <main className="min-h-screen bg-[#f8f1e7] text-[#111827]">
       <section className="mx-auto max-w-6xl px-6 py-20">
         <p className="mb-4 text-sm font-bold uppercase tracking-[0.25em] text-[#e85d04]">
@@ -99,6 +103,9 @@ export default function Issues() {
           ))}
         </div>
       </section>
-    </main>
-  );
+     </main>
+
+    <SiteFooter />
+  </>
+);
 }
