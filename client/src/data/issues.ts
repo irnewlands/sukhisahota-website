@@ -367,4 +367,5 @@ body: "Canada's universal healthcare system is one of our greatest national achi
   body: "Canada faces significant shortages of doctors, nurses, personal support workers, and other healthcare professionals. We should continue working with provinces and professional bodies to improve workforce mobility by standardizing credentials, qualifications, and registration processes wherever possible. Healthcare professionals should be able to move between provinces more easily so that skills can be directed where they are needed most. I also support exploring targeted incentives, including a $5,000 tax credit for nurses and personal support workers, to recognize their essential contributions, improve retention, and help attract more people into critically needed healthcare professions.",
 },
 ],
+},   
 };
