@@ -165,7 +165,7 @@ body: "This is a crucial moment for collaboration instead of polarization. Throu
   body: "Over time, too much power has become concentrated in the Prime Minister's Office at the expense of Parliament and individual Members of Parliament. I support reforms that strengthen Parliament's ability to scrutinize legislation and hold government accountable. This includes restricting the use of omnibus bills so that unrelated measures cannot be bundled together, establishing clear limits on the use of time allocation and other procedural tools that curtail debate, and reducing excessive centralization of decision-making within the PMO. A healthy democracy requires a Parliament that can deliberate openly, represent citizens effectively, and serve as a meaningful check on executive power.",
 },
 ],
-}
+},
 
   ai: {
     title: "Artificial Intelligence",
@@ -367,4 +367,4 @@ body: "Canada's universal healthcare system is one of our greatest national achi
   body: "Canada faces significant shortages of doctors, nurses, personal support workers, and other healthcare professionals. We should continue working with provinces and professional bodies to improve workforce mobility by standardizing credentials, qualifications, and registration processes wherever possible. Healthcare professionals should be able to move between provinces more easily so that skills can be directed where they are needed most. I also support exploring targeted incentives, including a $5,000 tax credit for nurses and personal support workers, to recognize their essential contributions, improve retention, and help attract more people into critically needed healthcare professions.",
 },
 ],
-},
+};
