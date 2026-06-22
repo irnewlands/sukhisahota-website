@@ -619,15 +619,15 @@ body: "First and foremost, I extend my heartfelt condolences to everyone who has
   sections: [
     {
       heading: "Why This Matters to Me",
-      body: "Disability and accessibility are personal issues for me. I grew up in a family where disability and care needs were part of everyday life, including my brother’s cerebral palsy and learning difficulties within my family. These experiences taught me how essential public services, accessibility, and social supports are for families trying to live with dignity.",
+      body: "Disability and accessibility are personal issues for me. I grew up in a family where disability and care needs were part of everyday life, including my brother’s cerebral palsy and my sister's learning difficulties within my family. These experiences taught me how essential public services, accessibility, and social supports are for families trying to live with dignity.",
     },
     {
       heading: "Accessibility From the Start",
-      body: "Accessibility should not be treated as an afterthought. Public buildings, housing, transportation, websites, workplaces, schools, and community spaces should be designed so disabled people can participate fully from the beginning.",
+      body: "Accessibility should not be treated as an afterthought. Public buildings, housing, transportation, workplaces, schools, and community spaces should be designed so everyone can participate fully from the beginning.",
     },
     {
       heading: "Disability Supports and Income Security",
-      body: "Disabled Canadians should not be forced into poverty. Strong disability supports, income assistance, healthcare access, and community services are essential to ensuring people can live safely and independently.",
+      body: "Disabled Canadians should not be forced into poverty. Strong disability supports, income assistance, healthcare access, free access to justice, and community services are essential to ensuring people can live safely and independently.",
     },
     {
       heading: "Employment and Opportunity",
@@ -638,8 +638,8 @@ body: "First and foremost, I extend my heartfelt condolences to everyone who has
       body: "People should have the support they need to live as independently as possible. That means access to home care, assistive devices, accessible housing, transportation, and community-based services.",
     },
     {
-      heading: "An Inclusive Society",
-      body: "A fair society removes barriers instead of expecting individuals to overcome them alone. Accessibility benefits everyone — seniors, families, workers, caregivers, disabled people, and anyone who may need support at different stages of life.",
+      heading: "Free Legal Access for an Inclusive Society - that's what I call 'Social Solidarity'",
+      body: "A fair society removes barriers instead of expecting individuals to overcome them alone. Accessibility benefits everyone — seniors, families, workers, caregivers, disabled people, and anyone who may need support at different stages of life. In order to ensure that barriers are removed and society becomes accessible for all, we need to provide free legal support and Access to Justice for our most vulnerable in society; doing so protects us all and is a practical step towards Social Solidarity.",
     },
   ],
 },
