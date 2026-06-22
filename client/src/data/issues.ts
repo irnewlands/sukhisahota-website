@@ -1,7 +1,7 @@
 // Core website migration completed - 20 June 2026
 // Issues architecture completed milestone.
 export const issueDetails = {
-affordability: {
+"affordability": {
   title: "Affordability",
   related: ["housing", "economy"],
   summary: "",
@@ -523,9 +523,9 @@ body: "Canada's universal healthcare system is one of our greatest national achi
 ],
 },  
 
-toxic-drug-crisis: {
+"toxic-drug-crisis": {
   title: "toxic-drug-crisis",
-  related: ["housing", "economy", "Healthcare"],
+  related: ["housing", "economy", "healthcare"],
   summary: "",
   priorities: [
   "Expand treatment and recovery options",
@@ -536,9 +536,9 @@ toxic-drug-crisis: {
   sections: [],
 },  
  
-disability-accessibility: {  
+"disability-accessibility": {  
    title: "disability-accessibility",
-  related: ["social-safety-net", "lgbtq-rights", "Healthcare"],
+  related: ["social-safety-net", "lgbtq-rights", "healthcare"],
   summary: "",
   priorities: [
   "Improve accessibility and inclusion",
@@ -549,7 +549,7 @@ disability-accessibility: {
   sections: [],
 },  
 
-misinformation: {  
+"misinformation": {  
    title: "misinformation",
   related: ["culture-community", "lgbtq-rights", "human-rights-foreign-policy"],
   summary: "",
@@ -562,9 +562,9 @@ misinformation: {
   sections: [],
 },  
    
-culture-community: {  
+"culture-community": {  
    title: "culture-community",
-  related: ["social-safety-net", "human-rights-foreign-policy", "Healthcare"],
+  related: ["social-safety-net", "human-rights-foreign-policy", "healthcare"],
   summary: "",
   priorities: [
   "Celebrate Canada's diversity",
@@ -575,7 +575,7 @@ culture-community: {
   sections: [],
 },   
 
-human-rights-foreign-policy: {  
+"human-rights-foreign-policy": {  
    title: "human-rights-foreign-policy",
   related: ["misinformation", "lgbtq-rights", "culture-community"],
   summary: "",
