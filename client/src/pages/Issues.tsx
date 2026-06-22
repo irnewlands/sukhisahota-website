@@ -61,6 +61,42 @@ const issues = [
     description:
       "A strong society is measured by how well it supports people during illness, disability, unemployment, caregiving, grief, and crisis.",
   },
+  {
+  title: "Affordability",
+  slug: "affordability",
+  description:
+    "Reducing the cost of living, making essentials more affordable, and building an economy where people can get ahead.",
+},
+{
+  title: "Toxic Drug Crisis",
+  slug: "toxic-drug-crisis",
+  description:
+    "Treating the toxic drug crisis as a public health emergency with compassion, treatment, recovery, housing, and support.",
+},
+{
+  title: "Disability & Accessibility",
+  slug: "disability-accessibility",
+  description:
+    "Building a society where disabled people have dignity, support, accessibility, and real opportunity.",
+},
+{
+  title: "Misinformation",
+  slug: "misinformation",
+  description:
+    "Protecting democracy through media literacy, platform transparency, trusted journalism, and public accountability.",
+},
+{
+  title: "Culture & Community",
+  slug: "culture-community",
+  description:
+    "Celebrating cultural heritage, supporting gathering spaces, and strengthening community connection across Canada.",
+},
+{
+  title: "Human Rights & Foreign Policy",
+  slug: "human-rights-foreign-policy",
+  description:
+    "Putting human rights, international law, peace, diplomacy, and humanitarian values at the centre of Canada’s role in the world.",
+},
 ];
 
 export default function Issues() {
