@@ -288,27 +288,55 @@ body: "Whether we like it or not, Artificial Intelligence is here. AI technologi
 
   reconciliation: {
     title: "Indigenous Reconciliation",
-    related: ["climate", "social-safety-net"],
+    related: ["climate", "democracy", "social-safety-net"],
     summary:
-      "Reconciliation requires action, respect for Indigenous rights, clean water, land protection, and meaningful consent.",
-    priorities: [
-  "Implement Truth and Reconciliation Calls to Action",
-  "Respect Indigenous self-determination",
-  "Ensure clean water and essential infrastructure",
-  "Strengthen nation-to-nation relationships",
-],
-    sections: [
-      {
-        heading: "Why this matters",
-        body: "Reconciliation cannot be symbolic. It requires governments and institutions to respect Indigenous rights, jurisdiction, and lived realities.",
-      },
-      {
-        heading: "What I believe",
-        body: "We must support clean drinking water, land protection, self-determination, and meaningful implementation of Indigenous rights.",
-      },
-    ],
-  },
+"Reconciliation requires action, respect, listening, and partnership. It is not a symbolic gesture or a political slogan, but an ongoing commitment to truth, healing, justice, and building a better future together with Indigenous peoples across Turtle Island.",
 
+priorities: [
+"Implement all 94 Calls to Action",
+"Support Indigenous self-determination",
+"Advance truth, healing, and education",
+"Ensure Indigenous rights are respected in law and policy",
+],
+
+sections: [
+{
+heading: "Reconciliation Is a Shared Journey",
+body: "To achieve reconciliation, we must be willing to meet people as they truly are rather than as we wish them to be. Reconciliation is not a destination that can be reached through a single policy or announcement. It is a long-term commitment that requires honesty, humility, respect, and a willingness to learn from one another.",
+},
+
+{
+  heading: "Implementing the Truth and Reconciliation Calls to Action",
+  body: "The Truth and Reconciliation Commission's 94 Calls to Action provide a roadmap for meaningful progress. I am committed to supporting the full implementation of these recommendations and ensuring governments remain accountable for delivering tangible results rather than symbolic gestures.",
+},
+
+{
+  heading: "Listening and Learning",
+  body: "Reconciliation begins with listening. I am committed to genuinely listening to, understanding, and respecting the Indigenous peoples of Turtle Island. Building stronger relationships requires openness, mutual respect, and a willingness to engage with Indigenous communities as partners rather than stakeholders to be consulted after decisions have already been made.",
+},
+
+{
+  heading: "Truth, Healing, and Awareness",
+  body: "The legacy of residential schools, colonial policies, and systemic discrimination continues to affect Indigenous communities today. Supporting truth and healing requires education, awareness, and a willingness to confront difficult aspects of our shared history. Reconciliation is strengthened when communities learn together and acknowledge both historical and ongoing injustices.",
+},
+
+{
+  heading: "Partnership and Indigenous Rights",
+  body: "Any significant changes affecting Indigenous rights must be developed in partnership with Indigenous peoples and uphold their rights and interests. Policies relating to reconciliation, land, governance, and self-determination should not be imposed unilaterally. Meaningful consultation and co-development are essential to building trust and achieving lasting outcomes.",
+},
+
+{
+  heading: "Welcoming New Canadians into Reconciliation",
+  body: "Many newcomers arrive in Canada with limited knowledge of Indigenous history and may encounter misinformation or harmful stereotypes. We should do more to ensure new Canadians learn about Indigenous peoples, treaties, residential schools, and the ongoing journey of reconciliation. Building understanding across communities helps create stronger foundations for the future.",
+},
+
+{
+  heading: "Moving Forward Together",
+  body: "Reconciliation is not a slogan; it is a shared journey. It requires sustained effort, mutual respect, and a commitment to building relationships based on trust and understanding. By working together, we can advance truth, healing, justice, and meaningful reconciliation for future generations.",
+},
+],
+},
+  
   sovereignty: {
     title: "Canadian Sovereignty",
     related: ["democracy", "economy"],
