@@ -63,7 +63,7 @@ body: "Having worked for an environmental organization, I understand that our li
 },
 
   housing: {
-  title: "Housing & Affordability",
+  title: "Housing",
   related: ["healthcare", "social-safety-net", "economy"],
   summary:
     "Housing is a human right. Everyone deserves a safe, secure, and affordable place to live. Canada must address the housing crisis by increasing supply, strengthening renter protections, and ensuring homes are treated as places to live rather than speculative investments.",
