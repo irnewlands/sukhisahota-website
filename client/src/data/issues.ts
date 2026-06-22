@@ -698,16 +698,55 @@ body: "Misinformation undermines public trust, weakens democratic participation,
    
 "culture-community": {  
    title: "Culture & Community",
-  related: ["social-safety-net", "human-rights-foreign-policy", "healthcare"],
-  summary: "",
-  priorities: [
-  "Celebrate Canada's diversity",
-  "Support community gathering spaces",
-  "Preserve cultural heritage",
-  "Strengthen community connections",
+  related: ["reconciliation", "social-safety-net", "human-rights-foreign-policy"],
+
+summary:
+"Strong communities do not happen by accident. They are built through shared spaces, cultural institutions, community organizations, and opportunities for people to connect, celebrate their heritage, and contribute to society. Canada's diversity is one of our greatest strengths, and we should continue investing in the communities that make our country vibrant and welcoming.",
+
+priorities: [
+"Support cultural and community spaces",
+"Preserve and celebrate heritage",
+"Strengthen multiculturalism and belonging",
+"Invest in community-led initiatives",
 ],
-  sections: [],
-},   
+
+sections: [
+{
+heading: "The Value of Community",
+body: "Communities thrive when people have places to gather, celebrate, learn, and share their experiences. Community centres, cultural institutions, museums, places of worship, festivals, and local organizations all play an important role in building social connection and strengthening civic life. Investing in community is an investment in people.",
+},
+
+{
+  heading: "A South Asian Cultural Centre of Excellence",
+  body: "South Asians have made enormous contributions to Canada and British Columbia for generations. Their contributions can be found in business, public service, healthcare, education, transportation, agriculture, labour movements, politics, and countless other areas of Canadian life. I support the creation of a South Asian Cultural Centre of Excellence that preserves and celebrates this history while serving as a hub for education, community engagement, cultural programming, and future generations.",
+},
+
+{
+  heading: "Building on Successful Models",
+  body: "Governments have demonstrated that cultural institutions can play an important role in preserving heritage and educating the public. The creation of the Chinese Canadian Museum showed what can be achieved when governments and communities work together. Canadians of South Asian heritage deserve similar support to ensure their stories, contributions, and experiences are preserved and shared with future generations.",
+},
+
+{
+  heading: "Federal Support for a South Asian Centre",
+  body: "The City of Vancouver has already committed to funding one-third of the capital costs of a South Asian Cultural Centre of Excellence if it is located within Vancouver. I support continued advocacy to secure federal participation in the project, including funding for both planning and capital development. I have also had the privilege of contributing ideas to discussions exploring how such a centre can best serve and represent the diversity of the South Asian community.",
+},
+
+{
+  heading: "A Filipino Cultural Centre for Future Generations",
+  body: "I also support the creation of a Filipino Cultural Centre that serves as more than simply a building. A successful cultural centre should provide space for community gatherings, education, arts, heritage preservation, youth engagement, seniors' programs, entrepreneurship, and cultural celebration. The Filipino community has made significant contributions to British Columbia and Canada, and a dedicated space can help ensure future generations remain connected to their culture, history, and community.",
+},
+
+{
+  heading: "Multiculturalism in Action",
+  body: "Canada's diversity is one of our greatest strengths. Multiculturalism is not simply about celebrating differences—it is about creating opportunities for people from all backgrounds to participate fully in society while preserving their cultural identities. Strong cultural institutions help build understanding, reduce prejudice, and strengthen the social fabric that connects us all.",
+},
+
+{
+  heading: "Building Community for Everyone",
+  body: "Community spaces should be welcoming, inclusive, and accessible. Whether someone is a newcomer, a long-time resident, a senior, a young person, or a member of a cultural community, they should have opportunities to connect with others and feel a sense of belonging. By investing in community infrastructure today, we strengthen the social foundations that support future generations.",
+},
+],
+},
 
 "human-rights-foreign-policy": {  
    title: "Human rights & Foreign policy",
