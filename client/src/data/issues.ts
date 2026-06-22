@@ -606,15 +606,43 @@ body: "First and foremost, I extend my heartfelt condolences to everyone who has
 "disability-accessibility": {  
    title: "Disability& Accessibility",
   related: ["social-safety-net", "lgbtq-rights", "healthcare"],
-  summary: "",
+  summary:
+    "Accessibility is about dignity, independence, and full participation in society. Disabled Canadians deserve public services, workplaces, housing, transportation, and communities that are designed with inclusion in mind from the beginning.",
+
   priorities: [
-  "Improve accessibility and inclusion",
-  "Strengthen disability supports",
-  "Expand employment opportunities",
-  "Promote independent living",
-],
-  sections: [],
-},  
+    "Improve accessibility and inclusion",
+    "Strengthen disability supports",
+    "Expand accessible employment opportunities",
+    "Promote independent living and dignity",
+  ],
+
+  sections: [
+    {
+      heading: "Why This Matters to Me",
+      body: "Disability and accessibility are personal issues for me. I grew up in a family where disability and care needs were part of everyday life, including my brother’s cerebral palsy and learning difficulties within my family. These experiences taught me how essential public services, accessibility, and social supports are for families trying to live with dignity.",
+    },
+    {
+      heading: "Accessibility From the Start",
+      body: "Accessibility should not be treated as an afterthought. Public buildings, housing, transportation, websites, workplaces, schools, and community spaces should be designed so disabled people can participate fully from the beginning.",
+    },
+    {
+      heading: "Disability Supports and Income Security",
+      body: "Disabled Canadians should not be forced into poverty. Strong disability supports, income assistance, healthcare access, and community services are essential to ensuring people can live safely and independently.",
+    },
+    {
+      heading: "Employment and Opportunity",
+      body: "Many disabled people face unnecessary barriers in the workplace. Employers should provide reasonable accommodations, accessible hiring practices, flexible supports, and inclusive workplace cultures so people can contribute their skills and talents.",
+    },
+    {
+      heading: "Independent Living",
+      body: "People should have the support they need to live as independently as possible. That means access to home care, assistive devices, accessible housing, transportation, and community-based services.",
+    },
+    {
+      heading: "An Inclusive Society",
+      body: "A fair society removes barriers instead of expecting individuals to overcome them alone. Accessibility benefits everyone — seniors, families, workers, caregivers, disabled people, and anyone who may need support at different stages of life.",
+    },
+  ],
+},
 
 "misinformation": {  
    title: "Misinformation",
