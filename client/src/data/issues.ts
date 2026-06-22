@@ -1,6 +1,21 @@
 // Core website migration completed - 20 June 2026
 // Issues architecture completed milestone.
 export const issueDetails = {
+affordability: {
+  title: "Affordability",
+  related: ["housing", "economy"],
+  summary: "",
+  priorities: [
+  "Reduce the cost of living",
+  "Strengthen competition and consumer protection",
+  "Improve wage growth and economic security",
+  "Make essentials more affordable",
+],
+  sections: [],
+},  
+],
+},
+  
 climate: {
 title: "Climate & Environment",
 
@@ -465,7 +480,7 @@ body: "Throughout my life, I have seen firsthand how important the social safety
   healthcare: {
     title: "Healthcare",
 
-related: ["social-safety-net", "housing"],
+related: ["social-safety-net", "housing", "toxic-drug-crisis"],
 
 summary:
 "Healthcare is a fundamental public service and one of the most important responsibilities of government. Every Canadian deserves access to timely, high-quality care regardless of income, location, or circumstance. We must strengthen and modernize our public healthcare system to meet the challenges of the future.",
@@ -508,5 +523,80 @@ body: "Canada's universal healthcare system is one of our greatest national achi
   body: "Canada faces significant shortages of doctors, nurses, personal support workers, and other healthcare professionals. We should continue working with provinces and professional bodies to improve workforce mobility by standardizing credentials, qualifications, and registration processes wherever possible. Healthcare professionals should be able to move between provinces more easily so that skills can be directed where they are needed most. I also support exploring targeted incentives, including a $5,000 tax credit for nurses and personal support workers, to recognize their essential contributions, improve retention, and help attract more people into critically needed healthcare professions.",
 },
 ],
+},  
+
+toxic-drug-crisis: {
+  title: "toxic-drug-crisis",
+  related: ["housing", "economy", "Healthcare"],
+  summary: "",
+  priorities: [
+  "Expand treatment and recovery options",
+  "Improve mental health supports",
+  "Address root causes of addiction",
+  "Reduce preventable deaths",
+],
+  sections: [],
+},  
+],
+},  
+
+disability-accessibility: {  
+   title: "disability-accessibility",
+  related: ["social-safety-net", "lgbtq-rights", "Healthcare"],
+  summary: "",
+  priorities: [
+  "Improve accessibility and inclusion",
+  "Strengthen disability supports",
+  "Expand employment opportunities",
+  "Promote independent living",
+],
+  sections: [],
+},  
+],
+},  
+
+misinformation: {  
+   title: "misinformation",
+  related: ["culture-community", "lgbtq-rights", "human-rights-foreign-policy"],
+  summary: "",
+  priorities: [
+  "Strengthen media literacy",
+  "Promote transparency online",
+  "Protect democratic institutions",
+  "Support independent journalism",
+],
+  sections: [],
+},  
+],
 },   
+
+culture-community: {  
+   title: "culture-community",
+  related: ["social-safety-net", "human-rights-foreign-policy", "Healthcare"],
+  summary: "",
+  priorities: [
+  "Celebrate Canada's diversity",
+  "Support community gathering spaces",
+  "Preserve cultural heritage",
+  "Strengthen community connections",
+],
+  sections: [],
+},  
+],
+}, 
+
+human-rights-foreign-policy: {  
+   title: "human-rights-foreign-policy",
+  related: ["misinformation", "lgbtq-rights", "culture-community"],
+  summary: "",
+  priorities: [
+  "Improve accessibility and inclusion",
+  "Strengthen disability supports",
+  "Expand employment opportunities",
+  "Promote independent living",
+],
+  sections: [],
+},  
+],
+},    
 };
