@@ -3,16 +3,39 @@
 export const issueDetails = {
 "affordability": {
   title: "Affordability",
-  related: ["housing", "economy"],
+  related: ["housing", "economy", "social-safety-net"],
   summary: "",
   priorities: [
   "Reduce the cost of living",
+  "Make essentials more affordable",
   "Strengthen competition and consumer protection",
   "Improve wage growth and economic security",
-  "Make essentials more affordable",
+  "Tackle corporate power and unfair pricing",
 ],
-  sections: [],
-},  
+  
+  sections: [
+    {
+      heading: "The Cost of Living Crisis",
+      body: "Too many Canadians are working hard but still struggling to keep up with rent, groceries, utilities, transportation, and everyday bills. Affordability is not just an economic issue; it affects health, family stability, mental well-being, and people’s ability to participate fully in society.",
+    },
+    {
+      heading: "Essentials Should Be Affordable",
+      body: "People should not have to choose between groceries, rent, medication, transportation, and other necessities. Governments must focus on making essential goods and services more affordable while protecting people from unfair price increases and excessive corporate profit-taking.",
+    },
+    {
+      heading: "Housing at the Centre",
+      body: "Housing is one of the biggest drivers of the affordability crisis. Building more homes, expanding non-market housing, protecting renters, and tackling speculation are essential to making life more affordable for Canadians.",
+    },
+    {
+      heading: "Fair Wages and Economic Security",
+      body: "Affordability is not only about prices; it is also about income. Workers need fair wages, predictable hours, good benefits, and stronger protections so that full-time work provides real stability and dignity.",
+    },
+    {
+      heading: "A Fairer Economy",
+      body: "An affordable Canada requires an economy that prioritizes people over excessive profits. That means stronger consumer protections, better competition policy, tax fairness, and public investment in the services people rely on every day.",
+    },
+  ],
+},
   
 climate: {
 title: "Climate & Environment",
