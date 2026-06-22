@@ -548,16 +548,60 @@ body: "Canada's universal healthcare system is one of our greatest national achi
 
 "toxic-drug-crisis": {
   title: "Toxic drug crisis",
-  related: ["housing", "economy", "healthcare"],
-  summary: "",
-  priorities: [
-  "Expand treatment and recovery options",
-  "Improve mental health supports",
-  "Address root causes of addiction",
-  "Reduce preventable deaths",
+ related: ["healthcare", "housing", "social-safety-net"],
+
+summary:
+"The toxic drug crisis is a public health emergency that requires compassion, evidence-based policy, treatment, housing, mental health support, harm reduction, and coordinated action across all levels of government.",
+
+priorities: [
+"Expand treatment and recovery options",
+"Provide temporary supportive housing",
+"Strengthen mental health and counselling supports",
+"Reduce preventable deaths through evidence-based care",
 ],
-  sections: [],
-},  
+
+sections: [
+{
+heading: "A Public Health Emergency",
+body: "First and foremost, I extend my heartfelt condolences to everyone who has lost loved ones to the ongoing toxic drug crisis. Witnessing a loved one struggle with substance use disorder is an unimaginable burden, especially when families feel powerless to help. British Columbia has been in a public health emergency since 2016, and thousands of lives have been lost, largely due to an increasingly toxic and unpredictable drug supply.",
+},
+
+{
+  heading: "A Coordinated Federal and Provincial Response",
+  body: "The federal government must work with provinces, territories, Indigenous governments, municipalities, healthcare providers, frontline organizations, and people with lived experience to develop effective drug and substance strategies. These strategies must reflect local realities, because urban, rural, northern, and Indigenous communities often face different barriers and require different supports.",
+},
+
+{
+  heading: "Building on the Four Pillars",
+  body: "Health Canada's drug strategy identifies four important pillars: prevention, treatment, harm reduction, and enforcement. These pillars remain important, but the scale of the crisis requires us to build on them with stronger housing, mental health, and social supports. A person cannot recover in isolation from the conditions that contribute to crisis in the first place.",
+},
+
+{
+  heading: "Temporary Supportive Housing",
+  body: "Temporary supportive housing for 18 to 30 months should be part of a stronger response to the toxic drug crisis. Stable housing can reduce barriers to treatment, provide safety and consistency, and help ensure vulnerable individuals are not forced back into environments where toxic street drugs are readily available. Housing is healthcare, and recovery is much harder without a safe place to live.",
+},
+
+{
+  heading: "Mental Health and Counselling",
+  body: "Substance use is often connected to trauma, mental health challenges, poverty, isolation, grief, and other social factors. Long-term recovery requires more than short-term intervention. People need access to mental health services, social counselling, peer support, and culturally appropriate care that addresses underlying causes rather than only immediate symptoms.",
+},
+
+{
+  heading: "Diverse Treatment Options",
+  body: "There is no single treatment model that works for everyone. People should have access to a range of substance use treatment options, including detox, residential treatment, outpatient care, medication-assisted treatment, counselling, peer-led supports, Indigenous-led services, and community-based recovery programs. A one-size-fits-all approach cannot meet the diverse needs of people experiencing substance use disorder.",
+},
+
+{
+  heading: "Harm Reduction and Supervised Safe Supply",
+  body: "Harm reduction is about keeping people alive long enough to access support, treatment, and recovery. Supervised safe supply, delivered through appropriate clinical, prevention, or supervised outreach models, can help reduce exposure to toxic street drugs while maintaining oversight and safety. The goal must always be to reduce deaths, prevent misuse, and connect people with care.",
+},
+
+{
+  heading: "Compassion, Safety, and Recovery",
+  body: "The toxic drug crisis cannot be solved through stigma or punishment. We need a compassionate, evidence-based approach that protects public health, supports recovery, improves community safety, and recognizes the dignity of every person affected. By combining prevention, treatment, harm reduction, enforcement, housing, and mental health supports, we can make a tangible difference and save lives.",
+},
+],
+}, 
  
 "disability-accessibility": {  
    title: "Disability& Accessibility",
