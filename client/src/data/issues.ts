@@ -265,26 +265,49 @@ body: "Whether we like it or not, Artificial Intelligence is here. AI technologi
 
   "lgbtq-rights": {
     title: "LGBTQ+ Rights",
-    related: ["healthcare", "social-safety-net"],
+    related: ["healthcare", "democracy", "social-safety-net"],
     summary:
-      "Queer and trans people deserve safety, dignity, healthcare, legal protection, and full participation in public life.",
-    priorities: [
-  "Defend LGBTQ+ equality and inclusion",
-  "Combat discrimination and hate",
-  "Support LGBTQ+ youth",
-  "Protect access to healthcare and services",
+"Every person deserves to live with dignity, safety, and respect regardless of their sexual orientation, gender identity, or gender expression. A fair and inclusive society protects the rights of all people and recognizes that equality benefits everyone.",
+
+priorities: [
+"Protect LGBTQ+ equality and inclusion",
+"Defend trans rights and gender diversity",
+"Combat discrimination and hate",
+"Support LGBTQ+ youth and mental health",
 ],
-    sections: [
-      {
-        heading: "Why this matters",
-        body: "LGBTQ+ rights are human rights. No one should face discrimination, exclusion, or fear because of who they are.",
-      },
-      {
-        heading: "What I believe",
-        body: "We must defend LGBTQ+ communities, protect access to affirming healthcare, and stand against hate, prejudice, and political scapegoating.",
-      },
-    ],
-  },
+
+sections: [
+{
+heading: "Why This Matters to Me",
+body: "I proudly identify as bisexual and have experienced different understandings of my own identity throughout my life. Those experiences taught me that people are complex and that identity is often shaped by personal growth, relationships, and lived experiences. Above all, I believe people should be respected for who they are rather than judged based on assumptions, labels, or stereotypes.",
+},
+
+{
+  heading: "Respecting People as They Are",
+  body: "No one person has all the answers when it comes to human identity and lived experience. What we can do is approach one another with empathy, curiosity, and respect. We should strive to understand people as they truly are rather than as we expect them to be. A healthy society creates space for people to live authentically and participate fully in community life.",
+},
+
+{
+  heading: "Protecting Hard-Won Progress",
+  body: "The progress achieved by LGBTQ+ communities over recent decades was not inevitable. It was secured through the efforts of countless individuals who fought for equality, dignity, and recognition. We must protect those achievements and continue building a society that is fairer, more inclusive, and more equitable for everyone.",
+},
+
+{
+  heading: "Defending Trans Rights",
+  body: "Trans rights are human rights. Transgender and gender-diverse people deserve the same dignity, respect, safety, and legal protections as every other Canadian. Efforts to marginalize or restrict the rights of trans people should concern all of us because equality is strongest when it extends to everyone, not just those in the majority.",
+},
+
+{
+  heading: "When Rights Are Eroded",
+  body: "History shows that rights are often lost gradually rather than all at once. When society accepts restrictions on the rights of one group, it creates precedents that can eventually affect others. Protecting LGBTQ+ rights helps protect broader principles of equality, freedom, and human dignity that benefit all Canadians.",
+},
+
+{
+  heading: "Building an Inclusive Future",
+  body: "Every person deserves to feel safe, valued, and respected in their workplace, school, community, and home. By combating discrimination, supporting mental health, protecting access to healthcare, and promoting inclusion, we can build communities where everyone has the opportunity to thrive and contribute their unique talents and perspectives.",
+},
+],
+},
 
   reconciliation: {
     title: "Indigenous Reconciliation",
