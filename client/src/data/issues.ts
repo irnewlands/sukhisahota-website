@@ -750,14 +750,54 @@ body: "Communities thrive when people have places to gather, celebrate, learn, a
 
 "human-rights-foreign-policy": {  
    title: "Human rights & Foreign policy",
-  related: ["misinformation", "lgbtq-rights", "culture-community"],
-  summary: "",
-  priorities: [
-  "Defend human rights",
-  "Support international law",
-  "Promote peace and diplomacy",
-  "Strengthen Canada's global leadership",
+ related: ["democracy", "misinformation", "reconciliation"],
+
+summary:
+"Canada should be a principled voice for peace, human rights, international law, and diplomacy. Our foreign policy should be guided by human dignity, accountability, and a commitment to reducing conflict rather than escalating it.",
+
+priorities: [
+"Defend human rights and international law",
+"Promote diplomacy and peaceful conflict resolution",
+"Oppose antisemitism, Islamophobia, and all forms of hatred",
+"Support humanitarian relief and civilian protection",
 ],
-  sections: [],
-},    
+
+sections: [
+{
+heading: "Human Rights First",
+body: "Every person deserves dignity, safety, freedom, and human rights regardless of nationality, ethnicity, religion, or political affiliation. Canada should consistently advocate for the protection of civilians, respect for international law, and accountability when human rights violations occur."
+},
+
+{
+  heading: "Peace Over Escalation",
+  body: "Violence rarely creates lasting solutions. Canada should support diplomatic efforts, ceasefires where appropriate, humanitarian access, and peaceful conflict resolution wherever possible. Military escalation often creates new suffering while making long-term peace more difficult to achieve."
+},
+
+{
+  heading: "Israel, Palestine, and Human Dignity",
+  body: "I believe in peace, justice, and dignity for both Palestinians and Israelis. Palestinians deserve safety, self-determination, and human rights. Israelis deserve safety, security, and the right to live free from violence and fear. Criticizing the actions of governments should never be confused with hostility toward entire peoples or communities. We must oppose both antisemitism and Islamophobia while continuing to advocate for human rights, international law, and a just and lasting peace."
+},
+
+{
+  heading: "Beyond Slogans",
+  body: "Complex international conflicts cannot be solved through slogans alone. When evaluating proposals, I ask whether they advance peace, uphold human rights, reduce suffering, and create realistic pathways toward long-term stability. Real solutions require diplomacy, accountability, and a willingness to engage with difficult realities."
+},
+
+{
+  heading: "Intergenerational Trauma",
+  body: "Conflict often leaves wounds that persist for generations. Growing up, I heard stories from my grandmother about the violence, fear, displacement, and trauma experienced during the Partition of India. Those experiences shaped my understanding that conflict affects ordinary people long after political leaders and armies have moved on. Lasting peace requires acknowledging trauma, supporting healing, and ensuring that future generations are not trapped by the conflicts of the past."
+},
+
+{
+  heading: "Opposing Imperialism and Great Power Politics",
+  body: "History shows that powerful nations often pursue their interests in ways that can destabilize regions and deepen conflicts. Canada should pursue an independent foreign policy that prioritizes peace, human rights, international cooperation, and respect for national self-determination. We should be willing to criticize the actions of any government when those actions contribute to unnecessary suffering or violate international norms."
+},
+
+{
+  heading: "Canada's Role in the World",
+  body: "Canada should be a bridge-builder. Our country is strongest when we promote dialogue, support humanitarian efforts, defend human rights, and encourage peaceful solutions to international disputes. We should strive to be a voice for justice, compassion, and diplomacy in an increasingly divided world."
+},
+
+],
+},
 };
