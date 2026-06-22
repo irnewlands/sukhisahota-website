@@ -13,8 +13,6 @@ affordability: {
 ],
   sections: [],
 },  
-],
-},
   
 climate: {
 title: "Climate & Environment",
@@ -537,9 +535,7 @@ toxic-drug-crisis: {
 ],
   sections: [],
 },  
-],
-},  
-
+ 
 disability-accessibility: {  
    title: "disability-accessibility",
   related: ["social-safety-net", "lgbtq-rights", "Healthcare"],
@@ -551,8 +547,6 @@ disability-accessibility: {
   "Promote independent living",
 ],
   sections: [],
-},  
-],
 },  
 
 misinformation: {  
@@ -567,9 +561,7 @@ misinformation: {
 ],
   sections: [],
 },  
-],
-},   
-
+   
 culture-community: {  
    title: "culture-community",
   related: ["social-safety-net", "human-rights-foreign-policy", "Healthcare"],
@@ -581,9 +573,7 @@ culture-community: {
   "Strengthen community connections",
 ],
   sections: [],
-},  
-],
-}, 
+},   
 
 human-rights-foreign-policy: {  
    title: "human-rights-foreign-policy",
@@ -596,7 +586,5 @@ human-rights-foreign-policy: {
   "Promote independent living",
 ],
   sections: [],
-},  
-],
 },    
 };
