@@ -646,16 +646,55 @@ body: "First and foremost, I extend my heartfelt condolences to everyone who has
 
 "misinformation": {  
    title: "Misinformation",
-  related: ["culture-community", "lgbtq-rights", "human-rights-foreign-policy"],
-  summary: "",
-  priorities: [
-  "Strengthen media literacy",
-  "Promote transparency online",
-  "Protect democratic institutions",
-  "Support independent journalism",
+  related: ["democracy", "ai", "human-rights-foreign-policy"],
+
+summary:
+"An informed society is essential to a healthy democracy. Misinformation, disinformation, and growing polarization undermine public trust, weaken democratic institutions, and make it harder for citizens to make informed decisions. We must strengthen critical thinking, transparency, and accountability while protecting freedom of expression.",
+
+priorities: [
+"Strengthen media literacy and critical thinking",
+"Increase transparency and accountability online",
+"Protect democratic institutions from disinformation",
+"Support independent journalism and research",
 ],
-  sections: [],
-},  
+
+sections: [
+{
+heading: "The Threat of Misinformation",
+body: "Misinformation undermines public trust, weakens democratic participation, and leaves individuals vulnerable to manipulation. False or misleading information can influence elections, fuel division, and make it harder for citizens to make informed decisions about issues that affect their lives. A healthy democracy depends upon access to reliable information and open public debate.",
+},
+
+{
+  heading: "Critical Thinking is the Best Defence",
+  body: "The most effective long-term response to misinformation is education. We must equip current and future generations with the critical thinking skills needed to evaluate information, identify unreliable sources, recognize manipulation, and distinguish facts from falsehoods. Strong media literacy should be a core part of preparing people to navigate an increasingly complex information environment.",
+},
+
+{
+  heading: "Transparency and Accountability Online",
+  body: "Social media platforms and digital technologies have transformed how information spreads. Policymakers should require greater transparency from technology companies regarding how content is promoted, amplified, and recommended. Citizens deserve to understand how algorithms shape what they see online and how those systems may influence public discourse.",
+},
+
+{
+  heading: "Independent Research and Oversight",
+  body: "Canada should establish and fund an independent research body with the authority to access platform data, study the effects of algorithms, and provide evidence-based recommendations to policymakers. Independent research can help identify emerging risks, improve transparency, and determine whether additional regulatory measures are necessary to protect the public interest.",
+},
+
+{
+  heading: "AI and the Future of Information",
+  body: "Artificial Intelligence has made it easier than ever to create convincing false content, including deepfakes, synthetic media, and automated misinformation campaigns. Governments, researchers, educators, and technology companies must work together to address these emerging challenges while ensuring that innovation remains responsible, transparent, and accountable.",
+},
+
+{
+  heading: "Combating Polarization",
+  body: "Polarization divides communities and encourages people to view opponents as enemies rather than fellow citizens. This environment makes constructive dialogue more difficult and allows negativity to flourish. We must resist the temptation to dehumanize those who disagree with us and instead focus on respectful engagement, evidence-based discussion, and finding common ground where possible.",
+},
+
+{
+  heading: "Protecting Democratic Values",
+  body: "Freedom of expression, democratic participation, and open debate are among Canada's greatest strengths. Protecting those values requires more than opposing misinformation—it requires fostering a culture of respect, curiosity, and accountability. Politicians, media organizations, technology companies, and citizens all share responsibility for creating a healthier public conversation and a stronger democracy.",
+},
+],
+},
    
 "culture-community": {  
    title: "Culture & Community",
