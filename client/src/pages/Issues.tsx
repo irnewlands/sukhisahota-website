@@ -8,10 +8,10 @@ const issues = [
       "Real climate action means ending fossil fuel subsidies, investing in renewable energy, and protecting communities from climate breakdown.",
   },
   {
-    title: "Housing & Affordability",
+    title: "Housing",
     slug: "housing",
     description:
-      "Everyone deserves stable housing, affordable groceries, and an economy that works for working people.",
+      "Everyone deserves stable housing; it's a Human right and an everyday part of our essential necessities just to live.",
   },
   {
     title: "Healthcare",
