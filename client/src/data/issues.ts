@@ -336,24 +336,48 @@ body: "Whether we like it or not, Artificial Intelligence is here. AI technologi
     title: "Social Safety Net",
     related: ["healthcare", "housing", "economy"],
     summary:
-      "A strong society is measured by how well it supports people during illness, disability, unemployment, caregiving, grief, and crisis.",
-    priorities: [
-  "Strengthen income supports",
-  "Reduce poverty and food insecurity",
-  "Expand disability supports",
-  "Ensure dignity for vulnerable Canadians",
+"A strong society is measured by how well it supports people during illness, disability, unemployment, caregiving, grief, and crisis. Every Canadian deserves the security of knowing that support will be there when life takes an unexpected turn.",
+
+priorities: [
+"Protect and strengthen income supports",
+"Expand access to healthcare and social services",
+"Safeguard Pharmacare and Dental Care",
+"Ensure dignity and security for vulnerable Canadians",
 ],
-    sections: [
-      {
-        heading: "Why this matters",
-        body: "At different points in life, anyone can become vulnerable. A strong social safety net ensures people are not abandoned during hardship.",
-      },
-      {
-        heading: "What I believe",
-        body: "Government should protect people when they need support most, including through healthcare, income support, disability services, housing, and care systems.",
-      },
-    ],
-  }, 
+
+sections: [
+{
+heading: "Why This Matters to Me",
+body: "Throughout my life, I have seen firsthand how important the social safety net can be. My family has faced challenges including learning disabilities, cerebral palsy, serious illness, and caregiving responsibilities. During difficult times, we relied on public healthcare, social services, and community support. These experiences taught me that government programs are not abstract policies—they are lifelines that help people navigate some of the most difficult moments of their lives.",
+},
+
+{
+  heading: "A Measure of Our Society",
+  body: "The true strength of a society is measured by how it treats those who need support the most. Children, seniors, people with disabilities, caregivers, those facing illness, and those experiencing hardship deserve dignity, compassion, and meaningful assistance. A strong social safety net benefits everyone because it creates healthier, more resilient communities.",
+},
+
+{
+  heading: "Any of Us Can Become Vulnerable",
+  body: "At various points in life, any one of us can become vulnerable. A disability, illness, accident, job loss, mental health challenge, or caregiving responsibility can dramatically change our circumstances. Government has an essential role in ensuring that people are not left behind during these moments and have access to the support they need to recover and rebuild.",
+},
+
+{
+  heading: "Government as a Last Line of Support",
+  body: "Government exists to serve the public and protect the common good. While families, friends, and communities provide invaluable support, there are times when public programs become the only available source of assistance. A robust social safety net ensures that no one is forced to face hardship entirely on their own.",
+},
+
+{
+  heading: "Protecting Pharmacare and Dental Care",
+  body: "I am committed to protecting and strengthening the progress that has been made through Pharmacare and Dental Care. Canadians should continue to have access to essential medications, including diabetes treatments, contraception, and abortion care. Healthcare should be based on need, not the ability to pay.",
+},
+
+{
+  heading: "Opportunity Through Security",
+  body: "When people have access to healthcare, housing support, income assistance, disability services, and other essential programs, they are better able to participate fully in society. A strong social safety net is not simply about helping people survive—it is about creating the conditions that allow people to thrive, contribute, and succeed together.",
+},
+],
+}, 
+  
   healthcare: {
     title: "Healthcare",
 
