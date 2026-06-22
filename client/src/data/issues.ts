@@ -341,25 +341,58 @@ body: "To achieve reconciliation, we must be willing to meet people as they trul
     title: "Canadian Sovereignty",
     related: ["democracy", "economy"],
     summary:
-      "Canada must protect its public institutions, economic independence, democratic values, and ability to act in the public interest.",
-    priorities: [
-  "Strengthen democratic institutions",
-  "Protect critical infrastructure",
-  "Support domestic economic resilience",
-  "Promote an independent foreign policy",
-],
-    sections: [
-      {
-        heading: "Why this matters",
-        body: "In a changing world, Canada must be able to make decisions that protect people, communities, public services, and democratic institutions.",
-      },
-      {
-        heading: "What I believe",
-        body: "Canadian sovereignty means defending democracy, protecting public institutions, and ensuring our economy serves people who live and work here.",
-      },
-    ],
-  },
+"Canada is a sovereign nation with its own values, interests, and priorities. We must strengthen our economic resilience, diversify our international partnerships, and ensure that decisions affecting Canadians are made in Canada, for Canadians.",
 
+priorities: [
+"Strengthen Canada's economic independence",
+"Diversify international trade relationships",
+"Support domestic industries and supply chains",
+"Protect Canada's sovereignty and democratic institutions",
+],
+
+sections: [
+{
+heading: "Canada Is Not America",
+body: "Canada and the United States share a close relationship, but they are distinct countries with different histories, values, and political traditions. Canada must always remain free to pursue policies that reflect our own national interests and the needs of Canadians. We are the True North, strong and free, and our future should be determined by Canadians themselves.",
+},
+
+{
+  heading: "Standing Together in Challenging Times",
+  body: "Recent trade disputes and tariff measures have demonstrated the importance of national unity. During periods of uncertainty, Canadians have repeatedly shown an ability to come together and support one another. That same spirit of cooperation should extend across all levels of government and across political parties when Canada's interests are at stake.",
+},
+
+{
+  heading: "Beyond Partisanship",
+  body: "Some challenges are bigger than politics. When Canada's economic security, sovereignty, and long-term prosperity are at risk, political leaders should be prepared to work together in the national interest. Canadians expect their elected representatives to focus on solutions rather than partisan divisions during periods of national challenge.",
+},
+
+{
+  heading: "Diversifying Trade Relationships",
+  body: "The United States will likely remain Canada's largest trading partner for the foreseeable future, but we should not become overly dependent on any single market. Canada should continue expanding trade relationships with Europe, Asia, and other regions of the world in order to strengthen economic resilience and create new opportunities for Canadian businesses and workers.",
+},
+
+{
+  heading: "Strengthening Partnerships with Europe and Asia",
+  body: "Canada should continue supporting the full implementation and ratification of the Comprehensive Economic and Trade Agreement (CETA) while pursuing deeper economic relationships with European partners. We should also continue expanding engagement with ASEAN countries and other emerging markets to create new export opportunities and reduce economic vulnerabilities.",
+},
+
+{
+  heading: "Building Canadian Industry",
+  body: "Canada possesses abundant natural resources, a highly educated workforce, and significant opportunities in clean energy, advanced manufacturing, critical minerals, and emerging technologies. We should focus on building domestic industries, creating high-quality jobs, and ensuring more value-added economic activity takes place here in Canada rather than exporting opportunities abroad.",
+},
+
+{
+  heading: "Defence and Strategic Independence",
+  body: "Canada should continue strengthening its defence capabilities and exploring opportunities to build domestic expertise and industrial capacity in partnership with trusted allies. Developing Canadian capabilities in strategic sectors can support national security, create jobs, and strengthen economic resilience while ensuring Canada remains an effective partner on the world stage.",
+},
+
+{
+  heading: "A Strong and Independent Canada",
+  body: "Sovereignty is about more than borders. It is about ensuring that Canadians have the ability to make decisions about their economy, public institutions, natural resources, and future. By strengthening our economy, diversifying our partnerships, and investing in Canadian capabilities, we can build a stronger, more resilient, and more independent Canada.",
+},
+],
+},
+  
   "social-safety-net": {
     title: "Social Safety Net",
     related: ["healthcare", "housing", "economy"],
