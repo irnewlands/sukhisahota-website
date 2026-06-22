@@ -524,7 +524,7 @@ body: "Canada's universal healthcare system is one of our greatest national achi
 },  
 
 "toxic-drug-crisis": {
-  title: "toxic-drug-crisis",
+  title: "Toxic-drug-crisis",
   related: ["housing", "economy", "healthcare"],
   summary: "",
   priorities: [
@@ -537,7 +537,7 @@ body: "Canada's universal healthcare system is one of our greatest national achi
 },  
  
 "disability-accessibility": {  
-   title: "disability-accessibility",
+   title: "Disability-accessibility",
   related: ["social-safety-net", "lgbtq-rights", "healthcare"],
   summary: "",
   priorities: [
@@ -550,7 +550,7 @@ body: "Canada's universal healthcare system is one of our greatest national achi
 },  
 
 "misinformation": {  
-   title: "misinformation",
+   title: "Misinformation",
   related: ["culture-community", "lgbtq-rights", "human-rights-foreign-policy"],
   summary: "",
   priorities: [
@@ -563,7 +563,7 @@ body: "Canada's universal healthcare system is one of our greatest national achi
 },  
    
 "culture-community": {  
-   title: "culture-community",
+   title: "Culture-and-Community",
   related: ["social-safety-net", "human-rights-foreign-policy", "healthcare"],
   summary: "",
   priorities: [
@@ -576,7 +576,7 @@ body: "Canada's universal healthcare system is one of our greatest national achi
 },   
 
 "human-rights-foreign-policy": {  
-   title: "human-rights-foreign-policy",
+   title: "Human-rights-and-Foreign-policy",
   related: ["misinformation", "lgbtq-rights", "culture-community"],
   summary: "",
   priorities: [
