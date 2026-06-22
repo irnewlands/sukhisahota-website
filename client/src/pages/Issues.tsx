@@ -137,7 +137,7 @@ return (
 
         <div className="grid gap-6 md:grid-cols-2">
           {issues.map((issue) => (
-           <a
+<a
   key={issue.title}
   href={`/issues/${issue.slug}`}
   className="block overflow-hidden rounded-3xl bg-white text-inherit no-underline shadow-lg transition hover:-translate-y-1 hover:shadow-xl"
