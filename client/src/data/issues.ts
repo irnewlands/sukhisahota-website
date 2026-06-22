@@ -97,26 +97,59 @@ body: "Having worked for an environmental organization, I understand that our li
 
    economy: {
     title: "Economic Security",
-    related: ["social-safety-net", "housing"], 
+    related: ["housing", "social-safety-net", "sovereignty"],
     summary:
-      "We need an economy where workers are respected, wealth is taxed fairly, and public investment builds long-term community prosperity.",
-     priorities: [
-  "Support good-paying union jobs",
-  "Invest in productivity and innovation",
-  "Strengthen worker protections",
-  "Build an economy that works for everyone",
+"Canada needs an economy that works for everyone, not just those at the top. By investing in workers, innovation, productivity, and sustainable industries, we can build a more prosperous, resilient, and equitable future while remaining competitive in a rapidly changing global economy.",
+
+priorities: [
+"Build a fairer tax system",
+"Invest in productivity and innovation",
+"Support unionized workers and good-paying jobs",
+"Strengthen Canada's economic independence",
 ],
-    sections: [
-      {
-        heading: "Why this matters",
-        body: "Too many people are working hard but still struggling with rent, groceries, bills, and financial insecurity.",
-      },
-      {
-        heading: "What I believe",
-        body: "An economy should serve people, not the other way around. Workers, families, small businesses, and communities should be at the centre of economic decision-making.",
-      },
-    ],
-  },
+
+sections: [
+{
+heading: "An Economy That Works for People",
+body: "Society thrives when everyone contributes fairly and has an opportunity to succeed. Economic growth should improve living standards, strengthen communities, and create opportunities for future generations. We need an economy that prioritizes people while also supporting environmental sustainability and long-term prosperity.",
+},
+
+{
+  heading: "Tax Fairness",
+  body: "The tax system should treat different forms of income fairly and consistently. Too often, working Canadians face a greater tax burden than those whose wealth is primarily generated through investments and assets. We need to review and modernize the tax system to ensure it reflects today's economic realities and promotes fairness for workers and families.",
+},
+
+{
+  heading: "Addressing Economic Inequality",
+  body: "Over the past several decades, wealth has become increasingly concentrated among a small segment of society. At the same time, many Canadians are struggling with rising housing costs, stagnant wages, and affordability challenges. Economic policy should focus on creating opportunities for everyone rather than allowing the gap between the wealthiest Canadians and ordinary workers to continue growing.",
+},
+
+{
+  heading: "Improving Productivity",
+  body: "Canada has faced long-standing productivity challenges. When labour is inexpensive, businesses often have less incentive to invest in modernization and efficiency. We should encourage investment in innovation, advanced manufacturing, clean technology, automation, and productivity-enhancing tools that help workers succeed and strengthen Canada's competitiveness.",
+},
+
+{
+  heading: "Supporting Workers and Unions",
+  body: "Workers deserve fair wages, safe workplaces, and the ability to organize collectively. As a union member myself, I understand the important role unions play in building a strong middle class and protecting workplace rights. Governments should recognize the value of unionized workforces and consider labour standards, worker protections, and fair employment practices when awarding public contracts.",
+},
+
+{
+  heading: "Build Canadian, Buy Canadian",
+  body: "Canada should strengthen domestic supply chains and support Canadian businesses, workers, and industries whenever possible. Strategic procurement policies can help create jobs, strengthen local economies, and reduce dependence on foreign suppliers while ensuring taxpayer dollars generate long-term benefits for Canadian communities.",
+},
+
+{
+  heading: "Investing in Emerging Industries",
+  body: "The global economy is changing rapidly. Canada should seize opportunities in clean technology, artificial intelligence, advanced manufacturing, renewable energy, life sciences, and other emerging sectors. Targeted incentives and strategic investments can help position Canada as a leader in future industries while creating high-quality jobs and reducing economic dependence on any single trading partner.",
+},
+
+{
+  heading: "Economic Sovereignty",
+  body: "A resilient economy requires strong domestic industries, diversified trade relationships, and the ability to compete internationally. By investing in innovation, supporting workers, and building strategic industries at home, Canada can strengthen its economic independence while continuing to engage successfully with global markets.",
+},
+],
+},
 
   democracy: {
 title: "Democracy & Electoral Reform",
