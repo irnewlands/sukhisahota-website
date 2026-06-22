@@ -18,21 +18,21 @@ const issues = [
   {
     title: "Healthcare",
     slug: "healthcare",
-    image: "/issues/healthcare.jpg"
+    image: "/issues/healthcare.jpg",
     description:
       "Public healthcare must be protected and expanded, including pharmacare, dental care, mental health care, and reproductive healthcare.",
   },
   {
     title: "Economic Security",
     slug: "economy",
-    image: "/issues/economy.jpg"
+    image: "/issues/economy.jpg",
     description:
       "Workers, families, small businesses, and communities should be at the centre of economic decision-making.",
   },
   {
     title: "Democracy & Electoral Reform",
     slug: "democracy",
-    image: "/issues/democracy.jpg"
+    image: "/issues/democracy.jpg",
     description:
       "Grassroots democracy must be more than a slogan. People should have real power in political parties and public institutions.",
   },
