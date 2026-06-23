@@ -221,6 +221,7 @@ export default function Home() {
     <div className="min-h-screen bg-cream">
       <Nav />
 
+    <main>  
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center pt-16 overflow-hidden bg-cream">
         {/* Decorative background shapes */}
@@ -615,6 +616,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+       <main>
 
       {/* Footer */}
       <footer className="bg-charcoal text-white py-16">
