@@ -80,7 +80,6 @@ const issues = [
     credit: "Photo: Jason Hafso / Unsplash",
     creditUrl: "https://unsplash.com/@jasonhafso?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText",
     description:
-    description:
       "Canada must protect its public institutions, economic independence, democratic values, and ability to act in the public interest.",
   },
   {
