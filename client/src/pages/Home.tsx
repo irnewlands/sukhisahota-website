@@ -11,9 +11,9 @@ import LanguageSwitcher from "@/components/LanguageSwitcher";
 import NewsletterSignup from "@/components/NewsletterSignup";
 
 // ─── Asset URLs ──────────────────────────────────────────────────────────────
-const PORTRAIT_PHOTO = "/006A7069a.jpg";
-const CANVASSING_PHOTO = "/151341v3.jpg";
-const CLASSROOM_PHOTO = "/20250110_113015v2.jpg";
+const PORTRAIT_PHOTO = "/006A7069a.webp";
+const CANVASSING_PHOTO = "/151341v3.webp";
+const CLASSROOM_PHOTO = "/20250110_113015v2.webp";
 
 // ─── Scroll reveal hook ───────────────────────────────────────────────────────
 function useReveal() {
