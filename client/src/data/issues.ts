@@ -3,10 +3,9 @@
 export const issueDetails = {
 "affordability": {
   title: "Affordability",
-  image: "/issues/toxic-drug-crisis.jpg",
-  credit: "Photo: Jonathan Gonzalez / Unsplash",
-  creditUrl: "https://unsplash.com/@jonogonzo?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText",
-  related: ["housing", "economy", "social-safety-net"],
+  image: "/issues/affordability.jpg",
+  credit: "Photo: Victoriano Izquierdo / Unsplash",
+  creditUrl: "https://unsplash.com/@victoriano?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText",
   summary: "",
   priorities: [
   "Reduce the cost of living",
