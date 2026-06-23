@@ -5,6 +5,8 @@ const issues = [
     title: "Climate & Environment",
     slug: "climate",
     image: "/issues/climate.jpg",
+    credit: "Photo: Mike Benna / Unsplash",
+    creditUrl: "https://unsplash.com/@mbenna?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText",
     description:
       "Real climate action means ending fossil fuel subsidies, investing in renewable energy, and protecting communities from climate breakdown.",
   },
@@ -12,6 +14,8 @@ const issues = [
     title: "Housing",
     slug: "housing",
     image: "/issues/housing.jpg",
+    credit: "Photo: Chelaxy Designs / Unsplash",
+    creditUrl: "https://unsplash.com/@chelaxydp?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText",
     description:
       "Everyone deserves stable housing; it's a Human right and an everyday part of our essential necessities just to live.",
   },
@@ -19,6 +23,8 @@ const issues = [
     title: "Healthcare",
     slug: "healthcare",
     image: "/issues/healthcare.jpg",
+    credit: "Photo: Albert Stoynov / Unsplash",
+    creditUrl: "https://unsplash.com/@albertstoynov?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText",
     description:
       "Public healthcare must be protected and expanded, including pharmacare, dental care, mental health care, and reproductive healthcare.",
   },
@@ -26,6 +32,8 @@ const issues = [
     title: "Economic Security",
     slug: "economy",
     image: "/issues/economy.jpg",
+    credit: "Photo: John McArthur / Unsplash",
+    creditUrl: "https://unsplash.com/@snowjam?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText",
     description:
       "Workers, families, small businesses, and communities should be at the centre of economic decision-making.",
   },
@@ -33,6 +41,8 @@ const issues = [
     title: "Democracy & Electoral Reform",
     slug: "democracy",
     image: "/issues/democracy.jpg",
+    credit: "Photo: Aleksandr Galenko / Unsplash",
+    creditUrl: "https://unsplash.com/@aleks_g?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText",
     description:
       "Grassroots democracy must be more than a slogan. People should have real power in political parties and public institutions.",
   },
@@ -40,6 +50,8 @@ const issues = [
     title: "Technology & Artificial Intelligence",
     slug: "ai",
     image: "/issues/ai.jpg",
+    credit: "Photo: Igor Omilaev / Unsplash",
+    creditUrl: "https://unsplash.com/@omilaev?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText",
     description:
       "AI and emerging technologies must be governed in the public interest, with transparency and worker protections.",
   },
@@ -47,6 +59,8 @@ const issues = [
     title: "LGBTQ+ Rights",
     slug: "lgbtq-rights",
     image: "/issues/lgbtq-rights.jpg",
+    credit: "Photo: Hannah Voggenhuber / Unsplash",
+    creditUrl: "https://unsplash.com/@han1234i?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText",
     description:
       "Queer and trans people deserve safety, dignity, healthcare, legal protection, and full participation in public life.",
   },
@@ -54,6 +68,8 @@ const issues = [
     title: "Indigenous Reconciliation",
     slug: "reconciliation",
     image: "/issues/reconciliation.jpg",
+    credit: "Photo: Rohit Tandon / Unsplash",
+    creditUrl: "https://unsplash.com/@sepoys?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText",
     description:
       "Reconciliation requires action, respect for Indigenous rights, clean water, land protection, and meaningful consent.",
   },
@@ -61,6 +77,9 @@ const issues = [
     title: "Canadian Sovereignty",
     slug: "sovereignty",
     image: "/issues/sovereignty.jpg",
+    credit: "Photo: Jason Hafso / Unsplash",
+    creditUrl: "https://unsplash.com/@jasonhafso?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText",
+    description:
     description:
       "Canada must protect its public institutions, economic independence, democratic values, and ability to act in the public interest.",
   },
@@ -68,6 +87,8 @@ const issues = [
     title: "Social Safety Net",
     slug: "social-safety-net",
     image: "/issues/social-safety-net.jpg",
+    credit: "Photo: John Cameron / Unsplash",
+    creditUrl: "https://unsplash.com/@john_cameron?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText",
     description:
       "A strong society is measured by how well it supports people during illness, disability, unemployment, caregiving, grief, and crisis.",
   },
@@ -75,6 +96,8 @@ const issues = [
   title: "Affordability",
   slug: "affordability",
   image: "/issues/affordability.jpg",
+  credit: "Photo: Victoriano Izquierdo / Unsplash",
+  creditUrl: "https://unsplash.com/@victoriano?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText",
   description:
     "Reducing the cost of living, making essentials more affordable, and building an economy where people can get ahead.",
 },
@@ -82,6 +105,8 @@ const issues = [
   title: "Toxic Drug Crisis",
   slug: "toxic-drug-crisis",
   image: "/issues/toxic-drug-crisis.jpg",
+  credit: "Photo: Jonathan Gonzalez / Unsplash",
+  creditUrl: "https://unsplash.com/@jonogonzo?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText",
   description:
     "Treating the toxic drug crisis as a public health emergency with compassion, treatment, recovery, housing, and support.",
 },
@@ -89,6 +114,8 @@ const issues = [
   title: "Disability & Accessibility",
   slug: "disability-accessibility",
   image: "/issues/disability-accessibility.jpg",
+  credit: "Photo: Jon Tyson / Unsplash",
+  creditUrl: "https://unsplash.com/@jontyson?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText",
   description:
     "Building a society where disabled people have dignity, support, accessibility, and real opportunity.",
 },
@@ -96,6 +123,8 @@ const issues = [
   title: "Misinformation",
   slug: "misinformation",
   image: "/issues/misinformation.jpg",
+  credit: "Photo: Hartono Creative Studio / Unsplash",
+  creditUrl: "https://unsplash.com/@hartonocreativestudio?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText",
   description:
     "Protecting democracy through media literacy, platform transparency, trusted journalism, and public accountability.",
 },
@@ -103,6 +132,8 @@ const issues = [
   title: "Culture & Community",
   slug: "culture-community",
   image: "/issues/culture-community.jpg",
+  credit: "Photo: Hardial Aujla / Unsplash",
+  creditUrl: "https://unsplash.com/@hardialsingh?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText",
   description:
     "Celebrating cultural heritage, supporting gathering spaces, and strengthening community connection across Canada.",
 },
@@ -110,6 +141,8 @@ const issues = [
   title: "Human Rights & Foreign Policy",
   slug: "human-rights-foreign-policy",
   image: "/issues/human-rights-foreign-policy.jpg",
+  credit: "Photo: Lucas George Wendt / Unsplash",
+  creditUrl: "https://unsplash.com/@lucasgwendt?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText",
   description:
     "Putting human rights, international law, peace, diplomacy, and humanitarian values at the centre of Canada’s role in the world.",
 },
@@ -148,6 +181,19 @@ return (
     className="h-56 w-full object-cover"
   />
 
+  {issue.credit && (
+  <div className="px-8 pt-3">
+    <a
+      href={issue.creditUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-xs text-[#6b7280] hover:text-[#e85d04]"
+    >
+      {issue.credit}
+    </a>
+  </div>
+)}
+  
   <div className="p-8">
     <h2 className="mb-4 font-serif text-3xl font-bold">
       {issue.title}
