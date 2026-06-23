@@ -72,7 +72,7 @@ function Nav() {
             <span className="font-serif font-bold text-lg text-charcoal group-hover:text-orange transition-colors leading-tight">
               Sukhi Sahota
             </span>
-            <span className="text-xs font-semibold tracking-widest text-orange uppercase">
+            <span className="text-xs font-semibold tracking-widest text-[#b84300] uppercase">
               Former Federal Candidate
             </span>
           </div>
