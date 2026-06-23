@@ -177,7 +177,7 @@ return (
   <img
     src={issue.image}
     alt={issue.title}
-    className="h-64 w-full object-cover object-center"
+    className="w-full h-auto object-contain"
   />
 
   {issue.credit && (
