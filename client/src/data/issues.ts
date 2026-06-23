@@ -3,6 +3,9 @@
 export const issueDetails = {
 "affordability": {
   title: "Affordability",
+  image: "/issues/toxic-drug-crisis.jpg",
+  credit: "Photo: Jonathan Gonzalez / Unsplash",
+  creditUrl: "https://unsplash.com/@jonogonzo?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText",
   related: ["housing", "economy", "social-safety-net"],
   summary: "",
   priorities: [
@@ -39,7 +42,9 @@ export const issueDetails = {
   
 climate: {
 title: "Climate & Environment",
-
+image: "/issues/climate.jpg",
+credit: "Photo: Mike Benna / Unsplash",
+creditUrl: "https://unsplash.com/@mbenna?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText",
 related: ["housing", "healthcare", "reconciliation"],
 
 summary:
@@ -87,6 +92,9 @@ body: "Having worked for an environmental organization, I understand that our li
 
   housing: {
   title: "Housing",
+  image: "/issues/housing.jpg",
+  credit: "Photo: Chelaxy Designs / Unsplash",
+  creditUrl: "https://unsplash.com/@chelaxydp?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText",  
   related: ["healthcare", "social-safety-net", "economy"],
   summary:
     "Housing is a human right. Everyone deserves a safe, secure, and affordable place to live. Canada must address the housing crisis by increasing supply, strengthening renter protections, and ensuring homes are treated as places to live rather than speculative investments.",
@@ -133,6 +141,9 @@ body: "Having worked for an environmental organization, I understand that our li
 
    economy: {
     title: "Economic Security",
+    image: "/issues/economy.jpg",
+    credit: "Photo: John McArthur / Unsplash",
+    creditUrl: "https://unsplash.com/@snowjam?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText", 
     related: ["housing", "social-safety-net", "sovereignty"],
     summary:
 "Canada needs an economy that works for everyone, not just those at the top. By investing in workers, innovation, productivity, and sustainable industries, we can build a more prosperous, resilient, and equitable future while remaining competitive in a rapidly changing global economy.",
@@ -189,7 +200,9 @@ body: "Society thrives when everyone contributes fairly and has an opportunity t
 
   democracy: {
 title: "Democracy & Electoral Reform",
-
+image: "/issues/democracy.jpg",
+credit: "Photo: Aleksandr Galenko / Unsplash",
+creditUrl: "https://unsplash.com/@aleks_g?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText",
 related: ["sovereignty", "ai"],
 
 summary:
@@ -238,7 +251,9 @@ body: "This is a crucial moment for collaboration instead of polarization. Throu
 
   ai: {
     title: "Artificial Intelligence",
-
+image: "/issues/ai.jpg",
+credit: "Photo: Igor Omilaev / Unsplash",
+creditUrl: "https://unsplash.com/@omilaev?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText",
 related: ["democracy", "economy"],
 
 summary:
@@ -301,6 +316,9 @@ body: "Whether we like it or not, Artificial Intelligence is here. AI technologi
 
   "lgbtq-rights": {
     title: "LGBTQ+ Rights",
+    image: "/issues/lgbtq-rights.jpg",
+    credit: "Photo: Hannah Voggenhuber / Unsplash",
+    creditUrl: "https://unsplash.com/@han1234i?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText",
     related: ["healthcare", "democracy", "social-safety-net"],
     summary:
 "Every person deserves to live with dignity, safety, and respect regardless of their sexual orientation, gender identity, or gender expression. A fair and inclusive society protects the rights of all people and recognizes that equality benefits everyone.",
@@ -347,6 +365,9 @@ body: "I proudly identify as bisexual and have experienced different understandi
 
   reconciliation: {
     title: "Indigenous Reconciliation",
+    image: "/issues/reconciliation.jpg",
+    credit: "Photo: Rohit Tandon / Unsplash",
+    creditUrl: "https://unsplash.com/@sepoys?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText",
     related: ["climate", "democracy", "social-safety-net"],
     summary:
 "Reconciliation requires action, respect, listening, and partnership. It is not a symbolic gesture or a political slogan, but an ongoing commitment to truth, healing, justice, and building a better future together with Indigenous peoples across Turtle Island.",
@@ -398,6 +419,9 @@ body: "To achieve reconciliation, we must be willing to meet people as they trul
   
   sovereignty: {
     title: "Canadian Sovereignty",
+    image: "/issues/sovereignty.jpg",
+    credit: "Photo: Jason Hafso / Unsplash",
+    creditUrl: "https://unsplash.com/@jasonhafso?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText",
     related: ["democracy", "economy"],
     summary:
 "Canada is a sovereign nation with its own values, interests, and priorities. We must strengthen our economic resilience, diversify our international partnerships, and ensure that decisions affecting Canadians are made in Canada, for Canadians.",
@@ -454,6 +478,9 @@ body: "Canada and the United States share a close relationship, but they are dis
   
   "social-safety-net": {
     title: "Social Safety Net",
+    image: "/issues/social-safety-net.jpg",
+    credit: "Photo: John Cameron / Unsplash",
+    creditUrl: "https://unsplash.com/@john_cameron?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText",
     related: ["healthcare", "housing", "economy"],
     summary:
 "A strong society is measured by how well it supports people during illness, disability, unemployment, caregiving, grief, and crisis. Every Canadian deserves the security of knowing that support will be there when life takes an unexpected turn.",
@@ -500,7 +527,9 @@ body: "Throughout my life, I have seen firsthand how important the social safety
   
   healthcare: {
     title: "Healthcare",
-
+image: "/issues/healthcare.jpg",
+credit: "Photo: Albert Stoynov / Unsplash",
+creditUrl: "https://unsplash.com/@albertstoynov?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText",
 related: ["social-safety-net", "housing", "toxic-drug-crisis"],
 
 summary:
@@ -548,6 +577,9 @@ body: "Canada's universal healthcare system is one of our greatest national achi
 
 "toxic-drug-crisis": {
   title: "Toxic drug crisis",
+  image: "/issues/toxic-drug-crisis.jpg",
+  credit: "Photo: Jonathan Gonzalez / Unsplash",
+  creditUrl: "https://unsplash.com/@jonogonzo?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText",
  related: ["healthcare", "housing", "social-safety-net"],
 
 summary:
@@ -605,6 +637,9 @@ body: "First and foremost, I extend my heartfelt condolences to everyone who has
  
 "disability-accessibility": {  
    title: "Disability& Accessibility",
+  image: "/issues/disability-accessibility.jpg",
+  credit: "Photo: Jon Tyson / Unsplash",
+  creditUrl: "https://unsplash.com/@jontyson?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText",
   related: ["social-safety-net", "lgbtq-rights", "healthcare"],
   summary:
     "Accessibility is about dignity, independence, and full participation in society. Disabled Canadians deserve public services, workplaces, housing, transportation, and communities that are designed with inclusion in mind from the beginning.",
@@ -646,6 +681,9 @@ body: "First and foremost, I extend my heartfelt condolences to everyone who has
 
 "misinformation": {  
    title: "Misinformation",
+  image: "/issues/misinformation.jpg",
+  credit: "Photo: Hartono Creative Studio / Unsplash",
+  creditUrl: "https://unsplash.com/@hartonocreativestudio?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText",
   related: ["democracy", "ai", "human-rights-foreign-policy"],
 
 summary:
@@ -698,6 +736,9 @@ body: "Misinformation undermines public trust, weakens democratic participation,
    
 "culture-community": {  
    title: "Culture & Community",
+  image: "/issues/culture-community.jpg",
+  credit: "Photo: Hardial Aujla / Unsplash",
+  creditUrl: "https://unsplash.com/@hardialsingh?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText",
   related: ["reconciliation", "social-safety-net", "human-rights-foreign-policy"],
 
 summary:
@@ -750,6 +791,9 @@ body: "Communities thrive when people have places to gather, celebrate, learn, a
 
 "human-rights-foreign-policy": {  
    title: "Human rights & Foreign policy",
+  image: "/issues/human-rights-foreign-policy.jpg",
+  credit: "Photo: Lucas George Wendt / Unsplash",
+  creditUrl: "https://unsplash.com/@lucasgwendt?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText",
  related: ["democracy", "misinformation", "reconciliation"],
 
 summary:
