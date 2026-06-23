@@ -160,16 +160,6 @@ return (
     <p className="mt-6 font-bold text-[#e85d04]">Learn more →</p>
   </div>
 </a>
-              <h2 className="mb-4 font-serif text-3xl font-bold">
-                {issue.title}
-              </h2>
-
-              <p className="text-lg leading-8 text-[#4b5563]">
-                {issue.description}
-              </p>
-
-              <p className="mt-6 font-bold text-[#e85d04]">Learn more →</p>
-            </a>
           ))}
         </div>
       </section>
