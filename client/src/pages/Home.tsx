@@ -617,7 +617,7 @@ export default function Home() {
         </div>
       </section>
 
-       <main>
+    </main>
 
       {/* Footer */}
       <footer className="bg-charcoal text-white py-16">
