@@ -292,7 +292,7 @@ export default function Home() {
                   <img
                     src={PORTRAIT_PHOTO}
                     alt="Sukhi Sahota"
-                    className="w-full h-full object-cover object-top"
+                    className="w-full h-full object-cover object-[center_35%]"
                   />
                 </div>
                 {/* Decorative frame */}
