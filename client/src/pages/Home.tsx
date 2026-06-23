@@ -288,13 +288,15 @@ export default function Home() {
             {/* Portrait photo */}
             <div className="relative flex justify-center lg:justify-end">
               <div className="relative">
-                <div className="w-80 h-80 md:w-96 md:h-96 lg:w-[440px] lg:h-[540px] rounded-2xl overflow-hidden shadow-2xl">
-                  <img
-                    src={PORTRAIT_PHOTO}
-                    alt="Sukhi Sahota"
-                    className="w-full h-full object-cover object-[center_35%]"
-                  />
-                </div>
+               <div className="w-80 md:w-96 lg:w-[440px] rounded-2xl overflow-hidden shadow-2xl">
+  <img
+    src={PORTRAIT_PHOTO}
+    alt="Sukhi Sahota"
+    width="880"
+    height="1080"
+    className="w-full h-auto object-contain"
+  />
+</div>
                 {/* Decorative frame */}
                 <div className="absolute -bottom-4 -left-4 w-full h-full rounded-2xl border-4 border-orange/30 -z-10" />
               </div>
