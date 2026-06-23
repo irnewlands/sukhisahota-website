@@ -48,7 +48,28 @@ return (
         <h1 className="mb-6 font-serif text-5xl font-bold leading-tight md:text-7xl">
           {issue.title}
         </h1>
+{issue.image && (
+  <div className="mb-10 overflow-hidden rounded-3xl bg-white shadow-lg">
+    <img
+      src={issue.image}
+      alt={issue.title}
+      className="h-80 w-full object-cover"
+    />
 
+    {issue.credit && (
+      <div className="px-6 py-3">
+        <a
+          href={issue.creditUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-xs text-[#6b7280] hover:text-[#e85d04]"
+        >
+          {issue.credit}
+        </a>
+      </div>
+    )}
+  </div>
+)}
         <p className="mb-12 text-xl leading-8 text-[#374151]">
           {issue.summary}
         </p>
