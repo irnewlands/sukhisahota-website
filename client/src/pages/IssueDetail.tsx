@@ -53,7 +53,7 @@ return (
     <img
       src={issue.image}
       alt={issue.title}
-      className="h-80 w-full object-cover"
+      className="w-full h-auto object-contain"
     />
 
     {issue.credit && (
