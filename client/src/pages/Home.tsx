@@ -9,6 +9,7 @@ import { useEffect, useState } from "react";
 import { Mail, Linkedin, Instagram, Facebook, ChevronDown, ArrowRight, Users, Globe, Heart, Shield, Leaf, HandHeart, Chrome as HomeIcon, Stethoscope, GraduationCap, Scale, TreePine, DollarSign, Wrench } from "lucide-react";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import NewsletterSignup from "@/components/NewsletterSignup";
+import ElectionReflectionBanner from "@/components/ElectionReflectionBanner";
 
 // ─── Asset URLs ──────────────────────────────────────────────────────────────
 const PORTRAIT_PHOTO = "/006A7069a.webp";
@@ -221,9 +222,13 @@ export default function Home() {
     <div className="min-h-screen bg-cream">
       <Nav />
 
+      <div className="pt-16">
+        <ElectionReflectionBanner />
+      </div>
+
     <main>  
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center pt-16 overflow-hidden bg-cream">
+      <section className="relative min-h-[calc(100vh-8rem)] flex items-center overflow-hidden bg-cream">
         {/* Decorative background shapes */}
         <div className="absolute top-0 right-0 w-1/2 h-full bg-orange/5 hidden lg:block" style={{ clipPath: "polygon(15% 0, 100% 0, 100% 100%, 0% 100%)" }} />
 
