@@ -5,6 +5,7 @@ const NAV_LINKS = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
   { label: "Election 2025", href: "/election-2025" },
+  { label: "BC Election 2026", href: "/after-the-election" },
   { label: "Renewal", href: "/renewal-report" },
   { label: "Issues", href: "/issues" },
   { label: "Get Involved", href: "/get-involved" },
@@ -28,7 +29,7 @@ export default function SiteHeader() {
           </div>
         </a>
 
-        <nav className="hidden md:flex items-center gap-1">
+        <nav className="hidden xl:flex items-center gap-1">
           {NAV_LINKS.map((l) => (
             <a key={l.href} href={l.href} className="nav-link px-3 py-2 text-sm font-medium rounded text-charcoal hover:text-orange">
               {l.label}
@@ -37,13 +38,13 @@ export default function SiteHeader() {
           <div className="ml-2"><LanguageSwitcher /></div>
         </nav>
 
-        <button onClick={() => setOpen(!open)} className="md:hidden p-2 text-charcoal">
+        <button onClick={() => setOpen(!open)} className="xl:hidden p-2 text-charcoal">
           ☰
         </button>
       </div>
 
       {open && (
-        <div className="bg-cream border-t border-border md:hidden">
+        <div className="bg-cream border-t border-border xl:hidden">
           <div className="container py-4">
             {NAV_LINKS.map((l) => (
               <a key={l.href} href={l.href} onClick={() => setOpen(false)} className="block py-3 text-base font-medium text-charcoal border-b border-border">
