@@ -3,12 +3,30 @@ import { ArrowRight, CalendarDays, ExternalLink, MessageCircle, ShieldCheck } fr
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 
-/**
- * Replace only after publishing AND manually testing each independent Google Form.
- * No fake URLs or contact-capture fields should be shown while these are blank.
- */
-const SURVEY_URL: string = "";
-const LISTENING_URL: string = "";
+const PARTICIPATION_FORMS = [
+  {
+    id: "member-survey",
+    title: "Independent member survey",
+    description:
+      "Allow about 10–15 minutes. Participation consent is required; all 24 substantive questions are optional. Please avoid including identifying details in your answers.",
+    url: "https://forms.gle/tCcxScxaaovLWBtf9",
+    embedUrl:
+      "https://docs.google.com/forms/d/e/1FAIpQLSfOsZb03dth70HV1qHs0kNo6CkN2vGQUdD1AeVExuhUYLhxWA/viewform?embedded=true",
+    linkLabel: "Open the survey in a new tab",
+    frameTitle: "Independent BC NDP Member Survey — Sukhi Sahota",
+  },
+  {
+    id: "listening-contact",
+    title: "Request a listening conversation",
+    description:
+      "This separate contact form is optional. You can request a conversation whether or not you complete the survey. Your contact details will not be matched with survey answers or used to subscribe you to campaign communications.",
+    url: "https://forms.gle/vNLjTxaqj8rfWuu59",
+    embedUrl:
+      "https://docs.google.com/forms/d/e/1FAIpQLSdu6mZDDCJZAtyUAVxmaY1SDYGzXdAyvamcIVlEUlIgvZtK2Q/viewform?embedded=true",
+    linkLabel: "Open the contact form in a new tab",
+    frameTitle: "Listening Conversation with Sukhi Sahota — Personal Initiative",
+  },
+] as const;
 
 export default function AfterElection() {
   useEffect(() => {
@@ -52,7 +70,7 @@ export default function AfterElection() {
                 href="#share-your-voice"
                 className="inline-flex items-center gap-2 rounded-xl border-2 border-charcoal px-6 py-3 font-semibold text-charcoal no-underline transition hover:bg-white"
               >
-                About the member survey
+                Take the member survey
               </a>
             </div>
           </div>
@@ -123,42 +141,54 @@ export default function AfterElection() {
                 What do you think?
               </h2>
               <p className="mt-6 max-w-3xl text-lg leading-8 text-white/85">
-                I'm preparing <strong>BC NDP Member Voices: Reflections After the 2026 Election</strong>, an independent survey for current and former members, volunteers, and supporters to reflect on the election, party processes, priorities, and possible improvements.
+                You can now complete <strong>BC NDP Member Voices: Reflections After the 2026 Election</strong>, an independent survey for current and former members, volunteers, and supporters to reflect on the election, party processes, priorities, and possible improvements.
               </p>
               <p className="mt-4 max-w-3xl text-lg leading-8 text-white/85">
                 You do not have to agree with my views to take part. I want to hear the positive experiences alongside the frustrations, and the ideas that may help inform a better conversation.
               </p>
 
-              <div className="mt-9 rounded-2xl border border-white/20 bg-white/10 p-6 md:p-8">
-                {SURVEY_URL ? (
-                  <a
-                    href={SURVEY_URL}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-3 rounded-xl bg-[#ffd400] px-6 py-4 font-extrabold text-[#641b25] no-underline transition hover:bg-[#ffe044]"
-                  >
-                    Share your views in the survey
-                    <ExternalLink className="h-5 w-5" aria-hidden="true" />
-                  </a>
-                ) : (
-                  <div>
-                    <span className="inline-flex items-center rounded-full bg-[#ffd400] px-4 py-2 text-sm font-extrabold uppercase tracking-wide text-[#641b25]" role="status">
-                      Survey coming soon
-                    </span>
-                    <p className="mt-4 text-base leading-7 text-white/80">
-                      The form and its privacy arrangements are being reviewed before public release. There is no survey to submit on this page yet.
-                    </p>
-                  </div>
-                )}
+              <div className="mt-7 flex flex-wrap gap-3">
+                <a href="#member-survey" className="inline-flex items-center gap-2 rounded-xl bg-[#ffd400] px-5 py-3 font-bold text-[#641b25] no-underline transition hover:bg-[#ffe044]">
+                  Complete the survey <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                </a>
+                <a href="#listening-contact" className="inline-flex items-center gap-2 rounded-xl border border-white/40 px-5 py-3 font-bold text-white no-underline transition hover:bg-white/10">
+                  Request a conversation <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                </a>
+              </div>
 
-                {LISTENING_URL && (
-                  <p className="mt-6 text-base text-white/85">
-                    Would you prefer a separate conversation?{" "}
-                    <a href={LISTENING_URL} target="_blank" rel="noopener noreferrer" className="font-bold text-[#ffd400] underline underline-offset-4">
-                      Request a listening conversation
-                    </a>.
-                  </p>
-                )}
+              <div className="mt-9 space-y-10">
+                {PARTICIPATION_FORMS.map((form) => (
+                  <section key={form.id} id={form.id} aria-labelledby={`${form.id}-heading`} className="scroll-mt-28 overflow-hidden rounded-2xl border border-white/20 bg-white text-charcoal shadow-sm">
+                    <div className="p-6 md:p-8">
+                      <h3 id={`${form.id}-heading`} className="font-serif text-2xl font-bold md:text-3xl">
+                        {form.title}
+                      </h3>
+                      <p className="mt-3 text-base leading-7 text-charcoal/80">
+                        {form.description}
+                      </p>
+                      <p className="mt-4 text-sm leading-6 text-charcoal/70">
+                        Complete the form below, or open it in a new tab if you prefer more space.
+                      </p>
+                      <a
+                        href={form.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="mt-4 inline-flex items-center gap-2 rounded-xl bg-charcoal px-5 py-3 font-semibold text-white no-underline transition hover:bg-orange"
+                      >
+                        {form.linkLabel}
+                        <ExternalLink className="h-4 w-4" aria-hidden="true" />
+                      </a>
+                    </div>
+                    <iframe
+                      src={form.embedUrl}
+                      title={form.frameTitle}
+                      width="100%"
+                      height="1000"
+                      loading="lazy"
+                      className="block h-[80svh] min-h-[34rem] w-full border-0 bg-white sm:min-h-[42rem]"
+                    />
+                  </section>
+                ))}
               </div>
             </div>
           </div>
@@ -173,16 +203,17 @@ export default function AfterElection() {
                   Independent, voluntary, and respectful of privacy
                 </h2>
                 <p className="mt-4 leading-8 text-charcoal/80">
-                  This is my personal initiative, not a survey commissioned or endorsed by the BC NDP, SCOEE, or any leadership candidacy. Participation is voluntary and all survey questions will be optional.
+                  This is my personal initiative, not a survey commissioned or endorsed by the BC NDP, SCOEE, or any leadership candidacy. Participation is voluntary. Consent is required to submit either form; all 24 substantive survey questions are optional.
                 </p>
                 <p className="mt-4 leading-8 text-charcoal/80">
-                  The survey will not request names or contact details. Submission timestamps and free-text answers may nevertheless identify someone, so absolute anonymity cannot be guaranteed. Responses will be reviewed as aggregate themes and counts, with quotations checked for identifying details. They will not be attached to individual political-opinion profiles.
+                  The survey does not request names or contact details. Submission timestamps and free-text answers may nevertheless identify someone, so absolute anonymity cannot be guaranteed. Responses will be reviewed as aggregate themes and counts, with quotations checked for identifying details. They will not be attached to individual political-opinion profiles.
                 </p>
                 <p className="mt-4 leading-8 text-charcoal/80">
-                  Anyone who wishes to request a listening conversation will be able to use a separate, optional contact form. Contact information will not be matched with survey answers or treated as consent to receive campaign communications.
+                  Anyone who wishes to request a listening conversation can use the separate, optional contact form above. Contact information will not be matched with survey answers or treated as consent to receive campaign communications.
                 </p>
                 <p className="mt-5 text-sm text-charcoal/65">
-                  Further collection, storage, retention, and privacy-contact details will appear in each form when it is published.
+                  Each Google Form explains its collection, storage, and retention arrangements. For privacy questions or requests, contact me at{" "}
+                  <a href="mailto:info@sukhisahota.ca" className="font-semibold text-orange underline underline-offset-4">info@sukhisahota.ca</a>.
                 </p>
               </div>
             </div>
