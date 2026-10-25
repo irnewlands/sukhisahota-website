@@ -5,7 +5,7 @@ const NAV_LINKS = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
   { label: "Election 2025", href: "/election-2025" },
-  { label: "After the Election", href: "/after-the-election" },
+  { label: "BC Election 2026", href: "/after-the-election" },
   { label: "Renewal", href: "/renewal-report" },
   { label: "Issues", href: "/issues" },
   { label: "Get Involved", href: "/get-involved" },
