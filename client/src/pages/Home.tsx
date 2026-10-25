@@ -40,6 +40,7 @@ const NAV_LINKS = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
   { label: "Election 2025", href: "/election-2025" },
+  { label: "After the Election", href: "/after-the-election" },
   { label: "Renewal", href: "/renewal-report" },
   { label: "Issues", href: "/issues" },
   { label: "Get Involved", href: "/get-involved" },
@@ -80,7 +81,7 @@ function Nav() {
         </a>
 
         {/* Desktop nav */}
-        <nav className="hidden md:flex items-center gap-1">
+        <nav className="hidden xl:flex items-center gap-1">
           {NAV_LINKS.map((l) => (
             <a
               key={l.href}
@@ -101,7 +102,7 @@ function Nav() {
         {/* Mobile menu toggle */}
         <button
           onClick={() => setOpen(!open)}
-          className="md:hidden p-2 text-charcoal"
+          className="xl:hidden p-2 text-charcoal"
           aria-label="Toggle menu"
         >
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -116,7 +117,7 @@ function Nav() {
 
      {/* Mobile drawer */}
 {open && (
-  <div className="bg-cream/98 border-t border-border md:hidden">
+  <div className="bg-cream/98 border-t border-border xl:hidden">
     <div className="container py-4">
       {NAV_LINKS.map((l) => (
         <a
