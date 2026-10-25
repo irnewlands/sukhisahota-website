@@ -13,6 +13,7 @@ import RenewalReport from "./pages/RenewalReport";
 import Issues from "./pages/Issues";
 import GetInvolved from "./pages/GetInvolved";
 import IssueDetail from "./pages/IssueDetail";
+import AfterElection from "./pages/AfterElection";
 
 function Router() {
   return (
@@ -25,6 +26,7 @@ function Router() {
       <Route path={"/renewal-report"} component={RenewalReport} />
       <Route path={"/issues"} component={Issues} />
       <Route path={"/get-involved"} component={GetInvolved} />
+      <Route path={"/after-the-election"} component={AfterElection} />
       <Route path={"/issues/:slug"} component={IssueDetail} />
       <Route path={"/404"} component={NotFound} />
       <Route component={NotFound} />
