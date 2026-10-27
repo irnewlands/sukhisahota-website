@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { ArrowRight, CalendarDays, ExternalLink, MessageCircle, ShieldCheck } from "lucide-react";
+import { ArrowRight, CalendarDays, Download, ExternalLink, FileText, MessageCircle, ShieldCheck } from "lucide-react";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 
@@ -72,6 +72,12 @@ export default function AfterElection() {
               >
                 Take the member survey
               </a>
+              <a
+                href="#election-results-analysis"
+                className="inline-flex items-center gap-2 rounded-xl border-2 border-orange px-6 py-3 font-semibold text-charcoal no-underline transition hover:bg-white"
+              >
+                Read the riding analysis <FileText className="h-4 w-4" aria-hidden="true" />
+              </a>
             </div>
           </div>
         </header>
@@ -127,6 +133,44 @@ export default function AfterElection() {
             <p>
               Before anyone rushes to propose a solution, I want to better understand the range of experiences and perspectives within and around the BC NDP — including positive experiences, criticism, disagreement, and fresh ideas.
             </p>
+          </div>
+        </section>
+
+        <section id="election-results-analysis" aria-labelledby="election-analysis-heading" className="scroll-mt-24 border-y border-orange/20 bg-white py-16 md:py-20">
+          <div className="container">
+            <div className="mx-auto max-w-4xl">
+              <p className="mb-4 text-xs font-bold uppercase tracking-[0.18em] text-orange">2026 election results</p>
+              <h2 id="election-analysis-heading" className="font-serif text-3xl font-bold leading-tight text-charcoal md:text-4xl">
+                Preliminary riding-by-riding analysis
+              </h2>
+              <p className="mt-5 max-w-3xl text-lg leading-8 text-charcoal/80">
+                Explore how the BC NDP, Conservatives and Greens performed in all 93 ridings compared with the certified 2024 election results. The report examines vote-share swings, regional patterns, riding leads and ballots counted.
+              </p>
+              <p className="mt-4 rounded-lg border-l-4 border-orange bg-[#fff6e9] px-5 py-4 text-sm leading-6 text-charcoal/80">
+                <strong>Preliminary snapshot:</strong> Elections BC initial count as published on October 26, 2026 at 10:34 a.m. Pacific Daylight Time. Outstanding ballots have not yet been counted, and turnout comparisons remain provisional. The files will be updated when final results become available.
+              </p>
+              <div className="mt-8 grid gap-4 sm:grid-cols-2">
+                <a href="/election-data/BC_Election_2026_Preliminary_Analysis.pdf" target="_blank" rel="noopener noreferrer"
+                   className="group flex flex-col justify-between rounded-2xl border border-charcoal/15 bg-[#f8f1e7] p-6 no-underline transition hover:border-orange hover:shadow-md">
+                  <span className="flex items-center gap-3 font-serif text-xl font-bold text-charcoal">
+                    <FileText className="h-6 w-6 shrink-0 text-orange" aria-hidden="true" /> Summary report (PDF)
+                  </span>
+                  <span className="mt-3 text-sm leading-6 text-charcoal/75">Five-page overview with provincial and regional trends, seat changes and close races.</span>
+                  <span className="mt-6 inline-flex items-center gap-2 font-semibold text-orange">View PDF <ExternalLink className="h-4 w-4" aria-hidden="true" /></span>
+                </a>
+                <a href="/election-data/BC_Election_2026_Riding_Analysis_Preliminary.xlsx" download="BC_Election_2026_Riding_Analysis_Preliminary.xlsx"
+                   className="group flex flex-col justify-between rounded-2xl border border-charcoal/15 bg-[#f8f1e7] p-6 no-underline transition hover:border-orange hover:shadow-md">
+                  <span className="flex items-center gap-3 font-serif text-xl font-bold text-charcoal">
+                    <Download className="h-6 w-6 shrink-0 text-orange" aria-hidden="true" /> Full riding analysis (Excel)
+                  </span>
+                  <span className="mt-3 text-sm leading-6 text-charcoal/75">Download the six-sheet workbook covering all 93 ridings, vote-share differences and source notes.</span>
+                  <span className="mt-6 inline-flex items-center gap-2 font-semibold text-orange">Download Excel <Download className="h-4 w-4" aria-hidden="true" /></span>
+                </a>
+              </div>
+              <p className="mt-6 text-sm leading-6 text-charcoal/65">
+                Independent analysis based on official <a className="font-semibold text-orange underline" href="https://results.elections.bc.ca/" target="_blank" rel="noopener noreferrer">Elections BC results</a>. It is not an official Elections BC publication.
+              </p>
+            </div>
           </div>
         </section>
 
