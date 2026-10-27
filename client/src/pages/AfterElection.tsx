@@ -85,7 +85,7 @@ export default function AfterElection() {
         <section id="my-reflections" aria-label="My reflections" className="container py-16 md:py-24">
           <div className="mx-auto max-w-3xl space-y-7 text-[1.08rem] leading-8 text-charcoal/85">
             <p className="font-serif text-2xl font-semibold leading-9 text-charcoal md:text-3xl md:leading-10">
-              Yesterday's election result was devastating for the BC NDP. I'm disappointed, frustrated, and deeply concerned about what comes next.
+              Saturday's election result was devastating for the BC NDP. I'm disappointed, frustrated, and deeply concerned about what comes next.
             </p>
             <p>
               But disappointment alone gets us nowhere. If we care about this movement, we have to be willing to ask difficult questions, listen to uncomfortable answers, and learn from what happened.
