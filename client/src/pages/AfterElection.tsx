@@ -147,7 +147,7 @@ export default function AfterElection() {
                 Explore how the BC NDP, Conservatives and Greens performed in all 93 ridings compared with the certified 2024 election results. The report examines vote-share swings, regional patterns, riding leads and ballots counted.
               </p>
               <p className="mt-4 rounded-lg border-l-4 border-orange bg-[#fff6e9] px-5 py-4 text-sm leading-6 text-charcoal/80">
-                <strong>Preliminary snapshot:</strong> Elections BC initial count dated October 26, 2026 at 10:34 a.m. (as displayed by Elections BC). Last checked October 27: no newer riding results have been released, so the analysis remains unchanged. Outstanding ballots have not yet been counted and turnout comparisons remain provisional. The files will be refreshed following the final count.
+                <strong>Preliminary snapshot:</strong> Elections BC initial count dated October 26, 2026 at 10:34 a.m. (as displayed by Elections BC). Last checked October 28: no newer riding results have been released since the October 27 verification, so the analysis remains unchanged. Outstanding ballots have not yet been counted and turnout comparisons remain provisional. The files will be refreshed following the final count.
               </p>
               <div className="mt-8 grid gap-4 sm:grid-cols-2">
                 <a href="/election-data/BC_Election_2026_Preliminary_Analysis.pdf" target="_blank" rel="noopener noreferrer"
