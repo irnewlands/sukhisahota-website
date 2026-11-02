@@ -5,8 +5,8 @@ import SiteFooter from "@/components/SiteFooter";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { HELP_CATEGORIES, HELP_RESOURCES, type HelpCategory, type HelpResource } from "@/data/helpResources";
 
-// Existing contact route. A dedicated help-request form is awaiting owner approval.
-const CONTACT_URL = "mailto:info@sukhisahota.ca?subject=Help%20request";
+// General help requests are collected separately from campaign communications.
+const CONTACT_URL = "https://docs.google.com/forms/d/e/1FAIpQLScEa8lAJeTUmSxbQkCHEUj7wtpWfStpPpAJVbG_w4jGgjGqaQ/viewform";
 
 function ResourceCard({ resource }: { resource: HelpResource }) {
   return (
@@ -115,8 +115,8 @@ export default function ResourcesForHelp() {
               <p className="mb-4 text-xs font-bold uppercase tracking-[0.18em] text-[#a13a08]">Personal help from Sukhi</p>
               <h2 id="asked-sukhi-heading" className="font-serif text-3xl font-bold leading-tight md:text-5xl">Have you asked Sukhi for help?</h2>
               <p className="mt-6 text-lg leading-8 text-charcoal/85">This section is specifically for people who have already reached out to Sukhi for help and received a response from him.</p>
-              <p className="mt-4 text-lg leading-8 text-charcoal/85">If you would like help from Sukhi, please contact him first and wait for his reply before using the questionnaire below.</p>
-              <a href={CONTACT_URL} className="mt-6 inline-flex items-center gap-2 rounded-xl border-2 border-charcoal bg-white px-6 py-3 font-bold text-charcoal no-underline hover:bg-cream"><Mail className="h-5 w-5" aria-hidden="true" />Contact Sukhi first</a>
+              <p className="mt-4 text-lg leading-8 text-charcoal/85">If you would like help from Sukhi, please use the Contact form first and wait for his reply before using the questionnaire below.</p>
+              <a href={CONTACT_URL} target="_blank" rel="noopener noreferrer" className="mt-6 inline-flex items-center gap-2 rounded-xl border-2 border-charcoal bg-white px-6 py-3 font-bold text-charcoal no-underline hover:bg-cream"><Mail className="h-5 w-5" aria-hidden="true" />Contact form<ExternalLink className="h-4 w-4" aria-hidden="true" /><span className="sr-only"> (opens in a new tab)</span></a>
 
               <div className="mt-10 rounded-2xl border border-charcoal/15 bg-white p-6 shadow-sm md:p-9">
                 <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-full bg-[#f2e8d9]"><LockKeyhole className="h-5 w-5 text-[#933708]" aria-hidden="true" /></div>
