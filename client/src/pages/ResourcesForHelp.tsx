@@ -128,7 +128,7 @@ export default function ResourcesForHelp() {
                   <DialogTrigger asChild><button type="button" className="mt-6 inline-flex items-center gap-2 rounded-xl bg-charcoal px-6 py-3 font-bold text-white hover:bg-[#a13a08]"><LockKeyhole className="h-4 w-4" aria-hidden="true" />Rental Housing Search<ExternalLink className="h-4 w-4" aria-hidden="true" /></button></DialogTrigger>
                   <DialogContent className="border-charcoal/20 bg-cream text-charcoal sm:max-w-md">
                     <DialogHeader><DialogTitle className="font-serif text-2xl">Rental Housing Search</DialogTitle><DialogDescription className="pt-2 leading-6 text-charcoal/80">Enter the password Sukhi gave you. The questionnaire will open in a new tab after your password is checked.</DialogDescription></DialogHeader>
-                    <form action="/api/rental-access" method="post" target="_blank" rel="noopener noreferrer" className="mt-2 space-y-5">
+                    <form action="/api/rental-access" method="post" target="_blank" rel="noopener" className="mt-2 space-y-5">
                       <div>
                         <label htmlFor="rental-password" className="mb-2 block text-sm font-bold">Password</label>
                         <input id="rental-password" name="password" type={showPassword ? "text" : "password"} required autoComplete="off" maxLength={64} spellCheck={false} autoCapitalize="none" aria-describedby="rental-password-hint" className="w-full rounded-lg border border-charcoal/40 bg-white px-4 py-3 text-base focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-charcoal" />
