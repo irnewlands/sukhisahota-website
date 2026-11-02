@@ -12,6 +12,7 @@ export default function SiteFooter() {
               <li><a href="/autobiography" className="text-white/70 hover:text-white">My Story</a></li>
               <li><a href="/election-2025" className="text-white/70 hover:text-white">Election 2025</a></li>
               <li><a href="/issues" className="text-white/70 hover:text-white">Issues</a></li>
+              <li><a href="/resources-for-help" className="text-white/70 hover:text-white">Resources for Help</a></li>
             </ul>
           </div>
 
@@ -45,3 +46,4 @@ export default function SiteFooter() {
     </footer>
   );
 }
+

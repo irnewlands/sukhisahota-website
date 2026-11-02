@@ -14,6 +14,7 @@ import Issues from "./pages/Issues";
 import GetInvolved from "./pages/GetInvolved";
 import IssueDetail from "./pages/IssueDetail";
 import AfterElection from "./pages/AfterElection";
+import ResourcesForHelp from "./pages/ResourcesForHelp";
 
 function Router() {
   return (
@@ -27,6 +28,7 @@ function Router() {
       <Route path={"/issues"} component={Issues} />
       <Route path={"/get-involved"} component={GetInvolved} />
       <Route path={"/after-the-election"} component={AfterElection} />
+      <Route path={"/resources-for-help"} component={ResourcesForHelp} />
       <Route path={"/issues/:slug"} component={IssueDetail} />
       <Route path={"/404"} component={NotFound} />
       <Route component={NotFound} />
@@ -48,3 +50,4 @@ function App() {
 }
 
 export default App;
+
