@@ -48,6 +48,7 @@ export default function ResourcesForHelp() {
   const [category, setCategory] = useState<HelpCategory>("All resources");
   const [search, setSearch] = useState("");
   const [passwordOpen, setPasswordOpen] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
 
   useEffect(() => {
     const previousTitle = document.title;
@@ -123,12 +124,20 @@ export default function ResourcesForHelp() {
                 <h3 className="font-serif text-2xl font-bold md:text-3xl">Rental housing search questionnaire</h3>
                 <p className="mt-4 max-w-2xl leading-7 text-charcoal/80">Already in touch about finding a home? Share your budget, location preferences, household needs and timing so Sukhi can look for suitable rental options.</p>
                 <p className="mt-3 max-w-2xl text-sm leading-6 text-charcoal/75">Use the password Sukhi provided. The questionnaire opens in a new tab, and your answers are collected privately through Google Forms for your housing search.</p>
-                <Dialog open={passwordOpen} onOpenChange={setPasswordOpen}>
+                <Dialog open={passwordOpen} onOpenChange={(open) => { setPasswordOpen(open); setShowPassword(false); }}>
                   <DialogTrigger asChild><button type="button" className="mt-6 inline-flex items-center gap-2 rounded-xl bg-charcoal px-6 py-3 font-bold text-white hover:bg-[#a13a08]"><LockKeyhole className="h-4 w-4" aria-hidden="true" />Rental Housing Search<ExternalLink className="h-4 w-4" aria-hidden="true" /></button></DialogTrigger>
                   <DialogContent className="border-charcoal/20 bg-cream text-charcoal sm:max-w-md">
                     <DialogHeader><DialogTitle className="font-serif text-2xl">Rental Housing Search</DialogTitle><DialogDescription className="pt-2 leading-6 text-charcoal/80">Enter the password Sukhi gave you. The questionnaire will open in a new tab after your password is checked.</DialogDescription></DialogHeader>
                     <form action="/api/rental-access" method="post" target="_blank" rel="noopener noreferrer" className="mt-2 space-y-5">
-                      <div><label htmlFor="rental-password" className="mb-2 block text-sm font-bold">Password</label><input id="rental-password" name="password" type="password" required autoComplete="off" maxLength={64} spellCheck={false} autoCapitalize="none" className="w-full rounded-lg border border-charcoal/40 bg-white px-4 py-3 text-base focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-charcoal" /><p className="mt-2 text-xs text-charcoal/70">Passwords are case-sensitive.</p></div>
+                      <div>
+                        <label htmlFor="rental-password" className="mb-2 block text-sm font-bold">Password</label>
+                        <input id="rental-password" name="password" type={showPassword ? "text" : "password"} required autoComplete="off" maxLength={64} spellCheck={false} autoCapitalize="none" aria-describedby="rental-password-hint" className="w-full rounded-lg border border-charcoal/40 bg-white px-4 py-3 text-base focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-charcoal" />
+                        <label className="mt-2 inline-flex cursor-pointer items-center gap-2 py-2 text-sm font-medium">
+                          <input type="checkbox" checked={showPassword} onChange={(event) => setShowPassword(event.target.checked)} aria-controls="rental-password" className="h-4 w-4 accent-charcoal focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-charcoal" />
+                          Show password
+                        </label>
+                        <p id="rental-password-hint" className="mt-1 text-xs text-charcoal/70">Passwords are case-sensitive.</p>
+                      </div>
                       <button type="submit" className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-charcoal px-5 py-3 font-bold text-white hover:bg-[#a13a08]">Open questionnaire<ExternalLink className="h-4 w-4" aria-hidden="true" /></button>
                     </form>
                   </DialogContent>
