@@ -150,9 +150,8 @@ export default function AfterElection() {
               <p className="mt-4 rounded-lg border-l-4 border-orange bg-[#fff6e9] px-5 py-4 text-sm leading-6 text-charcoal/80">
                 <strong>{copy("Preliminary snapshot:")}</strong>{" "}{copy("Elections BC initial count dated October 26, 2026 at 10:34 a.m. (as displayed by Elections BC). Last checked November 4: no newer riding-level results have been released since the November 1 verification, so the analysis remains unchanged. Outstanding ballots have not yet been counted and turnout comparisons remain provisional. The files will be refreshed following the final count.")}
               </p>
-              {isFrench && <p className="mt-4 text-sm text-charcoal/75">Le rapport PDF et le classeur Excel sont en anglais.</p>}
               <div className="mt-8 grid gap-4 sm:grid-cols-2">
-                <a href="/election-data/BC_Election_2026_Preliminary_Analysis.pdf" target="_blank" rel="noopener noreferrer"
+                <a href={isFrench ? "/election-data/Analyse_preliminaire_elections_CB_2026_fr-CA.pdf" : "/election-data/BC_Election_2026_Preliminary_Analysis.pdf"} target="_blank" rel="noopener noreferrer"
                    className="group flex flex-col justify-between rounded-2xl border border-charcoal/15 bg-[#f8f1e7] p-6 no-underline transition hover:border-orange hover:shadow-md">
                   <span className="flex items-center gap-3 font-serif text-xl font-bold text-charcoal">
                     <FileText className="h-6 w-6 shrink-0 text-orange" aria-hidden="true" />{" "}{copy("Summary report (PDF)")}
@@ -160,7 +159,7 @@ export default function AfterElection() {
                   <span className="mt-3 text-sm leading-6 text-charcoal/75">{copy("Five-page overview with provincial and regional trends, seat changes and close races.")}</span>
                   <span className="mt-6 inline-flex items-center gap-2 font-semibold text-orange">{copy("View PDF")}{" "}<ExternalLink className="h-4 w-4" aria-hidden="true" /></span>
                 </a>
-                <a href="/election-data/BC_Election_2026_Riding_Analysis_Preliminary.xlsx" download="BC_Election_2026_Riding_Analysis_Preliminary.xlsx"
+                <a href={isFrench ? "/election-data/Analyse_circonscriptions_CB_2026_fr-CA.xlsx" : "/election-data/BC_Election_2026_Riding_Analysis_Preliminary.xlsx"} download
                    className="group flex flex-col justify-between rounded-2xl border border-charcoal/15 bg-[#f8f1e7] p-6 no-underline transition hover:border-orange hover:shadow-md">
                   <span className="flex items-center gap-3 font-serif text-xl font-bold text-charcoal">
                     <Download className="h-6 w-6 shrink-0 text-orange" aria-hidden="true" />{" "}{copy("Full riding analysis (Excel)")}
