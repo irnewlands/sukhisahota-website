@@ -1,3 +1,4 @@
+import { copy } from "@/lib/locale";
 import { Mail } from "lucide-react";
 import { useState } from "react";
 
@@ -12,18 +13,17 @@ export default function NewsletterSignup() {
       <div className="flex items-center justify-center gap-3 mb-4">
         <Mail className="w-7 h-7 text-white" />
         <h3 className="font-serif text-2xl md:text-3xl font-bold text-white">
-          Stay Updated
+          {copy("Stay Updated")}
         </h3>
       </div>
 
       <p className="text-white/90 mb-6 max-w-2xl mx-auto">
-        Get future campaign updates, event announcements, and grassroots organizing
-        opportunities delivered to your inbox.
+        {copy("Get future campaign updates, event announcements, and grassroots organizing opportunities delivered to your inbox.")}
       </p>
 
       {submitted && (
         <div className="mb-4 rounded-xl border border-white/30 bg-white/15 p-4 text-white font-semibold">
-          ✓ Thank you — your details have been sent successfully.
+          {copy("✓ Thank you — your details have been sent successfully.")}
         </div>
       )}
 
@@ -48,7 +48,7 @@ export default function NewsletterSignup() {
           <input
             type="text"
             name="fields[name]"
-            placeholder="First name"
+            placeholder={copy("First name")}
             required
             autoComplete="given-name"
             className="w-full rounded-md px-4 py-3 bg-white text-black placeholder-gray-500 border-2 border-white"
@@ -57,7 +57,7 @@ export default function NewsletterSignup() {
           <input
             type="text"
             name="fields[last_name]"
-            placeholder="Last name"
+            placeholder={copy("Last name")}
             required
             autoComplete="family-name"
             className="w-full rounded-md px-4 py-3 bg-white text-black placeholder-gray-500 border-2 border-white"
@@ -78,7 +78,7 @@ export default function NewsletterSignup() {
           disabled={submitting}
           className="w-full rounded-md bg-black px-6 py-3 font-bold text-white hover:bg-charcoal transition disabled:opacity-60"
         >
-          {submitting ? "Sending..." : "Stay Connected"}
+          {submitting ? copy("Sending...") : copy("Stay Connected")}
         </button>
 
         <input type="hidden" name="ml-submit" value="1" />

@@ -1,3 +1,4 @@
+import { copy, localizedHref } from "@/lib/locale";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import { issueDetails } from "@/data/issues";
@@ -8,17 +9,19 @@ export default function IssueDetail() {
   const slug = location.split("/").pop() || "";
   const issue = issueDetails[slug as keyof typeof issueDetails];
 
+  const related = issue && "related" in issue ? issue.related : undefined;
+
   if (!issue) {
     return (
       <main className="min-h-screen bg-[#f8f1e7] px-6 py-20">
-        <h1 className="font-serif text-5xl font-bold">Issue not found</h1>
+        <h1 className="font-serif text-5xl font-bold">{copy("Issue not found")}</h1>
         <div className="mb-8 flex flex-wrap items-center justify-between gap-4">
-  <a href="/issues" className="font-bold text-[#e85d04]">
-    ← Back to Issues
+  <a href={localizedHref("/issues")} className="font-bold text-[#e85d04]">
+    {copy("← Back to Issues")}
   </a>
 
-  <a href="/" className="font-bold text-[#e85d04]">
-    Home →
+  <a href={localizedHref("/")} className="font-bold text-[#e85d04]">
+    {copy("Home →")}
   </a>
 </div>
       </main>
@@ -32,17 +35,17 @@ return (
     <main className="min-h-screen bg-[#f8f1e7] text-[#111827]">
       <section className="mx-auto max-w-4xl px-6 py-20">
        <div className="mb-8 flex flex-wrap items-center justify-between gap-4">
-  <a href="/issues" className="font-bold text-[#e85d04]">
-    ← Back to Issues
+  <a href={localizedHref("/issues")} className="font-bold text-[#e85d04]">
+    {copy("← Back to Issues")}
   </a>
 
-  <a href="/" className="font-bold text-[#e85d04]">
-    Home →
+  <a href={localizedHref("/")} className="font-bold text-[#e85d04]">
+    {copy("Home →")}
   </a>
 </div>
 
         <p className="mb-4 text-sm font-bold uppercase tracking-[0.25em] text-[#e85d04]">
-          Issues & Priorities
+          {copy("Issues & Priorities")}
         </p>
 
         <h1 className="mb-6 font-serif text-5xl font-bold leading-tight md:text-7xl">
@@ -76,7 +79,7 @@ return (
         {issue.priorities && issue.priorities.length > 0 && (
  <section className="mb-12 rounded-3xl bg-gradient-to-r from-[#fff7ed] to-[#ffedd5] border border-[#fdba74] p-8 shadow-lg">
   <h2 className="mb-6 font-serif text-3xl font-bold text-[#111827]">
-    Key Priorities
+    {copy("Key Priorities")}
   </h2>
 
   <div className="grid gap-4 md:grid-cols-2">
@@ -105,21 +108,21 @@ return (
           ))}
         </div>
 
-        {issue.related && issue.related.length > 0 && (
+        {related && related.length > 0 && (
           <section className="mt-16">
             <h2 className="mb-8 font-serif text-4xl font-bold">
-              Related Issues
+              {copy("Related Issues")}
             </h2>
 
             <div className="grid gap-6 md:grid-cols-2">
-              {issue.related.map((relatedSlug) => {
+              {related.map((relatedSlug) => {
                 const related =
                   issueDetails[relatedSlug as keyof typeof issueDetails];
 
                 return (
                   <a
                     key={relatedSlug}
-                    href={`/issues/${relatedSlug}`}
+                    href={localizedHref(`/issues/${relatedSlug}`)}
                     className="block rounded-3xl bg-white p-6 shadow-lg transition hover:-translate-y-1 hover:shadow-xl"
                   >
                     <h3 className="mb-3 font-serif text-2xl font-bold">
@@ -131,7 +134,7 @@ return (
                     </p>
 
                     <p className="mt-4 font-bold text-[#e85d04]">
-                      Learn more →
+                      {copy("Learn more →")}
                     </p>
                   </a>
                 );

@@ -1,4 +1,4 @@
-import { useLocation } from "wouter";
+import { isFrench, otherLanguageHref } from "@/lib/locale";
 import { Globe } from "lucide-react";
 
 /**
@@ -10,35 +10,14 @@ import { Globe } from "lucide-react";
  */
 
 export default function LanguageSwitcher() {
-  const [location, navigate] = useLocation();
-
-  // Determine current language based on route
-  const isFrench = location.includes("-fr");
-  const currentLang = isFrench ? "FR" : "EN";
-
-  // Get the corresponding route for the other language
-  const getOtherLanguageRoute = () => {
-    if (location === "/") {
-      // Home page - no French version of home, but we could add one
-      return isFrench ? "/" : "/";
-    } else if (location === "/autobiography") {
-      return "/autobiography-fr";
-    } else if (location === "/autobiography-fr") {
-      return "/autobiography";
-    }
-    return location;
-  };
-
-  const handleLanguageToggle = () => {
-    const otherRoute = getOtherLanguageRoute();
-    navigate(otherRoute);
-  };
-
   return (
-    <button
-      onClick={handleLanguageToggle}
+    <a
+      href={otherLanguageHref()}
+      lang={isFrench ? "en-CA" : "fr-CA"}
+      hrefLang={isFrench ? "en-CA" : "fr-CA"}
       style={{
         display: "flex",
+        textDecoration: "none",
         alignItems: "center",
         gap: "0.5rem",
         padding: "0.5rem 1rem",
@@ -67,6 +46,6 @@ export default function LanguageSwitcher() {
     >
       <Globe size={16} />
       <span>{isFrench ? "ENGLISH" : "FRANÇAIS"}</span>
-    </button>
+    </a>
   );
 }

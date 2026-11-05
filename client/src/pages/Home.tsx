@@ -1,3 +1,4 @@
+import { copy, localizedHref } from "@/lib/locale";
 /**
  * DESIGN PHILOSOPHY: Contemporary Progressive
  * Bold typography, dynamic layouts, intentional asymmetry
@@ -37,14 +38,14 @@ function useReveal() {
 
 // ─── Nav ──────────────────────────────────────────────────────────────────────
 const NAV_LINKS = [
-  { label: "Home", href: "/" },
-  { label: "About", href: "/about" },
-  { label: "Election 2025", href: "/election-2025" },
-  { label: "BC Election 2026", href: "/after-the-election" },
-  { label: "Renewal", href: "/renewal-report" },
-  { label: "Issues", href: "/issues" },
-  { label: "Resources for Help", href: "/resources-for-help" },
-  { label: "Get Involved", href: "/get-involved" },
+  { label: copy("Home"), href: "/" },
+  { label: copy("About"), href: "/about" },
+  { label: copy("Election 2025"), href: "/election-2025" },
+  { label: copy("BC Election 2026"), href: "/after-the-election" },
+  { label: copy("Renewal"), href: "/renewal-report" },
+  { label: copy("Issues"), href: "/issues" },
+  { label: copy("Resources for Help"), href: "/resources-for-help" },
+  { label: copy("Get Involved"), href: "/get-involved" },
 ];
 
 function Nav() {
@@ -65,10 +66,10 @@ function Nav() {
     >
       <div className="container flex items-center justify-between h-16">
         {/* Logo */}
-        <a href="/" className="group flex items-center gap-3 no-underline">
+        <a href={localizedHref("/")} className="group flex items-center gap-3 no-underline">
           <img
             src="/Forthepeople_-original.png"
-            alt="For the People"
+            alt={copy("For the People")}
             className="h-9 w-auto flex-shrink-0"
           />
           <div className="flex flex-col">
@@ -76,7 +77,7 @@ function Nav() {
               Sukhi Sahota
             </span>
             <span className="text-xs font-semibold tracking-widest text-[#b84300] uppercase">
-              Former Federal Candidate
+              {copy("Former Federal Candidate")}
             </span>
           </div>
         </a>
@@ -86,7 +87,7 @@ function Nav() {
           {NAV_LINKS.map((l) => (
             <a
               key={l.href}
-              href={l.href}
+              href={localizedHref(l.href)}
               className="nav-link px-3 py-2 text-sm font-medium rounded transition-colors text-charcoal hover:text-orange"
             >
               {l.label}
@@ -95,8 +96,8 @@ function Nav() {
           <div className="ml-2">
             <LanguageSwitcher />
           </div>
-          <a href="/get-involved" className="btn-primary ml-3 text-sm py-2 px-4">
-            Join
+          <a href={localizedHref("/get-involved")} className="btn-primary ml-3 text-sm py-2 px-4">
+            {copy("Join")}
           </a>
         </nav>
 
@@ -104,7 +105,7 @@ function Nav() {
         <button
           onClick={() => setOpen(!open)}
           className="min-[1440px]:hidden p-2 text-charcoal"
-          aria-label="Toggle menu"
+          aria-label={copy("Toggle menu")}
         >
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             {open ? (
@@ -123,7 +124,7 @@ function Nav() {
       {NAV_LINKS.map((l) => (
         <a
           key={l.href}
-          href={l.href}
+          href={localizedHref(l.href)}
           onClick={() => setOpen(false)}
           className="block py-3 text-base font-medium text-charcoal border-b border-border"
         >
@@ -136,10 +137,10 @@ function Nav() {
       </div>
 
       <a
-        href="/get-involved"
+        href={localizedHref("/get-involved")}
         className="block mt-4 py-3 text-center font-semibold text-white bg-orange rounded"
       >
-        Join
+        {copy("Join")}
       </a>
     </div>
   </div>
@@ -241,40 +242,40 @@ export default function Home() {
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-orange/10 rounded-full mb-6">
                 <span className="w-2 h-2 bg-orange rounded-full animate-pulse" />
                 <span className="text-sm font-semibold tracking-wider uppercase text-orange">
-                  NDP · Former Candidate for Vancouver Granville
+                  {copy("NDP · Former Candidate for Vancouver Granville")}
                 </span>
               </div>
 
               <h1 className="font-serif text-5xl md:text-7xl font-bold text-charcoal leading-none mb-6">
-                Fighting for
-                <span className="block text-orange">every Canadian</span>
+                {copy("Fighting for")}{" "}
+                <span className="block text-orange">{copy("every Canadian")}</span>
               </h1>
 
               <p className="text-lg md:text-xl text-charcoal/80 leading-relaxed mb-8 max-w-lg">
-                My name is Sukhi Sahota. I ran as the NDP Candidate for Vancouver Granville — fighting for regular people, not billionaires, and working to build a fairer, more equitable Canada.
+                {copy("My name is Sukhi Sahota. I ran as the NDP Candidate for Vancouver Granville — fighting for regular people, not billionaires, and working to build a fairer, more equitable Canada.")}
               </p>
 
               {/* Highlight Quote */}
               <div className="bg-charcoal text-white p-6 rounded-xl mb-8 max-w-md">
                 <p className="font-sans text-lg font-semibold">
-                  "Society can only be judged by how it looks after our most vulnerable individuals."
+                  {copy("\"Society can only be judged by how it looks after our most vulnerable individuals.\"")}
                 </p>
               </div>
 
               {/* CTAs */}
               <div className="flex flex-wrap gap-4 mb-8">
                 <a href="#about" className="btn-primary group">
-                  Learn About Me
+                  {copy("Learn About Me")}
                   <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                 </a>
                 <a href="mailto:info@sukhisahota.ca" className="btn-secondary">
-                  Ask a Question
+                  {copy("Ask a Question")}
                 </a>
               </div>
 
               {/* Social Links */}
               <div className="flex items-center gap-4">
-                <span className="text-sm text-muted-foreground">Follow:</span>
+                <span className="text-sm text-muted-foreground">{copy("Follow:")}</span>
                 <div className="flex gap-3">
                   <a href="http://www.linkedin.com/in/sukhisahota" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="LinkedIn">
                     <Linkedin className="w-5 h-5" />
@@ -285,7 +286,7 @@ export default function Home() {
                   <a href="https://www.facebook.com/Sukhi4thepeople" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="Facebook">
                     <Facebook className="w-5 h-5" />
                   </a>
-                  <a href="mailto:info@sukhisahota.ca" className="social-icon" aria-label="Email">
+                  <a href="mailto:info@sukhisahota.ca" className="social-icon" aria-label={copy("Email")}>
                     <Mail className="w-5 h-5" />
                   </a>
                 </div>
@@ -313,7 +314,7 @@ export default function Home() {
 
         {/* Scroll Indicator */}
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center animate-bounce">
-          <span className="text-xs text-muted-foreground mb-2">Scroll</span>
+          <span className="text-xs text-muted-foreground mb-2">{copy("Scroll")}</span>
           <ChevronDown className="w-5 h-5 text-orange" />
         </div>
       </section>
@@ -322,7 +323,7 @@ export default function Home() {
       <section className="bg-muted py-6 border-y border-border">
         <div className="container text-center">
           <p className="text-sm text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-            I acknowledge this was created on unceded traditional territories of the xʷməθkʷəy̓əm (Musqueam), Sḵwx̱wú7mesh (Squamish), and səlilwətaɬ (Tsleil-Waututh) Nations.
+            {copy("I acknowledge this was created on unceded traditional territories of the xʷməθkʷəy̓əm (Musqueam), Sḵwx̱wú7mesh (Squamish), and səlilwətaɬ (Tsleil-Waututh) Nations.")}
           </p>
         </div>
       </section>
@@ -332,19 +333,19 @@ export default function Home() {
         <div className="container">
           <div className="reveal grid lg:grid-cols-3 gap-12 items-start">
             <div className="lg:col-span-2">
-              <SectionHeader number="01 / Welcome" title="A grassroots voice for every New Democrat" />
+              <SectionHeader number={copy("01 / Welcome")} title={copy("A grassroots voice for every New Democrat")} />
 
               <div className="space-y-6 text-lg text-charcoal/85 leading-relaxed">
                 <p>
-                  My name is Sukhi Sahota, and I ran as the Candidate for Vancouver Granville in the last election. Originally from the UK, I was raised in a single-parent family with two siblings who have learning difficulties. I have fought my whole life for my mother, my brother, my sister, and my grandmother.
+                  {copy("My name is Sukhi Sahota, and I ran as the Candidate for Vancouver Granville in the last election. Originally from the UK, I was raised in a single-parent family with two siblings who have learning difficulties. I have fought my whole life for my mother, my brother, my sister, and my grandmother.")}
                 </p>
                 <p>
-                  Now we have Avi Lewis as our new leader, and I want to ensure he will be successful — but that will only happen if we have an Executive that represents our membership and core values. It's time for us to be truly organised from a grassroots level and expand that fight to each and every Canadian from Coast to Coast to Coast.
+                  {copy("Now we have Avi Lewis as our new leader, and I want to ensure he will be successful — but that will only happen if we have an Executive that represents our membership and core values. It's time for us to be truly organised from a grassroots level and expand that fight to each and every Canadian from Coast to Coast to Coast.")}
                 </p>
               </div>
 
               <div className="mt-12">
-                <QuoteBlock text="It's time for us to be truly organised from a grassroots level." />
+                <QuoteBlock text={copy("It's time for us to be truly organised from a grassroots level.")} />
               </div>
             </div>
 
@@ -353,20 +354,20 @@ export default function Home() {
               <div className="relative rounded-2xl overflow-hidden shadow-xl aspect-[3/4]">
                 <img
                   src={CANVASSING_PHOTO}
-                  alt="Sukhi Sahota canvassing door-to-door in Vancouver Granville"
+                  alt={copy("Sukhi Sahota canvassing door-to-door in Vancouver Granville")}
                   className="w-full h-full object-cover object-top"
                 />
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-charcoal/80 to-transparent p-4">
-                  <p className="text-white text-sm font-medium">Canvassing door-to-door in Vancouver Granville</p>
+                  <p className="text-white text-sm font-medium">{copy("Canvassing door-to-door in Vancouver Granville")}</p>
                 </div>
               </div>
               <StatCard
                 value="7.5%"
-                label="NDP vote share in Vancouver Granville — 3rd highest for any non-incumbent Metro Vancouver riding"
+                label={copy("NDP vote share in Vancouver Granville — 3rd highest for any non-incumbent Metro Vancouver riding")}
               />
               <StatCard
                 value="2 days"
-                label="After the writ dropped, I became the official candidate with under 10 volunteers"
+                label={copy("After the writ dropped, I became the official candidate with under 10 volunteers")}
               />
             </div>
           </div>
@@ -378,33 +379,33 @@ export default function Home() {
         <div className="container">
           <div className="reveal grid lg:grid-cols-2 gap-12 items-center">
             <div className="order-2 lg:order-1">
-              <SectionHeader number="02 / About Me" title="A life shaped by resilience" />
+              <SectionHeader number={copy("02 / About Me")} title={copy("A life shaped by resilience")} />
 
               <div className="space-y-5 text-base text-charcoal/85 leading-relaxed">
                 <p>
-                  Before settling in Vancouver, I lived in the UK, Japan, New Zealand, Australia, and Hong Kong. My experience growing up with family members struggling with health issues and disabilities taught me the importance of a social safety net and the need to protect universal healthcare.
+                  {copy("Before settling in Vancouver, I lived in the UK, Japan, New Zealand, Australia, and Hong Kong. My experience growing up with family members struggling with health issues and disabilities taught me the importance of a social safety net and the need to protect universal healthcare.")}
                 </p>
                 <p>
-                  A proud member of the 2SLGBTQIA+ community, I believe society can only be judged by how it looks after our most vulnerable individuals.
+                  {copy("A proud member of the 2SLGBTQIA+ community, I believe society can only be judged by how it looks after our most vulnerable individuals.")}
                 </p>
                 <p>
-                  I studied Accounting and Finance and work for an environmental NGO focused on the climate crisis. My commitment to the community led me to launch a food pantry during the pandemic, supporting those facing housing and food insecurity.
+                  {copy("I studied Accounting and Finance and work for an environmental NGO focused on the climate crisis. My commitment to the community led me to launch a food pantry during the pandemic, supporting those facing housing and food insecurity.")}
                 </p>
                 <p>
-                  I was brought up as a Jehovah's Witness, but I was excommunicated as a young adult when I embraced my identity as a member of the LGBTQ+ community. I lost every friend I had up to that point in my life. I have faced joblessness, discrimination, grief, housing insecurity, and food insecurity — and these experiences drive my commitment to public service.
+                  {copy("I was brought up as a Jehovah's Witness, but I was excommunicated as a young adult when I embraced my identity as a member of the LGBTQ+ community. I lost every friend I had up to that point in my life. I have faced joblessness, discrimination, grief, housing insecurity, and food insecurity — and these experiences drive my commitment to public service.")}
                 </p>
               </div>
 
             <a
-  href="/autobiography"
+  href={localizedHref("/autobiography")}
   className="inline-flex items-center gap-3 rounded-2xl bg-[#f25c05] px-8 py-5 text-white font-bold text-xl shadow-lg hover:scale-105 transition"
 >
-  Learn More About My Journey
+  {copy("Learn More About My Journey")}
   <span>→</span>
 </a>
 
               <div className="mt-10">
-                <QuoteBlock text="We can all make a difference both individually and collectively." />
+                <QuoteBlock text={copy("We can all make a difference both individually and collectively.")} />
               </div>
             </div>
 
@@ -412,7 +413,7 @@ export default function Home() {
               <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl">
                 <img
                   src={CLASSROOM_PHOTO}
-                  alt="Sukhi Sahota as a young person growing up in the UK"
+                  alt={copy("Sukhi Sahota as a young person growing up in the UK")}
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -426,26 +427,26 @@ export default function Home() {
       <section id="why" className="py-20 md:py-28 bg-charcoal text-white">
         <div className="container">
           <div className="reveal max-w-4xl mx-auto">
-            <SectionHeader number="03 / Why I Run" title="A protector for the vulnerable" light />
+            <SectionHeader number={copy("03 / Why I Run")} title={copy("A protector for the vulnerable")} light />
 
             <div className="space-y-6 text-lg text-white/85 leading-relaxed">
               <p>
-                I want to give back hope, love, and compassion to everyday Canadians and be a voice and advocate for the voiceless and vulnerable in our society.
+                {copy("I want to give back hope, love, and compassion to everyday Canadians and be a voice and advocate for the voiceless and vulnerable in our society.")}
               </p>
               <p>
-                I was brought up in the UK in a single-parent family household. My mother suffers from mild learning difficulties and brought up my brother who has Cerebral Palsy and my sister who also suffers from learning difficulties due to a brain injury when young. I watched my mother navigate these difficult circumstances, and I started to take on more responsibilities and become an adult and advocate for my family at the age of 13.
+                {copy("I was brought up in the UK in a single-parent family household. My mother suffers from mild learning difficulties and brought up my brother who has Cerebral Palsy and my sister who also suffers from learning difficulties due to a brain injury when young. I watched my mother navigate these difficult circumstances, and I started to take on more responsibilities and become an adult and advocate for my family at the age of 13.")}
               </p>
               <p>
-                My mother didn't struggle alone — she had a social support worker who would visit nearly every day, my Grandmother who lived with us, special schools for my siblings, and income assistance from the government. I cannot imagine how my mother would have coped without all the governmental assistance she received, but I am aware that today here in Canada, many other families face far less support.
+                {copy("My mother didn't struggle alone — she had a social support worker who would visit nearly every day, my Grandmother who lived with us, special schools for my siblings, and income assistance from the government. I cannot imagine how my mother would have coped without all the governmental assistance she received, but I am aware that today here in Canada, many other families face far less support.")}
               </p>
               <p>
-                I genuinely believe that society can only be judged by how far it looks after its most vulnerable and voiceless. I must carry the torch of democratic socialism — to see any government take away social support for our most vulnerable breaks my heart, and I cannot allow that to happen.
+                {copy("I genuinely believe that society can only be judged by how far it looks after its most vulnerable and voiceless. I must carry the torch of democratic socialism — to see any government take away social support for our most vulnerable breaks my heart, and I cannot allow that to happen.")}
               </p>
             </div>
 
             <div className="mt-12 bg-orange-600 p-8 rounded-xl">
               <p className="font-serif text-xl md:text-2xl italic leading-relaxed">
-                "This is why I'm here — I vow to be a protector of the defenceless and vulnerable for the rest of my life, whatever service I can carry out is what will fulfil my purpose in life."
+                {copy("\"This is why I'm here — I vow to be a protector of the defenceless and vulnerable for the rest of my life, whatever service I can carry out is what will fulfil my purpose in life.\"")}
               </p>
             </div>
           </div>
@@ -456,77 +457,77 @@ export default function Home() {
       <section id="platform" className="py-20 md:py-28">
         <div className="container">
           <div className="reveal">
-            <SectionHeader number="04 / Platform" title="Fighting for you" />
+            <SectionHeader number={copy("04 / Platform")} title={copy("Fighting for you")} />
 
             <p className="max-w-2xl text-lg text-charcoal/85 leading-relaxed mb-12">
-              As your representative, I'll fight for regular people, not billionaires. Here are the key areas where I'll work tirelessly to build a fairer, more equitable Canada.
+              {copy("As your representative, I'll fight for regular people, not billionaires. Here are the key areas where I'll work tirelessly to build a fairer, more equitable Canada.")}
             </p>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               <PlatformCard
                 icon={HomeIcon}
-                title="Affordability & Housing"
+                title={copy("Affordability & Housing")}
                 points={[
-                  "Remove GST permanently from essentials like groceries, diapers, and monthly bills",
-                  "Build 20% non-market housing in every neighbourhood",
-                  "Ban predatory financial landlords from buying affordable housing",
-                  "Fight soaring rents with strong tenant protections",
-                  "$16 billion national housing strategy"
+                  copy("Remove GST permanently from essentials like groceries, diapers, and monthly bills"),
+                  copy("Build 20% non-market housing in every neighbourhood"),
+                  copy("Ban predatory financial landlords from buying affordable housing"),
+                  copy("Fight soaring rents with strong tenant protections"),
+                  copy("$16 billion national housing strategy")
                 ]}
               />
               <PlatformCard
                 icon={Stethoscope}
-                title="Healthcare"
+                title={copy("Healthcare")}
                 points={[
-                  "Universal pharmacare covering essential medicines within 4 years",
-                  "Cover diabetes medications and birth control for all Canadians irregardless of Geographic location",
-                  "Pan-Canadian licensure for medical professionals",
-                  "$5,000 tax credit for nurses and PSWs",
-                  "Expand mental health coverage for psychotherapy and counselling"
+                  copy("Universal pharmacare covering essential medicines within 4 years"),
+                  copy("Cover diabetes medications and birth control for all Canadians irregardless of Geographic location"),
+                  copy("Pan-Canadian licensure for medical professionals"),
+                  copy("$5,000 tax credit for nurses and PSWs"),
+                  copy("Expand mental health coverage for psychotherapy and counselling")
                 ]}
               />
               <PlatformCard
                 icon={Globe}
-                title="Climate Action"
+                title={copy("Climate Action")}
                 points={[
-                  "Cut emissions to 50% below 2005 levels by 2035",
-                  "Eliminate fossil fuel subsidies by end of 2026",
-                  "Free energy retrofits for 2.3 million low-income households",
-                  "Build an East-West clean energy grid",
-                  "100% non-emitting electricity by 2045"
+                  copy("Cut emissions to 50% below 2005 levels by 2035"),
+                  copy("Eliminate fossil fuel subsidies by end of 2026"),
+                  copy("Free energy retrofits for 2.3 million low-income households"),
+                  copy("Build an East-West clean energy grid"),
+                  copy("100% non-emitting electricity by 2045")
                 ]}
               />
               <PlatformCard
                 icon={Heart}
-                title="Indigenous Rights"
+                title={copy("Indigenous Rights")}
                 points={[
-                  "End all long-term boil water advisories on First Nations",
-                  "Free, prior and informed consent for all decisions affecting land rights",
-                  "Expand Red Dress Alert nationwide",
-                  "Combat residential school denialism with legislation",
-                  "Support Indigenous jurisdiction over child welfare"
+                  copy("End all long-term boil water advisories on First Nations"),
+                  copy("Free, prior and informed consent for all decisions affecting land rights"),
+                  copy("Expand Red Dress Alert nationwide"),
+                  copy("Combat residential school denialism with legislation"),
+                  copy("Support Indigenous jurisdiction over child welfare")
                 ]}
               />
               <PlatformCard
                 icon={Shield}
-                title="Workers & Jobs"
+                title={copy("Workers & Jobs")}
                 points={[
-                  "Counter-tariff revenues go directly to support workers",
-                  "Train 100,000+ skilled workers for the green economy",
-                  "Develop sector-specific industrial strategies",
-                  "Protect workers affected by trade disputes",
-                  "Strengthen Employment Insurance benefits"
+                  copy("Counter-tariff revenues go directly to support workers"),
+                  copy("Train 100,000+ skilled workers for the green economy"),
+                  copy("Develop sector-specific industrial strategies"),
+                  copy("Protect workers affected by trade disputes"),
+                  copy("Strengthen Employment Insurance benefits")
                 ]}
               />
               <PlatformCard
                 icon={Scale}
-                title="Democratic Reform"
+                title={copy("Democratic Reform")}
                 points={[
-                  "Establish independent citizens assembly for proportional representation",
-                  "Lower voting age to 16",
-                  "Indigenous languages on election ballots in Indigenous territories",
-                  "Foreign agent registry to protect democratic institutions",
-                  "Strengthen transparency in federal budget-making"
+                  copy("Establish independent citizens assembly for proportional representation"),
+                  copy("Lower voting age to 16"),
+                  copy("Indigenous languages on election ballots in Indigenous territories"),
+                  copy("Foreign agent registry to protect democratic institutions"),
+                  copy("Strengthen transparency in federal budget-making")
                 ]}
               />
             </div>
@@ -538,38 +539,38 @@ export default function Home() {
       <section id="stand" className="py-20 md:py-28 bg-white">
         <div className="container">
           <div className="reveal">
-            <SectionHeader number="05 / What I Stand For" title="Core values that guide my work" />
+            <SectionHeader number={copy("05 / What I Stand For")} title={copy("Core values that guide my work")} />
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               <ValueCard
                 icon={Users}
-                title="Grassroots Democracy"
-                description="Members' voices must shape party decisions, not just leadership directives."
+                title={copy("Grassroots Democracy")}
+                description={copy("Members' voices must shape party decisions, not just leadership directives.")}
               />
               <ValueCard
                 icon={Globe}
-                title="Decentralization"
-                description="Regional councils should empower EDAs with autonomy and decision-making power."
+                title={copy("Decentralization")}
+                description={copy("Regional councils should empower EDAs with autonomy and decision-making power.")}
               />
               <ValueCard
                 icon={HandHeart}
-                title="Inclusive Leadership"
-                description="Approachable, listening to different views — that's how we grow stronger together."
+                title={copy("Inclusive Leadership")}
+                description={copy("Approachable, listening to different views — that's how we grow stronger together.")}
               />
               <ValueCard
                 icon={Leaf}
-                title="Environmental Justice"
-                description="Climate action and protecting our land, water, and air for future generations."
+                title={copy("Environmental Justice")}
+                description={copy("Climate action and protecting our land, water, and air for future generations.")}
               />
               <ValueCard
                 icon={Shield}
-                title="Workers' Rights"
-                description="Supporting unionization and ensuring everyday Canadians have a decent living wage."
+                title={copy("Workers' Rights")}
+                description={copy("Supporting unionization and ensuring everyday Canadians have a decent living wage.")}
               />
               <ValueCard
                 icon={Heart}
-                title="Community Care"
-                description="Food security, housing, and support for those facing systemic barriers."
+                title={copy("Community Care")}
+                description={copy("Food security, housing, and support for those facing systemic barriers.")}
               />
             </div>
           </div>
@@ -585,14 +586,14 @@ export default function Home() {
         <div className="container relative z-10">
           <div className="reveal max-w-2xl mx-auto text-center">
             <span className="text-xs font-semibold tracking-widest uppercase text-white/80">
-              Get Involved
+              {copy("Get Involved")}
             </span>
             <h2 className="font-serif text-4xl md:text-5xl font-bold mt-3 mb-6">
-              Join the movement
+              {copy("Join the movement")}
             </h2>
 
             <p className="text-lg text-white/90 leading-relaxed mb-10">
-              Whether you want to volunteer, donate, or simply stay informed, there are many ways to get involved in building a stronger, more democratic Canada.
+              {copy("Whether you want to volunteer, donate, or simply stay informed, there are many ways to get involved in building a stronger, more democratic Canada.")}
             </p>
 
             <div className="flex flex-wrap justify-center gap-4 mb-12">
@@ -602,7 +603,7 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className="btn-white group"
               >
-                Volunteer
+                {copy("Volunteer")}
                 <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
               </a>
               <a
@@ -611,13 +612,13 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className="btn-outline-white"
               >
-                Donate
+                {copy("Donate")}
               </a>
               <a
                 href="mailto:info@sukhisahota.ca"
                 className="btn-outline-white"
               >
-                Get in Touch
+                {copy("Get in Touch")}
               </a>
             </div>
 
@@ -634,26 +635,26 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-10 mb-12">
             {/* About */}
             <div>
-              <h4 className="font-serif text-lg font-bold mb-4">About</h4>
+              <h4 className="font-serif text-lg font-bold mb-4">{copy("About")}</h4>
               <ul className="space-y-3">
                 <li>
-                  <a href="/autobiography" className="text-white/70 hover:text-white transition-colors">
-                    My Story
+                  <a href={localizedHref("/autobiography")} className="text-white/70 hover:text-white transition-colors">
+                    {copy("My Story")}
                   </a>
                 </li>
                 <li>
                   <a href="#why" className="text-white/70 hover:text-white transition-colors">
-                    Why I Run
+                    {copy("Why I Run")}
                   </a>
                 </li>
                 <li>
                   <a href="#platform" className="text-white/70 hover:text-white transition-colors">
-                    Platform
+                    {copy("Platform")}
                   </a>
                 </li>
                 <li>
                   <a href="#stand" className="text-white/70 hover:text-white transition-colors">
-                    What I Stand For
+                    {copy("What I Stand For")}
                   </a>
                 </li>
               </ul>
@@ -661,7 +662,7 @@ export default function Home() {
 
             {/* Connect */}
             <div>
-              <h4 className="font-serif text-lg font-bold mb-4">Connect</h4>
+              <h4 className="font-serif text-lg font-bold mb-4">{copy("Connect")}</h4>
               <ul className="space-y-3">
                 <li>
                   <a href="https://www.linkedin.com/in/sukhisahota" target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-white transition-colors">
@@ -680,7 +681,7 @@ export default function Home() {
                 </li>
                 <li>
                   <a href="mailto:info@sukhisahota.ca" className="text-white/70 hover:text-white transition-colors">
-                    Email
+                    {copy("Email")}
                   </a>
                 </li>
               </ul>
@@ -688,9 +689,9 @@ export default function Home() {
 
             {/* Contact */}
             <div>
-              <h4 className="font-serif text-lg font-bold mb-4">Contact</h4>
+              <h4 className="font-serif text-lg font-bold mb-4">{copy("Contact")}</h4>
               <p className="text-white/70 text-sm leading-relaxed mb-4">
-                Have a question or want to get involved? Reach out anytime.
+                {copy("Have a question or want to get involved? Reach out anytime.")}
               </p>
               <a
                 href="mailto:info@sukhisahota.ca"
@@ -704,7 +705,7 @@ export default function Home() {
 
           <div className="border-t border-white/10 pt-8 text-center">
             <p className="text-sm text-white/50">
-              © 2026 Sukhi Sahota. Paid for by Sukhi Sahota. All rights reserved.
+              {copy("© 2026 Sukhi Sahota. Paid for by Sukhi Sahota. All rights reserved.")}
             </p>
           </div>
         </div>

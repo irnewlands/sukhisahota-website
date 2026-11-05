@@ -1,7 +1,7 @@
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/NotFound";
-import { Route, Switch } from "wouter";
+import { Route, Router as WouterRouter, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
@@ -16,12 +16,14 @@ import IssueDetail from "./pages/IssueDetail";
 import AfterElection from "./pages/AfterElection";
 import ResourcesForHelp from "./pages/ResourcesForHelp";
 
-function Router() {
+import { isFrench } from "@/lib/locale";
+
+function SiteRoutes() {
   return (
     <Switch>
       <Route path={"/"} component={Home} />
       <Route path={"/about"} component={About} />
-      <Route path={"/autobiography"} component={Autobiography} />
+      <Route path={"/autobiography"} component={isFrench ? AutobiographyFr : Autobiography} />
       <Route path={"/autobiography-fr"} component={AutobiographyFr} />
       <Route path={"/election-2025"} component={Election2025} />
       <Route path={"/renewal-report"} component={RenewalReport} />
@@ -42,7 +44,9 @@ function App() {
       <ThemeProvider defaultTheme="light">
         <TooltipProvider>
           <Toaster />
-          <Router />
+          <WouterRouter base={window.location.pathname.match(/^\/fr(?:\/|$)/) ? "/fr" : ""}>
+            <SiteRoutes />
+          </WouterRouter>
         </TooltipProvider>
       </ThemeProvider>
     </ErrorBoundary>

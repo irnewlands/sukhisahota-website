@@ -1,3 +1,4 @@
+import { copy } from "@/lib/locale";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import NewsletterSignup from "@/components/NewsletterSignup";
@@ -10,16 +11,15 @@ export default function GetInvolved() {
     <main className="min-h-screen bg-[#f8f1e7] text-[#111827]">
       <section className="mx-auto max-w-6xl px-6 py-20">
         <p className="mb-4 text-sm font-bold uppercase tracking-[0.25em] text-[#e85d04]">
-          Get Involved
+          {copy("Get Involved")}
         </p>
 
         <h1 className="mb-6 font-serif text-5xl font-bold leading-tight md:text-7xl">
-          Help build a stronger grassroots movement.
+          {copy("Help build a stronger grassroots movement.")}
         </h1>
 
         <p className="mb-12 max-w-3xl text-xl leading-8 text-[#374151]">
-          Whether you want to stay informed, volunteer, support future campaigns,
-          or help with digital organizing, there is a place for you in this work.
+          {copy("Whether you want to stay informed, volunteer, support future campaigns, or help with digital organizing, there is a place for you in this work.")}
         </p>
 
         <div className="mb-16 rounded-3xl bg-[#e85d04] p-8 shadow-xl">
@@ -30,23 +30,23 @@ export default function GetInvolved() {
           {[
             {
               icon: Users,
-              title: "Volunteer",
-              text: "Help with outreach, events, canvassing, phone banking, and community organizing.",
+              title: copy("Volunteer"),
+              text: copy("Help with outreach, events, canvassing, phone banking, and community organizing."),
             },
             {
               icon: Megaphone,
-              title: "Spread the Word",
-              text: "Share campaign updates, local issues, and organizing opportunities with your networks.",
+              title: copy("Spread the Word"),
+              text: copy("Share campaign updates, local issues, and organizing opportunities with your networks."),
             },
             {
               icon: ClipboardList,
-              title: "Research & Policy",
-              text: "Support issue research, community feedback, policy writing, and public education.",
+              title: copy("Research & Policy"),
+              text: copy("Support issue research, community feedback, policy writing, and public education."),
             },
             {
               icon: Code,
-              title: "Digital & Web",
-              text: "Developers, designers, writers, and digital volunteers can help improve this website and future campaigns.",
+              title: copy("Digital & Web"),
+              text: copy("Developers, designers, writers, and digital volunteers can help improve this website and future campaigns."),
             },
           ].map((item) => (
             <div key={item.title} className="rounded-3xl bg-white p-6 shadow-lg">
@@ -61,17 +61,17 @@ export default function GetInvolved() {
 
         <section className="mt-16 rounded-3xl bg-[#111827] p-8 text-white shadow-xl">
           <h2 className="mb-4 font-serif text-4xl font-bold">
-            Questions or want to help directly?
+            {copy("Questions or want to help directly?")}
           </h2>
 
           <p className="mb-6 text-lg leading-8 text-white/80">
-            Reach out by email or connect through social media.
+            {copy("Reach out by email or connect through social media.")}
           </p>
 
           <div className="flex flex-wrap gap-4">
             <a href="mailto:info@sukhisahota.ca" className="inline-flex items-center gap-2 rounded-2xl bg-[#e85d04] px-6 py-3 font-bold text-black">
               <Mail className="h-5 w-5" />
-              Email Sukhi
+              {copy("Email Sukhi")}
             </a>
 
             <a href="https://www.instagram.com/sukhi4thepeople/" className="inline-flex items-center gap-2 rounded-2xl border border-white px-6 py-3 font-bold text-white">

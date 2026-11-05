@@ -1,3 +1,4 @@
+import { copy, localizedHref } from "@/lib/locale";
 import { Mail } from "lucide-react";
 
 export default function SiteFooter() {
@@ -6,18 +7,18 @@ export default function SiteFooter() {
       <div className="container">
         <div className="grid md:grid-cols-3 gap-10 mb-12">
           <div>
-            <h4 className="font-serif text-lg font-bold mb-4">About</h4>
+            <h4 className="font-serif text-lg font-bold mb-4">{copy("About")}</h4>
             <ul className="space-y-3">
-              <li><a href="/about" className="text-white/70 hover:text-white">About Sukhi</a></li>
-              <li><a href="/autobiography" className="text-white/70 hover:text-white">My Story</a></li>
-              <li><a href="/election-2025" className="text-white/70 hover:text-white">Election 2025</a></li>
-              <li><a href="/issues" className="text-white/70 hover:text-white">Issues</a></li>
-              <li><a href="/resources-for-help" className="text-white/70 hover:text-white">Resources for Help</a></li>
+              <li><a href={localizedHref("/about")} className="text-white/70 hover:text-white">{copy("About Sukhi")}</a></li>
+              <li><a href={localizedHref("/autobiography")} className="text-white/70 hover:text-white">{copy("My Story")}</a></li>
+              <li><a href={localizedHref("/election-2025")} className="text-white/70 hover:text-white">{copy("Election 2025")}</a></li>
+              <li><a href={localizedHref("/issues")} className="text-white/70 hover:text-white">{copy("Issues")}</a></li>
+              <li><a href={localizedHref("/resources-for-help")} className="text-white/70 hover:text-white">{copy("Resources for Help")}</a></li>
             </ul>
           </div>
 
           <div>
-            <h4 className="font-serif text-lg font-bold mb-4">Connect</h4>
+            <h4 className="font-serif text-lg font-bold mb-4">{copy("Connect")}</h4>
             <ul className="space-y-3">
               <li><a href="https://www.linkedin.com/in/sukhisahota" className="text-white/70 hover:text-white">LinkedIn</a></li>
               <li><a href="https://www.instagram.com/sukhi4thepeople/" className="text-white/70 hover:text-white">Instagram</a></li>
@@ -26,9 +27,9 @@ export default function SiteFooter() {
           </div>
 
           <div>
-            <h4 className="font-serif text-lg font-bold mb-4">Contact</h4>
+            <h4 className="font-serif text-lg font-bold mb-4">{copy("Contact")}</h4>
             <p className="text-white/70 text-sm leading-relaxed mb-4">
-              Have a question or want to get involved?
+              {copy("Have a question or want to get involved?")}
             </p>
             <a href="mailto:info@sukhisahota.ca" className="inline-flex items-center gap-2 text-orange font-semibold">
               <Mail className="w-4 h-4" />
@@ -39,7 +40,7 @@ export default function SiteFooter() {
 
         <div className="border-t border-white/10 pt-8 text-center">
           <p className="text-sm text-white/50">
-            © 2026 Sukhi Sahota. All rights reserved.
+            {copy("© 2026 Sukhi Sahota. All rights reserved.")}
           </p>
         </div>
       </div>

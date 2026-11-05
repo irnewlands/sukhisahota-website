@@ -1,3 +1,4 @@
+import { copy } from "@/lib/locale";
 import { useState } from "react";
 
 /**
@@ -21,95 +22,95 @@ interface TimelineStop {
 
 const journeyStops: TimelineStop[] = [
   {
-    country: "United Kingdom",
+    country: copy("United Kingdom"),
     period: "1987 – 2010",
-    years: "23 years",
+    years: copy("23 years"),
     icon: "🇬🇧",
     milestones: [
-      "Raised in single-parent family",
-      "Jehovah's Witness upbringing",
-      "Excommunicated at young adulthood",
-      "Diploma in Accounting & Finance",
+      copy("Raised in single-parent family"),
+      copy("Jehovah's Witness upbringing"),
+      copy("Excommunicated at young adulthood"),
+      copy("Diploma in Accounting & Finance"),
     ],
     description:
-      "Born and raised in the UK with two siblings who have learning difficulties. Faced identity challenges and isolation after coming out as LGBTQ+.",
+      copy("Born and raised in the UK with two siblings who have learning difficulties. Faced identity challenges and isolation after coming out as LGBTQ+."),
     color: "oklch(0.65 0.15 30)",
   },
   {
-    country: "Japan",
+    country: copy("Japan"),
     period: "2010 – 2011",
-    years: "1 year and 2 months",
+    years: copy("1 year and 2 months"),
     icon: "🇯🇵",
     milestones: [
-      "Moved to Tokyo independently",
-      "English language instructor",
-      "Survived 2011 Tōhoku earthquake aftermath",
-      "Explored identity and freedom",
+      copy("Moved to Tokyo independently"),
+      copy("English language instructor"),
+      copy("Survived 2011 Tōhoku earthquake aftermath"),
+      copy("Explored identity and freedom"),
     ],
     description:
-      "Left the UK at 23 to explore the world. Landed in Tokyo with a suitcase and a phrasebook, found work within a month, and experienced resilience during crisis.",
+      copy("Left the UK at 23 to explore the world. Landed in Tokyo with a suitcase and a phrasebook, found work within a month, and experienced resilience during crisis."),
     color: "oklch(0.68 0.18 35)",
   },
   {
-    country: "Australia",
+    country: copy("Australia"),
     period: "2011 – 2014",
-    years: "2 years and 6 months",
+    years: copy("2 years and 6 months"),
     icon: "🇦🇺",
     milestones: [
-      "Struggled with job discrimination",
-      "Temporary foreign worker experience",
-      "Diverse temporary jobs (removals, pizza delivery, cotton gin)",
-      "2nd-year visa requirement work",
+      copy("Struggled with job discrimination"),
+      copy("Temporary foreign worker experience"),
+      copy("Diverse temporary jobs (removals, pizza delivery, cotton gin)"),
+      copy("2nd-year visa requirement work"),
     ],
     description:
-      "Faced employment discrimination and used an Anglo-phone pseudonym to get interviews. Worked 12-hour shifts in the outback and learned about systemic inequality.",
+      copy("Faced employment discrimination and used an Anglo-phone pseudonym to get interviews. Worked 12-hour shifts in the outback and learned about systemic inequality."),
     color: "oklch(0.70 0.20 40)",
   },
   {
-    country: "New Zealand",
+    country: copy("New Zealand"),
     period: "2014 – 2016",
-    years: "2 years",
+    years: copy("2 years"),
     icon: "🇳🇿",
     milestones: [
-      "Thriving in accounting work",
-      "Discovered Indigenous rights (Māori)",
-      "Appreciated proportional representation",
-      "Valued environmental biodiversity",
+      copy("Thriving in accounting work"),
+      copy("Discovered Indigenous rights (Māori)"),
+      copy("Appreciated proportional representation"),
+      copy("Valued environmental biodiversity"),
     ],
     description:
-      "Found a fresh sense of awakening. Appreciated stronger democracy, Indigenous rights, and the stunning natural environment of Aotearoa.",
+      copy("Found a fresh sense of awakening. Appreciated stronger democracy, Indigenous rights, and the stunning natural environment of Aotearoa."),
     color: "oklch(0.72 0.22 45)",
   },
   {
     country: "Hong Kong",
     period: "2016 – 2017",
-    years: "1 year and 4 months",
+    years: copy("1 year and 4 months"),
     icon: "🇭🇰",
     milestones: [
-      "Witnessed Umbrella Movement aftermath",
-      "Learned value of democracy",
-      "Understood authoritarianism risks",
-      "Appreciated Canadian freedoms",
+      copy("Witnessed Umbrella Movement aftermath"),
+      copy("Learned value of democracy"),
+      copy("Understood authoritarianism risks"),
+      copy("Appreciated Canadian freedoms"),
     ],
     description:
-      "Arrived 18 months after the Umbrella Movement. Witnessed the fight for basic democracy and realized how precious democratic institutions truly are.",
+      copy("Arrived 18 months after the Umbrella Movement. Witnessed the fight for basic democracy and realized how precious democratic institutions truly are."),
     color: "oklch(0.74 0.24 50)",
   },
   {
     country: "Canada",
-    period: "2018 – Present",
-    years: "8 years",
+    period: copy("2018 – Present"),
+    years: copy("8 years"),
     icon: "🇨🇦",
     milestones: [
-      "Settled in Vancouver",
-      "Hiking and landscape photography",
-      "Food pantry volunteer work",
-      "Environmental NGO employment",
-      "Union member",
-      "NDP candidate for Vancouver Granville",
+      copy("Settled in Vancouver"),
+      copy("Hiking and landscape photography"),
+      copy("Food pantry volunteer work"),
+      copy("Environmental NGO employment"),
+      copy("Union member"),
+      copy("NDP candidate for Vancouver Granville"),
     ],
     description:
-      "Found home on the West Coast. Pursued passions in nature, served the community, and now running for BC Regional Rep Executive to organize from the grassroots.",
+      copy("Found home on the West Coast. Pursued passions in nature, served the community, and now running for BC Regional Rep Executive to organize from the grassroots."),
     color: "#22c55e",
   },
 ];
@@ -130,7 +131,7 @@ export default function JourneyTimeline() {
             textTransform: "uppercase",
           }}
         >
-          Global Journey
+          {copy("Global Journey")}
         </span>
         <h2
           style={{
@@ -142,7 +143,7 @@ export default function JourneyTimeline() {
             color: "var(--foreground)",
           }}
         >
-          A Journey Across Continents
+          {copy("A Journey Across Continents")}
         </h2>
         <p
           style={{
@@ -154,7 +155,7 @@ export default function JourneyTimeline() {
             margin: "0 auto",
           }}
         >
-          From the UK to Japan, Australia, New Zealand, Hong Kong, and finally Vancouver — a 30-year journey shaped by resilience, discovery, and community.
+          {copy("From the UK to Japan, Australia, New Zealand, Hong Kong, and finally Vancouver — a 30-year journey shaped by resilience, discovery, and community.")}
         </p>
       </div>
 
@@ -295,7 +296,7 @@ export default function JourneyTimeline() {
                               marginBottom: "0.5rem",
                             }}
                           >
-                            Key Milestones
+                            {copy("Key Milestones")}
                           </div>
                           <ul
                             style={{
@@ -353,7 +354,7 @@ export default function JourneyTimeline() {
                               marginBottom: "0.5rem",
                             }}
                           >
-                            Key Milestones
+                            {copy("Key Milestones")}
                           </div>
                           <ul
                             style={{

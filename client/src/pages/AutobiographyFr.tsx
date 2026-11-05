@@ -1,3 +1,4 @@
+import { localizedHref } from "@/lib/locale";
 import { useEffect } from "react";
 import JourneyTimeline from "@/components/JourneyTimeline";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
@@ -98,7 +99,7 @@ export default function AutobiographyFr() {
       >
         <div style={{ maxWidth: "1200px", margin: "0 auto", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
           <a
-            href="/"
+            href={localizedHref("/")}
             style={{ display: "flex", alignItems: "center", gap: "0.75rem", textDecoration: "none" }}
           >
             <img src="/Forthepeople_-original.png" alt="For the People" style={{ height: "36px", width: "auto" }} />
@@ -114,7 +115,7 @@ export default function AutobiographyFr() {
           <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
             <LanguageSwitcher />
             <a
-              href="/"
+              href={localizedHref("/")}
               style={{
                 fontFamily: "'Outfit', sans-serif",
                 fontSize: "0.9rem",
@@ -270,7 +271,7 @@ export default function AutobiographyFr() {
           </p>
           <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
             <a
-              href="/"
+              href={localizedHref("/")}
               style={{
                 fontFamily: "'Outfit', sans-serif",
                 fontWeight: 600,
@@ -292,7 +293,7 @@ export default function AutobiographyFr() {
               Retour à l'accueil
             </a>
             <a
-              href="/"
+              href={localizedHref("/")}
               style={{
                 fontFamily: "'Outfit', sans-serif",
                 fontWeight: 600,
@@ -332,7 +333,7 @@ export default function AutobiographyFr() {
         }}
       >
         <a
-          href="/"
+          href={localizedHref("/")}
           style={{
             color: "var(--background)",
             textDecoration: "none",
