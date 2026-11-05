@@ -1,5 +1,5 @@
 {
   "version": 1,
-  "include": ["/api/rental-access"],
+  "include": ["/api/rental-access", "/api/career-access"],
   "exclude": []
 }
