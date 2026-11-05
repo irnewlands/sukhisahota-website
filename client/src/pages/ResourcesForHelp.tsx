@@ -49,6 +49,8 @@ export default function ResourcesForHelp() {
   const [search, setSearch] = useState("");
   const [passwordOpen, setPasswordOpen] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
+  const [careerPasswordOpen, setCareerPasswordOpen] = useState(false);
+  const [showCareerPassword, setShowCareerPassword] = useState(false);
 
   useEffect(() => {
     const previousTitle = document.title;
@@ -116,7 +118,7 @@ export default function ResourcesForHelp() {
               <p className="mb-4 text-xs font-bold uppercase tracking-[0.18em] text-[#a13a08]">Personal help from Sukhi</p>
               <h2 id="asked-sukhi-heading" className="font-serif text-3xl font-bold leading-tight md:text-5xl">Have you asked Sukhi for help?</h2>
               <p className="mt-6 text-lg leading-8 text-charcoal/85">This section is specifically for people who have already reached out to Sukhi for help and received a response from him.</p>
-              <p className="mt-4 text-lg leading-8 text-charcoal/85">If you would like help from Sukhi, please use the Contact form first and wait for his reply before using the questionnaire below.</p>
+              <p className="mt-4 text-lg leading-8 text-charcoal/85">If you would like help from Sukhi, please use the Contact form first and wait for his reply before using the questionnaires below.</p>
               <a href={CONTACT_URL} target="_blank" rel="noopener noreferrer" className="mt-6 inline-flex items-center gap-2 rounded-xl border-2 border-charcoal bg-white px-6 py-3 font-bold text-charcoal no-underline hover:bg-cream"><Mail className="h-5 w-5" aria-hidden="true" />Contact form<ExternalLink className="h-4 w-4" aria-hidden="true" /><span className="sr-only"> (opens in a new tab)</span></a>
 
               <div className="mt-10 rounded-2xl border border-charcoal/15 bg-white p-6 shadow-sm md:p-9">
@@ -137,6 +139,31 @@ export default function ResourcesForHelp() {
                           Show password
                         </label>
                         <p id="rental-password-hint" className="mt-1 text-xs text-charcoal/70">Passwords are case-sensitive.</p>
+                      </div>
+                      <button type="submit" className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-charcoal px-5 py-3 font-bold text-white hover:bg-[#a13a08]">Open questionnaire<ExternalLink className="h-4 w-4" aria-hidden="true" /></button>
+                    </form>
+                  </DialogContent>
+                </Dialog>
+              </div>
+
+              <div className="mt-6 rounded-2xl border border-charcoal/15 bg-white p-6 shadow-sm md:p-9">
+                <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-full bg-[#f2e8d9]"><LockKeyhole className="h-5 w-5 text-[#933708]" aria-hidden="true" /></div>
+                <h3 className="font-serif text-2xl font-bold md:text-3xl">Career Search Scan questionnaire</h3>
+                <p className="mt-4 max-w-2xl leading-7 text-charcoal/80">Already in touch about your job search? Share your experience, strengths, goals, pay expectations and practical needs so Sukhi can look for suitable vacancies and useful career steps.</p>
+                <p className="mt-3 max-w-2xl text-sm leading-6 text-charcoal/75">Use the password Sukhi provided. The questionnaire opens in a new tab. You can attach a PDF or Word résumé (one file, up to 10 MB); Google sign-in is required because this form accepts uploads. Your responses and résumé are kept private for your career search.</p>
+                <Dialog open={careerPasswordOpen} onOpenChange={(open) => { setCareerPasswordOpen(open); setShowCareerPassword(false); }}>
+                  <DialogTrigger asChild><button type="button" className="mt-6 inline-flex items-center gap-2 rounded-xl bg-charcoal px-6 py-3 font-bold text-white hover:bg-[#a13a08]"><LockKeyhole className="h-4 w-4" aria-hidden="true" />Career Search Scan<ExternalLink className="h-4 w-4" aria-hidden="true" /></button></DialogTrigger>
+                  <DialogContent className="border-charcoal/20 bg-cream text-charcoal sm:max-w-md">
+                    <DialogHeader><DialogTitle className="font-serif text-2xl">Career Search Scan</DialogTitle><DialogDescription className="pt-2 leading-6 text-charcoal/80">Enter the password Sukhi gave you. The questionnaire will open in a new tab after your password is checked.</DialogDescription></DialogHeader>
+                    <form action="/api/career-access" method="post" target="_blank" rel="noopener" className="mt-2 space-y-5">
+                      <div>
+                        <label htmlFor="career-password" className="mb-2 block text-sm font-bold">Password</label>
+                        <input id="career-password" name="password" type={showCareerPassword ? "text" : "password"} required autoComplete="off" maxLength={64} spellCheck={false} autoCapitalize="none" aria-describedby="career-password-hint" className="w-full rounded-lg border border-charcoal/40 bg-white px-4 py-3 text-base focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-charcoal" />
+                        <label className="mt-2 inline-flex cursor-pointer items-center gap-2 py-2 text-sm font-medium">
+                          <input type="checkbox" checked={showCareerPassword} onChange={(event) => setShowCareerPassword(event.target.checked)} aria-controls="career-password" className="h-4 w-4 accent-charcoal focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-charcoal" />
+                          Show password
+                        </label>
+                        <p id="career-password-hint" className="mt-1 text-xs text-charcoal/70">Passwords are case-sensitive.</p>
                       </div>
                       <button type="submit" className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-charcoal px-5 py-3 font-bold text-white hover:bg-[#a13a08]">Open questionnaire<ExternalLink className="h-4 w-4" aria-hidden="true" /></button>
                     </form>
