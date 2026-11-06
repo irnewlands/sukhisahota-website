@@ -17,11 +17,25 @@ interface Section {
   title: string;
   content: string[];
   pullQuote?: string;
+  image?: {
+    src: string;
+    alt: string;
+    caption: string;
+    width: number;
+    height: number;
+  };
 }
 
 const sections: Section[] = [
   {
     title: "Débuts",
+    image: {
+      src: "/IMG-20170310-WA0002.jpg",
+      alt: "Sukhi dans sa jeunesse au Royaume-Uni",
+      caption: "Mes années au Royaume-Uni et les premiers souvenirs qui m’ont façonné",
+      width: 1600,
+      height: 1200,
+    },
     content: [
       "Originaire du Royaume-Uni mais d'origine sud-asiatique, j'ai grandi dans une famille monoparentale avec deux frères et sœurs ayant des difficultés d'apprentissage.",
       "C'était une vie difficile pour ma mère, qui elle-même a connu un handicap qui n'a jamais été entièrement diagnostiqué et traité. Elle n'avait pas le choix d'avoir un mariage arrangé puis d'avoir des enfants. C'était la façon de ma grand-mère de mettre en place une structure de soutien pour l'avenir à long terme.",
@@ -41,6 +55,13 @@ const sections: Section[] = [
   },
   {
     title: "Mon Voyage",
+    image: {
+      src: "/SAM_2552v2.JPG",
+      alt: "Sukhi au sommet du Mauna Kea au lever du soleil",
+      caption: "Lever du soleil au sommet du Mauna Kea en 2011",
+      width: 3074,
+      height: 1962,
+    },
     content: [
       "Après avoir obtenu un diplôme en comptabilité et finance et avoir travaillé pendant quelques années, ainsi qu'après avoir vu mes frères et sœurs entrer en soins gouvernementaux à temps plein, je voulais en savoir plus sur moi-même et ma connexion à ce monde et à la société dans son ensemble après avoir été isolée dans une communauté recluse pendant la majeure partie de mon enfance.",
       "J'ai donc quitté le Royaume-Uni à 23 ans, j'ai profité du programme de mobilité des jeunes du gouvernement britannique (vacances-travail) et j'ai déménagé au Japon de l'autre côté du monde. Je suis arrivée à Tokyo avec une valise et un guide de phrases à la main, n'ayant appris que quelques mots à ce stade, mais j'ai réussi à trouver du travail comme instructrice en langue anglaise en moins d'un mois après mon arrivée.",
@@ -134,6 +155,13 @@ export default function AutobiographyFr() {
       <main style={{ maxWidth: "900px", margin: "0 auto", padding: "3rem 2rem" }}>
         {/* Hero Section */}
         <section style={{ marginBottom: "4rem", textAlign: "center" }}>
+          <img
+            src="/006A7069a.jpg"
+            alt="Portrait de Sukhi Sahota"
+            width={140}
+            height={140}
+            className="mx-auto mb-8 size-[140px] rounded-full border-4 border-orange object-cover object-top shadow-lg"
+          />
           <span
             style={{
               fontFamily: "'Outfit', sans-serif",
@@ -188,6 +216,22 @@ export default function AutobiographyFr() {
               {section.title}
             </h2>
 
+            {section.image && (
+              <figure className="mb-8">
+                <img
+                  src={section.image.src}
+                  alt={section.image.alt}
+                  width={section.image.width}
+                  height={section.image.height}
+                  loading="lazy"
+                  className="block h-auto w-full rounded-2xl"
+                />
+                <figcaption className="mt-2 text-center text-sm text-muted-foreground">
+                  {section.image.caption}
+                </figcaption>
+              </figure>
+            )}
+
             {/* Two-column layout for content */}
             <div
               style={{
@@ -239,14 +283,7 @@ export default function AutobiographyFr() {
       <JourneyTimeline />
 
       {/* CTA Footer */}
-      <section
-        style={{
-          backgroundColor: "var(--color-ndp-charcoal)",
-          color: "white",
-          padding: "3rem 2rem",
-          textAlign: "center",
-        }}
-      >
+      <section className="bg-[#111827] px-8 py-12 text-center text-white">
         <div style={{ maxWidth: "800px", margin: "0 auto" }}>
           <h2
             style={{
@@ -256,7 +293,7 @@ export default function AutobiographyFr() {
               marginBottom: "1rem",
             }}
           >
-            Prêt à Faire la Différence?
+            Prêt à faire une différence?
           </h2>
           <p
             style={{
@@ -272,50 +309,15 @@ export default function AutobiographyFr() {
           <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
             <a
               href={localizedHref("/")}
-              style={{
-                fontFamily: "'Outfit', sans-serif",
-                fontWeight: 600,
-                padding: "0.75rem 1.5rem",
-                backgroundColor: "var(--color-ndp-orange)",
-                color: "white",
-                textDecoration: "none",
-                borderRadius: "4px",
-                display: "inline-block",
-                transition: "all 0.2s ease-out",
-              }}
-              onMouseEnter={(e) => {
-                (e.target as HTMLElement).style.transform = "scale(1.05)";
-              }}
-              onMouseLeave={(e) => {
-                (e.target as HTMLElement).style.transform = "scale(1)";
-              }}
+              className="inline-block rounded border-2 border-cream bg-cream px-6 py-3 font-semibold text-charcoal no-underline transition-colors hover:border-white hover:bg-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
             >
               Retour à l'accueil
             </a>
             <a
-              href={localizedHref("/")}
-              style={{
-                fontFamily: "'Outfit', sans-serif",
-                fontWeight: 600,
-                padding: "0.75rem 1.5rem",
-                backgroundColor: "transparent",
-                color: "white",
-                border: "2px solid white",
-                textDecoration: "none",
-                borderRadius: "4px",
-                display: "inline-block",
-                transition: "all 0.2s ease-out",
-              }}
-              onMouseEnter={(e) => {
-                (e.target as HTMLElement).style.backgroundColor = "white";
-                (e.target as HTMLElement).style.color = "var(--color-ndp-charcoal)";
-              }}
-              onMouseLeave={(e) => {
-                (e.target as HTMLElement).style.backgroundColor = "transparent";
-                (e.target as HTMLElement).style.color = "white";
-              }}
+              href="mailto:info@sukhisahota.ca"
+              className="inline-block rounded border-2 border-white px-6 py-3 font-semibold text-white no-underline transition-colors hover:bg-white hover:text-charcoal focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
             >
-              Nous Contacter
+              Nous contacter
             </a>
           </div>
         </div>
