@@ -1,10 +1,10 @@
-import { isFrench, isPunjabi, isChinese, copy } from "@/lib/locale";
+import { isFrench, isPunjabi, isChinese, isTagalog, copy } from "@/lib/locale";
 import { useEffect } from "react";
 import { ArrowRight, CalendarDays, Download, ExternalLink, FileText, MessageCircle, ShieldCheck } from "lucide-react";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 
-const showEnglishDownloadLabels = isPunjabi || isChinese;
+const showEnglishDownloadLabels = isPunjabi || isChinese || isTagalog;
 
 const PARTICIPATION_FORMS = [
   {
@@ -57,7 +57,7 @@ export default function AfterElection() {
               </span>
             </div>
             <h1 className="max-w-5xl font-serif text-5xl font-bold leading-[1.06] tracking-tight md:text-7xl">
-              {(isPunjabi || isChinese) ? copy("After the defeat") : <>{copy("After the")}{" "}<span className="text-orange">{copy("Defeat.")}</span></>}
+              {(isPunjabi || isChinese || isTagalog) ? copy("After the defeat") : <>{copy("After the")}{" "}<span className="text-orange">{copy("Defeat.")}</span></>}
             </h1>
             <p className="mt-6 max-w-3xl text-xl leading-8 text-charcoal/80 md:text-2xl md:leading-10">
               {copy("My frustrations, my questions, and why I believe the BC NDP must listen carefully to its grassroots.")}
@@ -213,7 +213,7 @@ export default function AfterElection() {
                 </a>
               </div>
 
-              {(isFrench || isPunjabi || isChinese) && <p className="mt-6 text-sm text-white/85">{copy("The forms below are available in English.")}</p>}
+              {(isFrench || isPunjabi || isChinese || isTagalog) && <p className="mt-6 text-sm text-white/85">{copy("The forms below are available in English.")}</p>}
               <div className="mt-9 space-y-10">
                 {PARTICIPATION_FORMS.map((form) => (
                   <section key={form.id} id={form.id} aria-labelledby={`${form.id}-heading`} className="scroll-mt-28 overflow-hidden rounded-2xl border border-white/20 bg-white text-charcoal shadow-sm">

@@ -1,15 +1,17 @@
 import frenchCopy from "./french-copy.json";
 import punjabiCopy from "./punjabi-copy.json";
 import chineseCopy from "./chinese-copy.json";
+import tagalogCopy from "./tagalog-copy.json";
 
 export const languages = [
   { prefix: "", tag: "en-CA", label: "English" },
   { prefix: "/fr", tag: "fr-CA", label: "Français" },
   { prefix: "/pa", tag: "pa-Guru", label: "ਪੰਜਾਬੀ" },
   { prefix: "/zh", tag: "zh-Hans", label: "简体中文" },
+  { prefix: "/tl", tag: "tl", label: "Tagalog" },
 ] as const;
 
-const [english, french, punjabi, chinese] = languages;
+const [english, french, punjabi, chinese, tagalog] = languages;
 const legacyAutobiography = "/autobiography-fr";
 const currentPath = window.location.pathname;
 const isLegacyAutobiography = currentPath.replace(/\/$/, "") === legacyAutobiography;
@@ -21,9 +23,16 @@ export const language = isLegacyAutobiography
 export const isFrench = language === french;
 export const isPunjabi = language === punjabi;
 export const isChinese = language === chinese;
+export const isTagalog = language === tagalog;
 export const routePrefix = isLegacyAutobiography ? "" : language.prefix;
 
-const translations: Readonly<Record<string, string>> = isChinese ? chineseCopy : isPunjabi ? punjabiCopy : isFrench ? frenchCopy : {};
+const translations: Readonly<Record<string, string>> = {
+  "en-CA": {},
+  "fr-CA": frenchCopy,
+  "pa-Guru": punjabiCopy,
+  "zh-Hans": chineseCopy,
+  tl: tagalogCopy,
+}[language.tag];
 
 export function copy(english: string): string {
   return translations[english] ?? english;

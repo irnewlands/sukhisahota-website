@@ -1,4 +1,4 @@
-import { copy, localizedHref } from "@/lib/locale";
+import { copy, isTagalog, localizedHref } from "@/lib/locale";
 import { useState } from "react";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 
@@ -32,7 +32,7 @@ export default function SiteHeader() {
         </a>
 
         <div className="flex shrink-0 items-center gap-2">
-          <nav className="hidden min-[1440px]:flex items-center gap-1">
+          <nav className={`hidden items-center gap-1 ${isTagalog ? "min-[1600px]:flex" : "min-[1440px]:flex"}`}>
             {NAV_LINKS.map((l) => (
               <a key={l.href} href={localizedHref(l.href)} className="nav-link px-3 py-2 text-sm font-medium rounded text-charcoal hover:text-orange">
                 {l.label}
@@ -41,14 +41,14 @@ export default function SiteHeader() {
           </nav>
 
           <LanguageSwitcher />
-          <button onClick={() => setOpen(!open)} aria-label={copy("Toggle menu")} aria-expanded={open} className="min-[1440px]:hidden p-2 text-charcoal">
+          <button onClick={() => setOpen(!open)} aria-label={copy("Toggle menu")} aria-expanded={open} className={`p-2 text-charcoal ${isTagalog ? "min-[1600px]:hidden" : "min-[1440px]:hidden"}`}>
             ☰
           </button>
         </div>
       </div>
 
       {open && (
-        <div className="bg-cream border-t border-border min-[1440px]:hidden">
+        <div className={`bg-cream border-t border-border ${isTagalog ? "min-[1600px]:hidden" : "min-[1440px]:hidden"}`}>
           <div className="container py-4">
             {NAV_LINKS.map((l) => (
               <a key={l.href} href={localizedHref(l.href)} onClick={() => setOpen(false)} className="block py-3 text-base font-medium text-charcoal border-b border-border">

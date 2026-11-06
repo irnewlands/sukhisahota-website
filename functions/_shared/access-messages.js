@@ -18,61 +18,76 @@ function messageResponse({ title, message, status, language, label, close, back,
 
 export function questionnaireMessages(request, labels) {
   const language = new URL(request.url).searchParams.get("lang");
-  const chinese = language === "zh-Hans";
-  if (language === "pa-Guru" || chinese) {
-    const common = {
-      language,
-      label: chinese ? labels.zh : labels.pa,
-      close: chinese ? "关闭此窗口" : "ਇਹ ਵਿੰਡੋ ਬੰਦ ਕਰੋ",
-      back: chinese ? "返回求助资源页面" : "ਮਦਦ ਲਈ ਸਰੋਤਾਂ ਵੱਲ ਵਾਪਸ ਜਾਓ",
-      backHref: chinese ? "/zh/resources-for-help#asked-sukhi" : "/pa/resources-for-help#asked-sukhi",
-    };
-    return {
-      invalidPassword: () => messageResponse({
-        ...common,
-        status: 403,
-        title: chinese ? "密码不正确" : "ਪਾਸਵਰਡ ਸਹੀ ਨਹੀਂ ਹੈ",
-        message: chinese ? "请关闭此标签页，使用苏基提供的密码重试。求助资源页面仍在原标签页中打开。" : "ਇਹ ਟੈਬ ਬੰਦ ਕਰੋ ਅਤੇ ਸੁੱਖੀ ਵੱਲੋਂ ਦਿੱਤੇ ਪਾਸਵਰਡ ਨਾਲ ਮੁੜ ਕੋਸ਼ਿਸ਼ ਕਰੋ। ਮਦਦ ਲਈ ਸਰੋਤਾਂ ਵਾਲਾ ਪੰਨਾ ਪਹਿਲੀ ਟੈਬ ਵਿੱਚ ਹਾਲੇ ਵੀ ਖੁੱਲ੍ਹਾ ਹੈ।",
-      }),
-      openFromDirectory: () => {
-        const response = messageResponse({
-          ...common,
-          status: 405,
-          title: chinese ? "请从求助资源页面打开问卷" : "ਮਦਦ ਲਈ ਸਰੋਤਾਂ ਵਾਲੇ ਪੰਨੇ ਤੋਂ ਪ੍ਰਸ਼ਨਾਵਲੀ ਖੋਲ੍ਹੋ",
-          message: chinese ? `请点击求助资源页面上的“${labels.zh}”按钮输入密码。` : `ਪਾਸਵਰਡ ਦਰਜ ਕਰਨ ਲਈ ਮਦਦ ਲਈ ਸਰੋਤਾਂ ਵਾਲੇ ਪੰਨੇ ’ਤੇ « ${labels.pa} » ਬਟਨ ਵਰਤੋ।`,
-        });
-        response.headers.set("Allow", "POST");
-        return response;
-      },
-    };
-  }
-  const french = language === "fr-CA";
-  const label = french ? labels.fr : labels.en;
-  const common = {
-    language: french ? "fr-CA" : "en",
-    label,
-    close: french ? "Fermer cette fenêtre" : "Close this window",
-    back: french ? "Retour aux ressources d’aide" : "Return to Resources for Help",
-    backHref: french ? "/fr/resources-for-help#asked-sukhi" : "/resources-for-help#asked-sukhi",
+  const copy = {
+    en: {
+      close: "Close this window",
+      back: "Return to Resources for Help",
+      prefix: "",
+      invalidTitle: "Password not valid",
+      invalidMessage: "Please close this tab and try again using the password Sukhi provided. Your original Resources for Help page is still open.",
+      directoryTitle: "Open the questionnaire from Resources for Help",
+      directoryMessage: (label) => `Use the ${label} button on the Resources for Help page to enter your password.`,
+    },
+    "fr-CA": {
+      close: "Fermer cette fenêtre",
+      back: "Retour aux ressources d’aide",
+      prefix: "/fr",
+      invalidTitle: "Mot de passe invalide",
+      invalidMessage: "Fermez cet onglet et réessayez avec le mot de passe fourni par Sukhi. La page de ressources d’aide est toujours ouverte dans l’onglet d’origine.",
+      directoryTitle: "Ouvrez le questionnaire à partir de la page de ressources d’aide",
+      directoryMessage: (label) => `Utilisez le bouton « ${label} » sur la page de ressources d’aide pour entrer votre mot de passe.`,
+    },
+    "pa-Guru": {
+      close: "ਇਹ ਵਿੰਡੋ ਬੰਦ ਕਰੋ",
+      back: "ਮਦਦ ਲਈ ਸਰੋਤਾਂ ਵੱਲ ਵਾਪਸ ਜਾਓ",
+      prefix: "/pa",
+      invalidTitle: "ਪਾਸਵਰਡ ਸਹੀ ਨਹੀਂ ਹੈ",
+      invalidMessage: "ਇਹ ਟੈਬ ਬੰਦ ਕਰੋ ਅਤੇ ਸੁੱਖੀ ਵੱਲੋਂ ਦਿੱਤੇ ਪਾਸਵਰਡ ਨਾਲ ਮੁੜ ਕੋਸ਼ਿਸ਼ ਕਰੋ। ਮਦਦ ਲਈ ਸਰੋਤਾਂ ਵਾਲਾ ਪੰਨਾ ਪਹਿਲੀ ਟੈਬ ਵਿੱਚ ਹਾਲੇ ਵੀ ਖੁੱਲ੍ਹਾ ਹੈ।",
+      directoryTitle: "ਮਦਦ ਲਈ ਸਰੋਤਾਂ ਵਾਲੇ ਪੰਨੇ ਤੋਂ ਪ੍ਰਸ਼ਨਾਵਲੀ ਖੋਲ੍ਹੋ",
+      directoryMessage: (label) => `ਪਾਸਵਰਡ ਦਰਜ ਕਰਨ ਲਈ ਮਦਦ ਲਈ ਸਰੋਤਾਂ ਵਾਲੇ ਪੰਨੇ ’ਤੇ « ${label} » ਬਟਨ ਵਰਤੋ।`,
+    },
+    "zh-Hans": {
+      close: "关闭此窗口",
+      back: "返回求助资源页面",
+      prefix: "/zh",
+      invalidTitle: "密码不正确",
+      invalidMessage: "请关闭此标签页，使用苏基提供的密码重试。求助资源页面仍在原标签页中打开。",
+      directoryTitle: "请从求助资源页面打开问卷",
+      directoryMessage: (label) => `请点击求助资源页面上的“${label}”按钮输入密码。`,
+    },
+    tl: {
+      close: "Isara ang window na ito",
+      back: "Bumalik sa Mga Mapagkukunan ng Tulong",
+      prefix: "/tl",
+      invalidTitle: "Mali ang password",
+      invalidMessage: "Isara ang tab na ito at subukang muli gamit ang password na ibinigay ni Sukhi. Bukas pa rin sa unang tab ang pahina ng Mga Mapagkukunan ng Tulong.",
+      directoryTitle: "Buksan ang talatanungan mula sa Mga Mapagkukunan ng Tulong",
+      directoryMessage: (label) => `Pindutin ang “${label}” sa pahina ng Mga Mapagkukunan ng Tulong para ilagay ang iyong password.`,
+    },
   };
-
+  const lang = Object.hasOwn(copy, language) ? language : "en";
+  const text = copy[lang];
+  const label = labels[lang.split("-")[0]];
+  const common = {
+    language: lang,
+    label,
+    close: text.close,
+    back: text.back,
+    backHref: text.prefix + "/resources-for-help#asked-sukhi",
+  };
   return {
     invalidPassword: () => messageResponse({
       ...common,
       status: 403,
-      title: french ? "Mot de passe invalide" : "Password not valid",
-      message: french
-        ? "Fermez cet onglet et réessayez avec le mot de passe fourni par Sukhi. La page de ressources d’aide est toujours ouverte dans l’onglet d’origine."
-        : "Please close this tab and try again using the password Sukhi provided. Your original Resources for Help page is still open.",
+      title: text.invalidTitle,
+      message: text.invalidMessage,
     }),
     openFromDirectory: () => {
       const response = messageResponse({
         ...common,
         status: 405,
-        title: french ? "Ouvrez le questionnaire à partir de la page de ressources d’aide" : "Open the questionnaire from Resources for Help",
-        message: french
-          ? `Utilisez le bouton « ${label} » sur la page de ressources d’aide pour entrer votre mot de passe.`
-          : `Use the ${label} button on the Resources for Help page to enter your password.`,
+        title: text.directoryTitle,
+        message: text.directoryMessage(label),
       });
       response.headers.set("Allow", "POST");
       return response;

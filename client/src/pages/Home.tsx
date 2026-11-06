@@ -1,4 +1,4 @@
-import { copy, isFrench, isPunjabi, isChinese, localizedHref } from "@/lib/locale";
+import { copy, isFrench, isPunjabi, isChinese, isTagalog, localizedHref } from "@/lib/locale";
 /**
  * DESIGN PHILOSOPHY: Contemporary Progressive
  * Bold typography, dynamic layouts, intentional asymmetry
@@ -84,7 +84,7 @@ function Nav() {
 
         <div className="flex shrink-0 items-center gap-2">
           {/* Desktop nav */}
-          <nav className="hidden min-[1440px]:flex items-center gap-1">
+          <nav className={`hidden items-center gap-1 ${isTagalog ? "min-[1600px]:flex" : "min-[1440px]:flex"}`}>
             {NAV_LINKS.map((l) => (
               <a
                 key={l.href}
@@ -104,7 +104,7 @@ function Nav() {
           {/* Mobile menu toggle */}
           <button
             onClick={() => setOpen(!open)}
-            className="min-[1440px]:hidden p-2 text-charcoal"
+            className={`p-2 text-charcoal ${isTagalog ? "min-[1600px]:hidden" : "min-[1440px]:hidden"}`}
             aria-label={copy("Toggle menu")}
             aria-expanded={open}
           >
@@ -121,7 +121,7 @@ function Nav() {
 
      {/* Mobile drawer */}
 {open && (
-  <div className="bg-cream/98 border-t border-border min-[1440px]:hidden">
+  <div className={`bg-cream/98 border-t border-border ${isTagalog ? "min-[1600px]:hidden" : "min-[1440px]:hidden"}`}>
     <div className="container py-4">
       {NAV_LINKS.map((l) => (
         <a
@@ -245,7 +245,7 @@ export default function Home() {
               </div>
 
               <h1 className="font-serif text-5xl md:text-7xl font-bold text-charcoal leading-none mb-6">
-                {(isPunjabi || isChinese) ? (
+                {(isPunjabi || isChinese || isTagalog) ? (
                   <>{copy("For every Canadian")}{" "}<span className="block text-orange">{copy("I keep fighting")}</span></>
                 ) : (
                   <>{copy("Fighting for")}{" "}<span className="block text-orange">{copy("every Canadian")}</span></>

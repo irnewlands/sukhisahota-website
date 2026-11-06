@@ -9,7 +9,7 @@ const DESTINATION = "/8by63tul1WUJwpn67IByepBP3CLqhSDOcjr84/U3T9bPfnaAKiGcWN+Aj6
 const decode = (value) => Uint8Array.from(atob(value), (character) => character.charCodeAt(0));
 
 export async function onRequest({ request }) {
-  const { invalidPassword, openFromDirectory } = questionnaireMessages(request, { en: "Career Search Scan", fr: "Recherche d’emploi personnalisée", pa: "ਨੌਕਰੀ ਦੀ ਭਾਲ", zh: "求职需求问卷" });
+  const { invalidPassword, openFromDirectory } = questionnaireMessages(request, { en: "Career Search Scan", fr: "Recherche d’emploi personnalisée", pa: "ਨੌਕਰੀ ਦੀ ਭਾਲ", zh: "求职需求问卷", tl: "Paghahanap ng Trabaho" });
   if (request.method !== "POST") return openFromDirectory();
 
   const origin = request.headers.get("Origin");

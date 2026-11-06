@@ -9,7 +9,7 @@ const DESTINATION = "lIEoxVoRpUPh1Ms5J4k24626zbMek9CPALkkGGWR9hf3fFvS0ru6Ggjnsfd
 const decode = (value) => Uint8Array.from(atob(value), (character) => character.charCodeAt(0));
 
 export async function onRequest({ request }) {
-  const { invalidPassword, openFromDirectory } = questionnaireMessages(request, { en: "Rental Housing Search", fr: "Recherche de logement locatif", pa: "ਕਿਰਾਏ ਦੇ ਘਰ ਦੀ ਭਾਲ", zh: "租房需求问卷" });
+  const { invalidPassword, openFromDirectory } = questionnaireMessages(request, { en: "Rental Housing Search", fr: "Recherche de logement locatif", pa: "ਕਿਰਾਏ ਦੇ ਘਰ ਦੀ ਭਾਲ", zh: "租房需求问卷", tl: "Paghahanap ng Mauupahang Tirahan" });
   if (request.method !== "POST") return openFromDirectory();
 
   const origin = request.headers.get("Origin");

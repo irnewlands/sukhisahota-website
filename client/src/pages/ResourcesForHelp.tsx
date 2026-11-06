@@ -1,4 +1,4 @@
-import { copy, language, isFrench, isPunjabi, isChinese } from "@/lib/locale";
+import { copy, language, isFrench, isPunjabi, isChinese, isTagalog } from "@/lib/locale";
 import { useEffect, useMemo, useState } from "react";
 import { ArrowRight, ExternalLink, LockKeyhole, Mail, MapPin, Phone, Search } from "lucide-react";
 import SiteHeader from "@/components/SiteHeader";
@@ -74,7 +74,7 @@ export default function ResourcesForHelp() {
         <header className="border-b border-orange/20 bg-[#f8f1e7]">
           <div className="container py-14 md:py-20">
             <p className="mb-5 text-xs font-bold uppercase tracking-[0.2em] text-[#a13a08]">{copy("Community care · Vancouver & BC")}</p>
-            <h1 className="max-w-4xl font-serif text-5xl font-bold leading-[1.08] tracking-tight md:text-7xl">{(isPunjabi || isChinese) ? copy("Resources for Help") : <>{copy("Resources")}<br className="hidden sm:block" />{" "}{copy("for Help")}</>}</h1>
+            <h1 className="max-w-4xl font-serif text-5xl font-bold leading-[1.08] tracking-tight md:text-7xl">{(isPunjabi || isChinese || isTagalog) ? copy("Resources for Help") : <>{copy("Resources")}<br className="hidden sm:block" />{" "}{copy("for Help")}</>}</h1>
             <p className="mt-6 max-w-3xl text-xl leading-8 text-charcoal/80">{copy("Find someone who can help you take the next step.")}</p>
             <p className="mt-4 max-w-3xl text-lg leading-8 text-charcoal/80">{copy("A practical directory of advocacy organizations, community supports and public services for Vancouver residents. You can contact these services directly.")}</p>
             <div className="mt-8 flex flex-wrap gap-3">
@@ -120,7 +120,7 @@ export default function ResourcesForHelp() {
               <h2 id="asked-sukhi-heading" className="font-serif text-3xl font-bold leading-tight md:text-5xl">{copy("Have you asked Sukhi for help?")}</h2>
               <p className="mt-6 text-lg leading-8 text-charcoal/85">{copy("This section is specifically for people who have already reached out to Sukhi for help and received a response from him.")}</p>
               <p className="mt-4 text-lg leading-8 text-charcoal/85">{copy("If you would like help from Sukhi, please use the Contact form first and wait for his reply before using the questionnaires below.")}</p>
-              {(isFrench || isPunjabi || isChinese) && <p className="mt-4 text-sm text-charcoal/75">{copy("The forms linked on this page are in English.")}</p>}
+              {(isFrench || isPunjabi || isChinese || isTagalog) && <p className="mt-4 text-sm text-charcoal/75">{copy("The forms linked on this page are in English.")}</p>}
               <a href={CONTACT_URL} target="_blank" rel="noopener noreferrer" className="mt-6 inline-flex items-center gap-2 rounded-xl border-2 border-charcoal bg-white px-6 py-3 font-bold text-charcoal no-underline hover:bg-cream"><Mail className="h-5 w-5" aria-hidden="true" />{copy("Contact form")}<ExternalLink className="h-4 w-4" aria-hidden="true" /><span className="sr-only">{" "}{copy("(opens in a new tab)")}</span></a>
 
               <div className="mt-10 rounded-2xl border border-charcoal/15 bg-white p-6 shadow-sm md:p-9">

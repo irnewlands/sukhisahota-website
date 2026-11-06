@@ -5,6 +5,7 @@ const origin = "https://www.sukhisahota.ca";
 const frenchCopy = new URL("../client/src/lib/french-copy.json", import.meta.url);
 const punjabiCopy = new URL("../client/src/lib/punjabi-copy.json", import.meta.url);
 const chineseCopy = new URL("../client/src/lib/chinese-copy.json", import.meta.url);
+const tagalogCopy = new URL("../client/src/lib/tagalog-copy.json", import.meta.url);
 const reflectionTitle = "After the Defeat | Sukhi Sahota's Reflections on the 2026 BC Election";
 const directoryTitle = "Resources for Help | Vancouver Support & Advocacy | Sukhi Sahota";
 
@@ -43,6 +44,8 @@ const punjabiDescription = "ਸੁੱਖੀ ਸਹੋਤਾ ਦੀ ਅਧਿਕ�
 
 const chineseDescription = "苏基·萨霍塔的官方网站。了解他对住房、气候、医疗、民主、生活成本、原住民和解、LGBTQ+ 权利、人工智能和公共服务的看法。";
 
+const tagalogDescription = "Opisyal na website ni Sukhi Sahota. Basahin ang kanyang mga panukala tungkol sa pabahay, klima, pangangalagang pangkalusugan, demokrasya, gastos sa pamumuhay, pakikipagkasundo sa mga Katutubong Mamamayan, karapatan ng LGBTQ+, AI, at serbisyo publiko.";
+
 function escapeMarkup(value) {
   return value.replaceAll("&", "&amp;").replaceAll('"', "&quot;").replaceAll("<", "&lt;").replaceAll(">", "&gt;");
 }
@@ -60,7 +63,7 @@ function pageHtml(template, { url, alternates, lang, title, description }) {
     .replace(/<link rel="canonical" href="[^"]*"\s*\/?>/, [
       `<link rel="canonical" href="${url}" />`,
       ...Object.entries(alternates).map(([tag, href]) => `<link rel="alternate" hreflang="${tag}" href="${href}" />`),
-      `<meta property="og:locale" content="${lang === "pa-Guru" ? "pa_IN" : lang === "zh-Hans" ? "zh_CN" : lang.replace("-", "_")}" />`,
+      `<meta property="og:locale" content="${lang === "pa-Guru" ? "pa_IN" : lang === "zh-Hans" ? "zh_CN" : lang === "tl" ? "tl_PH" : lang.replace("-", "_")}" />`,
     ].join("\n  "))
     .replace(/(<script type="application\/ld\+json">)([\s\S]*?)(<\/script>)/, (_, start, json, end) => {
       const data = JSON.parse(json);
@@ -68,7 +71,7 @@ function pageHtml(template, { url, alternates, lang, title, description }) {
         if (item["@type"] === "WebPage") {
           Object.assign(item, { "@id": `${url}#webpage`, url, name: title, description, inLanguage: lang });
         }
-        if (item["@type"] === "WebSite") item.inLanguage = ["en-CA", "fr-CA", "pa-Guru", "zh-Hans"];
+        if (item["@type"] === "WebSite") item.inLanguage = ["en-CA", "fr-CA", "pa-Guru", "zh-Hans", "tl"];
         if (item["@type"] === "Person" && lang === "fr-CA") {
           item.description = "Sukhi Sahota défend les intérêts de la communauté et les politiques publiques. Il a été candidat aux élections fédérales.";
           item.jobTitle = "Défenseur des intérêts de la communauté et des politiques publiques";
@@ -81,6 +84,10 @@ function pageHtml(template, { url, alternates, lang, title, description }) {
           item.description = "苏基·萨霍塔关注社区事务和公共政策，曾参选加拿大联邦众议院议员。";
           item.jobTitle = "社区与公共政策倡导者";
         }
+        if (item["@type"] === "Person" && lang === "tl") {
+          item.description = "Si Sukhi Sahota ay isang tagapagtaguyod ng komunidad at pampublikong patakaran. Dati siyang kandidato sa pederal na halalan.";
+          item.jobTitle = "Tagapagtaguyod ng komunidad at pampublikong patakaran";
+        }
       }
       return `${start}\n${JSON.stringify(data, null, 2).replaceAll("<", "\\u003c")}\n${end}`;
     });
@@ -92,8 +99,8 @@ export function localizedPages(outputDir) {
     apply: "build",
     async closeBundle() {
       const template = await readFile(join(outputDir, "index.html"), "utf8");
-      const [french, punjabi, chinese] = await Promise.all(
-        [frenchCopy, punjabiCopy, chineseCopy].map(async (path) => JSON.parse(await readFile(path, "utf8"))),
+      const [french, punjabi, chinese, tagalog] = await Promise.all(
+        [frenchCopy, punjabiCopy, chineseCopy, tagalogCopy].map(async (path) => JSON.parse(await readFile(path, "utf8"))),
       );
       const sitemap = [];
       for (const [route, [english, explicitFrench]] of Object.entries(pages)) {
@@ -103,6 +110,7 @@ export function localizedPages(outputDir) {
           "fr-CA": origin + localizedPath("/fr"),
           "pa-Guru": origin + localizedPath("/pa"),
           "zh-Hans": origin + localizedPath("/zh"),
+          tl: origin + localizedPath("/tl"),
           "x-default": origin + route,
         };
         for (const [path, label, lang, description] of [
@@ -110,6 +118,7 @@ export function localizedPages(outputDir) {
           [localizedPath("/fr"), explicitFrench ?? french[english], "fr-CA", frenchDescription],
           [localizedPath("/pa"), punjabi[english], "pa-Guru", punjabiDescription],
           [localizedPath("/zh"), chinese[english], "zh-Hans", chineseDescription],
+          [localizedPath("/tl"), tagalog[english], "tl", tagalogDescription],
         ]) {
           if (!label) throw new Error(`Missing ${lang} page title for ${route}`);
           const url = origin + path;
