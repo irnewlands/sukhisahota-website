@@ -67,7 +67,7 @@ return (
           rel="noopener noreferrer"
           className="text-xs text-[#6b7280] hover:text-[#e85d04]"
         >
-          {issue.credit}
+          {copy(issue.credit)}
         </a>
       </div>
     )}

@@ -93,7 +93,7 @@ body: copy("Having worked for an environmental organization, I understand that o
   housing: {
   title: copy("Housing"),
   image: "/issues/housing.jpg",
-  credit: copy("Photo: Chelaxy Designs / Unsplash"),
+  credit: "Photo: Chelaxy Designs / Unsplash",
   creditUrl: "https://unsplash.com/@chelaxydp?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText",  
   related: ["healthcare", "social-safety-net", "economy"],
   summary:
@@ -252,7 +252,7 @@ body: copy("This is a crucial moment for collaboration instead of polarization. 
   ai: {
     title: copy("Artificial Intelligence"),
 image: "/issues/ai.jpg",
-credit: copy("Photo: Igor Omilaev / Unsplash"),
+credit: "Photo: Igor Omilaev / Unsplash",
 creditUrl: "https://unsplash.com/@omilaev?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText",
 related: ["democracy", "economy"],
 
@@ -317,7 +317,7 @@ body: copy("Whether we like it or not, Artificial Intelligence is here. AI techn
   "lgbtq-rights": {
     title: copy("LGBTQ+ Rights"),
     image: "/issues/lgbtq-rights.jpg",
-    credit: copy("Photo: Hannah Voggenhuber / Unsplash"),
+    credit: "Photo: Hannah Voggenhuber / Unsplash",
     creditUrl: "https://unsplash.com/@han1234i?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText",
     related: ["healthcare", "democracy", "social-safety-net"],
     summary:

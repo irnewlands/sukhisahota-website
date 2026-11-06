@@ -15,7 +15,7 @@ const issues = [
     title: copy("Housing"),
     slug: "housing",
     image: "/issues/housing.jpg",
-    credit: copy("Photo: Chelaxy Designs / Unsplash"),
+    credit: "Photo: Chelaxy Designs / Unsplash",
     creditUrl: "https://unsplash.com/@chelaxydp?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText",
     description:
       copy("Everyone deserves stable housing; it's a Human right and an everyday part of our essential necessities just to live."),
@@ -51,7 +51,7 @@ const issues = [
     title: copy("Technology & Artificial Intelligence"),
     slug: "ai",
     image: "/issues/ai.jpg",
-    credit: copy("Photo: Igor Omilaev / Unsplash"),
+    credit: "Photo: Igor Omilaev / Unsplash",
     creditUrl: "https://unsplash.com/@omilaev?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText",
     description:
       copy("AI and emerging technologies must be governed in the public interest, with transparency and worker protections."),
@@ -60,7 +60,7 @@ const issues = [
     title: copy("LGBTQ+ Rights"),
     slug: "lgbtq-rights",
     image: "/issues/lgbtq-rights.jpg",
-    credit: copy("Photo: Hannah Voggenhuber / Unsplash"),
+    credit: "Photo: Hannah Voggenhuber / Unsplash",
     creditUrl: "https://unsplash.com/@han1234i?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText",
     description:
       copy("Queer and trans people deserve safety, dignity, healthcare, legal protection, and full participation in public life."),
@@ -187,7 +187,7 @@ return (
       rel="noopener noreferrer"
       className="text-xs text-[#6b7280] hover:text-[#e85d04]"
     >
-      {issue.credit}
+      {copy(issue.credit)}
     </a>
   </div>
 )}
