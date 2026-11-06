@@ -64,19 +64,19 @@ function Nav() {
         scrolled ? "bg-cream/95 backdrop-blur-md shadow-sm" : "bg-transparent"
       }`}
     >
-      <div className="container flex items-center justify-between gap-2 min-h-16 py-2">
+      <div className="container flex items-center justify-between gap-2 min-h-16 py-2 max-sm:px-3">
         {/* Logo */}
         <a href={localizedHref("/")} className="group flex items-center gap-2 sm:gap-3 no-underline">
           <img
             src="/Forthepeople_-original.png"
             alt={copy("For the People")}
-            className="h-9 w-auto flex-shrink-0"
+            className="h-6 w-auto shrink-0 sm:h-9"
           />
           <div className="flex flex-col">
             <span className="font-serif font-bold text-lg text-charcoal group-hover:text-orange transition-colors leading-tight">
               {copy("Sukhi Sahota")}
             </span>
-            <span className="text-xs font-semibold tracking-widest text-[#b84300] uppercase">
+            <span className="text-xs font-semibold tracking-widest text-[#b84300] uppercase max-[399px]:hidden">
               {copy("Former Federal Candidate")}
             </span>
           </div>
@@ -246,7 +246,7 @@ export default function Home() {
 
               <h1 className="font-serif text-5xl md:text-7xl font-bold text-charcoal leading-none mb-6">
                 {isPunjabi ? (
-                  <>{copy("For every Canadian")}<span className="block text-orange">{copy("I keep fighting")}</span></>
+                  <>{copy("For every Canadian")}{" "}<span className="block text-orange">{copy("I keep fighting")}</span></>
                 ) : (
                   <>{copy("Fighting for")}{" "}<span className="block text-orange">{copy("every Canadian")}</span></>
                 )}
