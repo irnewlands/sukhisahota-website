@@ -148,7 +148,7 @@ export default function AfterElection() {
                 {copy("Explore how the BC NDP, Conservatives and Greens performed in all 93 ridings compared with the certified 2024 election results. The report examines vote-share swings, regional patterns, riding leads and ballots counted.")}
               </p>
               <p className="mt-4 rounded-lg border-l-4 border-orange bg-[#fff6e9] px-5 py-4 text-sm leading-6 text-charcoal/80">
-                <strong>{copy("Preliminary snapshot:")}</strong>{" "}{copy("Elections BC initial count dated October 26, 2026 at 10:34 a.m. (as displayed by Elections BC). Last checked November 4: no newer riding-level results have been released since the November 1 verification, so the analysis remains unchanged. Outstanding ballots have not yet been counted and turnout comparisons remain provisional. The files will be refreshed following the final count.")}
+                <strong>{copy("Preliminary snapshot:")}</strong>{" "}{copy("Elections BC revised preliminary initial count dated November 5, 2026 at 2:20 p.m. PCT. Compared with the November 4 report, vote figures were revised in 55 of 93 ridings; the NDP, Conservatives and Greens remain ahead in 28, 63 and 2 ridings respectively. These are verification adjustments, not final-count mail-in or absentee ballots. Final count is scheduled for November 6–10.")}
               </p>
               <div className="mt-8 grid gap-4 sm:grid-cols-2">
                 <a href={isFrench ? "/election-data/Analyse_preliminaire_elections_CB_2026_fr-CA.pdf" : "/election-data/BC_Election_2026_Preliminary_Analysis.pdf"} target="_blank" rel="noopener noreferrer"
