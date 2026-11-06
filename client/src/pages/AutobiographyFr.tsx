@@ -28,7 +28,7 @@ interface Section {
 
 const sections: Section[] = [
   {
-    title: "Débuts",
+    title: "Mes débuts",
     image: {
       src: "/IMG-20170310-WA0002.jpg",
       alt: "Sukhi entouré d’enfants dans une salle de classe",
@@ -37,66 +37,59 @@ const sections: Section[] = [
       height: 1200,
     },
     content: [
-      "Originaire du Royaume-Uni mais d'origine sud-asiatique, j'ai grandi dans une famille monoparentale avec deux frères et sœurs ayant des difficultés d'apprentissage.",
-      "C'était une vie difficile pour ma mère, qui elle-même a connu un handicap qui n'a jamais été entièrement diagnostiqué et traité. Elle n'avait pas le choix d'avoir un mariage arrangé puis d'avoir des enfants. C'était la façon de ma grand-mère de mettre en place une structure de soutien pour l'avenir à long terme.",
-      "Ma sœur a développé des difficultés d'apprentissage quand elle était petite après un accident. Mon frère est né avec une paralysie cérébrale, et malgré les médecins affirmant qu'il ne marcherait jamais, ma mère a fait tout ce qu'elle pouvait pour entraîner mon frère à marcher, ce qui s'est avéré être un succès.",
-      "On m'a d'abord appris à parler le pendjabi comme première langue. Cependant, j'ai dû trouver difficile d'apprendre l'anglais simultanément car à l'âge de 4 ans, je ne parlais pas l'anglais. En conséquence, tout le monde dans mon ménage a arrêté de parler le pendjabi pour m'immerger dans l'anglais ; bien que cela ait fonctionné, j'ai eu du mal à apprendre le pendjabi depuis.",
-      "À l'âge de 11 ans, mes parents ont divorcé ; ils s'étaient déjà séparés quelques années auparavant. Ma mère s'était aussi convertie du sikhisme pour devenir Témoin de Jéhovah, ce que mon père n'acceptait pas. La bataille pour la garde a eu un impact sur mon bien-être car j'étais déchiré entre 2 parents qui me voulaient tous les deux.",
+      "Originaire du Royaume-Uni et d’ascendance sud-asiatique, j’ai grandi dans une famille monoparentale avec un frère et une sœur qui ont tous deux des difficultés d’apprentissage.",
+      "La vie était difficile pour ma mère, qui vivait elle-même avec un handicap qui n’a jamais été complètement diagnostiqué ni pris en charge. Elle n’a pas eu le choix de se marier dans le cadre d’un mariage arrangé, puis d’avoir des enfants. C’était la façon dont ma grand-mère cherchait à mettre en place un réseau de soutien à long terme.",
+      "Ma sœur a développé des difficultés d’apprentissage à la suite d’un accident alors qu’elle était toute petite. Mon frère est né avec une paralysie cérébrale. Même si les médecins disaient qu’il ne marcherait jamais, ma mère a fait tout ce qu’elle pouvait pour lui apprendre à marcher, et elle y est parvenue.",
+      "Le pendjabi est la première langue qu’on m’a apprise. J’ai dû avoir du mal à apprendre l’anglais en même temps, puisqu’à quatre ans, je ne le parlais toujours pas. À la maison, tout le monde a donc cessé de parler pendjabi pour que je sois complètement immergé dans l’anglais. Ça a fonctionné, mais depuis, j’ai du mal à apprendre le pendjabi.",
+      "Mes parents ont divorcé quand j’avais 11 ans, après quelques années de séparation. À cette époque, ma mère a aussi quitté le sikhisme pour devenir témoin de Jéhovah, ce que mon père n’acceptait pas. La bataille pour ma garde a pesé sur mon bien-être. J’étais déchiré entre mes deux parents, qui voulaient tous deux ma garde.",
     ],
   },
   {
-    title: "Ma Foi",
+    title: "Ma foi",
     content: [
-      "Du patrimoine sikh, j'ai aussi été élevée comme Témoin de Jéhovah ; j'ai été baptisée le jour de mon 13e anniversaire. J'ai trouvé une communauté aimante et bienveillante qui m'a soutenue, ainsi que ma mère maintenant célibataire, pendant mes années d'adolescence. Je n'oublierai jamais les personnes qui ont aidé ma mère et mes frères et sœurs ou qui m'ont donné ce rôle de « figure paternelle » alors que je traversais la puberté.",
-      "J'ai eu la chance d'avoir des amis de différents horizons et ethnies, et j'ai poursuivi un rôle de ministre à temps plein à l'âge de 16 ans, mais tout s'est effondré quand j'ai été excommuniée en tant que jeune adulte quand je me suis identifiée comme faisant partie de la communauté LGBTQ+.",
-      "C'était une période douloureuse de ma vie ; j'ai perdu tous mes amis et tout mon réseau de soutien du jour au lendemain ; toute communication a été coupée selon leurs directives. Je n'avais effectivement personne, et ma santé mentale s'est détériorée. J'ai eu la chance de chercher de l'aide professionnelle sous la forme d'une intervention précoce ; je ne serais pas ici aujourd'hui sans elle.",
+      "Je suis issu d’une famille sikhe et j’ai aussi été élevé comme témoin de Jéhovah. J’ai été baptisé le jour de mes 13 ans. J’y ai trouvé une communauté aimante et bienveillante qui nous a soutenus, ma mère, qui élevait désormais seule ses enfants, et moi, pendant mon adolescence. Je n’oublierai jamais les personnes qui ont aidé ma mère, mon frère et ma sœur, ou qui ont été pour moi des figures paternelles pendant cette période.",
+      "J’ai eu la chance de me faire des amis de milieux et d’origines diverses. À 16 ans, j’ai entrepris un ministère à temps plein. Puis tout s’est effondré quand, au début de l’âge adulte, j’ai été excommunié après avoir affirmé mon appartenance à la communauté LGBTQ+.",
+      "Ça a été une période douloureuse. Du jour au lendemain, j’ai perdu tous mes amis et tout mon réseau de soutien. Selon les directives de la communauté, toute communication a été coupée. Je n’avais pratiquement plus personne, et ma santé mentale s’est détériorée. J’ai eu la chance d’obtenir de l’aide professionnelle grâce à une intervention précoce. Sans cette aide, je ne serais pas ici aujourd’hui.",
     ],
-    pullQuote: "J'ai perdu tous mes amis et tout mon réseau de soutien du jour au lendemain. J'ai eu la chance de chercher de l'aide professionnelle sous la forme d'une intervention précoce ; je ne serais pas ici aujourd'hui sans elle.",
+    pullQuote: "Du jour au lendemain, j’ai perdu tous mes amis et tout mon réseau de soutien. J’ai eu la chance d’obtenir de l’aide professionnelle grâce à une intervention précoce. Sans cette aide, je ne serais pas ici aujourd’hui.",
   },
   {
-    title: "Mon Voyage",
+    title: "Mon parcours",
     image: {
       src: "/SAM_2552v2.JPG",
       alt: "Sukhi au sommet du Mauna Kea au lever du soleil",
-      caption: "Lever du soleil au sommet du Mauna Kea en 2011",
+      caption: "Lever du soleil au sommet du Mauna Kea en 2011, au fil de mes aventures à travers le monde",
       width: 3074,
       height: 1962,
     },
     content: [
-      "Après avoir obtenu un diplôme en comptabilité et finance et avoir travaillé pendant quelques années, ainsi qu'après avoir vu mes frères et sœurs entrer en soins gouvernementaux à temps plein, je voulais en savoir plus sur moi-même et ma connexion à ce monde et à la société dans son ensemble après avoir été isolée dans une communauté recluse pendant la majeure partie de mon enfance.",
-      "J'ai donc quitté le Royaume-Uni à 23 ans, j'ai profité du programme de mobilité des jeunes du gouvernement britannique (vacances-travail) et j'ai déménagé au Japon de l'autre côté du monde. Je suis arrivée à Tokyo avec une valise et un guide de phrases à la main, n'ayant appris que quelques mots à ce stade, mais j'ai réussi à trouver du travail comme instructrice en langue anglaise en moins d'un mois après mon arrivée.",
-      "Cinq mois plus tard, le tremblement de terre et le tsunami de Tōhoku en 2011 ont été le premier test de ma réaction face à une crise seule sans pouvoir chercher l'aide de ma famille et de mes amis. C'était une période difficile ; non seulement j'étais préoccupée par la situation à Fukushima, mais j'écoutais aussi de nombreux étudiants me raconter comment un proche ou un être cher avait perdu la vie.",
-      "J'ai ensuite déménagé en Australie et j'ai eu du mal à trouver un emploi à Sydney ; il m'a fallu 3 mois pour finalement obtenir un emploi en comptabilité, et j'ai commencé à comprendre ce que c'était d'être une travailleuse étrangère temporaire. J'ai aussi connu de la discrimination. J'ai eu recours à l'utilisation d'un pseudonyme anglophone de mon nom pour être considérée par les recruteurs pour des opportunités d'emploi.",
-      "Je me souviens aussi d'avoir fait tellement d'emplois différents entre des postes plus longs ; j'ai travaillé dans les déménagements, le contrôle du trafic, cuisinière de tempura, livreuse de pizza, et voiturier, ainsi que travailleuse dans une usine de coton dans l'outback travaillant 12 heures par jour pendant 3 mois pour répondre à mon exigence de travail de 2e année de visa.",
-      "Mon déménagement en Nouvelle-Zélande m'a donné un sentiment d'illumination ; je n'avais plus de difficulté à obtenir du travail temporaire en comptabilité, mais je prospérais aussi. Ce que j'ai trouvé rafraîchissant, c'était ses droits autochtones pour les Māori, la démocratie étant beaucoup plus forte et harmonieuse, donc moins polarisante en raison de la représentation proportionnelle, et l'environnement et sa biodiversité.",
-      "Mon déménagement à Hong Kong m'a quelque peu rappelé les réalités brutales de la vie ; la lutte pour une démocratie de base était évidente pour moi à mon arrivée environ 18 mois après le mouvement des parapluies. Cela m'a fait apprécier ce que j'avais et en quoi j'avais été élevée à croire.",
+      "Après avoir obtenu un diplôme en comptabilité et en finance, travaillé quelques années et vu mon frère et ma sœur être pris en charge à temps plein par les services publics, j’ai voulu mieux me connaître et comprendre ma place dans le monde et dans la société. J’avais passé la majeure partie de mon enfance dans une communauté repliée sur elle-même.",
+      "J’ai donc quitté le Royaume-Uni à 23 ans. Grâce au programme de mobilité des jeunes du gouvernement britannique, dans le cadre d’un séjour vacances-travail, je suis parti vivre au Japon, à l’autre bout du monde. Je suis arrivé à Tokyo avec une valise et un guide de conversation. Je ne connaissais que quelques mots de japonais, mais en moins d’un mois, j’ai trouvé un emploi comme enseignant d’anglais.",
+      "Cinq mois plus tard, le séisme et le tsunami de Tōhoku, en 2011, m’ont mis à l’épreuve pour la première fois. Je devais faire face à une crise seul, sans pouvoir me tourner vers ma famille ou mes amis. Ça a été une période difficile. La situation à Fukushima m’inquiétait, et plusieurs de mes nouveaux élèves me racontaient comment ils avaient perdu un proche.",
+      "J’ai ensuite déménagé en Australie, où j’ai eu du mal à trouver du travail à Sydney. Il m’a fallu trois mois pour décrocher un emploi en comptabilité. J’ai commencé à comprendre ce que c’était que d’être un travailleur étranger temporaire. J’ai aussi subi de la discrimination. J’ai fini par utiliser un nom d’emprunt à consonance anglophone pour que les recruteurs prennent ma candidature en considération.",
+      "Entre des emplois de plus longue durée, j’ai occupé toutes sortes de postes temporaires. J’ai travaillé dans le déménagement et la gestion de la circulation, préparé des tempuras, livré des pizzas et travaillé comme voiturier. J’ai aussi fait des quarts de 12 heures pendant trois mois dans une usine d’égrenage du coton, dans l’arrière-pays australien, pour satisfaire à l’exigence de travail de la deuxième année de mon visa.",
+      "Mon déménagement en Nouvelle-Zélande m’a ouvert de nouvelles perspectives. Je trouvais facilement des contrats temporaires en comptabilité et je m’épanouissais dans mon travail. J’y ai apprécié les droits reconnus aux Māori, la biodiversité et une démocratie plus solide, plus harmonieuse et moins polarisée grâce à la représentation proportionnelle.",
+      "En déménageant à Hong Kong, j’ai été ramené à certaines dures réalités. À mon arrivée, environ 18 mois après le mouvement des parapluies, la lutte pour des droits démocratiques fondamentaux était manifeste. Ça m’a fait apprécier ce que j’avais et les convictions qui m’avaient été transmises.",
     ],
-    pullQuote: "J'ai commencé à apprécier à quel point les démocraties et leurs institutions sont précieuses, car elles peuvent être enlevées par l'autoritarisme sans beaucoup d'opposition en peu de temps.",
+    pullQuote: "J’ai commencé à mesurer à quel point les démocraties et leurs institutions sont précieuses. L’autoritarisme peut les emporter en peu de temps, sans rencontrer beaucoup d’opposition.",
   },
   {
-    title: "Pourquoi Vancouver",
+    title: "Retour au Royaume-Uni",
     content: [
-      "J'ai finalement déménagé à Vancouver en 2018 et j'ai trouvé une communauté accueillante et diversifiée. J'ai découvert ma passion pour la photographie de paysage et la randonnée, explorant les montagnes côtières de la Colombie-Britannique. J'ai aussi commencé à m'engager dans le travail communautaire, en tant que bénévole à la banque alimentaire locale et en travaillant pour une ONG environnementale.",
-      "Ce qui m'a vraiment attiré à Vancouver, c'est le sentiment d'appartenance à une communauté qui valorise la diversité, l'inclusion et l'action climatique. J'ai rejoint un syndicat et j'ai commencé à m'impliquer dans l'organisation communautaire, en parlant avec mes voisins de leurs préoccupations et de leurs rêves.",
-      "Après des années de travail dans le secteur privé et sans but, j'ai réalisé que je voulais faire une différence réelle. Je voulais être une voix pour ceux qui n'en ont pas. Je voulais lutter pour une économie plus juste, une action climatique plus forte et une démocratie plus participative.",
-    ],
-    pullQuote: "J'ai réalisé que je voulais faire une différence réelle. Je voulais être une voix pour ceux qui n'en ont pas.",
-  },
-  {
-    title: "Pourquoi le NPD",
-    content: [
-      "Le NPD a toujours représenté les valeurs qui me sont chères : la justice sociale, l'égalité économique et l'action climatique. C'est le seul parti qui prend vraiment au sérieux la lutte contre les inégalités et la construction d'une économie qui fonctionne pour tout le monde, pas seulement pour les riches.",
-      "J'ai vu comment les politiques du NPD ont amélioré les vies des gens en Colombie-Britannique et au Canada. Je veux être une part de ce mouvement, en apportant mon expérience unique et ma perspective à la table.",
-      "Je crois que nous pouvons construire un avenir meilleur ensemble. Un avenir où tout le monde a accès à un logement abordable, à des soins de santé, à une éducation de qualité et à une économie verte. Un avenir où les voix des gens ordinaires sont entendues et respectées.",
+      "Après sept ans à l’étranger, je suis finalement rentré au Royaume-Uni, un peu plus âgé et un peu plus sage. Je suis retourné auprès de ma grand-mère, qui avait récemment fait une chute, avait reçu un diagnostic de cancer et devait emménager dans un établissement de soins. C’était après le vote sur le Brexit. Dans ma ville natale, je voyais que les choses étaient restées à peu près pareilles ou s’étaient détériorées.",
+      "J’ai postulé à des emplois en comptabilité et, dans la plupart de mes entrevues, on me posait la même question : « Pourquoi êtes-vous revenu ici? » Ça m’a amené à me demander si je pouvais de nouveau vivre au Royaume-Uni à long terme.",
     ],
   },
   {
-    title: "Candidature pour le NPD",
+    title: "Pourquoi Vancouver?",
     content: [
-      "Je me présente comme candidate du NPD pour Vancouver Granville parce que je crois que c'est le moment d'une nouvelle génération de leadership. Je crois que nous avons besoin de plus de voix diverses à la table, des gens qui ont vécu des expériences réelles et qui comprennent les défis auxquels font face les gens ordinaires.",
-      "Je suis prête à me battre pour vous. À vous écouter. À travailler avec vous pour construire une communauté plus juste et plus durable. Je suis prête à être une voix pour ceux qui n'en ont pas.",
-      "Ensemble, nous pouvons faire une différence. Ensemble, nous pouvons construire un avenir meilleur pour tous.",
+      "En avril 2018, j’ai déménagé au Canada. Depuis, je vis à Vancouver, où j’habite depuis environ huit ans.",
+      "J’ai choisi Vancouver plutôt que Toronto parce que j’aime la randonnée et la photographie de paysages. La côte Ouest me permet de profiter de la nature et de sa beauté tout en vivant dans une grande ville accueillante pour les personnes LGBTQ+ et qui offre tous les services dont j’ai besoin.",
+      "Depuis la pandémie, j’ai aussi constaté un changement marqué dans notre communauté. Comme moi, beaucoup de gens ont connu le chômage, la discrimination, le deuil, l’insécurité en matière de logement ou l’insécurité alimentaire. Ça m’a amené à travailler avec d’autres bénévoles d’une banque alimentaire pour aménager et ouvrir un garde-manger communautaire à l’extérieur de ses locaux.",
+      "J’étais ravi quand nous avons ouvert le garde-manger et découvert les petits mots manuscrits laissés par des personnes qui se sentaient tellement stigmatisées qu’elles n’auraient jamais osé se rendre dans une banque alimentaire. Ça m’a convaincu de m’investir davantage au service de la communauté.",
+      "Je viens de terminer trois années de travail pour une ONG environnementale. Ce travail m’a donné le sentiment que chacun de nous peut faire une différence, à la fois individuellement et collectivement.",
     ],
+    pullQuote: "Nous pouvons tous faire une différence, individuellement et collectivement.",
   },
 ];
 
@@ -129,7 +122,7 @@ export default function AutobiographyFr() {
                 Sukhi Sahota
               </span>
               <span style={{ fontFamily: "'Outfit', sans-serif", fontSize: "0.7rem", fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--color-ndp-orange)" }}>
-                Ancien Candidat Fédéral
+                Ancien candidat fédéral
               </span>
             </div>
           </a>
@@ -172,7 +165,7 @@ export default function AutobiographyFr() {
               textTransform: "uppercase",
             }}
           >
-            L'Histoire Complète
+            L’histoire complète
           </span>
           <h1
             style={{
@@ -184,7 +177,7 @@ export default function AutobiographyFr() {
               color: "var(--foreground)",
             }}
           >
-            Une Autobiographie
+            Une autobiographie
           </h1>
           <p
             style={{
@@ -196,7 +189,7 @@ export default function AutobiographyFr() {
               margin: "0 auto",
             }}
           >
-            Un parcours personnel façonné par la résilience, l'identité et la communauté — du Royaume-Uni au monde et de retour.
+            Un parcours personnel façonné par la résilience, l’identité et la communauté, du Royaume-Uni à plusieurs pays du monde, puis au Canada.
           </p>
         </section>
 
@@ -293,7 +286,7 @@ export default function AutobiographyFr() {
               marginBottom: "1rem",
             }}
           >
-            Prêt à faire une différence?
+            Prêt à soutenir le changement à la base?
           </h2>
           <p
             style={{
@@ -304,7 +297,7 @@ export default function AutobiographyFr() {
               opacity: 0.95,
             }}
           >
-            Rejoignez-moi dans la lutte pour une économie plus juste, une action climatique plus forte et une démocratie plus participative.
+            Joignez-vous à moi pour bâtir un NPD mieux organisé et plus inclusif, en partant de la base.
           </p>
           <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
             <a
