@@ -156,7 +156,11 @@ export default function AfterElection() {
                   <span className="flex items-center gap-3 font-serif text-xl font-bold text-charcoal">
                     <FileText className="h-6 w-6 shrink-0 text-orange" aria-hidden="true" />{" "}{copy("Summary report (PDF)")}
                   </span>
-                  <span className="mt-3 text-sm leading-6 text-charcoal/75">{copy("Five-page overview with provincial and regional trends, seat changes and close races.")}</span>
+                  <span className="mt-3 text-sm leading-6 text-charcoal/75">
+                    {copy(isPunjabi
+                      ? "Six-page overview with provincial and regional trends, seat changes and close races."
+                      : "Five-page overview with provincial and regional trends, seat changes and close races.")}
+                  </span>
                   {isPunjabi && <span className="mt-2 text-sm text-charcoal/75">{copy("Available in English")}</span>}
                   <span className="mt-6 inline-flex items-center gap-2 font-semibold text-orange">{copy("View PDF")}{" "}<ExternalLink className="h-4 w-4" aria-hidden="true" /></span>
                 </a>
@@ -165,7 +169,11 @@ export default function AfterElection() {
                   <span className="flex items-center gap-3 font-serif text-xl font-bold text-charcoal">
                     <Download className="h-6 w-6 shrink-0 text-orange" aria-hidden="true" />{" "}{copy("Full riding analysis (Excel)")}
                   </span>
-                  <span className="mt-3 text-sm leading-6 text-charcoal/75">{copy("Download the six-sheet workbook covering all 93 ridings, vote-share differences and source notes.")}</span>
+                  <span className="mt-3 text-sm leading-6 text-charcoal/75">
+                    {copy(isPunjabi
+                      ? "Download the eight-sheet workbook covering all 93 ridings, vote-share differences and source notes."
+                      : "Download the six-sheet workbook covering all 93 ridings, vote-share differences and source notes.")}
+                  </span>
                   {isPunjabi && <span className="mt-2 text-sm text-charcoal/75">{copy("Available in English")}</span>}
                   <span className="mt-6 inline-flex items-center gap-2 font-semibold text-orange">{copy("Download Excel")}{" "}<Download className="h-4 w-4" aria-hidden="true" /></span>
                 </a>
