@@ -385,3 +385,12 @@
 html:lang(pa) :is(h1, h2, h3, h4, h5, h6) {
   line-height: 1.35;
 }
+
+:lang(zh) {
+  font-family: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif !important;
+  letter-spacing: normal !important;
+}
+
+html:lang(zh) :is(h1, h2, h3, h4, h5, h6) {
+  line-height: 1.35;
+}

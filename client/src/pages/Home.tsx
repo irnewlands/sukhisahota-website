@@ -1,4 +1,4 @@
-import { copy, isFrench, isPunjabi, localizedHref } from "@/lib/locale";
+import { copy, isFrench, isPunjabi, isChinese, localizedHref } from "@/lib/locale";
 /**
  * DESIGN PHILOSOPHY: Contemporary Progressive
  * Bold typography, dynamic layouts, intentional asymmetry
@@ -245,7 +245,7 @@ export default function Home() {
               </div>
 
               <h1 className="font-serif text-5xl md:text-7xl font-bold text-charcoal leading-none mb-6">
-                {isPunjabi ? (
+                {(isPunjabi || isChinese) ? (
                   <>{copy("For every Canadian")}{" "}<span className="block text-orange">{copy("I keep fighting")}</span></>
                 ) : (
                   <>{copy("Fighting for")}{" "}<span className="block text-orange">{copy("every Canadian")}</span></>

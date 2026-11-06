@@ -4,6 +4,7 @@ import { dirname, join } from "node:path";
 const origin = "https://www.sukhisahota.ca";
 const frenchCopy = new URL("../client/src/lib/french-copy.json", import.meta.url);
 const punjabiCopy = new URL("../client/src/lib/punjabi-copy.json", import.meta.url);
+const chineseCopy = new URL("../client/src/lib/chinese-copy.json", import.meta.url);
 const reflectionTitle = "After the Defeat | Sukhi Sahota's Reflections on the 2026 BC Election";
 const directoryTitle = "Resources for Help | Vancouver Support & Advocacy | Sukhi Sahota";
 
@@ -40,6 +41,8 @@ const frenchDescription = "Site officiel de Sukhi Sahota. Découvrez ses positio
 
 const punjabiDescription = "ਸੁੱਖੀ ਸਹੋਤਾ ਦੀ ਅਧਿਕਾਰਤ ਵੈੱਬਸਾਈਟ। ਰਿਹਾਇਸ਼, ਜਲਵਾਯੂ, ਸਿਹਤ ਸੰਭਾਲ, ਲੋਕਤੰਤਰ, ਜੀਵਨ-ਖ਼ਰਚ, ਮੂਲ ਨਿਵਾਸੀ ਲੋਕਾਂ ਨਾਲ ਸੁਲ੍ਹਾ, LGBTQ+ ਹੱਕਾਂ, ਕ੍ਰਿਤ੍ਰਿਮ ਬੁੱਧੀ ਅਤੇ ਜਨ ਸੇਵਾ ਬਾਰੇ ਉਨ੍ਹਾਂ ਦੇ ਵਿਚਾਰ ਪੜ੍ਹੋ।";
 
+const chineseDescription = "苏基·萨霍塔的官方网站。了解他对住房、气候、医疗、民主、生活成本、原住民和解、LGBTQ+ 权利、人工智能和公共服务的看法。";
+
 function escapeMarkup(value) {
   return value.replaceAll("&", "&amp;").replaceAll('"', "&quot;").replaceAll("<", "&lt;").replaceAll(">", "&gt;");
 }
@@ -57,7 +60,7 @@ function pageHtml(template, { url, alternates, lang, title, description }) {
     .replace(/<link rel="canonical" href="[^"]*"\s*\/?>/, [
       `<link rel="canonical" href="${url}" />`,
       ...Object.entries(alternates).map(([tag, href]) => `<link rel="alternate" hreflang="${tag}" href="${href}" />`),
-      `<meta property="og:locale" content="${lang === "pa-Guru" ? "pa_IN" : lang.replace("-", "_")}" />`,
+      `<meta property="og:locale" content="${lang === "pa-Guru" ? "pa_IN" : lang === "zh-Hans" ? "zh_CN" : lang.replace("-", "_")}" />`,
     ].join("\n  "))
     .replace(/(<script type="application\/ld\+json">)([\s\S]*?)(<\/script>)/, (_, start, json, end) => {
       const data = JSON.parse(json);
@@ -65,7 +68,7 @@ function pageHtml(template, { url, alternates, lang, title, description }) {
         if (item["@type"] === "WebPage") {
           Object.assign(item, { "@id": `${url}#webpage`, url, name: title, description, inLanguage: lang });
         }
-        if (item["@type"] === "WebSite") item.inLanguage = ["en-CA", "fr-CA", "pa-Guru"];
+        if (item["@type"] === "WebSite") item.inLanguage = ["en-CA", "fr-CA", "pa-Guru", "zh-Hans"];
         if (item["@type"] === "Person" && lang === "fr-CA") {
           item.description = "Sukhi Sahota défend les intérêts de la communauté et les politiques publiques. Il a été candidat aux élections fédérales.";
           item.jobTitle = "Défenseur des intérêts de la communauté et des politiques publiques";
@@ -73,6 +76,10 @@ function pageHtml(template, { url, alternates, lang, title, description }) {
         if (item["@type"] === "Person" && lang === "pa-Guru") {
           item.description = "ਸੁੱਖੀ ਸਹੋਤਾ ਭਾਈਚਾਰੇ ਅਤੇ ਜਨਤਕ ਨੀਤੀ ਲਈ ਕੰਮ ਕਰਦੇ ਹਨ। ਉਹ ਫੈਡਰਲ ਚੋਣਾਂ ਵਿੱਚ ਉਮੀਦਵਾਰ ਰਹਿ ਚੁੱਕੇ ਹਨ।";
           item.jobTitle = "ਭਾਈਚਾਰੇ ਅਤੇ ਜਨਤਕ ਨੀਤੀ ਦੇ ਹਿਮਾਇਤੀ";
+        }
+        if (item["@type"] === "Person" && lang === "zh-Hans") {
+          item.description = "苏基·萨霍塔关注社区事务和公共政策，曾参选加拿大联邦众议院议员。";
+          item.jobTitle = "社区与公共政策倡导者";
         }
       }
       return `${start}\n${JSON.stringify(data, null, 2).replaceAll("<", "\\u003c")}\n${end}`;
@@ -85,8 +92,8 @@ export function localizedPages(outputDir) {
     apply: "build",
     async closeBundle() {
       const template = await readFile(join(outputDir, "index.html"), "utf8");
-      const [french, punjabi] = await Promise.all(
-        [frenchCopy, punjabiCopy].map(async (path) => JSON.parse(await readFile(path, "utf8"))),
+      const [french, punjabi, chinese] = await Promise.all(
+        [frenchCopy, punjabiCopy, chineseCopy].map(async (path) => JSON.parse(await readFile(path, "utf8"))),
       );
       const sitemap = [];
       for (const [route, [english, explicitFrench]] of Object.entries(pages)) {
@@ -95,16 +102,18 @@ export function localizedPages(outputDir) {
           "en-CA": origin + route,
           "fr-CA": origin + localizedPath("/fr"),
           "pa-Guru": origin + localizedPath("/pa"),
+          "zh-Hans": origin + localizedPath("/zh"),
           "x-default": origin + route,
         };
         for (const [path, label, lang, description] of [
           [route, english, "en-CA", englishDescription],
           [localizedPath("/fr"), explicitFrench ?? french[english], "fr-CA", frenchDescription],
           [localizedPath("/pa"), punjabi[english], "pa-Guru", punjabiDescription],
+          [localizedPath("/zh"), chinese[english], "zh-Hans", chineseDescription],
         ]) {
           if (!label) throw new Error(`Missing ${lang} page title for ${route}`);
           const url = origin + path;
-          const name = lang === "pa-Guru" ? "ਸੁੱਖੀ ਸਹੋਤਾ" : "Sukhi Sahota";
+          const name = lang === "pa-Guru" ? "ਸੁੱਖੀ ਸਹੋਤਾ" : lang === "zh-Hans" ? "苏基·萨霍塔" : "Sukhi Sahota";
           const title = label.includes(" | ") ? label : `${label} | ${name}`;
           const file = join(outputDir, path === "/" ? "index.html" : `${path.slice(1)}.html`);
           await mkdir(dirname(file), { recursive: true });

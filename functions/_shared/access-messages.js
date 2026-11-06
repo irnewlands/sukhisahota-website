@@ -18,27 +18,28 @@ function messageResponse({ title, message, status, language, label, close, back,
 
 export function questionnaireMessages(request, labels) {
   const language = new URL(request.url).searchParams.get("lang");
-  if (language === "pa-Guru") {
+  const chinese = language === "zh-Hans";
+  if (language === "pa-Guru" || chinese) {
     const common = {
       language,
-      label: labels.pa,
-      close: "ਇਹ ਵਿੰਡੋ ਬੰਦ ਕਰੋ",
-      back: "ਮਦਦ ਲਈ ਸਰੋਤਾਂ ਵੱਲ ਵਾਪਸ ਜਾਓ",
-      backHref: "/pa/resources-for-help#asked-sukhi",
+      label: chinese ? labels.zh : labels.pa,
+      close: chinese ? "关闭此窗口" : "ਇਹ ਵਿੰਡੋ ਬੰਦ ਕਰੋ",
+      back: chinese ? "返回求助资源页面" : "ਮਦਦ ਲਈ ਸਰੋਤਾਂ ਵੱਲ ਵਾਪਸ ਜਾਓ",
+      backHref: chinese ? "/zh/resources-for-help#asked-sukhi" : "/pa/resources-for-help#asked-sukhi",
     };
     return {
       invalidPassword: () => messageResponse({
         ...common,
         status: 403,
-        title: "ਪਾਸਵਰਡ ਸਹੀ ਨਹੀਂ ਹੈ",
-        message: "ਇਹ ਟੈਬ ਬੰਦ ਕਰੋ ਅਤੇ ਸੁੱਖੀ ਵੱਲੋਂ ਦਿੱਤੇ ਪਾਸਵਰਡ ਨਾਲ ਮੁੜ ਕੋਸ਼ਿਸ਼ ਕਰੋ। ਮਦਦ ਲਈ ਸਰੋਤਾਂ ਵਾਲਾ ਪੰਨਾ ਪਹਿਲੀ ਟੈਬ ਵਿੱਚ ਹਾਲੇ ਵੀ ਖੁੱਲ੍ਹਾ ਹੈ।",
+        title: chinese ? "密码不正确" : "ਪਾਸਵਰਡ ਸਹੀ ਨਹੀਂ ਹੈ",
+        message: chinese ? "请关闭此标签页，使用苏基提供的密码重试。求助资源页面仍在原标签页中打开。" : "ਇਹ ਟੈਬ ਬੰਦ ਕਰੋ ਅਤੇ ਸੁੱਖੀ ਵੱਲੋਂ ਦਿੱਤੇ ਪਾਸਵਰਡ ਨਾਲ ਮੁੜ ਕੋਸ਼ਿਸ਼ ਕਰੋ। ਮਦਦ ਲਈ ਸਰੋਤਾਂ ਵਾਲਾ ਪੰਨਾ ਪਹਿਲੀ ਟੈਬ ਵਿੱਚ ਹਾਲੇ ਵੀ ਖੁੱਲ੍ਹਾ ਹੈ।",
       }),
       openFromDirectory: () => {
         const response = messageResponse({
           ...common,
           status: 405,
-          title: "ਮਦਦ ਲਈ ਸਰੋਤਾਂ ਵਾਲੇ ਪੰਨੇ ਤੋਂ ਪ੍ਰਸ਼ਨਾਵਲੀ ਖੋਲ੍ਹੋ",
-          message: `ਪਾਸਵਰਡ ਦਰਜ ਕਰਨ ਲਈ ਮਦਦ ਲਈ ਸਰੋਤਾਂ ਵਾਲੇ ਪੰਨੇ ’ਤੇ « ${labels.pa} » ਬਟਨ ਵਰਤੋ।`,
+          title: chinese ? "请从求助资源页面打开问卷" : "ਮਦਦ ਲਈ ਸਰੋਤਾਂ ਵਾਲੇ ਪੰਨੇ ਤੋਂ ਪ੍ਰਸ਼ਨਾਵਲੀ ਖੋਲ੍ਹੋ",
+          message: chinese ? `请点击求助资源页面上的“${labels.zh}”按钮输入密码。` : `ਪਾਸਵਰਡ ਦਰਜ ਕਰਨ ਲਈ ਮਦਦ ਲਈ ਸਰੋਤਾਂ ਵਾਲੇ ਪੰਨੇ ’ਤੇ « ${labels.pa} » ਬਟਨ ਵਰਤੋ।`,
         });
         response.headers.set("Allow", "POST");
         return response;
