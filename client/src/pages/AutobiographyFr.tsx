@@ -31,8 +31,8 @@ const sections: Section[] = [
     title: "Débuts",
     image: {
       src: "/IMG-20170310-WA0002.jpg",
-      alt: "Sukhi dans sa jeunesse au Royaume-Uni",
-      caption: "Mes années au Royaume-Uni et les premiers souvenirs qui m’ont façonné",
+      alt: "Sukhi entouré d’enfants dans une salle de classe",
+      caption: "Un souvenir de mon parcours, en salle de classe",
       width: 1600,
       height: 1200,
     },
