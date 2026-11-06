@@ -1,4 +1,4 @@
-import { copy, localizedHref } from "@/lib/locale";
+import { copy, isFrench, localizedHref } from "@/lib/locale";
 /**
  * DESIGN PHILOSOPHY: Contemporary Progressive
  * Bold typography, dynamic layouts, intentional asymmetry
@@ -362,11 +362,11 @@ export default function Home() {
                 </div>
               </div>
               <StatCard
-                value="7.5%"
+                value={copy("7.5%")}
                 label={copy("NDP vote share in Vancouver Granville — 3rd highest for any non-incumbent Metro Vancouver riding")}
               />
               <StatCard
-                value="2 days"
+                value={copy("2 days")}
                 label={copy("After the writ dropped, I became the official candidate with under 10 volunteers")}
               />
             </div>
@@ -598,7 +598,7 @@ export default function Home() {
 
             <div className="flex flex-wrap justify-center gap-4 mb-12">
               <a
-                href="https://www.ndp.ca/volunteer"
+                href={isFrench ? "https://www.npd.ca/devenir-volontaire" : "https://www.ndp.ca/volunteer"}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-white group"

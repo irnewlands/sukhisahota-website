@@ -58,7 +58,7 @@ export const HELP_RESOURCES: HelpResource[] = [
   {
     id: "rtb", name: "Residential Tenancy Branch (RTB)", category: "Housing & tenancy", kind: copy("BC government service"),
     description: copy("Official tenancy information, forms and dispute resolution for tenants and landlords. Information officers explain the process and tenancy rules; they cannot provide legal advice."),
-    phones: [{ label: "Lower Mainland", number: "604-660-1020" }, { label: copy("Toll-free"), number: "1-800-665-8779" }],
+    phones: [{ label: copy("Lower Mainland"), number: "604-660-1020" }, { label: copy("Toll-free"), number: "1-800-665-8779" }],
     email: "HSRTO@gov.bc.ca", emailNote: copy("Information inquiries. Follow the RTB's specified process for submitting evidence."),
     address: copy("400–5021 Kingsway, Burnaby, BC V5H 4A5."), accessNote: copy("Serves Vancouver residents. Check current office hours before visiting."),
     website: "https://www2.gov.bc.ca/gov/content/housing-tenancy/residential-tenancies/contact-the-residential-tenancy-branch",
@@ -116,7 +116,7 @@ export const HELP_RESOURCES: HelpResource[] = [
   {
     id: "workers-advisers", name: "Workers’ Advisers Office", category: "Work & consumer", kind: copy("BC government service — independent of WorkSafeBC"),
     description: copy("Free advice and assistance for workers and their families about disagreements with WorkSafeBC decisions. Assistance can include reviews, appeals and certain prohibited-action matters."),
-    phones: [{ label: "Lower Mainland", number: "604-335-5931" }, { label: copy("Toll-free"), number: "1-800-663-4261" }],
+    phones: [{ label: copy("Lower Mainland"), number: "604-335-5931" }, { label: copy("Toll-free"), number: "1-800-663-4261" }],
     emailNote: copy("Use the official inquiry route or call. Existing clients can use the secure Worker Portal."),
     address: copy("260A–4600 Jacombs Road, Richmond, BC V6V 3B1."), accessNote: copy("Serves Vancouver residents; call before visiting. Report new injury claims to WorkSafeBC first."),
     website: "https://www2.gov.bc.ca/gov/content/employment-business/employment-standards-advice/personal-injury-and-workplace-safety/offices",

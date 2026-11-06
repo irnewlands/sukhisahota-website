@@ -67,7 +67,7 @@ export default function NewsletterSignup() {
         <input
           type="email"
           name="fields[email]"
-          placeholder="your@email.com"
+          placeholder={copy("your@email.com")}
           required
           autoComplete="email"
           className="w-full rounded-md px-4 py-3 bg-white text-black placeholder-gray-500 border-2 border-white"
@@ -85,8 +85,7 @@ export default function NewsletterSignup() {
         <input type="hidden" name="anticsrf" value="true" />
 
         <p className="text-sm text-white/80">
-          We respect your privacy. Unsubscribe at any time by e-mailing:
-          info@sukhisahota.ca
+          {copy("We respect your privacy. Unsubscribe at any time by e-mailing:")}{" "}info@sukhisahota.ca
         </p>
       </form>
     </div>

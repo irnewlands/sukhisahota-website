@@ -169,7 +169,7 @@ export default function AfterElection() {
                 </a>
               </div>
               <p className="mt-6 text-sm leading-6 text-charcoal/65">
-                {copy("Independent analysis based on official")}{" "}<a className="font-semibold text-orange underline" href="https://results.elections.bc.ca/" target="_blank" rel="noopener noreferrer">{copy("Elections BC results")}</a>. It is not an official Elections BC publication.
+                {copy("Independent analysis based on official")}{" "}<a className="font-semibold text-orange underline" href="https://results.elections.bc.ca/" target="_blank" rel="noopener noreferrer">{copy("Elections BC results")}</a>.{" "}{copy("It is not an official Elections BC publication.")}
               </p>
             </div>
           </div>
@@ -201,6 +201,7 @@ export default function AfterElection() {
                 </a>
               </div>
 
+              {isFrench && <p className="mt-6 text-sm text-white/85">{copy("The forms below are available in English.")}</p>}
               <div className="mt-9 space-y-10">
                 {PARTICIPATION_FORMS.map((form) => (
                   <section key={form.id} id={form.id} aria-labelledby={`${form.id}-heading`} className="scroll-mt-28 overflow-hidden rounded-2xl border border-white/20 bg-white text-charcoal shadow-sm">

@@ -91,7 +91,7 @@ export default function ResourcesForHelp() {
               <p className="mt-3 leading-7 text-charcoal/80">{copy("Call or text")}{" "}<a className="font-bold text-[#933708] underline underline-offset-4" href="tel:211">211</a>{" "}{copy("for help finding the right community service. If someone is in immediate danger, call")}{" "}<a className="font-bold text-[#933708] underline underline-offset-4" href="tel:911">911</a>.</p>
             </div>
             <div className="border-t border-charcoal/15 pt-5 md:border-l md:border-t-0 md:pl-7 md:pt-0">
-              <p className="text-sm leading-6 text-charcoal/75">{copy("Contact details checked")}{" "}<strong>{copy("November 1, 2026")}</strong>. Eligibility and availability vary. Check the official intake details before visiting; some addresses are for mail only.</p>
+              <p className="text-sm leading-6 text-charcoal/75">{copy("Contact details checked")}{" "}<strong>{copy("November 1, 2026")}</strong>.{" "}{copy("Eligibility and availability vary. Check the official intake details before visiting; some addresses are for mail only.")}</p>
               <p className="mt-3 text-sm leading-6 text-charcoal/75"><strong>{copy("Tenancy terms:")}</strong>{" "}{copy("RTB means Residential Tenancy Branch. RTA means Residential Tenancy Act, the law that applies to many BC tenancies.")}</p>
             </div>
           </div>
@@ -108,7 +108,7 @@ export default function ResourcesForHelp() {
           <div className="mb-5 flex flex-wrap gap-2" role="group" aria-label={copy("Filter resources by issue")}>
             {HELP_CATEGORIES.map((item) => <button key={item} type="button" aria-pressed={category === item} onClick={() => setCategory(item)} className={`rounded-full border px-4 py-2 text-sm font-semibold transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-charcoal ${category === item ? "border-charcoal bg-charcoal text-white" : "border-charcoal/25 bg-white text-charcoal hover:border-charcoal"}`}>{copy(item)}</button>)}
           </div>
-          <p className="mb-6 text-sm text-charcoal/75" role="status" aria-live="polite">{resources.length} {resources.length === 1 ? "resource" : "resources"} shown</p>
+          <p className="mb-6 text-sm text-charcoal/75" role="status" aria-live="polite">{resources.length} {copy(resources.length === 1 ? "resource shown" : "resources shown")}</p>
           <div className="grid items-stretch gap-6 md:grid-cols-2">{resources.map((resource) => <ResourceCard key={resource.id} resource={resource} />)}</div>
           {resources.length === 0 && <div className="rounded-2xl border border-charcoal/15 bg-white p-8"><p className="font-semibold">{copy("No matching resources in this directory.")}</p><p className="mt-2 text-charcoal/75">{copy("Try a broader search, choose another issue, or contact 211.")}</p><button type="button" onClick={() => { setSearch(""); setCategory("All resources"); }} className="mt-4 font-bold text-[#933708] underline underline-offset-4">{copy("Show all resources")}</button></div>}
         </section>
@@ -132,7 +132,7 @@ export default function ResourcesForHelp() {
                   <DialogTrigger asChild><button type="button" className="mt-6 inline-flex items-center gap-2 rounded-xl bg-charcoal px-6 py-3 font-bold text-white hover:bg-[#a13a08]"><LockKeyhole className="h-4 w-4" aria-hidden="true" />{copy("Rental Housing Search")}<ExternalLink className="h-4 w-4" aria-hidden="true" /></button></DialogTrigger>
                   <DialogContent className="border-charcoal/20 bg-cream text-charcoal sm:max-w-md">
                     <DialogHeader><DialogTitle className="font-serif text-2xl">{copy("Rental Housing Search")}</DialogTitle><DialogDescription className="pt-2 leading-6 text-charcoal/80">{copy("Enter the password Sukhi gave you. The questionnaire will open in a new tab after your password is checked.")}</DialogDescription></DialogHeader>
-                    <form action="/api/rental-access" method="post" target="_blank" rel="noopener" className="mt-2 space-y-5">
+                    <form action={isFrench ? "/api/rental-access?lang=fr-CA" : "/api/rental-access"} method="post" target="_blank" rel="noopener" className="mt-2 space-y-5">
                       <div>
                         <label htmlFor="rental-password" className="mb-2 block text-sm font-bold">{copy("Password")}</label>
                         <input id="rental-password" name="password" type={showPassword ? "text" : "password"} required autoComplete="off" maxLength={64} spellCheck={false} autoCapitalize="none" aria-describedby="rental-password-hint" className="w-full rounded-lg border border-charcoal/40 bg-white px-4 py-3 text-base focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-charcoal" />
@@ -157,7 +157,7 @@ export default function ResourcesForHelp() {
                   <DialogTrigger asChild><button type="button" className="mt-6 inline-flex items-center gap-2 rounded-xl bg-charcoal px-6 py-3 font-bold text-white hover:bg-[#a13a08]"><LockKeyhole className="h-4 w-4" aria-hidden="true" />{copy("Career Search Scan")}<ExternalLink className="h-4 w-4" aria-hidden="true" /></button></DialogTrigger>
                   <DialogContent className="border-charcoal/20 bg-cream text-charcoal sm:max-w-md">
                     <DialogHeader><DialogTitle className="font-serif text-2xl">{copy("Career Search Scan")}</DialogTitle><DialogDescription className="pt-2 leading-6 text-charcoal/80">{copy("Enter the password Sukhi gave you. The questionnaire will open in a new tab after your password is checked.")}</DialogDescription></DialogHeader>
-                    <form action="/api/career-access" method="post" target="_blank" rel="noopener" className="mt-2 space-y-5">
+                    <form action={isFrench ? "/api/career-access?lang=fr-CA" : "/api/career-access"} method="post" target="_blank" rel="noopener" className="mt-2 space-y-5">
                       <div>
                         <label htmlFor="career-password" className="mb-2 block text-sm font-bold">{copy("Password")}</label>
                         <input id="career-password" name="password" type={showCareerPassword ? "text" : "password"} required autoComplete="off" maxLength={64} spellCheck={false} autoCapitalize="none" aria-describedby="career-password-hint" className="w-full rounded-lg border border-charcoal/40 bg-white px-4 py-3 text-base focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-charcoal" />
