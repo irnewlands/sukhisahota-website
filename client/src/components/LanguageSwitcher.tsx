@@ -1,51 +1,41 @@
-import { isFrench, otherLanguageHref } from "@/lib/locale";
-import { Globe } from "lucide-react";
-
-/**
- * LanguageSwitcher Component
- * Allows users to toggle between English and French versions of the site
- * Design: Warm Civic Modernism
- * - Uses NDP orange for active state
- * - Smooth transitions and hover effects
- */
+import { Check, ChevronDown, Globe } from "lucide-react";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { copy, language, languageHref, languages } from "@/lib/locale";
 
 export default function LanguageSwitcher() {
   return (
-    <a
-      href={otherLanguageHref()}
-      lang={isFrench ? "en-CA" : "fr-CA"}
-      hrefLang={isFrench ? "en-CA" : "fr-CA"}
-      style={{
-        display: "flex",
-        textDecoration: "none",
-        alignItems: "center",
-        gap: "0.5rem",
-        padding: "0.5rem 1rem",
-        backgroundColor: "transparent",
-        border: `2px solid var(--color-ndp-orange)`,
-        borderRadius: "4px",
-        color: "var(--color-ndp-orange)",
-        fontFamily: "'Outfit', sans-serif",
-        fontWeight: 600,
-        fontSize: "0.85rem",
-        cursor: "pointer",
-        transition: "all 0.2s ease-out",
-        letterSpacing: "0.05em",
-      }}
-      onMouseEnter={(e) => {
-        const target = e.currentTarget;
-        target.style.backgroundColor = "var(--color-ndp-orange)";
-        target.style.color = "white";
-      }}
-      onMouseLeave={(e) => {
-        const target = e.currentTarget;
-        target.style.backgroundColor = "transparent";
-        target.style.color = "var(--color-ndp-orange)";
-      }}
-      title={isFrench ? "Switch to English" : "Passer au français"}
-    >
-      <Globe size={16} />
-      <span>{isFrench ? "ENGLISH" : "FRANÇAIS"}</span>
-    </a>
+    <DropdownMenu modal={false}>
+      <DropdownMenuTrigger asChild>
+        <button
+          type="button"
+          aria-label={copy("Choose language")}
+          className="inline-flex h-10 shrink-0 items-center gap-1.5 rounded-md border border-[#b84300] px-2.5 text-[#a13a08] hover:bg-cream-alt focus-visible:outline-2 focus-visible:outline-offset-2"
+        >
+          <Globe size={17} aria-hidden="true" />
+          <ChevronDown size={14} aria-hidden="true" />
+        </button>
+      </DropdownMenuTrigger>
+      <DropdownMenuContent align="end" sideOffset={8} className="min-w-36">
+        {languages.map((option) => (
+          <DropdownMenuItem key={option.tag} asChild>
+            <a
+              href={languageHref(option)}
+              hrefLang={option.tag}
+              lang={option.tag}
+              aria-current={option === language ? "true" : undefined}
+              className="flex min-h-10 justify-between px-3"
+            >
+              {option.label}
+              {option === language && <Check size={16} aria-hidden="true" />}
+            </a>
+          </DropdownMenuItem>
+        ))}
+      </DropdownMenuContent>
+    </DropdownMenu>
   );
 }

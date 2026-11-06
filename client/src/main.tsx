@@ -1,8 +1,8 @@
 import { createRoot } from "react-dom/client";
 import App from "./App";
 import "./index.css";
-import { isFrench } from "@/lib/locale";
+import { language } from "@/lib/locale";
 
-document.documentElement.lang = isFrench ? "fr-CA" : "en-CA";
+document.documentElement.lang = language.tag;
 
 createRoot(document.getElementById("root")!).render(<App />);

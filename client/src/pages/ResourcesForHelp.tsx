@@ -1,4 +1,4 @@
-import { isFrench, copy } from "@/lib/locale";
+import { copy, language, isFrench, isPunjabi } from "@/lib/locale";
 import { useEffect, useMemo, useState } from "react";
 import { ArrowRight, ExternalLink, LockKeyhole, Mail, MapPin, Phone, Search } from "lucide-react";
 import SiteHeader from "@/components/SiteHeader";
@@ -74,7 +74,7 @@ export default function ResourcesForHelp() {
         <header className="border-b border-orange/20 bg-[#f8f1e7]">
           <div className="container py-14 md:py-20">
             <p className="mb-5 text-xs font-bold uppercase tracking-[0.2em] text-[#a13a08]">{copy("Community care · Vancouver & BC")}</p>
-            <h1 className="max-w-4xl font-serif text-5xl font-bold leading-[1.08] tracking-tight md:text-7xl">{copy("Resources")}<br className="hidden sm:block" />{" "}{copy("for Help")}</h1>
+            <h1 className="max-w-4xl font-serif text-5xl font-bold leading-[1.08] tracking-tight md:text-7xl">{isPunjabi ? copy("Resources for Help") : <>{copy("Resources")}<br className="hidden sm:block" />{" "}{copy("for Help")}</>}</h1>
             <p className="mt-6 max-w-3xl text-xl leading-8 text-charcoal/80">{copy("Find someone who can help you take the next step.")}</p>
             <p className="mt-4 max-w-3xl text-lg leading-8 text-charcoal/80">{copy("A practical directory of advocacy organizations, community supports and public services for Vancouver residents. You can contact these services directly.")}</p>
             <div className="mt-8 flex flex-wrap gap-3">
@@ -120,7 +120,7 @@ export default function ResourcesForHelp() {
               <h2 id="asked-sukhi-heading" className="font-serif text-3xl font-bold leading-tight md:text-5xl">{copy("Have you asked Sukhi for help?")}</h2>
               <p className="mt-6 text-lg leading-8 text-charcoal/85">{copy("This section is specifically for people who have already reached out to Sukhi for help and received a response from him.")}</p>
               <p className="mt-4 text-lg leading-8 text-charcoal/85">{copy("If you would like help from Sukhi, please use the Contact form first and wait for his reply before using the questionnaires below.")}</p>
-              {isFrench && <p className="mt-4 text-sm text-charcoal/75">Les formulaires liés à cette page sont en anglais.</p>}
+              {(isFrench || isPunjabi) && <p className="mt-4 text-sm text-charcoal/75">{copy("The forms linked on this page are in English.")}</p>}
               <a href={CONTACT_URL} target="_blank" rel="noopener noreferrer" className="mt-6 inline-flex items-center gap-2 rounded-xl border-2 border-charcoal bg-white px-6 py-3 font-bold text-charcoal no-underline hover:bg-cream"><Mail className="h-5 w-5" aria-hidden="true" />{copy("Contact form")}<ExternalLink className="h-4 w-4" aria-hidden="true" /><span className="sr-only">{" "}{copy("(opens in a new tab)")}</span></a>
 
               <div className="mt-10 rounded-2xl border border-charcoal/15 bg-white p-6 shadow-sm md:p-9">
@@ -132,7 +132,7 @@ export default function ResourcesForHelp() {
                   <DialogTrigger asChild><button type="button" className="mt-6 inline-flex items-center gap-2 rounded-xl bg-charcoal px-6 py-3 font-bold text-white hover:bg-[#a13a08]"><LockKeyhole className="h-4 w-4" aria-hidden="true" />{copy("Rental Housing Search")}<ExternalLink className="h-4 w-4" aria-hidden="true" /></button></DialogTrigger>
                   <DialogContent className="border-charcoal/20 bg-cream text-charcoal sm:max-w-md">
                     <DialogHeader><DialogTitle className="font-serif text-2xl">{copy("Rental Housing Search")}</DialogTitle><DialogDescription className="pt-2 leading-6 text-charcoal/80">{copy("Enter the password Sukhi gave you. The questionnaire will open in a new tab after your password is checked.")}</DialogDescription></DialogHeader>
-                    <form action={isFrench ? "/api/rental-access?lang=fr-CA" : "/api/rental-access"} method="post" target="_blank" rel="noopener" className="mt-2 space-y-5">
+                    <form action={language.prefix ? `/api/rental-access?lang=${language.tag}` : "/api/rental-access"} method="post" target="_blank" rel="noopener" className="mt-2 space-y-5">
                       <div>
                         <label htmlFor="rental-password" className="mb-2 block text-sm font-bold">{copy("Password")}</label>
                         <input id="rental-password" name="password" type={showPassword ? "text" : "password"} required autoComplete="off" maxLength={64} spellCheck={false} autoCapitalize="none" aria-describedby="rental-password-hint" className="w-full rounded-lg border border-charcoal/40 bg-white px-4 py-3 text-base focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-charcoal" />
@@ -157,7 +157,7 @@ export default function ResourcesForHelp() {
                   <DialogTrigger asChild><button type="button" className="mt-6 inline-flex items-center gap-2 rounded-xl bg-charcoal px-6 py-3 font-bold text-white hover:bg-[#a13a08]"><LockKeyhole className="h-4 w-4" aria-hidden="true" />{copy("Career Search Scan")}<ExternalLink className="h-4 w-4" aria-hidden="true" /></button></DialogTrigger>
                   <DialogContent className="border-charcoal/20 bg-cream text-charcoal sm:max-w-md">
                     <DialogHeader><DialogTitle className="font-serif text-2xl">{copy("Career Search Scan")}</DialogTitle><DialogDescription className="pt-2 leading-6 text-charcoal/80">{copy("Enter the password Sukhi gave you. The questionnaire will open in a new tab after your password is checked.")}</DialogDescription></DialogHeader>
-                    <form action={isFrench ? "/api/career-access?lang=fr-CA" : "/api/career-access"} method="post" target="_blank" rel="noopener" className="mt-2 space-y-5">
+                    <form action={language.prefix ? `/api/career-access?lang=${language.tag}` : "/api/career-access"} method="post" target="_blank" rel="noopener" className="mt-2 space-y-5">
                       <div>
                         <label htmlFor="career-password" className="mb-2 block text-sm font-bold">{copy("Password")}</label>
                         <input id="career-password" name="password" type={showCareerPassword ? "text" : "password"} required autoComplete="off" maxLength={64} spellCheck={false} autoCapitalize="none" aria-describedby="career-password-hint" className="w-full rounded-lg border border-charcoal/40 bg-white px-4 py-3 text-base focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-charcoal" />

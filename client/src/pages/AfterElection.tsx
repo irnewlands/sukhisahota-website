@@ -1,4 +1,4 @@
-import { isFrench, copy } from "@/lib/locale";
+import { isFrench, isPunjabi, copy } from "@/lib/locale";
 import { useEffect } from "react";
 import { ArrowRight, CalendarDays, Download, ExternalLink, FileText, MessageCircle, ShieldCheck } from "lucide-react";
 import SiteHeader from "@/components/SiteHeader";
@@ -55,7 +55,7 @@ export default function AfterElection() {
               </span>
             </div>
             <h1 className="max-w-5xl font-serif text-5xl font-bold leading-[1.06] tracking-tight md:text-7xl">
-              {copy("After the")}{" "}<span className="text-orange">{copy("Defeat.")}</span>
+              {isPunjabi ? copy("After the defeat") : <>{copy("After the")}{" "}<span className="text-orange">{copy("Defeat.")}</span></>}
             </h1>
             <p className="mt-6 max-w-3xl text-xl leading-8 text-charcoal/80 md:text-2xl md:leading-10">
               {copy("My frustrations, my questions, and why I believe the BC NDP must listen carefully to its grassroots.")}
@@ -157,6 +157,7 @@ export default function AfterElection() {
                     <FileText className="h-6 w-6 shrink-0 text-orange" aria-hidden="true" />{" "}{copy("Summary report (PDF)")}
                   </span>
                   <span className="mt-3 text-sm leading-6 text-charcoal/75">{copy("Five-page overview with provincial and regional trends, seat changes and close races.")}</span>
+                  {isPunjabi && <span className="mt-2 text-sm text-charcoal/75">{copy("Available in English")}</span>}
                   <span className="mt-6 inline-flex items-center gap-2 font-semibold text-orange">{copy("View PDF")}{" "}<ExternalLink className="h-4 w-4" aria-hidden="true" /></span>
                 </a>
                 <a href={isFrench ? "/election-data/Analyse_circonscriptions_CB_2026_fr-CA.xlsx" : "/election-data/BC_Election_2026_Riding_Analysis_Preliminary.xlsx"} download
@@ -165,6 +166,7 @@ export default function AfterElection() {
                     <Download className="h-6 w-6 shrink-0 text-orange" aria-hidden="true" />{" "}{copy("Full riding analysis (Excel)")}
                   </span>
                   <span className="mt-3 text-sm leading-6 text-charcoal/75">{copy("Download the six-sheet workbook covering all 93 ridings, vote-share differences and source notes.")}</span>
+                  {isPunjabi && <span className="mt-2 text-sm text-charcoal/75">{copy("Available in English")}</span>}
                   <span className="mt-6 inline-flex items-center gap-2 font-semibold text-orange">{copy("Download Excel")}{" "}<Download className="h-4 w-4" aria-hidden="true" /></span>
                 </a>
               </div>
@@ -201,7 +203,7 @@ export default function AfterElection() {
                 </a>
               </div>
 
-              {isFrench && <p className="mt-6 text-sm text-white/85">{copy("The forms below are available in English.")}</p>}
+              {(isFrench || isPunjabi) && <p className="mt-6 text-sm text-white/85">{copy("The forms below are available in English.")}</p>}
               <div className="mt-9 space-y-10">
                 {PARTICIPATION_FORMS.map((form) => (
                   <section key={form.id} id={form.id} aria-labelledby={`${form.id}-heading`} className="scroll-mt-28 overflow-hidden rounded-2xl border border-white/20 bg-white text-charcoal shadow-sm">

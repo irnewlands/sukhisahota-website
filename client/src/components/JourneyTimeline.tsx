@@ -82,7 +82,7 @@ const journeyStops: TimelineStop[] = [
     color: "oklch(0.72 0.22 45)",
   },
   {
-    country: "Hong Kong",
+    country: copy("Hong Kong"),
     period: "2016 – 2017",
     years: copy("1 year and 4 months"),
     icon: "🇭🇰",
@@ -97,7 +97,7 @@ const journeyStops: TimelineStop[] = [
     color: "oklch(0.74 0.24 50)",
   },
   {
-    country: "Canada",
+    country: copy("Canada"),
     period: copy("2018 – Present"),
     years: copy("8 years"),
     icon: "🇨🇦",

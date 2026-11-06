@@ -6,7 +6,7 @@ export const ACCESS_HEADERS = {
 };
 
 function messageResponse({ title, message, status, language, label, close, back, backHref }) {
-  return new Response(`<!doctype html><html lang="${language}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>${title} | Sukhi Sahota</title><style>body{margin:0;min-height:100vh;display:grid;place-items:center;background:#f8f1e7;color:#1f2937;font:17px/1.65 system-ui,sans-serif}main{max-width:32rem;margin:1.5rem;padding:2.5rem;background:white;border:1px solid #d8d0c6;border-top:6px solid #a13a08;border-radius:1rem}p{margin:1rem 0}h1{font:700 2rem/1.2 Georgia,serif}button,a{font:inherit}button{border:0;border-radius:.65rem;background:#1f2937;color:white;padding:.8rem 1.3rem;cursor:pointer}a{color:#933708}small{display:block;margin-top:1.5rem}</style></head><body><main><p>Sukhi Sahota · ${label}</p><h1>${title}</h1><p>${message}</p><button type="button" onclick="window.close()">${close}</button><small><a href="${backHref}">${back}</a></small></main></body></html>`, {
+  return new Response(`<!doctype html><html lang="${language}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>${title} | Sukhi Sahota</title><style>body{margin:0;min-height:100vh;display:grid;place-items:center;background:#f8f1e7;color:#1f2937;font:17px/1.65 system-ui,"Noto Sans Gurmukhi","Raavi",sans-serif}main{max-width:32rem;margin:1.5rem;padding:2.5rem;background:white;border:1px solid #d8d0c6;border-top:6px solid #a13a08;border-radius:1rem}p{margin:1rem 0}h1{font:700 2rem/1.2 Georgia,"Noto Sans Gurmukhi","Raavi",serif}html:lang(pa) h1{line-height:1.4}button,a{font:inherit}button{border:0;border-radius:.65rem;background:#1f2937;color:white;padding:.8rem 1.3rem;cursor:pointer}a{color:#933708}small{display:block;margin-top:1.5rem}</style></head><body><main><p>Sukhi Sahota · ${label}</p><h1>${title}</h1><p>${message}</p><button type="button" onclick="window.close()">${close}</button><small><a href="${backHref}">${back}</a></small></main></body></html>`, {
     status,
     headers: {
       ...ACCESS_HEADERS,
@@ -17,7 +17,35 @@ function messageResponse({ title, message, status, language, label, close, back,
 }
 
 export function questionnaireMessages(request, labels) {
-  const french = new URL(request.url).searchParams.get("lang") === "fr-CA";
+  const language = new URL(request.url).searchParams.get("lang");
+  if (language === "pa-Guru") {
+    const common = {
+      language,
+      label: labels.pa,
+      close: "ਇਹ ਵਿੰਡੋ ਬੰਦ ਕਰੋ",
+      back: "ਮਦਦ ਲਈ ਸਰੋਤਾਂ ਵੱਲ ਵਾਪਸ ਜਾਓ",
+      backHref: "/pa/resources-for-help#asked-sukhi",
+    };
+    return {
+      invalidPassword: () => messageResponse({
+        ...common,
+        status: 403,
+        title: "ਪਾਸਵਰਡ ਸਹੀ ਨਹੀਂ ਹੈ",
+        message: "ਇਹ ਟੈਬ ਬੰਦ ਕਰੋ ਅਤੇ ਸੁੱਖੀ ਵੱਲੋਂ ਦਿੱਤੇ ਪਾਸਵਰਡ ਨਾਲ ਮੁੜ ਕੋਸ਼ਿਸ਼ ਕਰੋ। ਮਦਦ ਲਈ ਸਰੋਤਾਂ ਵਾਲਾ ਪੰਨਾ ਪਹਿਲੀ ਟੈਬ ਵਿੱਚ ਹਾਲੇ ਵੀ ਖੁੱਲ੍ਹਾ ਹੈ।",
+      }),
+      openFromDirectory: () => {
+        const response = messageResponse({
+          ...common,
+          status: 405,
+          title: "ਮਦਦ ਲਈ ਸਰੋਤਾਂ ਵਾਲੇ ਪੰਨੇ ਤੋਂ ਪ੍ਰਸ਼ਨਾਵਲੀ ਖੋਲ੍ਹੋ",
+          message: `ਪਾਸਵਰਡ ਦਰਜ ਕਰਨ ਲਈ ਮਦਦ ਲਈ ਸਰੋਤਾਂ ਵਾਲੇ ਪੰਨੇ ’ਤੇ « ${labels.pa} » ਬਟਨ ਵਰਤੋ।`,
+        });
+        response.headers.set("Allow", "POST");
+        return response;
+      },
+    };
+  }
+  const french = language === "fr-CA";
   const label = french ? labels.fr : labels.en;
   const common = {
     language: french ? "fr-CA" : "en",

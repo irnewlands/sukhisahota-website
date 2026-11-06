@@ -16,7 +16,7 @@ import IssueDetail from "./pages/IssueDetail";
 import AfterElection from "./pages/AfterElection";
 import ResourcesForHelp from "./pages/ResourcesForHelp";
 
-import { isFrench } from "@/lib/locale";
+import { isFrench, routePrefix } from "@/lib/locale";
 
 function SiteRoutes() {
   return (
@@ -44,7 +44,7 @@ function App() {
       <ThemeProvider defaultTheme="light">
         <TooltipProvider>
           <Toaster />
-          <WouterRouter base={window.location.pathname.match(/^\/fr(?:\/|$)/) ? "/fr" : ""}>
+          <WouterRouter base={routePrefix}>
             <SiteRoutes />
           </WouterRouter>
         </TooltipProvider>

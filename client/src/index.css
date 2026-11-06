@@ -375,3 +375,13 @@
     scroll-margin-top: 80px;
   }
 }
+
+/* Load the Gurmukhi glyphs for Punjabi pages and the language menu. */
+:lang(pa) {
+  font-family: "Noto Sans Gurmukhi", "Outfit", sans-serif !important;
+  letter-spacing: normal !important;
+}
+
+html:lang(pa) :is(h1, h2, h3, h4, h5, h6) {
+  line-height: 1.35;
+}

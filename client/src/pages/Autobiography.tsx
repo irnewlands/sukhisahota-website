@@ -2,7 +2,7 @@ import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import { useEffect } from "react";
 import JourneyTimeline from "@/components/JourneyTimeline";
-import LanguageSwitcher from "@/components/LanguageSwitcher";
+import { copy, localizedHref } from "@/lib/locale";
 
 /**
  * Autobiography Page
@@ -114,7 +114,7 @@ export default function Autobiography() {
           }}>
             <img
               src="/006A7069a.jpg"
-              alt="Sukhi Sahota"
+              alt={copy("Sukhi Sahota")}
               style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "top" }}
             />
           </div>
@@ -129,7 +129,7 @@ export default function Autobiography() {
             textTransform: "uppercase",
           }}
         >
-          Full Story
+          {copy("Full Story")}
         </span>
         <h1
           style={{
@@ -141,7 +141,7 @@ export default function Autobiography() {
             color: "var(--foreground)",
           }}
         >
-          An Autobiography
+          {copy("An Autobiography")}
         </h1>
         <p
           style={{
@@ -153,7 +153,7 @@ export default function Autobiography() {
             margin: "0 auto",
           }}
         >
-          A personal journey shaped by resilience, identity, and community — from the UK to the world and finally Canada.
+          {copy("A personal journey shaped by resilience, identity, and community — from the UK to the world and finally Canada.")}
         </p>
       </section>
 
@@ -178,7 +178,7 @@ export default function Autobiography() {
                 color: "var(--foreground)",
               }}
             >
-              {section.title}
+              {copy(section.title)}
             </h2>
 
             {section.image && (
@@ -186,13 +186,13 @@ export default function Autobiography() {
                 <div style={{ borderRadius: "1rem", overflow: "visible", maxHeight: "none" }}>
                   <img
                     src={section.image}
-                    alt={section.imageAlt}
+                    alt={section.imageAlt && copy(section.imageAlt)}
                     style={{ width: "100%", height: "auto", objectFit: "contain", objectPosition: "center", display: "block" }}
                   />
                 </div>
                 {section.imageCaption && (
                   <p style={{ fontFamily: "'Outfit', sans-serif", fontSize: "0.85rem", color: "var(--muted-foreground)", textAlign: "center", marginTop: "0.5rem" }}>
-                    {section.imageCaption}
+                    {copy(section.imageCaption)}
                   </p>
                 )}
               </div>
@@ -211,7 +211,7 @@ export default function Autobiography() {
                       color: "var(--foreground)",
                     }}
                   >
-                    {para}
+                    {copy(para)}
                   </p>
                 ))}
               </div>
@@ -228,7 +228,7 @@ export default function Autobiography() {
                       color: "var(--foreground)",
                     }}
                   >
-                    {para}
+                    {copy(para)}
                   </p>
                 ))}
 
@@ -246,7 +246,7 @@ export default function Autobiography() {
                       margin: "2rem 0 0 0",
                     }}
                   >
-                    "{section.pullQuote}"
+                    "{copy(section.pullQuote)}"
                   </blockquote>
                 )}
               </div>
@@ -285,7 +285,7 @@ export default function Autobiography() {
             marginBottom: "1rem",
           }}
         >
-          Ready to support grassroots change?
+          {copy("Ready to support grassroots change?")}
         </h3>
        <p
   style={{
@@ -296,10 +296,10 @@ export default function Autobiography() {
     color: "#d1d5db",
   }}
 >
-          Join Sukhi in building a more organized, inclusive NDP from the ground up.
+          {copy("Join Sukhi in building a more organized, inclusive NDP from the ground up.")}
         </p>
         <a
-          href="/"
+          href={localizedHref("/")}
           style={{
             display: "inline-block",
             fontFamily: "'Outfit', sans-serif",
@@ -321,7 +321,7 @@ export default function Autobiography() {
             (e.target as HTMLElement).style.transform = "scale(1)";
           }}
         >
-          Back to Home
+          {copy("Back to Home")}
         </a>
       </section>
     </div>

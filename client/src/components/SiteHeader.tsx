@@ -18,12 +18,12 @@ export default function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-50 bg-cream/95 backdrop-blur-md shadow-sm">
-      <div className="container flex items-center justify-between h-16">
-        <a href={localizedHref("/")} className="group flex items-center gap-3 no-underline">
-          <img src="/Forthepeople_-original.png" alt={copy("For the People")} className="h-9 w-auto" />
+      <div className="container flex items-center justify-between gap-2 min-h-16 py-2">
+        <a href={localizedHref("/")} className="group flex items-center gap-2 sm:gap-3 no-underline">
+          <img src="/Forthepeople_-original.png" alt={copy("For the People")} className="h-9 w-auto shrink-0" />
           <div className="flex flex-col">
             <span className="font-serif font-bold text-lg text-charcoal group-hover:text-orange transition-colors leading-tight">
-              Sukhi Sahota
+              {copy("Sukhi Sahota")}
             </span>
             <span className="text-xs font-semibold tracking-widest text-[#b84300] uppercase">
               {copy("Former Federal Candidate")}
@@ -31,18 +31,20 @@ export default function SiteHeader() {
           </div>
         </a>
 
-        <nav className="hidden min-[1440px]:flex items-center gap-1">
-          {NAV_LINKS.map((l) => (
-            <a key={l.href} href={localizedHref(l.href)} className="nav-link px-3 py-2 text-sm font-medium rounded text-charcoal hover:text-orange">
-              {l.label}
-            </a>
-          ))}
-          <div className="ml-2"><LanguageSwitcher /></div>
-        </nav>
+        <div className="flex shrink-0 items-center gap-2">
+          <nav className="hidden min-[1440px]:flex items-center gap-1">
+            {NAV_LINKS.map((l) => (
+              <a key={l.href} href={localizedHref(l.href)} className="nav-link px-3 py-2 text-sm font-medium rounded text-charcoal hover:text-orange">
+                {l.label}
+              </a>
+            ))}
+          </nav>
 
-        <button onClick={() => setOpen(!open)} aria-label={copy("Toggle menu")} aria-expanded={open} className="min-[1440px]:hidden p-2 text-charcoal">
-          ☰
-        </button>
+          <LanguageSwitcher />
+          <button onClick={() => setOpen(!open)} aria-label={copy("Toggle menu")} aria-expanded={open} className="min-[1440px]:hidden p-2 text-charcoal">
+            ☰
+          </button>
+        </div>
       </div>
 
       {open && (
@@ -53,7 +55,6 @@ export default function SiteHeader() {
                 {l.label}
               </a>
             ))}
-            <div className="mt-4"><LanguageSwitcher /></div>
           </div>
         </div>
       )}

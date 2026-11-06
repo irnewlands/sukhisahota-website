@@ -1,4 +1,4 @@
-import { copy, isFrench, localizedHref } from "@/lib/locale";
+import { copy, isFrench, isPunjabi, localizedHref } from "@/lib/locale";
 /**
  * DESIGN PHILOSOPHY: Contemporary Progressive
  * Bold typography, dynamic layouts, intentional asymmetry
@@ -64,9 +64,9 @@ function Nav() {
         scrolled ? "bg-cream/95 backdrop-blur-md shadow-sm" : "bg-transparent"
       }`}
     >
-      <div className="container flex items-center justify-between h-16">
+      <div className="container flex items-center justify-between gap-2 min-h-16 py-2">
         {/* Logo */}
-        <a href={localizedHref("/")} className="group flex items-center gap-3 no-underline">
+        <a href={localizedHref("/")} className="group flex items-center gap-2 sm:gap-3 no-underline">
           <img
             src="/Forthepeople_-original.png"
             alt={copy("For the People")}
@@ -74,7 +74,7 @@ function Nav() {
           />
           <div className="flex flex-col">
             <span className="font-serif font-bold text-lg text-charcoal group-hover:text-orange transition-colors leading-tight">
-              Sukhi Sahota
+              {copy("Sukhi Sahota")}
             </span>
             <span className="text-xs font-semibold tracking-widest text-[#b84300] uppercase">
               {copy("Former Federal Candidate")}
@@ -82,39 +82,41 @@ function Nav() {
           </div>
         </a>
 
-        {/* Desktop nav */}
-        <nav className="hidden min-[1440px]:flex items-center gap-1">
-          {NAV_LINKS.map((l) => (
-            <a
-              key={l.href}
-              href={localizedHref(l.href)}
-              className="nav-link px-3 py-2 text-sm font-medium rounded transition-colors text-charcoal hover:text-orange"
-            >
-              {l.label}
+        <div className="flex shrink-0 items-center gap-2">
+          {/* Desktop nav */}
+          <nav className="hidden min-[1440px]:flex items-center gap-1">
+            {NAV_LINKS.map((l) => (
+              <a
+                key={l.href}
+                href={localizedHref(l.href)}
+                className="nav-link px-3 py-2 text-sm font-medium rounded transition-colors text-charcoal hover:text-orange"
+              >
+                {l.label}
+              </a>
+            ))}
+            <a href={localizedHref("/get-involved")} className="btn-primary ml-3 text-sm py-2 px-4">
+              {copy("Join")}
             </a>
-          ))}
-          <div className="ml-2">
-            <LanguageSwitcher />
-          </div>
-          <a href={localizedHref("/get-involved")} className="btn-primary ml-3 text-sm py-2 px-4">
-            {copy("Join")}
-          </a>
-        </nav>
+          </nav>
 
-        {/* Mobile menu toggle */}
-        <button
-          onClick={() => setOpen(!open)}
-          className="min-[1440px]:hidden p-2 text-charcoal"
-          aria-label={copy("Toggle menu")}
-        >
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            {open ? (
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-            ) : (
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-            )}
-          </svg>
-        </button>
+          <LanguageSwitcher />
+
+          {/* Mobile menu toggle */}
+          <button
+            onClick={() => setOpen(!open)}
+            className="min-[1440px]:hidden p-2 text-charcoal"
+            aria-label={copy("Toggle menu")}
+            aria-expanded={open}
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              {open ? (
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              ) : (
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              )}
+            </svg>
+          </button>
+        </div>
       </div>
 
      {/* Mobile drawer */}
@@ -131,10 +133,6 @@ function Nav() {
           {l.label}
         </a>
       ))}
-
-      <div className="py-3 border-b border-border">
-        <LanguageSwitcher />
-      </div>
 
       <a
         href={localizedHref("/get-involved")}
@@ -247,8 +245,11 @@ export default function Home() {
               </div>
 
               <h1 className="font-serif text-5xl md:text-7xl font-bold text-charcoal leading-none mb-6">
-                {copy("Fighting for")}{" "}
-                <span className="block text-orange">{copy("every Canadian")}</span>
+                {isPunjabi ? (
+                  <>{copy("For every Canadian")}<span className="block text-orange">{copy("I keep fighting")}</span></>
+                ) : (
+                  <>{copy("Fighting for")}{" "}<span className="block text-orange">{copy("every Canadian")}</span></>
+                )}
               </h1>
 
               <p className="text-lg md:text-xl text-charcoal/80 leading-relaxed mb-8 max-w-lg">
@@ -299,7 +300,7 @@ export default function Home() {
                <div className="w-80 md:w-96 lg:w-[440px] rounded-2xl overflow-hidden shadow-2xl">
   <img
     src={PORTRAIT_PHOTO}
-    alt="Sukhi Sahota"
+    alt={copy("Sukhi Sahota")}
     width="880"
     height="1080"
     className="w-full h-auto object-contain"

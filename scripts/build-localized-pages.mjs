@@ -2,7 +2,8 @@ import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { dirname, join } from "node:path";
 
 const origin = "https://www.sukhisahota.ca";
-const translationsPath = new URL("../client/src/lib/french-copy.json", import.meta.url);
+const frenchCopy = new URL("../client/src/lib/french-copy.json", import.meta.url);
+const punjabiCopy = new URL("../client/src/lib/punjabi-copy.json", import.meta.url);
 const reflectionTitle = "After the Defeat | Sukhi Sahota's Reflections on the 2026 BC Election";
 const directoryTitle = "Resources for Help | Vancouver Support & Advocacy | Sukhi Sahota";
 
@@ -37,11 +38,13 @@ const pages = {
 const englishDescription = "Official website of Sukhi Sahota. Explore Sukhi's platform on housing, climate, healthcare, democracy, affordability, reconciliation, LGBTQ+ rights, AI, and public service.";
 const frenchDescription = "Site officiel de Sukhi Sahota. Découvrez ses positions sur le logement, le climat, la santé, la démocratie, le coût de la vie, la réconciliation, les droits LGBTQ+, l’IA et le service public.";
 
+const punjabiDescription = "ਸੁੱਖੀ ਸਹੋਤਾ ਦੀ ਅਧਿਕਾਰਤ ਵੈੱਬਸਾਈਟ। ਰਿਹਾਇਸ਼, ਜਲਵਾਯੂ, ਸਿਹਤ ਸੰਭਾਲ, ਲੋਕਤੰਤਰ, ਜੀਵਨ-ਖ਼ਰਚ, ਮੂਲ ਨਿਵਾਸੀ ਲੋਕਾਂ ਨਾਲ ਸੁਲ੍ਹਾ, LGBTQ+ ਹੱਕਾਂ, ਕ੍ਰਿਤ੍ਰਿਮ ਬੁੱਧੀ ਅਤੇ ਜਨ ਸੇਵਾ ਬਾਰੇ ਉਨ੍ਹਾਂ ਦੇ ਵਿਚਾਰ ਪੜ੍ਹੋ।";
+
 function escapeMarkup(value) {
   return value.replaceAll("&", "&amp;").replaceAll('"', "&quot;").replaceAll("<", "&lt;").replaceAll(">", "&gt;");
 }
 
-function pageHtml(template, { url, englishUrl, frenchUrl, lang, title, description }) {
+function pageHtml(template, { url, alternates, lang, title, description }) {
   const safeTitle = escapeMarkup(title);
   const safeDescription = escapeMarkup(description);
   return template
@@ -53,10 +56,8 @@ function pageHtml(template, { url, englishUrl, frenchUrl, lang, title, descripti
     .replace(/(<meta property="og:url" content=")[^"]*"/, `$1${url}"`)
     .replace(/<link rel="canonical" href="[^"]*"\s*\/?>/, [
       `<link rel="canonical" href="${url}" />`,
-      `<link rel="alternate" hreflang="en-CA" href="${englishUrl}" />`,
-      `<link rel="alternate" hreflang="fr-CA" href="${frenchUrl}" />`,
-      `<link rel="alternate" hreflang="x-default" href="${englishUrl}" />`,
-      `<meta property="og:locale" content="${lang.replace("-", "_")}" />`,
+      ...Object.entries(alternates).map(([tag, href]) => `<link rel="alternate" hreflang="${tag}" href="${href}" />`),
+      `<meta property="og:locale" content="${lang === "pa-Guru" ? "pa_IN" : lang.replace("-", "_")}" />`,
     ].join("\n  "))
     .replace(/(<script type="application\/ld\+json">)([\s\S]*?)(<\/script>)/, (_, start, json, end) => {
       const data = JSON.parse(json);
@@ -64,10 +65,14 @@ function pageHtml(template, { url, englishUrl, frenchUrl, lang, title, descripti
         if (item["@type"] === "WebPage") {
           Object.assign(item, { "@id": `${url}#webpage`, url, name: title, description, inLanguage: lang });
         }
-        if (item["@type"] === "WebSite") item.inLanguage = ["en-CA", "fr-CA"];
+        if (item["@type"] === "WebSite") item.inLanguage = ["en-CA", "fr-CA", "pa-Guru"];
         if (item["@type"] === "Person" && lang === "fr-CA") {
           item.description = "Sukhi Sahota défend les intérêts de la communauté et les politiques publiques. Il a été candidat aux élections fédérales.";
           item.jobTitle = "Défenseur des intérêts de la communauté et des politiques publiques";
+        }
+        if (item["@type"] === "Person" && lang === "pa-Guru") {
+          item.description = "ਸੁੱਖੀ ਸਹੋਤਾ ਭਾਈਚਾਰੇ ਅਤੇ ਜਨਤਕ ਨੀਤੀ ਲਈ ਕੰਮ ਕਰਦੇ ਹਨ। ਉਹ ਫੈਡਰਲ ਚੋਣਾਂ ਵਿੱਚ ਉਮੀਦਵਾਰ ਰਹਿ ਚੁੱਕੇ ਹਨ।";
+          item.jobTitle = "ਭਾਈਚਾਰੇ ਅਤੇ ਜਨਤਕ ਨੀਤੀ ਦੇ ਹਿਮਾਇਤੀ";
         }
       }
       return `${start}\n${JSON.stringify(data, null, 2).replaceAll("<", "\\u003c")}\n${end}`;
@@ -80,23 +85,30 @@ export function localizedPages(outputDir) {
     apply: "build",
     async closeBundle() {
       const template = await readFile(join(outputDir, "index.html"), "utf8");
-      const translations = JSON.parse(await readFile(translationsPath, "utf8"));
+      const [french, punjabi] = await Promise.all(
+        [frenchCopy, punjabiCopy].map(async (path) => JSON.parse(await readFile(path, "utf8"))),
+      );
       const sitemap = [];
       for (const [route, [english, explicitFrench]] of Object.entries(pages)) {
-        const frenchRoute = route === "/" ? "/fr" : "/fr" + route;
-        const englishUrl = origin + route;
-        const frenchUrl = origin + frenchRoute;
-        const french = explicitFrench ?? translations[english];
-        if (!french) throw new Error(`Missing French page title for ${route}`);
+        const localizedPath = (prefix) => prefix + (route === "/" ? "" : route);
+        const alternates = {
+          "en-CA": origin + route,
+          "fr-CA": origin + localizedPath("/fr"),
+          "pa-Guru": origin + localizedPath("/pa"),
+          "x-default": origin + route,
+        };
         for (const [path, label, lang, description] of [
           [route, english, "en-CA", englishDescription],
-          [frenchRoute, french, "fr-CA", frenchDescription],
+          [localizedPath("/fr"), explicitFrench ?? french[english], "fr-CA", frenchDescription],
+          [localizedPath("/pa"), punjabi[english], "pa-Guru", punjabiDescription],
         ]) {
+          if (!label) throw new Error(`Missing ${lang} page title for ${route}`);
           const url = origin + path;
-          const title = label.includes(" | ") ? label : `${label} | Sukhi Sahota`;
+          const name = lang === "pa-Guru" ? "ਸੁੱਖੀ ਸਹੋਤਾ" : "Sukhi Sahota";
+          const title = label.includes(" | ") ? label : `${label} | ${name}`;
           const file = join(outputDir, path === "/" ? "index.html" : `${path.slice(1)}.html`);
           await mkdir(dirname(file), { recursive: true });
-          await writeFile(file, pageHtml(template, { url, englishUrl, frenchUrl, lang, title, description }));
+          await writeFile(file, pageHtml(template, { url, alternates, lang, title, description }));
           sitemap.push(`  <url><loc>${url}</loc></url>`);
         }
       }
