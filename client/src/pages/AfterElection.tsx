@@ -150,7 +150,7 @@ export default function AfterElection() {
                 {copy("Explore how the BC NDP, Conservatives and Greens performed in all 93 ridings compared with the certified 2024 election results. The report examines vote-share swings, regional patterns, riding leads and ballots counted.")}
               </p>
               <p className="mt-4 rounded-lg border-l-4 border-orange bg-[#fff6e9] px-5 py-4 text-sm leading-6 text-charcoal/80">
-                <strong>{copy("Preliminary snapshot:")}</strong>{" "}{copy("Elections BC revised preliminary initial count dated November 5, 2026 at 2:20 p.m. PCT. Compared with the November 4 report, vote figures were revised in 55 of 93 ridings; the NDP, Conservatives and Greens remain ahead in 28, 63 and 2 ridings respectively. These are verification adjustments, not final-count mail-in or absentee ballots. Final count is scheduled for November 6–10.")}
+                <strong>{copy("Preliminary snapshot:")}</strong>{" "}{copy("Elections BC final count in progress. Snapshot November 6, 2026 at 7:00 p.m. PCT: BC NDP 707,284 votes (37.35%, leading in 28 ridings), Conservatives 908,337 (47.96%, leading in 63), and BC Greens 210,642 (11.12%, leading in 2). Compared with the November 5 revised initial count, 99,700 more ballots are now considered; no riding's leading party changed between these snapshots. Results remain uncertified and may change as counting continues.")}
               </p>
               <div className="mt-8 grid gap-4 sm:grid-cols-2">
                 <a href={isFrench ? "/election-data/Analyse_preliminaire_elections_CB_2026_fr-CA.pdf" : "/election-data/BC_Election_2026_Preliminary_Analysis.pdf"} target="_blank" rel="noopener noreferrer"
@@ -159,9 +159,7 @@ export default function AfterElection() {
                     <FileText className="h-6 w-6 shrink-0 text-orange" aria-hidden="true" />{" "}{copy("Summary report (PDF)")}
                   </span>
                   <span className="mt-3 text-sm leading-6 text-charcoal/75">
-                    {copy(showEnglishDownloadLabels
-                      ? "Six-page overview with provincial and regional trends, seat changes and close races."
-                      : "Five-page overview with provincial and regional trends, seat changes and close races.")}
+                    {copy("Six-page report covering provincial results, regional vote-share shifts, changes since November 5 and close races.")}
                   </span>
                   {showEnglishDownloadLabels && <span className="mt-2 text-sm text-charcoal/75">{copy("Available in English")}</span>}
                   <span className="mt-6 inline-flex items-center gap-2 font-semibold text-orange">{copy("View PDF")}{" "}<ExternalLink className="h-4 w-4" aria-hidden="true" /></span>
@@ -172,9 +170,7 @@ export default function AfterElection() {
                     <Download className="h-6 w-6 shrink-0 text-orange" aria-hidden="true" />{" "}{copy("Full riding analysis (Excel)")}
                   </span>
                   <span className="mt-3 text-sm leading-6 text-charcoal/75">
-                    {copy(showEnglishDownloadLabels
-                      ? "Download the eight-sheet workbook covering all 93 ridings, vote-share differences and source notes."
-                      : "Download the six-sheet workbook covering all 93 ridings, vote-share differences and source notes.")}
+                    {copy("Download the nine-sheet workbook with all 93 ridings, 2024 comparisons, changes since November 5 and source notes.")}
                   </span>
                   {showEnglishDownloadLabels && <span className="mt-2 text-sm text-charcoal/75">{copy("Available in English")}</span>}
                   <span className="mt-6 inline-flex items-center gap-2 font-semibold text-orange">{copy("Download Excel")}{" "}<Download className="h-4 w-4" aria-hidden="true" /></span>
