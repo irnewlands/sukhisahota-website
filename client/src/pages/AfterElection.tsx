@@ -4,24 +4,12 @@ import { ArrowRight, CalendarDays, Download, ExternalLink, FileText, MessageCirc
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 
-const showEnglishDownloadLabels = false; // All three languages now have local reports and workbooks.
+const showEnglishDownloadLabels = isPunjabi || isChinese || isTagalog; // Latest Nov 7 analysis: English fallback for these languages.
 const electionPdfHref = isFrench
   ? "/election-data/Analyse_preliminaire_elections_CB_2026_fr-CA.pdf"
-  : isPunjabi
-  ? "/election-data/BC_Election_2026_Preliminary_Analysis_Nov06_1900_pa.pdf"
-  : isChinese
-  ? "/election-data/BC_Election_2026_Preliminary_Analysis_Nov06_1900_zh-CN.pdf"
-  : isTagalog
-  ? "/election-data/BC_Election_2026_Preliminary_Analysis_Nov06_1900_tl.pdf"
   : "/election-data/BC_Election_2026_Preliminary_Analysis.pdf";
 const electionExcelHref = isFrench
   ? "/election-data/Analyse_circonscriptions_CB_2026_fr-CA.xlsx"
-  : isPunjabi
-  ? "/election-data/BC_Election_2026_Riding_Analysis_Nov06_1900_pa.xlsx"
-  : isChinese
-  ? "/election-data/BC_Election_2026_Riding_Analysis_Nov06_1900_zh-CN.xlsx"
-  : isTagalog
-  ? "/election-data/BC_Election_2026_Riding_Analysis_Nov06_1900_tl.xlsx"
   : "/election-data/BC_Election_2026_Riding_Analysis_Preliminary.xlsx";
 
 const PARTICIPATION_FORMS = [
@@ -168,7 +156,7 @@ export default function AfterElection() {
                 {copy("Explore how the BC NDP, Conservatives and Greens performed in all 93 ridings compared with the certified 2024 election results. The report examines vote-share swings, regional patterns, riding leads and ballots counted.")}
               </p>
               <p className="mt-4 rounded-lg border-l-4 border-orange bg-[#fff6e9] px-5 py-4 text-sm leading-6 text-charcoal/80">
-                <strong>{copy("Preliminary snapshot:")}</strong>{" "}{copy("Elections BC final count in progress. Snapshot November 6, 2026 at 7:00 p.m. PCT: BC NDP 707,284 votes (37.35%, leading in 28 ridings), Conservatives 908,337 (47.96%, leading in 63), and BC Greens 210,642 (11.12%, leading in 2). Compared with the November 5 revised initial count, 99,700 more ballots are now considered; no riding's leading party changed between these snapshots. Results remain uncertified and may change as counting continues.")}
+                <strong>{copy("Preliminary snapshot:")}</strong>{" "}{copy("Elections BC final count in progress. Snapshot November 7, 2026 at 12:00 p.m. Pacific: BC NDP 709,096 votes (37.36%, leading in 27 ridings); Conservatives 910,259 (47.96%, leading in 64); and BC Greens 211,132 (11.12%, leading in 2). Burnaby South–Metrotown changed from an NDP lead of 27 votes on November 6 at 7:00 p.m. to a Conservative lead of 104 votes, a 131-vote margin reversal. An automatic recount is part of final count. Results remain uncertified and may change.")}
               </p>
               <div className="mt-8 grid gap-4 sm:grid-cols-2">
                 <a href={electionPdfHref} target="_blank" rel="noopener noreferrer"
@@ -177,7 +165,7 @@ export default function AfterElection() {
                     <FileText className="h-6 w-6 shrink-0 text-orange" aria-hidden="true" />{" "}{copy("Summary report (PDF)")}
                   </span>
                   <span className="mt-3 text-sm leading-6 text-charcoal/75">
-                    {copy("Six-page report covering provincial results, regional vote-share shifts, changes since November 5 and close races.")}
+                    {copy("Six-page analysis of the November 7 count, Burnaby South–Metrotown lead change, 2024 comparisons and close races.")}
                   </span>
                   {showEnglishDownloadLabels && <span className="mt-2 text-sm text-charcoal/75">{copy("Available in English")}</span>}
                   <span className="mt-6 inline-flex items-center gap-2 font-semibold text-orange">{copy("View PDF")}{" "}<ExternalLink className="h-4 w-4" aria-hidden="true" /></span>
@@ -188,13 +176,7 @@ export default function AfterElection() {
                     <Download className="h-6 w-6 shrink-0 text-orange" aria-hidden="true" />{" "}{copy("Full riding analysis (Excel)")}
                   </span>
                   <span className="mt-3 text-sm leading-6 text-charcoal/75">
-                    {isPunjabi
-                      ? "ਸਾਰੇ 93 ਹਲਕਿਆਂ, 2024 ਦੀ ਤੁਲਨਾ, 5 ਨਵੰਬਰ ਤੋਂ ਬਾਅਦ ਦੇ ਬਦਲਾਅ ਅਤੇ ਸਰੋਤ ਨੋਟਾਂ ਸਮੇਤ ਅੱਠ ਵਰਕਸ਼ੀਟਾਂ ਵਾਲੀ Excel ਫਾਈਲ ਡਾਊਨਲੋਡ ਕਰੋ।"
-                      : isChinese
-                      ? "下载包含全部 93 个选区、2024 年对比、11 月 5 日以来的变化及来源说明的八工作表 Excel 文件。"
-                      : isTagalog
-                      ? "I-download ang workbook na may walong worksheet para sa lahat ng 93 distrito, paghahambing sa 2024, mga pagbabago mula Nobyembre 5 at mga tala ng mga sanggunian."
-                      : copy("Download the nine-sheet workbook with all 93 ridings, 2024 comparisons, changes since November 5 and source notes.")}
+                    {copy("Download the ten-sheet workbook covering all 93 ridings, 2024 comparisons, November 6-to-7 changes and historical snapshots.")}
                   </span>
                   {showEnglishDownloadLabels && <span className="mt-2 text-sm text-charcoal/75">{copy("Available in English")}</span>}
                   <span className="mt-6 inline-flex items-center gap-2 font-semibold text-orange">{copy("Download Excel")}{" "}<Download className="h-4 w-4" aria-hidden="true" /></span>
