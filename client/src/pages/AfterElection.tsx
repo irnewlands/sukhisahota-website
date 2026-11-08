@@ -4,13 +4,69 @@ import { ArrowRight, CalendarDays, Download, ExternalLink, FileText, MessageCirc
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 
-const showEnglishDownloadLabels = isPunjabi || isChinese || isTagalog; // Latest Nov 7 analysis: English fallback for these languages.
-const electionPdfHref = isFrench
-  ? "/election-data/Analyse_preliminaire_elections_CB_2026_fr-CA.pdf"
-  : "/election-data/BC_Election_2026_Preliminary_Analysis.pdf";
-const electionExcelHref = isFrench
-  ? "/election-data/Analyse_circonscriptions_CB_2026_fr-CA.xlsx"
-  : "/election-data/BC_Election_2026_Riding_Analysis_Preliminary.xlsx";
+const showEnglishDownloadLabels = false; // Every locale now has its own updated PDF and Excel.
+
+const electionDownloads = {
+  en: {
+    pdf: "/election-data/BC_Election_2026_Preliminary_Analysis.pdf",
+    excel: "/election-data/BC_Election_2026_Riding_Analysis_Preliminary.xlsx",
+  },
+  fr: {
+    pdf: "/election-data/Analyse_preliminaire_elections_CB_2026_fr-CA.pdf",
+    excel: "/election-data/Analyse_circonscriptions_CB_2026_fr-CA.xlsx",
+  },
+  pa: {
+    pdf: "/election-data/BC_Election_2026_Preliminary_Analysis_pa.pdf",
+    excel: "/election-data/BC_Election_2026_Riding_Analysis_pa.xlsx",
+  },
+  zh: {
+    pdf: "/election-data/BC_Election_2026_Preliminary_Analysis_zh-CN.pdf",
+    excel: "/election-data/BC_Election_2026_Riding_Analysis_zh-CN.xlsx",
+  },
+  tl: {
+    pdf: "/election-data/BC_Election_2026_Preliminary_Analysis_tl.pdf",
+    excel: "/election-data/BC_Election_2026_Riding_Analysis_tl.xlsx",
+  },
+} as const;
+
+const electionLanguage = isFrench ? "fr" : isPunjabi ? "pa" : isChinese ? "zh" : isTagalog ? "tl" : "en";
+const electionPdfHref = `${electionDownloads[electionLanguage].pdf}?v=20261108-1200`;
+const electionExcelHref = `${electionDownloads[electionLanguage].excel}?v=20261108-1200`;
+
+const electionUpdate = {
+  en: {
+    snapshot: "Elections BC final count in progress. November 8, 2026, 12:00 p.m. Pacific: BC NDP 730,932 votes (37.58% of valid votes, leading in 27 ridings); Conservatives 928,014 (47.71%, leading in 64); and BC Greens 216,808 (11.15%, leading in 2). A total of 1,950,166 ballots have been considered (preliminary turnout 52.17%), 47,147 more than at noon on November 7. Burnaby South–Metrotown is Conservative-led by 64 votes; Ladysmith–Oceanside NDP-led by 50; Kelowna Centre Conservative-led by 43. Final counting and recounts continue, and these standings are not certified.",
+    pdf: "Three-page, November 8 analysis of the latest count, close Metro Vancouver races, 2024 comparisons and outstanding certification.",
+    excel: "Updated November 8 multi-sheet workbook for all 93 ridings, 2024 comparisons, regional trends and changes between official count snapshots.",
+    status: "The riding and vote data shown in this report section are provisional as of November 8, 2026, at 12:00 p.m. Pacific.",
+  },
+  fr: {
+    snapshot: "Le décompte final d’Élections BC est en cours. Relevé du 8 novembre 2026, à 12 h (heure du Pacifique) : NPD de la C.-B., 730 932 voix (37,58 % des suffrages valides; en tête dans 27 circonscriptions); conservateurs, 928 014 (47,71 %; en tête dans 64); Verts de la C.-B., 216 808 (11,15 %; en tête dans 2). Au total, 1 950 166 bulletins ont été pris en compte (participation provisoire de 52,17 %), soit 47 147 de plus que le 7 novembre à midi. Les conservateurs devancent le NPD de 64 voix à Burnaby South–Metrotown; le NPD mène par 50 voix à Ladysmith–Oceanside et les conservateurs par 43 à Kelowna Centre. Le décompte et les recomptages se poursuivent; les résultats ne sont pas encore certifiés.",
+    pdf: "Analyse de trois pages au 8 novembre : résultats récents, courses serrées, comparaison avec 2024 et état de la certification.",
+    excel: "Classeur actualisé au 8 novembre : 93 circonscriptions, comparaisons de 2024, tendances régionales et évolution entre les décomptes.",
+    status: "Les données présentées dans cette section sont provisoires, au 8 novembre 2026 à 12 h (heure du Pacifique).",
+  },
+  pa: {
+    snapshot: "ਇਲੈਕਸ਼ਨਜ਼ ਬੀ.ਸੀ. ਦੀ ਅੰਤਿਮ ਗਿਣਤੀ ਜਾਰੀ ਹੈ। 8 ਨਵੰਬਰ 2026, ਦੁਪਹਿਰ 12 ਵਜੇ (ਪੈਸਿਫਿਕ ਸਮਾਂ) ਦੇ ਅੰਕੜੇ: ਬੀ.ਸੀ. ਐਨ.ਡੀ.ਪੀ. ਨੂੰ 730,932 ਵੋਟਾਂ (ਵੈਧ ਵੋਟਾਂ ਦਾ 37.58%; 27 ਹਲਕਿਆਂ ਵਿੱਚ ਅੱਗੇ), ਕੰਜ਼ਰਵੇਟਿਵਾਂ ਨੂੰ 928,014 (47.71%; 64 ਹਲਕਿਆਂ ਵਿੱਚ ਅੱਗੇ), ਅਤੇ ਬੀ.ਸੀ. ਗ੍ਰੀਨ ਪਾਰਟੀ ਨੂੰ 216,808 (11.15%; 2 ਹਲਕਿਆਂ ਵਿੱਚ ਅੱਗੇ) ਮਿਲੀਆਂ। ਕੁੱਲ 1,950,166 ਬੈਲਟ ਗਿਣਤੀ ਵਿੱਚ ਸ਼ਾਮਲ ਹਨ; ਆਰੰਭਕ ਮਤਦਾਨ ਦਰ 52.17% ਹੈ। ਇਹ 7 ਨਵੰਬਰ ਦੁਪਹਿਰ ਦੇ ਮੁਕਾਬਲੇ 47,147 ਵੱਧ ਹਨ। Burnaby South–Metrotown ਵਿੱਚ ਕੰਜ਼ਰਵੇਟਿਵ 64 ਵੋਟਾਂ ਨਾਲ, Ladysmith–Oceanside ਵਿੱਚ ਐਨ.ਡੀ.ਪੀ. 50 ਨਾਲ ਅਤੇ Kelowna Centre ਵਿੱਚ ਕੰਜ਼ਰਵੇਟਿਵ 43 ਨਾਲ ਅੱਗੇ ਹਨ। ਅੰਤਿਮ ਗਿਣਤੀ ਅਤੇ ਮੁੜ-ਗਿਣਤੀਆਂ ਜਾਰੀ ਹਨ; ਨਤੀਜੇ ਪ੍ਰਮਾਣਿਤ ਨਹੀਂ ਹੋਏ।",
+    pdf: "8 ਨਵੰਬਰ ਦੀ ਤਿੰਨ-ਸਫ਼ਿਆਂ ਦੀ ਰਿਪੋਰਟ: ਨਵੀਂ ਗਿਣਤੀ, ਫ਼ਰਕ ਘੱਟ ਵਾਲੇ ਹਲਕੇ, 2024 ਨਾਲ ਤੁਲਨਾ ਅਤੇ ਅੰਤਿਮ ਪ੍ਰਮਾਣੀਕਰਨ ਦੀ ਸਥਿਤੀ।",
+    excel: "8 ਨਵੰਬਰ ਦੀ ਅੱਪਡੇਟ ਕੀਤੀ ਐਕਸਲ ਫ਼ਾਈਲ: ਸਾਰੇ 93 ਹਲਕੇ, 2024 ਨਾਲ ਤੁਲਨਾ, ਖੇਤਰੀ ਰੁਝਾਨ ਅਤੇ ਗਿਣਤੀ ਦੇ ਬਦਲਾਅ।",
+    status: "ਇਸ ਭਾਗ ਦੇ ਨਤੀਜੇ 8 ਨਵੰਬਰ 2026, ਦੁਪਹਿਰ 12 ਵਜੇ (ਪੈਸਿਫਿਕ ਸਮਾਂ) ਤੱਕ ਆਰੰਭਕ ਅਤੇ ਅਪ੍ਰਮਾਣਿਤ ਹਨ।",
+  },
+  zh: {
+    snapshot: "卑诗选举局的最终计票仍在进行。2026 年 11 月 8 日太平洋时间中午 12 时的数据：卑诗新民主党获得 730,932 票（占有效票 37.58%，领先 27 个选区）；保守党获得 928,014 票（47.71%，领先 64 个选区）；卑诗绿党获得 216,808 票（11.15%，领先 2 个选区）。已计入统计的选票共 1,950,166 张，初步投票率 52.17%，比 11 月 7 日中午增加 47,147 张。Burnaby South–Metrotown 保守党领先 64 票；Ladysmith–Oceanside 新民主党领先 50 票；Kelowna Centre 保守党领先 43 票。最终计票及重新计票尚在进行，结果尚未正式认证。",
+    pdf: "11 月 8 日三页分析报告：最新计票、票差接近的选区、与 2024 年对比，以及正式认证状态。",
+    excel: "11 月 8 日更新的 Excel 工作簿：全部 93 个选区、2024 年对比、地区趋势和计票变化。",
+    status: "本栏目中的选区及得票数据截至 2026 年 11 月 8 日太平洋时间中午 12 时，仍为未经正式认证的初步结果。",
+  },
+  tl: {
+    snapshot: "Nagpapatuloy ang pinal na bilangan ng Elections BC. Noong Nobyembre 8, 2026, 12:00 ng tanghali, oras-Pasipiko: may 730,932 boto ang BC NDP (37.58% ng mga balidong boto; nangunguna sa 27 distrito), 928,014 ang Conservatives (47.71%; nangunguna sa 64), at 216,808 ang BC Greens (11.15%; nangunguna sa 2). May 1,950,166 balotang naisama sa bilang (paunang turnout na 52.17%), o 47,147 higit kaysa noong tanghali ng Nobyembre 7. Nangunguna ang Conservatives ng 64 boto sa Burnaby South–Metrotown; ang NDP ng 50 sa Ladysmith–Oceanside; at ang Conservatives ng 43 sa Kelowna Centre. Patuloy ang bilangan at mga muling pagbibilang; hindi pa sertipikado ang mga resulta.",
+    pdf: "Tatlong-pahinang pagsusuri noong Nobyembre 8: pinakahuling bilang, dikitang labanan, paghahambing sa 2024 at katayuan ng sertipikasyon.",
+    excel: "Na-update na workbook noong Nobyembre 8: lahat ng 93 distrito, paghahambing sa 2024, mga trend sa rehiyon at pagbabago sa bilang.",
+    status: "Pansamantala at hindi pa sertipikado ang datos ng mga distrito at boto sa seksyong ito noong Nobyembre 8, 2026, 12:00 ng tanghali, oras-Pasipiko.",
+  },
+} as const;
+
+const electionUpdateText = electionUpdate[electionLanguage];
 
 const PARTICIPATION_FORMS = [
   {
@@ -156,7 +212,7 @@ export default function AfterElection() {
                 {copy("Explore how the BC NDP, Conservatives and Greens performed in all 93 ridings compared with the certified 2024 election results. The report examines vote-share swings, regional patterns, riding leads and ballots counted.")}
               </p>
               <p className="mt-4 rounded-lg border-l-4 border-orange bg-[#fff6e9] px-5 py-4 text-sm leading-6 text-charcoal/80">
-                <strong>{copy("Preliminary snapshot:")}</strong>{" "}{copy("Elections BC final count in progress. Snapshot November 7, 2026 at 12:00 p.m. Pacific: BC NDP 709,096 votes (37.36%, leading in 27 ridings); Conservatives 910,259 (47.96%, leading in 64); and BC Greens 211,132 (11.12%, leading in 2). Burnaby South–Metrotown changed from an NDP lead of 27 votes on November 6 at 7:00 p.m. to a Conservative lead of 104 votes, a 131-vote margin reversal. An automatic recount is part of final count. Results remain uncertified and may change.")}
+                <strong>{copy("Preliminary snapshot:")}</strong>{" "}{electionUpdateText.snapshot}
               </p>
               <div className="mt-8 grid gap-4 sm:grid-cols-2">
                 <a href={electionPdfHref} target="_blank" rel="noopener noreferrer"
@@ -165,7 +221,7 @@ export default function AfterElection() {
                     <FileText className="h-6 w-6 shrink-0 text-orange" aria-hidden="true" />{" "}{copy("Summary report (PDF)")}
                   </span>
                   <span className="mt-3 text-sm leading-6 text-charcoal/75">
-                    {copy("Six-page analysis of the November 7 count, Burnaby South–Metrotown lead change, 2024 comparisons and close races.")}
+                    {electionUpdateText.pdf}
                   </span>
                   {showEnglishDownloadLabels && <span className="mt-2 text-sm text-charcoal/75">{copy("Available in English")}</span>}
                   <span className="mt-6 inline-flex items-center gap-2 font-semibold text-orange">{copy("View PDF")}{" "}<ExternalLink className="h-4 w-4" aria-hidden="true" /></span>
@@ -176,7 +232,7 @@ export default function AfterElection() {
                     <Download className="h-6 w-6 shrink-0 text-orange" aria-hidden="true" />{" "}{copy("Full riding analysis (Excel)")}
                   </span>
                   <span className="mt-3 text-sm leading-6 text-charcoal/75">
-                    {copy("Download the ten-sheet workbook covering all 93 ridings, 2024 comparisons, November 6-to-7 changes and historical snapshots.")}
+                    {electionUpdateText.excel}
                   </span>
                   {showEnglishDownloadLabels && <span className="mt-2 text-sm text-charcoal/75">{copy("Available in English")}</span>}
                   <span className="mt-6 inline-flex items-center gap-2 font-semibold text-orange">{copy("Download Excel")}{" "}<Download className="h-4 w-4" aria-hidden="true" /></span>
@@ -283,7 +339,7 @@ export default function AfterElection() {
         <section aria-label={copy("Sources and election results")} className="container py-10">
           <div className="mx-auto max-w-4xl text-sm leading-7 text-charcoal/65">
             <p>
-              <strong>{copy("Election status:")}</strong>{" "}{copy("Results described here are preliminary as of October 25, 2026.")}{" "}
+              <strong>{copy("Election status:")}</strong>{" "}{electionUpdateText.status}{" "}
               <a className="font-semibold text-orange underline" href="https://elections.bc.ca/2026-provincial-election/" target="_blank" rel="noopener noreferrer">
                 {copy("Elections BC official information")}
               </a>
