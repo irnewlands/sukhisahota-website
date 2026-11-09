@@ -97,7 +97,7 @@ const PARTICIPATION_FORMS = [
 
 function electionAssetFilename(path: string): string {
   const filename = path.split("?")[0].split("/").pop() || "election-report";
-  return filename.replace(/\\.b64$/, "");
+  return filename.replace(/\.b64$/, "");
 }
 
 async function openElectionAsset(path: string, mimeType: string, pdfTab?: Window | null) {
