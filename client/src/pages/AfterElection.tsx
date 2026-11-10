@@ -36,31 +36,31 @@ const electionExcelHref = `${electionDownloads[electionLanguage].excel}?v=202611
 
 const electionUpdate = {
   "en": {
-    "snapshot": "Final counting is complete in all 93 districts, but these results are still unofficial. Elections BC, November 8, 2026, 4:21 p.m. Pacific: BC NDP 730,939 votes (37.58% of valid votes; leading in 27 districts), Conservatives 928,019 (47.71%; leading in 64), and BC Greens 216,808 (11.15%; leading in 2). A total of 1,950,180 ballots were considered (provisional participation 52.17%). Since the noon count, nine districts had small numerical revisions and 14 more ballots were considered; no leading party changed. Burnaby South–Metrotown remains Conservative-led by 64 votes, Ladysmith–Oceanside NDP-led by 50 and Kelowna Centre Conservative-led by 43. Quality assurance is underway; formal results are expected by November 10.",
+    "snapshot": "Elections BC officially declared the results on November 9, 2026 (latest numerical snapshot: 2:37 p.m. Pacific). Conservatives: 64 elected, 928,027 votes (47.71%); BC NDP: 27 elected, 730,952 votes (37.58%); BC Greens: 2 elected, 216,808 votes (11.15%). A total of 1,950,193 ballots were considered, with preliminary turnout of 52.17%. Kelowna Centre (Conservative +43) and Ladysmith–Oceanside (NDP +50) are subject to automatic judicial recounts, with applications due November 16. Burnaby South–Metrotown (Conservative +64) and Cowichan Valley (Conservative +88) are also close. The declared 64–27–2 result may change following judicial recounts. The downloadable PDF and Excel below are archived November 8 versions pending regeneration.",
     "pdf": "Three-page analysis updated November 8 at 4:21 p.m., covering final counting, closest races, regional trends, and comparisons with certified 2024 results.",
     "excel": "Updated 93-district workbook with 2024 comparisons, regional analysis, historical snapshots and a new nine-district revision audit.",
     "status": "Final count complete across all 93 districts. Figures are unofficial as of November 8, 2026, 4:21 p.m. Pacific; quality assurance and formal declarations remain outstanding."
   },
   "fr": {
-    "snapshot": "Le décompte final est terminé dans les 93 circonscriptions, mais les résultats restent non officiels. Selon Élections BC le 8 novembre 2026 à 16 h 21 (heure du Pacifique) : NPD de la C.-B., 730 939 voix (37,58 % des suffrages valides; en tête dans 27 circonscriptions); conservateurs, 928 019 (47,71 %; en tête dans 64); Verts de la C.-B., 216 808 (11,15 %; en tête dans 2). Au total, 1 950 180 bulletins sont pris en compte (participation provisoire : 52,17 %). Depuis midi, neuf circonscriptions ont connu de petites corrections numériques et 14 bulletins supplémentaires ont été pris en compte; aucun parti en tête n'a changé. Les conservateurs mènent par 64 voix à Burnaby South–Metrotown; le NPD par 50 à Ladysmith–Oceanside; les conservateurs par 43 à Kelowna Centre. Les vérifications se poursuivent avant la déclaration officielle prévue au plus tard le 10 novembre.",
+    "snapshot": "Élections BC a officiellement déclaré les résultats le 9 novembre 2026 (dernier relevé numérique : 14 h 37, heure du Pacifique). Conservateurs : 64 élus, 928 027 voix (47,71 %); NPD de la C.-B. : 27 élus, 730 952 voix (37,58 %); Verts : 2 élus, 216 808 voix (11,15 %). Au total, 1 950 193 bulletins ont été pris en compte; participation provisoire : 52,17 %. Kelowna Centre (conservateurs +43) et Ladysmith–Oceanside (NPD +50) font l’objet de recomptages judiciaires automatiques, avec une date limite de demande fixée au 16 novembre. Burnaby South–Metrotown (conservateurs +64) et Cowichan Valley (conservateurs +88) restent serrées. La répartition déclarée de 64–27–2 pourrait changer. Les PDF et Excel téléchargeables ci-dessous sont des archives du 8 novembre en attente de mise à jour.",
     "pdf": "Analyse de trois pages actualisée le 8 novembre à 16 h 21 : fin du décompte, courses serrées, tendances régionales et comparaison avec 2024.",
     "excel": "Classeur des 93 circonscriptions, comparaisons avec 2024, tendances régionales, anciens relevés et audit des neuf corrections.",
     "status": "Décompte final terminé dans les 93 circonscriptions. Données non officielles au 8 novembre 2026 à 16 h 21 (heure du Pacifique), en attente des vérifications et déclarations."
   },
   "pa": {
-    "snapshot": "ਸਾਰੇ 93 ਹਲਕਿਆਂ ਦੀ ਅੰਤਿਮ ਗਿਣਤੀ ਪੂਰੀ ਹੋ ਗਈ ਹੈ, ਪਰ ਨਤੀਜੇ ਅਜੇ ਅਧਿਕਾਰਤ ਨਹੀਂ ਹਨ। ਇਲੈਕਸ਼ਨਜ਼ ਬੀ.ਸੀ. ਦੇ 8 ਨਵੰਬਰ 2026, ਸ਼ਾਮ 4:21 ਵਜੇ (ਪੈਸਿਫਿਕ ਸਮਾਂ) ਦੇ ਅੰਕੜੇ: ਬੀ.ਸੀ. ਐਨ.ਡੀ.ਪੀ. 730,939 ਵੋਟਾਂ (37.58%; 27 ਹਲਕਿਆਂ ਵਿੱਚ ਅੱਗੇ), ਕੰਜ਼ਰਵੇਟਿਵ 928,019 (47.71%; 64 ਵਿੱਚ ਅੱਗੇ) ਅਤੇ ਬੀ.ਸੀ. ਗ੍ਰੀਨ 216,808 (11.15%; 2 ਵਿੱਚ ਅੱਗੇ)। ਕੁੱਲ 1,950,180 ਬੈਲਟ ਸ਼ਾਮਲ ਹਨ ਅਤੇ ਆਰੰਭਕ ਮਤਦਾਨ ਦਰ 52.17% ਹੈ। ਦੁਪਹਿਰ ਤੋਂ ਬਾਅਦ ਨੌਂ ਹਲਕਿਆਂ ਦੇ ਅੰਕੜਿਆਂ ਵਿੱਚ ਛੋਟੀਆਂ ਸੋਧਾਂ ਹੋਈਆਂ ਅਤੇ 14 ਹੋਰ ਬੈਲਟ ਸ਼ਾਮਲ ਹੋਏ; ਕਿਸੇ ਹਲਕੇ ਦੀ ਮੋਹਰੀ ਪਾਰਟੀ ਨਹੀਂ ਬਦਲੀ। Burnaby South–Metrotown ਵਿੱਚ ਕੰਜ਼ਰਵੇਟਿਵ 64 ਵੋਟਾਂ, Ladysmith–Oceanside ਵਿੱਚ ਐਨ.ਡੀ.ਪੀ. 50 ਅਤੇ Kelowna Centre ਵਿੱਚ ਕੰਜ਼ਰਵੇਟਿਵ 43 ਵੋਟਾਂ ਨਾਲ ਅੱਗੇ ਹਨ। ਜਾਂਚ ਜਾਰੀ ਹੈ; ਅਧਿਕਾਰਤ ਐਲਾਨ 10 ਨਵੰਬਰ ਤੱਕ ਸੰਭਾਵਿਤ ਹੈ।",
+    "snapshot": "ਇਲੈਕਸ਼ਨਜ਼ ਬੀ.ਸੀ. ਨੇ 9 ਨਵੰਬਰ 2026 ਨੂੰ ਨਤੀਜਿਆਂ ਦਾ ਅਧਿਕਾਰਤ ਐਲਾਨ ਕੀਤਾ (ਆਖਰੀ ਅੰਕੜੇ: ਦੁਪਹਿਰ 2:37 ਵਜੇ ਪੈਸਿਫਿਕ ਸਮਾਂ)। ਕੰਜ਼ਰਵੇਟਿਵ: 64 ਜੇਤੂ, 928,027 ਵੋਟਾਂ (47.71%); ਬੀ.ਸੀ. ਐਨ.ਡੀ.ਪੀ.: 27 ਜੇਤੂ, 730,952 (37.58%); ਗ੍ਰੀਨ: 2 ਜੇਤੂ, 216,808 (11.15%)। ਕੁੱਲ 1,950,193 ਬੈਲਟ ਗਿਣੇ ਗਏ; ਆਰੰਭਕ ਮਤਦਾਨ ਦਰ 52.17%। Kelowna Centre (ਕੰਜ਼ਰਵੇਟਿਵ +43) ਅਤੇ Ladysmith–Oceanside (ਐਨ.ਡੀ.ਪੀ. +50) ਵਿੱਚ ਲਾਜ਼ਮੀ ਅਦਾਲਤੀ ਮੁੜ-ਗਿਣਤੀ ਹੋਵੇਗੀ; ਅਰਜ਼ੀਆਂ ਦੀ ਆਖਰੀ ਮਿਤੀ 16 ਨਵੰਬਰ ਹੈ। Burnaby South–Metrotown (+64 ਕੰਜ਼ਰਵੇਟਿਵ) ਅਤੇ Cowichan Valley (+88 ਕੰਜ਼ਰਵੇਟਿਵ) ਵੀ ਕਰੀਬੀ ਹਨ। ਮੁੜ-ਗਿਣਤੀ ਤੋਂ ਬਾਅਦ 64–27–2 ਨਤੀਜਾ ਬਦਲ ਸਕਦਾ ਹੈ। ਹੇਠਲੇ PDF ਅਤੇ Excel 8 ਨਵੰਬਰ ਦੇ ਪੁਰਾਣੇ ਸੰਸਕਰਣ ਹਨ।",
     "pdf": "8 ਨਵੰਬਰ ਸ਼ਾਮ 4:21 ਵਜੇ ਦੀ ਤਿੰਨ-ਸਫ਼ਿਆਂ ਦੀ ਰਿਪੋਰਟ: ਅੰਤਿਮ ਗਿਣਤੀ, ਫ਼ਰਕ ਘੱਟ ਵਾਲੇ ਹਲਕੇ, ਖੇਤਰੀ ਰੁਝਾਨ ਅਤੇ 2024 ਨਾਲ ਤੁਲਨਾ।",
     "excel": "93 ਹਲਕਿਆਂ ਦੀ ਐਕਸਲ ਵਰਕਬੁੱਕ: 2024 ਨਾਲ ਤੁਲਨਾ, ਖੇਤਰੀ ਵਿਸ਼ਲੇਸ਼ਣ, ਪੁਰਾਣੇ ਅੰਕੜੇ ਅਤੇ ਨੌਂ ਹਲਕਿਆਂ ਦੀਆਂ ਸੋਧਾਂ ਦੀ ਸੂਚੀ।",
     "status": "93 ਹਲਕਿਆਂ ਦੀ ਅੰਤਿਮ ਗਿਣਤੀ ਮੁਕੰਮਲ। 8 ਨਵੰਬਰ 2026, ਸ਼ਾਮ 4:21 ਵਜੇ ਤੱਕ ਨਤੀਜੇ ਗੈਰ-ਅਧਿਕਾਰਤ ਹਨ; ਜਾਂਚ ਅਤੇ ਐਲਾਨ ਬਾਕੀ ਹਨ।"
   },
   "zh": {
-    "snapshot": "全部 93 个选区的最终计票已经完成，但结果尚未正式宣布。卑诗选举局截至 2026 年 11 月 8 日下午 4:21（太平洋时间）的数据：卑诗新民主党 730,939 票（37.58%；领先 27 个选区）；保守党 928,019 票（47.71%；领先 64 个选区）；卑诗绿党 216,808 票（11.15%；领先 2 个选区）。已计入选票共 1,950,180 张，初步投票率为 52.17%。与中午相比，9 个选区的数字略有修正，计入选票增加 14 张，没有选区的领先政党改变。Burnaby South–Metrotown 保守党领先 64 票，Ladysmith–Oceanside 新民主党领先 50 票，Kelowna Centre 保守党领先 43 票。选举局正在进行质量核查，预计最迟于 11 月 10 日正式宣布结果。",
+    "snapshot": "卑诗选举局于2026年11月9日正式宣布选举结果（最新数字时间：太平洋时间下午2:37）。保守党当选64席，928,027票（47.71%）；卑诗新民主党当选27席，730,952票（37.58%）；绿党当选2席，216,808票（11.15%）。计入选票1,950,193张，初步投票率52.17%。Kelowna Centre（保守党领先43票）及Ladysmith–Oceanside（新民主党领先50票）须进行自动司法重新计票，申请截止11月16日。Burnaby South–Metrotown（保守党领先64票）和Cowichan Valley（保守党领先88票）也很接近。已宣布的64–27–2席位分布可能因重新计票而改变。下方PDF和Excel仍是11月8日的存档版本，等待更新。",
     "pdf": "11 月 8 日下午 4:21 更新的三页分析：最终计票、票差较小的选区、地区趋势及与 2024 年的比较。",
     "excel": "涵盖全部 93 个选区的工作簿：2024 年比较、地区分析、历史数据及 9 个选区的修正记录。",
     "status": "全部 93 个选区的最终计票已完成。数据截至 2026 年 11 月 8 日下午 4:21（太平洋时间），仍属非正式结果，等待核查和正式宣布。"
   },
   "tl": {
-    "snapshot": "Tapos na ang pinal na bilangan sa lahat ng 93 distrito, ngunit hindi pa opisyal ang mga resulta. Ayon sa Elections BC noong Nobyembre 8, 2026, 4:21 n.h. oras-Pasipiko: 730,939 boto ang BC NDP (37.58% ng mga balidong boto; nangunguna sa 27 distrito), 928,019 ang Conservatives (47.71%; nangunguna sa 64), at 216,808 ang BC Greens (11.15%; nangunguna sa 2). May 1,950,180 balotang naisama sa bilang, at 52.17% ang paunang turnout. Mula noong tanghali, may maliliit na pagwawasto sa siyam na distrito at 14 pang balotang naisama; walang nagbago sa nangungunang partido. Nangunguna ang Conservatives ng 64 boto sa Burnaby South–Metrotown, ang NDP ng 50 sa Ladysmith–Oceanside, at ang Conservatives ng 43 sa Kelowna Centre. Isinasagawa pa ang pagsusuri bago ang pormal na deklarasyong inaasahan bago o sa Nobyembre 10.",
+    "snapshot": "Opisyal nang idineklara ng Elections BC ang mga resulta noong Nobyembre 9, 2026 (pinakahuling tala: 2:37 n.h., oras-Pasipiko). Conservatives: 64 nahalal, 928,027 boto (47.71%); BC NDP: 27 nahalal, 730,952 (37.58%); BC Greens: 2 nahalal, 216,808 (11.15%). May 1,950,193 balotang isinaalang-alang at 52.17% ang paunang turnout. Ang Kelowna Centre (Conservative +43) at Ladysmith–Oceanside (NDP +50) ay sasailalim sa awtomatikong judicial recount; Nobyembre 16 ang takdang araw ng aplikasyon. Dikit din ang Burnaby South–Metrotown (Conservative +64) at Cowichan Valley (Conservative +88). Maaaring magbago ang idineklarang 64–27–2 matapos ang recount. Ang PDF at Excel sa ibaba ay naka-archive na bersyon ng Nobyembre 8 habang hinihintay ang pag-update.",
     "pdf": "Tatlong-pahinang pagsusuri na na-update noong Nobyembre 8, 4:21 n.h.: pinal na bilangan, dikitang labanan, rehiyonal na trend at paghahambing sa 2024.",
     "excel": "Workbook para sa 93 distrito, paghahambing sa 2024, rehiyonal na pagsusuri, mga dating talaan at audit ng siyam na pagwawasto.",
     "status": "Tapos na ang pinal na bilangan sa 93 distrito. Hindi pa opisyal ang datos noong Nobyembre 8, 2026, 4:21 n.h. oras-Pasipiko; hinihintay ang pagsusuri at pormal na deklarasyon."
@@ -191,7 +191,7 @@ export default function AfterElection() {
               {copy("But disappointment alone gets us nowhere. If we care about this movement, we have to be willing to ask difficult questions, listen to uncomfortable answers, and learn from what happened.")}
             </p>
             <p>
-              {copy("The initial count points to a substantial defeat, and David Eby has announced that he will step down as party leader. At the time of writing, these electoral results are still preliminary: Elections BC has scheduled its final count for November 6–10. That distinction matters, even as the wider political consequences become clear.")}
+              {copy("The October 24 election resulted in a substantial defeat, and David Eby has announced that he will step down as party leader. Elections BC declared the election results on November 9, with judicial recounts outstanding in Kelowna Centre and Ladysmith–Oceanside.")}
             </p>
 
             <h2 className="pt-6 font-serif text-3xl font-bold leading-tight text-charcoal md:text-4xl">
@@ -241,13 +241,13 @@ export default function AfterElection() {
             <div className="mx-auto max-w-4xl">
               <p className="mb-4 text-xs font-bold uppercase tracking-[0.18em] text-orange">{copy("2026 election results")}</p>
               <h2 id="election-analysis-heading" className="font-serif text-3xl font-bold leading-tight text-charcoal md:text-4xl">
-                {copy("Preliminary riding-by-riding analysis")}
+                {copy("Riding-by-riding election analysis")}
               </h2>
               <p className="mt-5 max-w-3xl text-lg leading-8 text-charcoal/80">
                 {copy("Explore how the BC NDP, Conservatives and Greens performed in all 93 ridings compared with the certified 2024 election results. The report examines vote-share swings, regional patterns, riding leads and ballots counted.")}
               </p>
               <p className="mt-4 rounded-lg border-l-4 border-orange bg-[#fff6e9] px-5 py-4 text-sm leading-6 text-charcoal/80">
-                <strong>{copy("Preliminary snapshot:")}</strong>{" "}{electionUpdateText.snapshot}
+                <strong>{copy("Official declaration, November 9:")}</strong>{" "}{electionUpdateText.snapshot}
               </p>
               <div className="mt-8 grid gap-4 sm:grid-cols-2">
                 <a href={electionPdfHref} target="_blank" rel="noopener noreferrer" onClick={(event) => { event.preventDefault(); const tab = window.open("", "_blank"); void openElectionAsset(electionPdfHref, "application/pdf", tab); }}
