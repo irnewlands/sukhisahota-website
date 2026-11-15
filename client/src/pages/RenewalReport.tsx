@@ -117,6 +117,26 @@ export default function RenewalReport() {
               </p>
             </article>
           </div>
+          <div className="mt-8 flex flex-col gap-5 rounded-3xl border border-[#e85d04]/30 bg-[#fff7ed] p-8 shadow-sm md:flex-row md:items-center md:justify-between">
+            <div className="max-w-2xl">
+              <p className="mb-2 text-xs font-bold uppercase tracking-[0.18em] text-[#b84a00]">
+                {copy("Full report · PDF · 21 pages")}
+              </p>
+              <h3 className="mb-2 font-serif text-2xl font-bold">
+                {copy("NDP Review and Renewal Report - Campaign 2025")}
+              </h3>
+              <p className="leading-7 text-[#4b5563]">
+                {copy("Read the complete review and renewal report, including its findings on EDA capacity, candidate nominations, fundraising, campaign messaging, and party governance.")}
+              </p>
+            </div>
+            <a
+              href="/docs/ndp-review-and-renewal-report-campaign-2025.pdf"
+              download="NDP Review and Renewal Report - Campaign 2025.pdf"
+              className="inline-flex shrink-0 items-center justify-center gap-3 rounded-2xl bg-[#111827] px-6 py-4 font-bold text-white transition hover:bg-[#374151] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#e85d04]"
+            >
+              {copy("Download PDF")} <span aria-hidden="true">↓</span>
+            </a>
+          </div>
         </section>
 
         <section>
