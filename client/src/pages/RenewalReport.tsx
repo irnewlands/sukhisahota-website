@@ -78,6 +78,47 @@ export default function RenewalReport() {
           </aside>
         </div>
 
+        <section aria-labelledby="taman-review-heading" className="mb-16 border-t border-[#d7c6b6] pt-12">
+          <div className="mb-8 max-w-4xl">
+            <p className="mb-3 text-sm font-bold uppercase tracking-[0.2em] text-[#b84a00]">
+              {copy("Lessons from the federal NDP review")}
+            </p>
+            <h2 id="taman-review-heading" className="mb-5 font-serif text-4xl font-bold">
+              {copy("Three findings from Emilie Taman’s review")}
+            </h2>
+            <p className="text-lg leading-8 text-[#4b5563]">
+              {copy("Emilie Taman’s review of the 2025 federal election offers important lessons for NDP renewal. These are findings from the review, distinct from my own proposals below.")}
+            </p>
+          </div>
+
+          <div className="grid gap-6 md:grid-cols-3">
+            <article className="rounded-3xl bg-white p-8 shadow-lg">
+              <h3 className="mb-4 font-serif text-2xl font-bold">
+                {copy("Rebuild from the grassroots")}
+              </h3>
+              <p className="leading-7 text-[#4b5563]">
+                {copy("The NDP cannot rebuild through national leadership or central campaign operations alone. Strong local electoral district associations (EDAs) and sustained community organizing are essential.")}
+              </p>
+            </article>
+            <article className="rounded-3xl bg-white p-8 shadow-lg">
+              <h3 className="mb-4 font-serif text-2xl font-bold">
+                {copy("Improve nominations and EDA governance")}
+              </h3>
+              <p className="leading-7 text-[#4b5563]">
+                {copy("The review identifies delayed candidate nominations, opaque processes, and insufficient local support as problems. It does not, however, explicitly recommend giving EDAs unrestricted authority over candidate approval.")}
+              </p>
+            </article>
+            <article className="rounded-3xl bg-white p-8 shadow-lg">
+              <h3 className="mb-4 font-serif text-2xl font-bold">
+                {copy("Stay progressive and organize to win")}
+              </h3>
+              <p className="leading-7 text-[#4b5563]">
+                {copy("Electoral renewal need not mean abandoning progressive principles or moving toward the political centre. The review points instead to stronger grassroots organizing and bold, positive political messaging.")}
+              </p>
+            </article>
+          </div>
+        </section>
+
         <section>
           <h2 className="mb-8 font-serif text-4xl font-bold">
             {copy("Renewal priorities")}
