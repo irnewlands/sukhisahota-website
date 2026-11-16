@@ -29,7 +29,7 @@ const electionDownloads = {
 
 const electionLanguage = isFrench ? "fr" : isPunjabi ? "pa" : isChinese ? "zh" : isTagalog ? "tl" : "en";
 const { pdf: electionPdfPath, excel: electionExcelHref } = electionDownloads[electionLanguage];
-const electionPdfHref = electionLanguage === "en" ? `${electionPdfPath}?v=tagged-20261115` : electionPdfPath;
+const electionPdfHref = electionLanguage === "en" ? `${electionPdfPath}?v=restored-20261115` : electionPdfPath;
 
 const electionUpdate = {
   "en": {

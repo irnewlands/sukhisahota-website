@@ -51,14 +51,13 @@ four-page PDF lacked a structure tree and marked-document metadata. Its raw
 text included all three party cards, but the viewer was left to infer the
 reading order from the layout.
 
-The English PDF now has an explicit logical structure: heading levels, complete
-party/metric groups, four tables with column and row headers, and five tagged
-links. Repeated headers/footers and decorative drawings are marked as artifacts.
-The script `scripts/tag-election-pdf.py` is guarded by the original PDF hash.
-All four pages were rendered before and after the repair and compared pixel
-for pixel; all renderings matched. Extracted text also matches exactly.
+An attempted repair added a logical structure and passed structural and visual
+checks, but the user's real NVDA retest failed: the viewer announced only
+"graphic Page rendition". The attempt was withdrawn and the pre-repair English
+PDF was restored. The repair remains in Git history for diagnosis; its script
+has been removed from the current tree. Do not treat this PDF as screen-reader
+verified or PDF/UA compliant.
 
-The English download link includes a version query to request the repaired
-file. Real NVDA retesting of that file is pending. This repair does not establish
-PDF/UA compliance. Other language PDFs, the NDP renewal report and workbook
-accessibility have not been remediated by this targeted repair.
+A full semantic HTML version is being provided as the primary alternative.
+Other language PDFs, the NDP renewal report and workbook accessibility remain
+outside this targeted repair.
