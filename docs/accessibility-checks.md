@@ -12,7 +12,7 @@ To undo this accessibility release, revert its commit on `main` and push the rev
 - Persistent, associated first-name, last-name and email labels, with translated required-field indicators in English, French, Punjabi, Simplified Chinese and Tagalog.
 - A translated first-tab skip link and one focusable `main-content` target on every page, including error pages.
 - A dark-and-white keyboard focus indicator, scroll clearance beneath headers, immediate visibility of focused reveal sections, and reduced-motion handling for reveal effects.
-- Signup feedback exposed as a polite status message. The former timer-based assertion of success now asks visitors to check for a subscription confirmation; it does not verify provider acceptance.
+- Signup feedback uses a polite status message for sending and provider-confirmed acceptance, and an alert for errors. The original timer and hidden response frame have been removed; see the MailerLite follow-up below.
 
 ## Verified locally
 
@@ -30,7 +30,7 @@ To undo this accessibility release, revert its commit on `main` and push the rev
 These are not claimed as passed:
 
 - NVDA scenarios beyond the user-confirmed results below, including signup-success announcements; VoiceOver on Apple devices.
-- A real signup with a consenting test recipient, including MailerLite acceptance, confirmation email and delivery failures. No real subscriber was added during these checks.
+- A real signup with a consenting test recipient, including MailerLite acceptance and subsequent email delivery. Double opt-in is currently off, so a confirmation email is not promised. No real subscriber was added during these checks.
 - Actual Google Forms submission and confirmation; password-protected questionnaire flows with test credentials.
 - PDF tags, reading order and table accessibility; spreadsheet reading order and navigation.
 - Actual 200%/400% browser zoom and text-spacing testing on the target devices. Browser zoom shortcuts did not alter the cloud test viewport, so this was not treated as a passing zoom test.
@@ -120,3 +120,35 @@ The password-protected rental and career questionnaires, mobile VoiceOver,
 colour contrast and actual zoom behaviour within Google Forms were not covered
 by these user-assisted checks. Do not describe all forms as fully accessible
 or WCAG certified on this basis.
+
+## MailerLite signup feedback follow-up
+
+The selected embedded form is `190139921541891187`, shared by the homepage
+and Get Involved signup component. MailerLite reports double opt-in disabled.
+The user confirmed that its hosted version announces required/invalid states
+when returning to fields and automatically announces a malformed-email error,
+but does not automatically announce empty-form errors. Its hosted accessible
+names include `name` and `last_name`. That hosted form was not modified here.
+
+The website component now posts to the same public MailerLite form endpoint
+using a readable CORS response. A real empty request confirmed both
+`Access-Control-Allow-Origin: *` and the HTTP-200 validation response
+`success: false` with `errors.fields.email`. It added no subscriber.
+The component requires both a successful HTTP status and boolean
+`success: true` before showing acceptance or clearing the fields.
+HTTP failures, validation rejection, invalid JSON, network failures and
+15-second timeouts retain entries and display an error alert. Sending and
+acceptance use a persistent polite live region. The submit button remains
+focusable with `aria-disabled` while pending; an in-flight guard prevents
+duplicate submissions and fields are temporarily read-only. It makes no
+confirmation-email promise. Feedback is translated into all five site languages.
+
+Regression tests cover explicit acceptance, a response delayed beyond the old
+800-ms timer, the real validation-error shape, ambiguous/malformed/error
+responses, network/abort failures and the actual timeout. Local browser checks
+with simulated provider responses verify pending status, acceptance/reset,
+error/retained entries, and focus remaining on the submit button. These
+simulations do not establish a successful real subscription or prove that NVDA
+announces the new asynchronous feedback; those require a consenting test signup
+and a user-assisted screen-reader retest. TypeScript and production build checks
+are also required for this release.

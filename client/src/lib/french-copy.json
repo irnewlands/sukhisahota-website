@@ -850,5 +850,8 @@
   "Download PDF": "Télécharger le PDF",
   "Skip to main content": "Aller au contenu principal",
   "(required)": "(obligatoire)",
-  "Please check your inbox for a subscription confirmation. If nothing arrives, try again or email info@sukhisahota.ca.": "Veuillez vérifier votre boîte de réception pour confirmer votre inscription. Si vous ne recevez rien, réessayez ou écrivez à info@sukhisahota.ca."
+  "Thank you! Your signup has been accepted.": "Merci ! Votre demande d’inscription a été acceptée.",
+  "Please check your first name, last name and email address, then try again. Your details have been kept.": "Veuillez vérifier votre prénom, votre nom et votre adresse courriel, puis réessayer. Vos renseignements ont été conservés dans le formulaire.",
+  "Your signup could not be accepted. Please check your details and try again, or email info@sukhisahota.ca. Your details have been kept.": "Votre demande d’inscription n’a pas pu être acceptée. Vérifiez vos renseignements et réessayez, ou écrivez à info@sukhisahota.ca. Vos renseignements ont été conservés dans le formulaire.",
+  "We could not confirm your signup. Your details have been kept. Please try again, or email info@sukhisahota.ca for help.": "Nous n’avons pas pu confirmer votre inscription. Vos renseignements ont été conservés dans le formulaire. Réessayez ou écrivez à info@sukhisahota.ca pour obtenir de l’aide."
 }

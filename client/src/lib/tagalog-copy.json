@@ -916,5 +916,8 @@
   "Download PDF": "I-download ang PDF",
   "Skip to main content": "Lumaktaw sa pangunahing nilalaman",
   "(required)": "(kailangan)",
-  "Please check your inbox for a subscription confirmation. If nothing arrives, try again or email info@sukhisahota.ca.": "Tingnan ang iyong inbox para sa kumpirmasyon ng subscription. Kung walang dumating, subukan muli o mag-email sa info@sukhisahota.ca."
+  "Thank you! Your signup has been accepted.": "Salamat! Tinanggap ang iyong kahilingang mag-sign up.",
+  "Please check your first name, last name and email address, then try again. Your details have been kept.": "Pakisuri ang iyong unang pangalan, apelyido at email address, pagkatapos ay subukang muli. Nananatili sa form ang iyong mga detalye.",
+  "Your signup could not be accepted. Please check your details and try again, or email info@sukhisahota.ca. Your details have been kept.": "Hindi matanggap ang iyong kahilingang mag-sign up. Pakisuri ang iyong mga detalye at subukang muli, o mag-email sa info@sukhisahota.ca. Nananatili sa form ang iyong mga detalye.",
+  "We could not confirm your signup. Your details have been kept. Please try again, or email info@sukhisahota.ca for help.": "Hindi namin makumpirma ang iyong pag-sign up. Nananatili sa form ang iyong mga detalye. Pakisubukang muli, o mag-email sa info@sukhisahota.ca para sa tulong."
 }

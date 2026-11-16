@@ -916,5 +916,8 @@
   "Download PDF": "下载 PDF",
   "Skip to main content": "跳至主要内容",
   "(required)": "（必填）",
-  "Please check your inbox for a subscription confirmation. If nothing arrives, try again or email info@sukhisahota.ca.": "请查看收件箱中的订阅确认邮件。如果没有收到，请重试或发送邮件至 info@sukhisahota.ca。"
+  "Thank you! Your signup has been accepted.": "谢谢！您的订阅申请已被接受。",
+  "Please check your first name, last name and email address, then try again. Your details have been kept.": "请检查您的名字、姓氏和电子邮件地址，然后重试。您填写的内容已保留在表单中。",
+  "Your signup could not be accepted. Please check your details and try again, or email info@sukhisahota.ca. Your details have been kept.": "您的订阅申请未能被接受。请检查填写的内容后重试，或发送邮件至 info@sukhisahota.ca。您填写的内容已保留在表单中。",
+  "We could not confirm your signup. Your details have been kept. Please try again, or email info@sukhisahota.ca for help.": "我们无法确认您的订阅申请。您填写的内容已保留在表单中。请重试，或发送邮件至 info@sukhisahota.ca 寻求帮助。"
 }
