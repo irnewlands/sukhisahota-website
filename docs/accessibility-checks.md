@@ -29,8 +29,8 @@ To undo this accessibility release, revert its commit on `main` and push the rev
 
 These are not claimed as passed:
 
-- NVDA scenarios beyond the user-confirmed results below, including signup-success announcements; VoiceOver on Apple devices.
-- A real signup with a consenting test recipient, including MailerLite acceptance and subsequent email delivery. Double opt-in is currently off, so a confirmation email is not promised. No real subscriber was added during these checks.
+- NVDA scenarios beyond the user-confirmed results below, including asynchronous signup-error announcements; VoiceOver on Apple devices.
+- Subsequent newsletter delivery after signup. The user confirmed real website signup acceptance and its NVDA announcement below. Double opt-in is currently off, so a confirmation email is not promised.
 - Actual Google Forms submission and confirmation; password-protected questionnaire flows with test credentials.
 - PDF tags, reading order and table accessibility; spreadsheet reading order and navigation.
 - Actual 200%/400% browser zoom and text-spacing testing on the target devices. Browser zoom shortcuts did not alter the cloud test viewport, so this was not treated as a passing zoom test.
@@ -148,7 +148,22 @@ Regression tests cover explicit acceptance, a response delayed beyond the old
 responses, network/abort failures and the actual timeout. Local browser checks
 with simulated provider responses verify pending status, acceptance/reset,
 error/retained entries, and focus remaining on the submit button. These
-simulations do not establish a successful real subscription or prove that NVDA
-announces the new asynchronous feedback; those require a consenting test signup
-and a user-assisted screen-reader retest. TypeScript and production build checks
-are also required for this release.
+simulations alone do not establish a successful real subscription or prove that
+NVDA announces the new asynchronous feedback. TypeScript, all six regression
+tests and the production build passed for this release.
+
+### Confirmed real-signup NVDA retest
+
+Following publication, the user completed the real-signup test in Chrome with
+NVDA and confirmed that the acceptance message was announced automatically and
+the fields cleared. The website shows this message only after MailerLite returns
+an HTTP-success response with boolean `success: true`. Record this as a passed
+user-assisted signup-acceptance announcement and field-reset check.
+
+This confirmation does not establish that a new subscriber record was created
+rather than an existing address being accepted, or that subsequent newsletters
+will be delivered. No subscriber address was collected in this conversation.
+The new asynchronous error announcement and retention of entries have been
+tested with simulated responses but still need a user-assisted NVDA retest.
+The separately hosted MailerLite form's empty-error announcement and field-name
+issues remain unresolved.
