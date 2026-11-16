@@ -64,7 +64,19 @@ sections, three party summaries in sequence, all four data tables with native
 row/column headers, and source links. The election page links to it in all five
 languages, explicitly identifying the report as English. The dated snapshot
 and all table values are preserved. Browser semantic checks and source-value
-comparisons are separate from the pending real NVDA test. When refreshing the
+comparisons are separate from user-assisted screen-reader testing. When refreshing the
 dated report, refresh this web version alongside the PDF and workbook.
 Other language PDFs, the NDP renewal report and workbook accessibility remain
 outside this targeted repair.
+
+
+## Confirmed web-report NVDA retest
+
+The user subsequently confirmed that NVDA reads all three party summaries,
+including their elected-seat and vote totals, in the web report. The user also
+confirmed that the Provincial vote shares table supports cell navigation with
+Ctrl+Alt+Arrow keys and announces the relevant row/column headings alongside
+the figures. These specific English-web-report checks passed in the user's
+Windows/Chrome/NVDA environment. They do not certify every table, locale,
+external form, PDF or spreadsheet, or establish site-wide WCAG conformance.
+The restored PDF's screen-reader accessibility remains unresolved.
