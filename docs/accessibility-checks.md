@@ -80,3 +80,32 @@ the figures. These specific English-web-report checks passed in the user's
 Windows/Chrome/NVDA environment. They do not certify every table, locale,
 external form, PDF or spreadsheet, or establish site-wide WCAG conformance.
 The restored PDF's screen-reader accessibility remains unresolved.
+
+
+## User-assisted Google Forms checks
+
+The Independent BC NDP Member Survey was tested by the user with NVDA in
+Chrome on Windows. The user confirmed:
+
+- The consent checkbox announces its checked state, and Next moves to the
+  Background and involvement section with clear context.
+- Answer controls on that page were checked through Question 4; multiple-choice
+  options and selection state were announced.
+- A long-answer field can be identified, edited and read after returning to it.
+- Forward navigation remains clear through the remaining sections to the final
+  page, including a Back/Next navigation check.
+
+The required-consent validation is a partial pass: it blocks progression and
+shows an error; NVDA reads "This is a required question" when the user navigates
+to the message, but the user did not hear the error announced automatically.
+Do not mark automatic error announcements as passed.
+
+The user was instructed to leave the survey unsubmitted. Submission,
+confirmation and email delivery have not been verified. No form wording or
+settings were changed during this review.
+
+The listening-conversation and general help-request forms were inspected for
+labels and native question controls, but their user-assisted NVDA tests remain
+pending. The listening form currently repeats contact collection: one combined
+email/telephone question followed by separate email and phone questions. That
+is a usability cleanup recommendation, not a confirmed screen-reader failure.
