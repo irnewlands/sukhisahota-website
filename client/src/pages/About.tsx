@@ -7,9 +7,9 @@ export default function About() {
     <>
       <SiteHeader />
 
-      <main className="min-h-screen bg-[#f8f1e7] text-[#111827]">
+      <main id="main-content" tabIndex={-1} className="min-h-screen bg-[#f8f1e7] text-[#111827]">
         <section className="mx-auto max-w-5xl px-6 py-20">
-          <p className="mb-4 text-sm font-bold uppercase tracking-[0.25em] text-[#e85d04]">
+          <p className="mb-4 text-sm font-bold uppercase tracking-[0.25em] text-orange">
             {copy("About Sukhi")}
           </p>
 

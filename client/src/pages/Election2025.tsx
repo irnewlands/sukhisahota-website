@@ -6,9 +6,9 @@ export default function Election2025() {
     <>
      <SiteHeader />
 
-    <main className="min-h-screen bg-[#f8f1e7] text-[#111827]">
+    <main id="main-content" tabIndex={-1} className="min-h-screen bg-[#f8f1e7] text-[#111827]">
       <section className="mx-auto max-w-5xl px-6 py-20">
-        <p className="mb-4 text-sm font-bold uppercase tracking-[0.25em] text-[#e85d04]">
+        <p className="mb-4 text-sm font-bold uppercase tracking-[0.25em] text-orange">
           {copy("Election 2025")}
         </p>
 
@@ -66,7 +66,7 @@ export default function Election2025() {
 
         <section className="mt-16 grid gap-6 md:grid-cols-3">
           <div className="rounded-3xl bg-white p-6 shadow-lg">
-            <p className="mb-2 text-sm font-bold uppercase tracking-widest text-[#e85d04]">
+            <p className="mb-2 text-sm font-bold uppercase tracking-widest text-orange">
               {copy("Campaign")}
             </p>
             <h3 className="font-serif text-3xl font-bold">{copy("5 weeks")}</h3>
@@ -76,7 +76,7 @@ export default function Election2025() {
           </div>
 
           <div className="rounded-3xl bg-white p-6 shadow-lg">
-            <p className="mb-2 text-sm font-bold uppercase tracking-widest text-[#e85d04]">
+            <p className="mb-2 text-sm font-bold uppercase tracking-widest text-orange">
               {copy("Volunteers")}
             </p>
             <h3 className="font-serif text-3xl font-bold">{copy("Under 10")}</h3>
@@ -86,7 +86,7 @@ export default function Election2025() {
           </div>
 
           <div className="rounded-3xl bg-white p-6 shadow-lg">
-            <p className="mb-2 text-sm font-bold uppercase tracking-widest text-[#e85d04]">
+            <p className="mb-2 text-sm font-bold uppercase tracking-widest text-orange">
               {copy("Lesson")}
             </p>
             <h3 className="font-serif text-3xl font-bold">{copy("Organize early")}</h3>

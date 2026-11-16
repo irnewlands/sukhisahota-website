@@ -103,7 +103,7 @@ export default function AfterElection() {
   return (
     <>
       <SiteHeader />
-      <main className="min-h-screen bg-cream text-charcoal">
+      <main id="main-content" tabIndex={-1} className="min-h-screen bg-cream text-charcoal">
         <header className="relative overflow-hidden border-b border-orange/20 bg-[#f8f1e7]">
           <div className="pointer-events-none absolute -right-32 -top-40 h-96 w-96 rounded-full bg-orange/10 blur-3xl" aria-hidden="true" />
           <div className="container relative py-16 md:py-24">

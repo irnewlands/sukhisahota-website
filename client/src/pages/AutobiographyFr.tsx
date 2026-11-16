@@ -145,7 +145,7 @@ export default function AutobiographyFr() {
       </header>
 
       {/* Main Content */}
-      <main style={{ maxWidth: "900px", margin: "0 auto", padding: "3rem 2rem" }}>
+      <main id="main-content" tabIndex={-1} style={{ maxWidth: "900px", margin: "0 auto", padding: "3rem 2rem" }}>
         {/* Hero Section */}
         <section style={{ marginBottom: "4rem", textAlign: "center" }}>
           <img

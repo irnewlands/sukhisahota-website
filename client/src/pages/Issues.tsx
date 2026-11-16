@@ -152,9 +152,9 @@ export default function Issues() {
 return (
   <>
     <SiteHeader />
-    <main className="min-h-screen bg-[#f8f1e7] text-[#111827]">
+    <main id="main-content" tabIndex={-1} className="min-h-screen bg-[#f8f1e7] text-[#111827]">
       <section className="mx-auto max-w-6xl px-6 py-20">
-        <p className="mb-4 text-sm font-bold uppercase tracking-[0.25em] text-[#e85d04]">
+        <p className="mb-4 text-sm font-bold uppercase tracking-[0.25em] text-orange">
           {copy("Issues & Priorities")}
         </p>
 
@@ -185,7 +185,7 @@ return (
       href={issue.creditUrl}
       target="_blank"
       rel="noopener noreferrer"
-      className="text-xs text-[#6b7280] hover:text-[#e85d04]"
+      className="text-xs text-[#6b7280] hover:text-orange"
     >
       {copy(issue.credit)}
     </a>
@@ -201,7 +201,7 @@ return (
       {issue.description}
     </p>
 
-    <p className="mt-6 font-bold text-[#e85d04]">{copy("Learn more →")}</p>
+    <p className="mt-6 font-bold text-orange">{copy("Learn more →")}</p>
   </div>
 </a>
           ))}

@@ -70,7 +70,7 @@ export default function ResourcesForHelp() {
   return (
     <>
       <SiteHeader />
-      <main className="min-h-screen bg-cream text-charcoal">
+      <main id="main-content" tabIndex={-1} className="min-h-screen bg-cream text-charcoal">
         <header className="border-b border-orange/20 bg-[#f8f1e7]">
           <div className="container py-14 md:py-20">
             <p className="mb-5 text-xs font-bold uppercase tracking-[0.2em] text-[#a13a08]">{copy("Community care · Vancouver & BC")}</p>

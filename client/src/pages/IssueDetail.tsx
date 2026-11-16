@@ -13,14 +13,14 @@ export default function IssueDetail() {
 
   if (!issue) {
     return (
-      <main className="min-h-screen bg-[#f8f1e7] px-6 py-20">
+      <main id="main-content" tabIndex={-1} className="min-h-screen bg-[#f8f1e7] px-6 py-20">
         <h1 className="font-serif text-5xl font-bold">{copy("Issue not found")}</h1>
         <div className="mb-8 flex flex-wrap items-center justify-between gap-4">
-  <a href={localizedHref("/issues")} className="font-bold text-[#e85d04]">
+  <a href={localizedHref("/issues")} className="font-bold text-orange">
     {copy("← Back to Issues")}
   </a>
 
-  <a href={localizedHref("/")} className="font-bold text-[#e85d04]">
+  <a href={localizedHref("/")} className="font-bold text-orange">
     {copy("Home →")}
   </a>
 </div>
@@ -32,19 +32,19 @@ return (
   <>
     <SiteHeader />
     
-    <main className="min-h-screen bg-[#f8f1e7] text-[#111827]">
+    <main id="main-content" tabIndex={-1} className="min-h-screen bg-[#f8f1e7] text-[#111827]">
       <section className="mx-auto max-w-4xl px-6 py-20">
        <div className="mb-8 flex flex-wrap items-center justify-between gap-4">
-  <a href={localizedHref("/issues")} className="font-bold text-[#e85d04]">
+  <a href={localizedHref("/issues")} className="font-bold text-orange">
     {copy("← Back to Issues")}
   </a>
 
-  <a href={localizedHref("/")} className="font-bold text-[#e85d04]">
+  <a href={localizedHref("/")} className="font-bold text-orange">
     {copy("Home →")}
   </a>
 </div>
 
-        <p className="mb-4 text-sm font-bold uppercase tracking-[0.25em] text-[#e85d04]">
+        <p className="mb-4 text-sm font-bold uppercase tracking-[0.25em] text-orange">
           {copy("Issues & Priorities")}
         </p>
 
@@ -65,7 +65,7 @@ return (
           href={issue.creditUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-xs text-[#6b7280] hover:text-[#e85d04]"
+          className="text-xs text-[#6b7280] hover:text-orange"
         >
           {copy(issue.credit)}
         </a>
@@ -133,7 +133,7 @@ return (
                       {related.summary}
                     </p>
 
-                    <p className="mt-4 font-bold text-[#e85d04]">
+                    <p className="mt-4 font-bold text-orange">
                       {copy("Learn more →")}
                     </p>
                   </a>

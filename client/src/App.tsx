@@ -15,6 +15,7 @@ import GetInvolved from "./pages/GetInvolved";
 import IssueDetail from "./pages/IssueDetail";
 import AfterElection from "./pages/AfterElection";
 import ResourcesForHelp from "./pages/ResourcesForHelp";
+import SkipLink from "./components/SkipLink";
 
 import { isFrench, routePrefix } from "@/lib/locale";
 
@@ -43,6 +44,7 @@ function App() {
     <ErrorBoundary>
       <ThemeProvider defaultTheme="light">
         <TooltipProvider>
+          <SkipLink />
           <Toaster />
           <WouterRouter base={routePrefix}>
             <SiteRoutes />

@@ -196,7 +196,7 @@ function PlatformCard({ icon: Icon, title, points }: { icon: React.ElementType; 
 function SectionHeader({ number, title, light = false }: { number: string; title: string; light?: boolean }) {
   return (
     <div className="mb-12">
-      <span className="text-xs font-semibold tracking-widest uppercase text-orange">
+      <span className={`text-xs font-semibold tracking-widest uppercase ${light ? "text-orange-light" : "text-orange"}`}>
         {number}
       </span>
       <h2 className={`font-serif text-4xl md:text-5xl font-bold mt-2 leading-tight ${light ? "text-white" : "text-charcoal"}`}>
@@ -227,7 +227,7 @@ export default function Home() {
         <ElectionReflectionBanner />
       </div>
 
-    <main>  
+    <main id="main-content" tabIndex={-1}>
       {/* Hero Section */}
       <section className="relative min-h-[calc(100vh-8rem)] flex items-center overflow-hidden bg-cream">
         {/* Decorative background shapes */}
@@ -399,7 +399,7 @@ export default function Home() {
 
             <a
   href={localizedHref("/autobiography")}
-  className="inline-flex items-center gap-3 rounded-2xl bg-[#f25c05] px-8 py-5 text-white font-bold text-xl shadow-lg hover:scale-105 transition"
+  className="inline-flex items-center gap-3 rounded-2xl bg-orange px-8 py-5 text-white font-bold text-xl shadow-lg hover:scale-105 transition"
 >
   {copy("Learn More About My Journey")}
   <span>→</span>
@@ -445,7 +445,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="mt-12 bg-orange-600 p-8 rounded-xl">
+            <div className="mt-12 bg-orange p-8 rounded-xl">
               <p className="font-serif text-xl md:text-2xl italic leading-relaxed">
                 {copy("\"This is why I'm here — I vow to be a protector of the defenceless and vulnerable for the rest of my life, whatever service I can carry out is what will fulfil my purpose in life.\"")}
               </p>
@@ -586,14 +586,14 @@ export default function Home() {
 
         <div className="container relative z-10">
           <div className="reveal max-w-2xl mx-auto text-center">
-            <span className="text-xs font-semibold tracking-widest uppercase text-white/80">
+            <span className="text-xs font-semibold tracking-widest uppercase text-white">
               {copy("Get Involved")}
             </span>
             <h2 className="font-serif text-4xl md:text-5xl font-bold mt-3 mb-6">
               {copy("Join the movement")}
             </h2>
 
-            <p className="text-lg text-white/90 leading-relaxed mb-10">
+            <p className="text-lg text-white leading-relaxed mb-10">
               {copy("Whether you want to volunteer, donate, or simply stay informed, there are many ways to get involved in building a stronger, more democratic Canada.")}
             </p>
 
@@ -696,7 +696,7 @@ export default function Home() {
               </p>
               <a
                 href="mailto:info@sukhisahota.ca"
-                className="inline-flex items-center gap-2 text-orange hover:text-amber transition-colors font-semibold"
+                className="inline-flex items-center gap-2 text-orange-light hover:text-white transition-colors font-semibold"
               >
                 <Mail className="w-4 h-4" />
                 info@sukhisahota.ca

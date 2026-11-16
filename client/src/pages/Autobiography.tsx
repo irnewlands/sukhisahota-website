@@ -91,7 +91,7 @@ export default function Autobiography() {
     <>
     <SiteHeader />
       
-    <div style={{ minHeight: "100vh", backgroundColor: "var(--background)", color: "var(--foreground)" }}>
+    <main id="main-content" tabIndex={-1} style={{ minHeight: "100vh", backgroundColor: "var(--background)", color: "var(--foreground)" }}>
 
       {/* Hero Section */}
       <section
@@ -158,7 +158,7 @@ export default function Autobiography() {
       </section>
 
       {/* Content Sections */}
-      <main style={{ maxWidth: "900px", margin: "0 auto", padding: "0 2rem 4rem" }}>
+      <div style={{ maxWidth: "900px", margin: "0 auto", padding: "0 2rem 4rem" }}>
         {sections.map((section, idx) => (
           <article
             key={idx}
@@ -263,7 +263,7 @@ export default function Autobiography() {
             `}</style>
           </article>
         ))}
-      </main>
+      </div>
 
       {/* Journey Timeline */}
       <JourneyTimeline />
@@ -313,7 +313,7 @@ export default function Autobiography() {
             transition: "all 0.2s ease-out",
           }}
           onMouseEnter={(e) => {
-            (e.target as HTMLElement).style.backgroundColor = "oklch(0.65 0.2 30)";
+            (e.target as HTMLElement).style.backgroundColor = "var(--color-amber)";
             (e.target as HTMLElement).style.transform = "scale(0.98)";
           }}
           onMouseLeave={(e) => {
@@ -324,7 +324,7 @@ export default function Autobiography() {
           {copy("Back to Home")}
         </a>
       </section>
-    </div>
+    </main>
 
       <SiteFooter />
     </>

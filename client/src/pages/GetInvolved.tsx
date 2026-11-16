@@ -8,9 +8,9 @@ export default function GetInvolved() {
   return (
     <>
      <SiteHeader />
-    <main className="min-h-screen bg-[#f8f1e7] text-[#111827]">
+    <main id="main-content" tabIndex={-1} className="min-h-screen bg-[#f8f1e7] text-[#111827]">
       <section className="mx-auto max-w-6xl px-6 py-20">
-        <p className="mb-4 text-sm font-bold uppercase tracking-[0.25em] text-[#e85d04]">
+        <p className="mb-4 text-sm font-bold uppercase tracking-[0.25em] text-orange">
           {copy("Get Involved")}
         </p>
 
@@ -22,7 +22,7 @@ export default function GetInvolved() {
           {copy("Whether you want to stay informed, volunteer, support future campaigns, or help with digital organizing, there is a place for you in this work.")}
         </p>
 
-        <div className="mb-16 rounded-3xl bg-[#e85d04] p-8 shadow-xl">
+        <div className="mb-16 rounded-3xl bg-orange p-8 shadow-xl">
           <NewsletterSignup />
         </div>
 
@@ -50,7 +50,7 @@ export default function GetInvolved() {
             },
           ].map((item) => (
             <div key={item.title} className="rounded-3xl bg-white p-6 shadow-lg">
-              <item.icon className="mb-4 h-8 w-8 text-[#e85d04]" />
+              <item.icon className="mb-4 h-8 w-8 text-orange" />
               <h2 className="mb-3 font-serif text-2xl font-bold">
                 {item.title}
               </h2>
