@@ -29,9 +29,9 @@ To undo this accessibility release, revert its commit on `main` and push the rev
 
 These are not claimed as passed:
 
-- NVDA on Windows and VoiceOver on Apple devices: read heading/landmark lists, skip navigation, names/required states, menu states, filter announcements and signup status.
+- NVDA scenarios beyond the user-confirmed results below, including signup-success announcements; VoiceOver on Apple devices.
 - A real signup with a consenting test recipient, including MailerLite acceptance, confirmation email and delivery failures. No real subscriber was added during these checks.
-- Completion and submission of the external Google Forms; password-protected questionnaire flows with test credentials.
+- Actual Google Forms submission and confirmation; password-protected questionnaire flows with test credentials.
 - PDF tags, reading order and table accessibility; spreadsheet reading order and navigation.
 - Actual 200%/400% browser zoom and text-spacing testing on the target devices. Browser zoom shortcuts did not alter the cloud test viewport, so this was not treated as a passing zoom test.
 
@@ -104,8 +104,19 @@ The user was instructed to leave the survey unsubmitted. Submission,
 confirmation and email delivery have not been verified. No form wording or
 settings were changed during this review.
 
-The listening-conversation and general help-request forms were inspected for
-labels and native question controls, but their user-assisted NVDA tests remain
-pending. The listening form currently repeats contact collection: one combined
+The user subsequently confirmed the listening-conversation form's field labels,
+required states and selected contact-method announcement in NVDA. The user also
+confirmed that the general help-request form identifies each tested question,
+its required status and its available choices clearly. These are basic
+user-assisted control checks; final submission, confirmation and delivery were
+not tested for either contact form.
+
+The listening form currently repeats contact collection: one combined
 email/telephone question followed by separate email and phone questions. That
-is a usability cleanup recommendation, not a confirmed screen-reader failure.
+remains a usability cleanup recommendation, not a confirmed screen-reader
+failure. No questions or response-sheet structure were changed.
+
+The password-protected rental and career questionnaires, mobile VoiceOver,
+colour contrast and actual zoom behaviour within Google Forms were not covered
+by these user-assisted checks. Do not describe all forms as fully accessible
+or WCAG certified on this basis.
