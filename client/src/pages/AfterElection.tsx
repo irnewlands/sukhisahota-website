@@ -31,6 +31,15 @@ const electionLanguage = isFrench ? "fr" : isPunjabi ? "pa" : isChinese ? "zh" :
 const { pdf: electionPdfPath, excel: electionExcelHref } = electionDownloads[electionLanguage];
 const electionPdfHref = electionLanguage === "en" ? `${electionPdfPath}?v=restored-20261115` : electionPdfPath;
 
+const webReportCopy = {
+  en: { title: "Read the full report as a web page (English)", description: "All report sections and tables, with headings and a single-column reading order." },
+  fr: { title: "Lire le rapport complet sur une page Web (en anglais)", description: "Toutes les sections et tous les tableaux, avec des titres et un ordre de lecture à une seule colonne." },
+  pa: { title: "ਪੂਰੀ ਰਿਪੋਰਟ ਵੈੱਬ ਪੰਨੇ ਵਜੋਂ ਪੜ੍ਹੋ (ਅੰਗਰੇਜ਼ੀ)", description: "ਰਿਪੋਰਟ ਦੇ ਸਾਰੇ ਭਾਗ ਅਤੇ ਸਾਰਣੀਆਂ, ਸਿਰਲੇਖਾਂ ਅਤੇ ਇੱਕ ਕਾਲਮ ਦੇ ਪੜ੍ਹਨ ਕ੍ਰਮ ਨਾਲ।" },
+  zh: { title: "阅读完整网页报告（英文）", description: "包含报告的所有章节和表格，设有标题，按单栏顺序阅读。" },
+  tl: { title: "Basahin ang buong ulat bilang web page (English)", description: "Lahat ng seksyon at talahanayan ng ulat, na may mga heading at iisang kolum para sa pagbabasa." },
+} as const;
+const webReportText = webReportCopy[electionLanguage];
+
 const electionUpdate = {
   "en": {
     "snapshot": "Elections BC officially declared the results on November 9, 2026 (latest numerical snapshot: 2:37 p.m. Pacific). Conservatives: 64 elected, 928,027 votes (47.71%); BC NDP: 27 elected, 730,952 votes (37.58%); BC Greens: 2 elected, 216,808 votes (11.15%). A total of 1,950,193 ballots were considered, with preliminary turnout of 52.17%. Kelowna Centre (Conservative +43) and Ladysmith–Oceanside (NDP +50) are subject to automatic judicial recounts, with applications due November 16. Burnaby South–Metrotown (Conservative +64) and Cowichan Valley (Conservative +88) are also close. The declared 64–27–2 result may change following judicial recounts.",
@@ -213,6 +222,14 @@ export default function AfterElection() {
               <p className="mt-4 rounded-lg border-l-4 border-orange bg-[#fff6e9] px-5 py-4 text-sm leading-6 text-charcoal/80">
                 <strong>{copy("Official declaration, November 9:")}</strong>{" "}{electionUpdateText.snapshot}
               </p>
+              <a href="/election-data/BC_Election_2026_Analysis_Nov09_1437.html"
+                 className="mt-8 flex items-start gap-4 rounded-2xl border-2 border-orange bg-cream p-6 no-underline hover:shadow-md">
+                <FileText className="mt-1 h-6 w-6 shrink-0 text-orange" aria-hidden="true" />
+                <span>
+                  <strong className="block text-xl text-charcoal">{webReportText.title}</strong>
+                  <span className="mt-2 block text-charcoal/80">{webReportText.description}</span>
+                </span>
+              </a>
               <div className="mt-8 grid gap-4 sm:grid-cols-2">
                 <a href={electionPdfHref} target="_blank" rel="noopener noreferrer"
                    className="group flex flex-col justify-between rounded-2xl border border-charcoal/15 bg-[#f8f1e7] p-6 no-underline transition hover:border-orange hover:shadow-md">

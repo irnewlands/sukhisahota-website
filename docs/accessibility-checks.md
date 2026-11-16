@@ -58,6 +58,13 @@ PDF was restored. The repair remains in Git history for diagnosis; its script
 has been removed from the current tree. Do not treat this PDF as screen-reader
 verified or PDF/UA compliant.
 
-A full semantic HTML version is being provided as the primary alternative.
+A full semantic HTML version is provided as the primary alternative at
+`/election-data/BC_Election_2026_Analysis_Nov09_1437.html`. It includes all report
+sections, three party summaries in sequence, all four data tables with native
+row/column headers, and source links. The election page links to it in all five
+languages, explicitly identifying the report as English. The dated snapshot
+and all table values are preserved. Browser semantic checks and source-value
+comparisons are separate from the pending real NVDA test. When refreshing the
+dated report, refresh this web version alongside the PDF and workbook.
 Other language PDFs, the NDP renewal report and workbook accessibility remain
 outside this targeted repair.
