@@ -29,7 +29,7 @@ To undo this accessibility release, revert its commit on `main` and push the rev
 
 These are not claimed as passed:
 
-- NVDA scenarios beyond the user-confirmed results below, including asynchronous signup-error announcements; VoiceOver on Apple devices.
+- NVDA scenarios beyond the user-confirmed results below; VoiceOver on Apple devices.
 - Subsequent newsletter delivery after signup. The user confirmed real website signup acceptance and its NVDA announcement below. Double opt-in is currently off, so a confirmation email is not promised.
 - Actual Google Forms submission and confirmation; password-protected questionnaire flows with test credentials.
 - PDF tags, reading order and table accessibility; spreadsheet reading order and navigation.
@@ -163,7 +163,12 @@ user-assisted signup-acceptance announcement and field-reset check.
 This confirmation does not establish that a new subscriber record was created
 rather than an existing address being accepted, or that subsequent newsletters
 will be delivered. No subscriber address was collected in this conversation.
-The new asynchronous error announcement and retention of entries have been
-tested with simulated responses but still need a user-assisted NVDA retest.
+The user subsequently completed the connection-failure test using Chrome's
+Network Offline setting after loading and filling the website form. The user
+confirmed that NVDA automatically announced the unconfirmed-signup error and
+that the entered details remained filled in. Record this as a passed
+user-assisted asynchronous connection-error announcement and entry-retention
+check, alongside the acceptance announcement and reset check above. This does
+not establish NVDA behavior for every distinct provider error or language.
 The separately hosted MailerLite form's empty-error announcement and field-name
 issues remain unresolved.
