@@ -36,3 +36,29 @@ These are not claimed as passed:
 - Actual 200%/400% browser zoom and text-spacing testing on the target devices. Browser zoom shortcuts did not alter the cloud test viewport, so this was not treated as a passing zoom test.
 
 This is a focused improvement pass, not a WCAG conformance certification.
+
+
+## User-assisted NVDA results and English PDF repair
+
+On November 15, the user reported successful NVDA checks for the homepage skip
+link and heading, newsletter labels and empty-field validation, language menu
+choices and Escape focus restoration, and automatic directory result-count
+announcements. These are user-assisted results, not automated screen-reader tests.
+
+The user then reported that the English election PDF read only the first
+column of the first-page statistics. Inspection confirmed that the original
+four-page PDF lacked a structure tree and marked-document metadata. Its raw
+text included all three party cards, but the viewer was left to infer the
+reading order from the layout.
+
+The English PDF now has an explicit logical structure: heading levels, complete
+party/metric groups, four tables with column and row headers, and five tagged
+links. Repeated headers/footers and decorative drawings are marked as artifacts.
+The script `scripts/tag-election-pdf.py` is guarded by the original PDF hash.
+All four pages were rendered before and after the repair and compared pixel
+for pixel; all renderings matched. Extracted text also matches exactly.
+
+The English download link includes a version query to request the repaired
+file. Real NVDA retesting of that file is pending. This repair does not establish
+PDF/UA compliance. Other language PDFs, the NDP renewal report and workbook
+accessibility have not been remediated by this targeted repair.

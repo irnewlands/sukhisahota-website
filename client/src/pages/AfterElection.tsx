@@ -28,7 +28,8 @@ const electionDownloads = {
 } as const;
 
 const electionLanguage = isFrench ? "fr" : isPunjabi ? "pa" : isChinese ? "zh" : isTagalog ? "tl" : "en";
-const { pdf: electionPdfHref, excel: electionExcelHref } = electionDownloads[electionLanguage];
+const { pdf: electionPdfPath, excel: electionExcelHref } = electionDownloads[electionLanguage];
+const electionPdfHref = electionLanguage === "en" ? `${electionPdfPath}?v=tagged-20261115` : electionPdfPath;
 
 const electionUpdate = {
   "en": {
